@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "enums/Ranks.json",
+  "title": "Unit ranks",
+  "description": "Ranks that are part of the game.",
+
+  "enum": [
+    "Commander",
+    "Operative",
+    "Corps",
+    "Special Forces",
+    "Support",
+    "Heavy"
+  ]
+}
