@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://schema.retinue.app/enums/UnitType.json",
+  "title": "UnitType",
+  "description": "Unit types and sub-types",
+
+  "definitions": {
+    "Trooper": {
+      "additionalProperties": false,
+      "description": "A trooper subtype.",
+      "properties": {
+        "name": {
+          "enum": ["Trooper"]
+        },
+        "type": {
+          "$comment": "To support custom trooper sub-types.",
+          "tsType": "string",
+          "enum": [
+            "Clone Trooper",
+            "Creature Trooper",
+            "Droid Trooper",
+            "Emplacement Trooper",
+            "Wookiee Trooper"
+          ]
+        }
+      },
+      "required": ["name", "type"]
+    },
+
+    "Vehicle": {
+      "additionalProperties": false,
+      "description": "A vehicle subtype.",
+      "properties": {
+        "name": {
+          "enum": ["Vehicle"]
+        },
+        "type": {
+          "$comment": "To support custom vehicle sub-types.",
+          "tsType": "string",
+          "enum": ["Ground Vehicle", "Repulsor Vehicle"]
+        }
+      },
+      "required": ["name", "type"]
+    }
+  },
+
+  "anyOf": [
+    {
+      "enum": ["Trooper"]
+    },
+    {
+      "$ref": "#/definitions/Trooper"
+    },
+    {
+      "$ref": "#/definitions/Vehicle"
+    }
+  ]
+}

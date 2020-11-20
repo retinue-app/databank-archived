@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://schema.retinue.app/enums/AttackDicePool.json",
+  "title": "AttackPool",
+
+  "description": "A pool of attack dice.",
+
+  "properties": {
+    "White": {
+      "type": "number",
+      "minimum": 1
+    },
+    "Black": {
+      "type": "number",
+      "minimum": 1
+    },
+    "Red": {
+      "type": "number",
+      "minimum": 1
+    }
+  },
+
+  "additionalProperties": false,
+  "minProperties": 1
+}

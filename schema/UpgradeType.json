@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://schema.retinue.app/enums/UpgradeType.json",
+  "title": "UpgradeType",
+  "description": "Upgrade categories in the game.",
+
+  "definitions": {
+    "OfficialUpgradeType": {
+      "enum": [
+        "Armament",
+        "Command",
+        "Comms",
+        "Counterpart",
+        "Crew",
+        "Force",
+        "Gear",
+        "Generator",
+        "Grenades",
+        "Hardpoint",
+        "Heavy Weapon",
+        "Ordnance",
+        "Personnel",
+        "Pilot",
+        "Training"
+      ]
+    }
+  },
+
+  "anyOf": [
+    { "$ref": "#/definitions/OfficialUpgradeType" },
+    { "type": "string" }
+  ]
+}
