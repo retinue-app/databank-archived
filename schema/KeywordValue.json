@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://schema.retinue.app/Keyword.json",
+  "title": "Keyword",
+  "description": "A keyword definition in the game.",
+
+  "definitions": {
+    "NullValue": {
+      "type": "null"
+    },
+
+    "NumericValue": {
+      "type": "number",
+      "minimum": 1
+    },
+
+    "ImmuneValue": {
+      "enum": [
+        "Blast",
+        "Deflect",
+        "Deflect (Melee)",
+        "Enemy Effects",
+        "Pierce",
+        "Range 1 Weapons"
+      ],
+      "tsType": "string"
+    },
+
+    "TreatOrRepairValue": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "minimum": 1
+      },
+      "minItems": 2,
+      "maxItems": 2,
+      "tsType": "number[]"
+    },
+
+    "UnitOrUnitRankValue": {
+      "type": "array",
+      "items": [
+        {
+          "anyOf": [
+            { "$ref": "./UnitName.json" },
+            { "$ref": "./UnitRank.json" }
+          ]
+        }
+      ],
+      "minItems": 1,
+      "tsType": "string[]"
+    },
+
+    "UnitKeywords": {
+      "enum": ["Precise"],
+      "tsType": "string"
+    },
+
+    "WeaponKeywords": {
+      "enum": [
+        "Cumbersome",
+        "High Velocity",
+        "Impact",
+        "Pierce",
+        "Suppressive",
+        "Versatile"
+      ],
+      "tsType": "string"
+    }
+  },
+
+  "anyOf": [
+    { "$ref": "#/definitions/NullValue" },
+    { "$ref": "#/definitions/NumericValue" },
+    { "$ref": "#/definitions/ImmuneValue" },
+    { "$ref": "#/definitions/TreatOrRepairValue" },
+    { "$ref": "#/definitions/UnitOrUnitRankValue" }
+  ]
+}

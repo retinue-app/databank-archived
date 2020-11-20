@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "UnitCard.json",
+  "$id": "https://schema.retinue.app/UnitCard.json",
   "title": "UnitCard",
   "description": "Unit card definition.",
 
@@ -11,7 +11,7 @@
 
       "properties": {
         "color": {
-          "$ref": "./enums/DefenseDice.json"
+          "$ref": "./DefenseDice.json"
         },
         "surges": {
           "enum": [true]
@@ -51,7 +51,7 @@
 
   "properties": {
     "name": {
-      "$ref": "./enums/UnitName.json"
+      "$ref": "./UnitName.json"
     },
 
     "title": {
@@ -62,7 +62,7 @@
     },
 
     "faction": {
-      "$ref": "./enums/Faction.json"
+      "$ref": "./Faction.json"
     },
 
     "points": {
@@ -71,7 +71,7 @@
     },
 
     "rank": {
-      "$ref": "./enums/UnitRank.json"
+      "$ref": "./UnitRank.json"
     },
 
     "miniatures": {
@@ -81,7 +81,7 @@
     },
 
     "type": {
-      "$ref": "./enums/UnitType.json"
+      "$ref": "./UnitType.json"
     },
 
     "defense": {
@@ -100,7 +100,7 @@
 
     "upgrades": {
       "propertyNames": {
-        "$ref": "./enums/UpgradeType.json"
+        "$ref": "./UpgradeType.json"
       },
 
       "additionalProperties": {

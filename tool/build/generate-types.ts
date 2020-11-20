@@ -16,6 +16,7 @@ async function compileAndNormalize(
   return compileFromFile(input, {
     cwd,
     enableConstEnums: true,
+    declareExternallyReferenced: false,
     bannerComment: `/* Generated from ${path.basename(input)} */`,
   });
 }
@@ -35,7 +36,7 @@ async function formatWithPrettier(input: string): Promise<string> {
 async function compileAllSchemas(): Promise<string> {
   const cwd = path.join('schema');
   const out = [] as string[];
-  for (const file of await asyncGlob(path.join(cwd, '*.json'))) {
+  for (const file of await asyncGlob(path.join(cwd, '**', '*.json'))) {
     out.push(await compileAndNormalize(file, cwd));
   }
   return await formatWithPrettier(out.join('\n'));
