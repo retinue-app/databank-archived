@@ -1,0 +1,143 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://schema.retinue.app/ActionKeywordSet.json",
+  "title": "ActionKeywordSet",
+
+  "description": "A set of keywords that provide an action.",
+
+  "definitions": {
+    "DefineAction": {
+      "properties": {
+        "actions": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2
+        }
+      },
+
+      "required": ["actions"]
+    },
+
+    "DefineActionWithAmount": {
+      "properties": {
+        "actions": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2
+        },
+
+        "amount": {
+          "type": "number",
+          "minimum": 1
+        }
+      },
+
+      "required": ["actions", "amount"]
+    },
+
+    "DefineActionWithCapacity": {
+      "properties": {
+        "actions": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2
+        },
+
+        "amount": {
+          "type": "number",
+          "minimum": 1
+        },
+
+        "capacity": {
+          "type": "number",
+          "minimum": 1
+        }
+      },
+
+      "required": ["actions", "amount", "capacity"]
+    }
+  },
+
+  "properties": {
+    "Arm": {
+      "$comment": "Arm is fairly unique for a keyword.",
+      "properties": {
+        "actions": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2
+        },
+
+        "amount": {
+          "type": "number",
+          "minimum": 1
+        },
+
+        "explosive": {
+          "type": "string",
+          "description": "This name must be identical to a weapon on an upgrade or command card."
+        }
+      },
+
+      "required": ["actions", "amount", "explosive"]
+    },
+
+    "Calculate Odds": {
+      "$ref": "#/definitions/DefineAction"
+    },
+
+    "Distract": {
+      "$ref": "#/definitions/DefineAction"
+    },
+
+    "Jump": {
+      "$ref": "#/definitions/DefineActionWithAmount"
+    },
+
+    "Observe": {
+      "$ref": "#/definitions/DefineActionWithAmount"
+    },
+
+    "Pulling the Strings": {
+      "$ref": "#/definitions/DefineAction"
+    },
+
+    "Quick Thinking": {
+      "$ref": "#/definitions/DefineAction"
+    },
+
+    "Repair": {
+      "$ref": "#/definitions/DefineActionWithCapacity"
+    },
+
+    "Secret Mission": {
+      "$ref": "#/definitions/DefineAction"
+    },
+
+    "Smoke": {
+      "$ref": "#definitions/DefineActionWithAmount"
+    },
+
+    "Spotter": {
+      "$ref": "#definitions/DefineActionWithAmount"
+    },
+
+    "Treat": {
+      "$ref": "#/definitions/DefineActionWithCapacity"
+    },
+
+    "TakeCover": {
+      "$ref": "#definitions/DefineActionWithAmount"
+    }
+  },
+
+  "minProperties": 1,
+
+  "additionalProperties": {
+    "anyOf": [
+      { "$ref": "#/definitions/DefineAction" },
+      { "$ref": "#/definitions/DefineActionWithAmount" },
+      { "$ref": "#/definitions/DefineActionWithCapacity" }
+    ]
+  }
+}

@@ -1,6 +1,8 @@
 {
   "name": "Stormtroopers",
-  "faction": "Galactic Empire",
+  "restrictions": {
+    "factions": ["Galactic Empire"]
+  },
   "points": 40,
   "rank": "Corps",
   "miniatures": 4,

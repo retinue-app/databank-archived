@@ -19,6 +19,11 @@
 
     "dice": {
       "$ref": "./AttackPool.json"
+    },
+
+    "keywords": {
+      "$ref": "./WeaponKeywordSet.json",
+      "minProperties": 1
     }
   },
 
