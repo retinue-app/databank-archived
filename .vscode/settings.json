@@ -24,7 +24,7 @@
   "json.schemas": [
     {
       "fileMatch": ["data/*/Units/*.json"],
-      "url": "schema/UnitCard.json"
+      "url": "/schema/UnitCard.json"
     }
   ],
   // Linting.

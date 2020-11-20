@@ -1,43 +1,92 @@
 /* Generated from UnitCard.json */
 
 /**
+ * Names of units that are part of the game.
+ */
+export type UnitName = string;
+/**
  * Factions that are part of the game.
  */
 export type Faction = string;
+/**
+ * Unit types and sub-types
+ */
+export type UnitType =
+  | 'Trooper'
+  | {
+      name: 'Trooper';
+      type: string;
+    }
+  | {
+      name: 'Vehicle';
+      type: string;
+    };
 
 /**
  * Unit card definition.
  */
 export interface UnitCard {
-  /**
-   * Name of the unit.
-   */
-  name: string;
+  name: UnitName;
   /**
    * Optional sub-title for the unit.
    */
   title?: string;
   faction: Faction;
+  points: number;
+  rank: UnitRank;
+  /**
+   * Number of miniatures in the unit.
+   */
+  miniatures: number;
+  type: UnitType;
+  defense: Defense;
+  attack?: Offense;
+  speed: number;
+  upgrades: {
+    [k: string]: number;
+  };
+}
+export interface Defense {
+  color: DefenseDice;
+  surges?: true;
+  wounds: number;
+  courage?: number;
+  resilience?: number;
+}
+export interface Offense {
+  surges: 'Hit' | 'Crit';
 }
 
-/* Generated from UnitType.json */
-
 /**
- * Unit types and sub-types
+ * Ranks that are part of the game.
  */
-export type UnitType = Trooper | Vehicle;
-
-/**
- * A trooper subtype.
- */
-export interface Trooper {
-  name: 'Trooper';
-  type?: string;
+export const enum UnitRank {
+  Commander = 'Commander',
+  Operative = 'Operative',
+  Corps = 'Corps',
+  SpecialForces = 'Special Forces',
+  Support = 'Support',
+  Heavy = 'Heavy',
 }
 /**
- * A vehicle subtype.
+ * Defensive dice in the game.
  */
-export interface Vehicle {
-  name: 'Vehicle';
-  type?: string;
+export const enum DefenseDice {
+  White = 'White',
+  Red = 'Red',
+}
+
+/* Generated from Weapon.json */
+
+/**
+ * Range in the game.
+ */
+export type Range = ('Melee' | 0 | 1 | 2 | 3 | 4 | 5 | 'Infinite')[];
+
+/**
+ * Weapon definition.
+ */
+export interface Weapon {
+  name: string;
+  range: Range;
 }

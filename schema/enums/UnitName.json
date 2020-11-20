@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "enums/UnitName.json",
+  "title": "UnitName",
+  "description": "Names of units that are part of the game.",
+
+  "enum": [
+    "74-Z Speeder Bikes",
+    "AT-RT",
+    "Darth Vader",
+    "Luke Skywalker",
+    "Rebel Troopers",
+    "Stormtroopers"
+  ],
+
+  "$comment": "Not validated, only for auto-complete.",
+  "tsType": "string"
+}

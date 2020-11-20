@@ -1,0 +1,9 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "enums/DefenseDice.json",
+  "title": "DefenseDice",
+  "description": "Defensive dice in the game.",
+
+  "enum": ["White", "Red"],
+  "tsEnumNames": ["White", "Red"]
+}

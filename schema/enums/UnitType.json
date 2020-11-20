@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "UnitType.json",
+  "$id": "enums/UnitType.json",
   "title": "UnitType",
   "description": "Unit types and sub-types",
 
@@ -24,7 +24,7 @@
           ]
         }
       },
-      "required": ["name"]
+      "required": ["name", "type"]
     },
 
     "Vehicle": {
@@ -40,11 +40,14 @@
           "enum": ["Ground Vehicle", "Repulsor Vehicle"]
         }
       },
-      "required": ["name"]
+      "required": ["name", "type"]
     }
   },
 
   "anyOf": [
+    {
+      "enum": ["Trooper"]
+    },
     {
       "$ref": "#/definitions/Trooper"
     },

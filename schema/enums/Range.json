@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "enums/Range.json",
+  "title": "Range",
+  "description": "Range in the game.",
+
+  "items": {
+    "enum": ["Melee", 0, 1, 2, 3, 4, 5, "Infinite"]
+  },
+
+  "minItems": 1,
+  "maxItems": 3,
+  "uniqueItems": true
+}

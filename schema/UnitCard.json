@@ -4,14 +4,54 @@
   "title": "UnitCard",
   "description": "Unit card definition.",
 
+  "definitions": {
+    "Defense": {
+      "title": "Defense",
+      "additionalProperties": false,
+
+      "properties": {
+        "color": {
+          "$ref": "./enums/DefenseDice.json"
+        },
+        "surges": {
+          "enum": [true]
+        },
+        "wounds": {
+          "type": "number",
+          "minimum": 1
+        },
+        "courage": {
+          "type": "number",
+          "minimum": 1
+        },
+        "resilience": {
+          "type": "number",
+          "minimum": 1
+        }
+      },
+
+      "required": ["color", "wounds"]
+    },
+
+    "Offense": {
+      "title": "Offense",
+      "additionalProperties": false,
+
+      "properties": {
+        "surges": {
+          "enum": ["Hit", "Crit"]
+        }
+      },
+
+      "required": ["surges"]
+    }
+  },
+
   "additionalProperties": false,
 
   "properties": {
     "name": {
-      "description": "Name of the unit.",
-      "type": "string",
-      "minLength": 3,
-      "maxLength": 40
+      "$ref": "./enums/UnitName.json"
     },
 
     "title": {
@@ -28,8 +68,66 @@
     "points": {
       "type": "number",
       "minimum": 0
+    },
+
+    "rank": {
+      "$ref": "./enums/UnitRank.json"
+    },
+
+    "miniatures": {
+      "type": "number",
+      "minimum": 1,
+      "description": "Number of miniatures in the unit."
+    },
+
+    "type": {
+      "$ref": "./enums/UnitType.json"
+    },
+
+    "defense": {
+      "$ref": "#/definitions/Defense"
+    },
+
+    "attack": {
+      "$ref": "#/definitions/Offense"
+    },
+
+    "speed": {
+      "type": "number",
+      "enum": [0, 1, 2, 3],
+      "tsType": "number"
+    },
+
+    "upgrades": {
+      "propertyNames": {
+        "$ref": "./enums/UpgradeType.json"
+      },
+
+      "additionalProperties": {
+        "type": "number",
+        "minimum": 1
+      }
+    },
+
+    "weapons": {
+      "items": {
+        "$ref": "./Weapon.json"
+      },
+      "minItems": 1,
+      "maxItems": 3
     }
   },
 
-  "required": ["name", "faction", "points"]
+  "required": [
+    "name",
+    "faction",
+    "points",
+    "rank",
+    "miniatures",
+    "type",
+    "defense",
+    "speed",
+    "upgrades",
+    "weapons"
+  ]
 }
