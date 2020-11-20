@@ -1,8 +1,0 @@
-{
-  "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "https://schema.retinue.app/enums/AttackDice.json",
-  "title": "AttackDice",
-  "description": "Attack dice in the game.",
-  "enum": ["White", "Black", "Red"],
-  "tsEnumNames": ["White", "Black", "Red"]
-}
