@@ -23,20 +23,8 @@
   // Schema Validation.
   "json.schemas": [
     {
-      "fileMatch": ["src/data/cards/*/commands/**.json"],
-      "url": "/src/schema/Command.json"
-    },
-    {
-      "fileMatch": ["src/data/keywords/**.json"],
-      "url": "/src/schema/Keyword.json"
-    },
-    {
-      "fileMatch": ["src/data/cards/*/units/**.json"],
-      "url": "/src/schema/Unit.json"
-    },
-    {
-      "fileMatch": ["src/data/cards/*/upgrades/**.json"],
-      "url": "/src/schema/Upgrade.json"
+      "fileMatch": ["data/*/Units/*.json"],
+      "url": "schema/UnitCard.json"
     }
   ],
   // Linting.

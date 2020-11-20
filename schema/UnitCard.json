@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "UnitCard.json",
+  "title": "UnitCard",
+  "description": "Unit card definition.",
+
+  "additionalProperties": false,
+
+  "properties": {
+    "name": {
+      "description": "Name of the unit.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 40
+    },
+
+    "title": {
+      "description": "Optional sub-title for the unit.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 40
+    },
+
+    "faction": {
+      "$ref": "./enums/Faction.json"
+    },
+
+    "points": {
+      "type": "number",
+      "minimum": 0
+    }
+  },
+
+  "required": ["name", "faction", "points"]
+}
