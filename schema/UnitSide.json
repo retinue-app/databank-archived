@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://schema.retinue.app/UnitSide.json",
+  "title": "UnitSide",
+
+  "description": "Defines the sides of a notched unit.",
+
+  "enum": ["Front", "Sides", "Rear"],
+
+  "tsEnumNames": ["Front", "Sides", "Rear"]
+}

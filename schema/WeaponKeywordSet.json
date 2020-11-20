@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://schema.retinue.app/UnitCard.json",
+  "title": "WeaponKeywordSet",
+
+  "description": "A set of weapon keywords (i.e. on a weapon).",
+
+  "properties": {
+    "Beam": {
+      "type": "number",
+      "minimum": 1
+    },
+    "Blast": {
+      "type": "null"
+    },
+    "Critical": {
+      "type": "number",
+      "minimum": 1
+    },
+    "Cumbersome": {
+      "type": "null"
+    },
+    "Fixed": {
+      "type": "array",
+      "items": {},
+      "minItems": 1,
+      "uniqueItems": true
+    }
+  },
+
+  "propertyNames": {
+    "type": "string"
+  },
+
+  "additionalProperties": {
+    "anyOf": [{ "type": "null" }, { "type": "number" }, { "type": "string" }]
+  }
+}
