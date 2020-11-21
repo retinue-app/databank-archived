@@ -10,19 +10,24 @@
  */
 export interface ActionKeywordSet {
   Arm?: DefineActionWithExplosive;
-  "Calculate Odds"?: DefineAction;
+  'Calculate Odds'?: DefineAction;
   Distract?: DefineAction;
   Jump?: DefineActionWithAmount;
   Observe?: DefineActionWithAmount;
-  "Pulling the Strings"?: DefineAction;
-  "Quick Thinking"?: DefineAction;
+  'Pulling the Strings'?: DefineAction;
+  'Quick Thinking'?: DefineAction;
   Repair?: DefineActionWithCapacity;
-  "Secret Mission"?: DefineAction;
+  'Secret Mission'?: DefineAction;
   Smoke?: DefineActionWithAmount;
   Spotter?: DefineActionWithAmount;
   Treat?: DefineActionWithCapacity;
   TakeCover?: DefineActionWithAmount;
-  [k: string]: undefined | DefineAction | DefineActionWithAmount | DefineActionWithCapacity | DefineActionWithExplosive;
+  [k: string]:
+    | undefined
+    | DefineAction
+    | DefineActionWithAmount
+    | DefineActionWithCapacity
+    | DefineActionWithExplosive;
 }
 export interface DefineActionWithExplosive {
   actions: number;

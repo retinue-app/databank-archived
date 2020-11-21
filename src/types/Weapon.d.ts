@@ -8,11 +8,11 @@
 /**
  * Range in the game.
  */
-export type Range = ("Melee" | "Infinite" | number)[];
+export type Range = ('Melee' | 'Infinite' | number)[];
 /**
  * Sides of a notched base.
  */
-export type NotchedBaseSide = "Front" | "Sides" | "Rear";
+export type NotchedBaseSide = 'Front' | 'Sides' | 'Rear';
 
 /**
  * Weapon definition.
@@ -40,20 +40,20 @@ export interface WeaponKeywordSet {
   Critical?: number;
   Cumbersome?: null;
   Fixed?: NotchedBaseSide[];
-  "High Velocity"?: null;
+  'High Velocity'?: null;
   Immobilize?: number;
-  Immune?: "Deflect"[];
+  Immune?: 'Deflect'[];
   Impact?: number;
   Ion?: number;
   Lethal?: number;
-  "Long Shot"?: number;
+  'Long Shot'?: number;
   Pierce?: number;
   Poison?: number;
   Ram?: number;
   Scatter?: null;
   Spray?: null;
   Suppressive?: null;
-  "Tow Cable"?: null;
+  'Tow Cable'?: null;
   Versatile?: null;
   [k: string]: null | undefined | string[] | number | string;
 }

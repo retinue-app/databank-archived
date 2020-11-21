@@ -5,13 +5,16 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-export type DefinePassiveWithActions = ["Attack" | "Dodge" | "Move", ...("Attack" | "Dodge" | "Move")[]];
+export type DefinePassiveWithActions = [
+  'Attack' | 'Dodge' | 'Move',
+  ...('Attack' | 'Dodge' | 'Move')[]
+];
 export type DefinePassiveWithAmount = number;
 export type DefinePassive = null;
 /**
  * Factions that are part of the game.
  */
-export type Faction = ("Galactic Empire" | "Rebel Alliance") | string;
+export type Faction = ('Galactic Empire' | 'Rebel Alliance') | string;
 /**
  * Unit names.
  */
@@ -20,43 +23,57 @@ export type UnitName = string;
  * Unit types and sub-types
  */
 export type UnitType =
-  | "Trooper"
+  | 'Trooper'
   | {
-      primary: "Trooper";
+      primary: 'Trooper';
       secondary: string;
     }
   | {
-      primary: "Vehicle";
+      primary: 'Vehicle';
       secondary: string;
     };
 /**
  * Upgrade categories in the game.
  */
 export type UpgradeType =
-  | "Armament"
-  | "Command"
-  | "Comms"
-  | "Counterpart"
-  | "Crew"
-  | "Force"
-  | "Gear"
-  | "Generator"
-  | "Grenades"
-  | "Hardpoint"
-  | "Heavy Weapon"
-  | "Ordnance"
-  | "Personnel"
-  | "Pilot"
-  | "Training";
+  | 'Armament'
+  | 'Command'
+  | 'Comms'
+  | 'Counterpart'
+  | 'Crew'
+  | 'Force'
+  | 'Gear'
+  | 'Generator'
+  | 'Grenades'
+  | 'Hardpoint'
+  | 'Heavy Weapon'
+  | 'Ordnance'
+  | 'Personnel'
+  | 'Pilot'
+  | 'Training';
 export type DefinePassiveWithEffects = [
-  "Blast" | "Deflect" | "Melee" | "Pierce" | "Pierce (Melee)" | "Range 1 Weapons",
-  ...("Blast" | "Deflect" | "Melee" | "Pierce" | "Pierce (Melee)" | "Range 1 Weapons")[]
+  (
+    | 'Blast'
+    | 'Deflect'
+    | 'Melee'
+    | 'Pierce'
+    | 'Pierce (Melee)'
+    | 'Range 1 Weapons'
+  ),
+  ...(
+    | 'Blast'
+    | 'Deflect'
+    | 'Melee'
+    | 'Pierce'
+    | 'Pierce (Melee)'
+    | 'Range 1 Weapons'
+  )[]
 ];
 export type DefinePassiveWithSides = [NotchedBaseSide, ...NotchedBaseSide[]];
 /**
  * Sides of a notched base.
  */
-export type NotchedBaseSide = "Front" | "Sides" | "Rear";
+export type NotchedBaseSide = 'Front' | 'Sides' | 'Rear';
 
 /**
  * A set of keywords that provide a passive effect.
@@ -71,13 +88,13 @@ export interface PassiveKeywordSet {
   Block?: DefinePassive;
   Bounty?: DefinePassive;
   Charge?: DefinePassive;
-  "Climbing Vehicle"?: DefinePassive;
+  'Climbing Vehicle'?: DefinePassive;
   Compel?: DefinePassive;
   Coordinate?: TargetSet;
   Cover?: DefinePassiveWithAmount;
-  "Covert Ops"?: DefinePassive;
+  'Covert Ops'?: DefinePassive;
   Cunning?: DefinePassive;
-  "Danger Sense"?: DefinePassiveWithAmount;
+  'Danger Sense'?: DefinePassiveWithAmount;
   Dauntless?: DefinePassive;
   Defend?: DefinePassiveWithAmount;
   Deflect?: DefinePassive;
@@ -86,22 +103,22 @@ export interface PassiveKeywordSet {
   Detonate?: DefinePassiveWithExplosive;
   Disciplined?: DefinePassiveWithAmount;
   Disengage?: DefinePassive;
-  "Djem So Mastery"?: DefinePassive;
+  'Djem So Mastery'?: DefinePassive;
   Duelist?: DefinePassive;
   Enrage?: DefinePassiveWithAmount;
   Entourage?: TargetSet;
   Equip?: TargetSet;
   Exemplar?: DefinePassive;
-  "Expert Climber"?: DefinePassive;
-  "Field Commander"?: DefinePassive;
-  "Fire Support"?: DefinePassive;
+  'Expert Climber'?: DefinePassive;
+  'Field Commander'?: DefinePassive;
+  'Fire Support'?: DefinePassive;
   Flawed?: DefinePassive;
-  "Full Pivot"?: DefinePassive;
+  'Full Pivot'?: DefinePassive;
   Generator?: DefinePassiveWithAmount;
   Grounded?: DefinePassive;
   Guardian?: DefinePassiveWithAmount;
   Gunslinger?: DefinePassive;
-  "Heavy Weapon Team"?: DefinePassive;
+  'Heavy Weapon Team'?: DefinePassive;
   Hover?: DefinePassiveWithTerrain;
   Immune?: DefinePassiveWithEffects;
   Impervious?: DefinePassive;
@@ -110,14 +127,14 @@ export interface PassiveKeywordSet {
   Indomitable?: DefinePassive;
   Infiltrate?: DefinePassive;
   Inspire?: DefinePassiveWithAmount;
-  "Jedi Hunter"?: DefinePassive;
-  "Juyo Mastery"?: DefinePassive;
-  "Light Transport"?: DefinePassiveWithTransport;
+  'Jedi Hunter'?: DefinePassive;
+  'Juyo Mastery'?: DefinePassive;
+  'Light Transport'?: DefinePassiveWithTransport;
   Loadout?: DefinePassive;
-  "Low Profile"?: DefinePassive;
-  "Makashi Mastery"?: DefinePassive;
+  'Low Profile'?: DefinePassive;
+  'Makashi Mastery'?: DefinePassive;
   Marksman?: DefinePassive;
-  "Master of the Force"?: DefinePassiveWithAmount;
+  'Master of the Force'?: DefinePassiveWithAmount;
   Nimble?: DefinePassive;
   Outmaneuver?: DefinePassive;
   Plodding?: DefinePassive;
@@ -131,11 +148,11 @@ export interface PassiveKeywordSet {
   Retinue?: TargetSet;
   Scale?: DefinePassive;
   Scout?: DefinePassiveWithAmount;
-  "Scouting Party"?: DefinePassiveWithAmount;
+  'Scouting Party'?: DefinePassiveWithAmount;
   Sentinel?: DefinePassive;
   Sharpshooter?: DefinePassiveWithAmount;
   Shielded?: DefinePassiveWithAmount;
-  "Soresu Mastery"?: DefinePassive;
+  'Soresu Mastery'?: DefinePassive;
   Speeder?: DefinePassiveWithAmount;
   Spur?: DefinePassive;
   Stationary?: DefinePassive;
@@ -145,11 +162,11 @@ export interface PassiveKeywordSet {
   Teamwork?: TargetSet;
   Tempted?: DefinePassive;
   Transport?: DefinePassiveWithTransport;
-  "Uncanny Luck"?: DefinePassiveWithAmount;
+  'Uncanny Luck'?: DefinePassiveWithAmount;
   Unhindered?: DefinePassive;
   Versatile?: DefinePassive;
-  "Weak Point"?: DefinePassiveWithSides;
-  "Wheel Mode"?: DefinePassive;
+  'Weak Point'?: DefinePassiveWithSides;
+  'Wheel Mode'?: DefinePassive;
   [k: string]:
     | undefined
     | DefinePassive
@@ -173,7 +190,7 @@ export interface TargetSet {
   /**
    * Force alignments. Multiple entries is treated as an OR.
    */
-  forceAlignment?: ("Light Side" | "Dark Side")[];
+  forceAlignment?: ('Light Side' | 'Dark Side')[];
   /**
    * Unit names. Multiple entries is treated as an OR.
    */
@@ -203,11 +220,11 @@ export interface DefinePassiveWithExplosive {
   explosive: string;
 }
 export interface DefinePassiveWithTerrain {
-  type: "Air" | "Ground";
+  type: 'Air' | 'Ground';
   height: number;
 }
 export interface DefinePassiveWithTransport {
-  type: "Open" | "Closed";
+  type: 'Open' | 'Closed';
   capacity: number;
 }
 
@@ -215,10 +232,10 @@ export interface DefinePassiveWithTransport {
  * Ranks that are part of the game. These values are not customizable for custom content.
  */
 export const enum UnitRank {
-  Commander = "Commander",
-  Operative = "Operative",
-  Corps = "Corps",
-  SpecialForces = "Special Forces",
-  Support = "Support",
-  Heavy = "Heavy"
+  Commander = 'Commander',
+  Operative = 'Operative',
+  Corps = 'Corps',
+  SpecialForces = 'Special Forces',
+  Support = 'Support',
+  Heavy = 'Heavy',
 }

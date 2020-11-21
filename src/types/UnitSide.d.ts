@@ -9,7 +9,7 @@
  * Defines the sides of a notched unit.
  */
 export const enum UnitSide {
-  Front = "Front",
-  Sides = "Sides",
-  Rear = "Rear"
+  Front = 'Front',
+  Sides = 'Sides',
+  Rear = 'Rear',
 }

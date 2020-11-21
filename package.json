@@ -2,7 +2,11 @@
   "name": "@retinue/databank",
   "version": "0.0.0",
   "scripts": {
-    "build:types": "json2ts --unknownAny --enableConstEnums --cwd schema -i schema/*.json -o src/types"
+    "build:types": "json2ts --unknownAny --enableConstEnums --cwd schema -i schema/*.json -o src/types && prettier --ignore-path .gitignore --write src/types",
+    "lint": "npm run lint:format && npm run lint:eslint && npm run lint:file-names",
+    "lint:eslint": "eslint src",
+    "lint:file-names": "ts-node ./tool/check/use-consistent-file-names.ts",
+    "lint:format": "prettier --ignore-path .gitignore --list-different src"
   },
   "license": "MIT",
   "devDependencies": {
