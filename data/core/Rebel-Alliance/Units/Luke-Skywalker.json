@@ -1,5 +1,6 @@
 {
   "name": "Luke Skywalker",
+  "title": "Hero Of The Rebellion",
   "restrictions": {
     "factions": ["Rebel Alliance"]
   },

@@ -1,0 +1,9 @@
+{
+  "name": "Rebel Trooper",
+  "points": 10,
+  "type": "Personnel",
+
+  "restrictions": {
+    "units": ["Rebel Troopers"]
+  }
+}

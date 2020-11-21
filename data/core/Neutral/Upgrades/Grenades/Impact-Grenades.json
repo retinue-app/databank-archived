@@ -1,0 +1,14 @@
+{
+  "name": "Impact Grenades",
+  "points": 5,
+  "type": "Grenades",
+
+  "weapon": {
+    "name": "Impact Grenades",
+    "range": [1],
+    "dice": { "black": 1 },
+    "keywords": {
+      "Impact": 1
+    }
+  }
+}

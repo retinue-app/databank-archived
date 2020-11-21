@@ -1,0 +1,9 @@
+{
+  "name": "Grappling Hooks",
+  "points": 3,
+  "type": "Gear",
+
+  "keywords": {
+    "Expert Climber": null
+  }
+}

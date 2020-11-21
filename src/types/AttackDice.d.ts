@@ -9,7 +9,7 @@
  * Attack dice in the game.
  */
 export const enum AttackDice {
-  white = "white",
-  black = "black",
-  red = "red"
+  white = 'white',
+  black = 'black',
+  red = 'red',
 }

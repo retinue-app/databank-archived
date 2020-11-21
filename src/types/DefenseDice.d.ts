@@ -9,6 +9,6 @@
  * Defense dice in the game.
  */
 export const enum DefenseDice {
-  white = "white",
-  red = "red"
+  white = 'white',
+  red = 'red',
 }

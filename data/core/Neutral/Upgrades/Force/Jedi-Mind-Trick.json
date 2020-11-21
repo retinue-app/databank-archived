@@ -1,0 +1,26 @@
+{
+  "name": "Jedi Mind Trick",
+  "points": 5,
+  "type": "Force",
+
+  "restrictions": {
+    "forceAlignment": ["Light Side"]
+  },
+
+  "usage": "Exhaust",
+
+  "customActions": [
+    {
+      "name": "Jedi Mind Trick",
+      "description": "Choose an enemy trooper unit at range 1-2. It gains 2 suppression tokens.",
+      "actions": 0,
+      "target": {
+        "range": [1, 2],
+        "is": {
+          "unitTypes": ["Trooper"],
+          "hostile": "Enemy"
+        }
+      }
+    }
+  ]
+}

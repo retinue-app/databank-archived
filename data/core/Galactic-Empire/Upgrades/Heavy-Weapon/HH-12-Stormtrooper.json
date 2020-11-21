@@ -1,0 +1,21 @@
+{
+  "name": "HH-12 Stormtrooper",
+  "points": 34,
+  "type": "Heavy Weapon",
+
+  "restrictions": {
+    "units": ["Stormtroopers"]
+  },
+
+  "usage": "Exhaust",
+
+  "weapon": {
+    "name": "HH-12 Stormtrooper",
+    "range": [2, 4],
+    "dice": { "black": 3 },
+    "keywords": {
+      "Cumbersome": null,
+      "Impact": 3
+    }
+  }
+}

@@ -8,55 +8,47 @@
 /**
  * Factions that are part of the game.
  */
-export type Faction = ("Galactic Empire" | "Rebel Alliance") | string;
-/**
- * Unit names.
- */
-export type UnitName = string;
+export type Faction = ('Galactic Empire' | 'Rebel Alliance') | string;
 /**
  * Unit types and sub-types
  */
 export type UnitType =
-  | "Trooper"
+  | 'Trooper'
   | {
-      primary: "Trooper";
+      primary: 'Trooper';
       secondary: string;
     }
   | {
-      primary: "Vehicle";
+      primary: 'Vehicle';
       secondary: string;
     };
 /**
  * Upgrade categories in the game.
  */
 export type UpgradeType =
-  | "Armament"
-  | "Command"
-  | "Comms"
-  | "Counterpart"
-  | "Crew"
-  | "Force"
-  | "Gear"
-  | "Generator"
-  | "Grenades"
-  | "Hardpoint"
-  | "Heavy Weapon"
-  | "Ordnance"
-  | "Personnel"
-  | "Pilot"
-  | "Training";
-/**
- * A set of keywords for a unit or upgrade.
- */
-export type KeywordSet = ActionKeywordSet & PassiveKeywordSet;
+  | 'Armament'
+  | 'Command'
+  | 'Comms'
+  | 'Counterpart'
+  | 'Crew'
+  | 'Force'
+  | 'Gear'
+  | 'Generator'
+  | 'Grenades'
+  | 'Hardpoint'
+  | 'Heavy Weapon'
+  | 'Ordnance'
+  | 'Personnel'
+  | 'Pilot'
+  | 'Training';
 /**
  * Sides of a notched base.
  */
-export type NotchedBaseSide = "Front" | "Sides" | "Rear";
+export type NotchedBaseSide = 'Front' | 'Sides' | 'Rear';
 /**
  * Range in the game.
  */
-export type Range = ("Melee" | "Infinite" | number)[];
+export type Range = ('Melee' | 'Infinite' | number)[];
 
 /**
  * Defines a unit card.
@@ -84,7 +76,8 @@ export interface UnitCard {
   upgrades: {
     [k: string]: number;
   };
-  keywords: KeywordSet;
+  actions?: ActionKeywordSet;
+  keywords?: PassiveKeywordSet;
   weapons: [Weapon] | [Weapon, Weapon] | [Weapon, Weapon, Weapon];
 }
 /**
@@ -98,11 +91,11 @@ export interface TargetSet {
   /**
    * Force alignments. Multiple entries is treated as an OR.
    */
-  forceAlignment?: ("Light Side" | "Dark Side")[];
+  forceAlignment?: ('Light Side' | 'Dark Side')[];
   /**
    * Unit names. Multiple entries is treated as an OR.
    */
-  units?: UnitName[];
+  units?: string[];
   /**
    * Unit ranks. Multiple entries is treated as an OR.
    */
@@ -119,6 +112,7 @@ export interface TargetSet {
    * Units that have an upgrade icon. Multiple entries is treated as an OR.
    */
   hasUpgradeSlot?: UpgradeType[];
+  hostile?: 'Enemy' | 'Friendly';
 }
 export interface Defense {
   color: DefenseDice;
@@ -128,7 +122,7 @@ export interface Defense {
   resilience?: number;
 }
 export interface Offense {
-  surges: "Hit" | "Crit";
+  surges: 'Hit' | 'Crit';
 }
 /**
  * A set of keywords that provide an action.
@@ -142,7 +136,7 @@ export interface ActionKeywordSet {
      */
     explosive: string;
   };
-  "Calculate Odds"?: {
+  'Calculate Odds'?: {
     actions: number;
   };
   Distract?: {
@@ -156,10 +150,10 @@ export interface ActionKeywordSet {
     actions: number;
     amount: number;
   };
-  "Pulling the Strings"?: {
+  'Pulling the Strings'?: {
     actions: number;
   };
-  "Quick Thinking"?: {
+  'Quick Thinking'?: {
     actions: number;
   };
   Repair?: {
@@ -167,7 +161,7 @@ export interface ActionKeywordSet {
     amount: number;
     capacity: number;
   };
-  "Secret Mission"?: {
+  'Secret Mission'?: {
     actions: number;
   };
   Smoke?: {
@@ -183,7 +177,7 @@ export interface ActionKeywordSet {
     amount: number;
     capacity: number;
   };
-  TakeCover?: {
+  'Take Cover'?: {
     actions: number;
     amount: number;
   };
@@ -214,7 +208,7 @@ export interface ActionKeywordSet {
  * A set of keywords that provide a passive effect.
  */
 export interface PassiveKeywordSet {
-  AI?: ("Attack" | "Dodge" | "Move")[];
+  AI?: ('Attack' | 'Dodge' | 'Move')[];
   Agile?: number;
   Armor?: null | number;
   Arsenal?: number;
@@ -223,13 +217,13 @@ export interface PassiveKeywordSet {
   Block?: null;
   Bounty?: null;
   Charge?: null;
-  "Climbing Vehicle"?: null;
+  'Climbing Vehicle'?: null;
   Compel?: null;
   Coordinate?: TargetSet;
   Cover?: number;
-  "Covert Ops"?: null;
+  'Covert Ops'?: null;
   Cunning?: null;
-  "Danger Sense"?: number;
+  'Danger Sense'?: number;
   Dauntless?: null;
   Defend?: number;
   Deflect?: null;
@@ -244,44 +238,51 @@ export interface PassiveKeywordSet {
   };
   Disciplined?: number;
   Disengage?: null;
-  "Djem So Mastery"?: null;
+  'Djem So Mastery'?: null;
   Duelist?: null;
   Enrage?: number;
   Entourage?: TargetSet;
   Equip?: TargetSet;
   Exemplar?: null;
-  "Expert Climber"?: null;
-  "Field Commander"?: null;
-  "Fire Support"?: null;
+  'Expert Climber'?: null;
+  'Field Commander'?: null;
+  'Fire Support'?: null;
   Flawed?: null;
-  "Full Pivot"?: null;
+  'Full Pivot'?: null;
   Generator?: number;
   Grounded?: null;
   Guardian?: number;
   Gunslinger?: null;
-  "Heavy Weapon Team"?: null;
+  'Heavy Weapon Team'?: null;
   Hover?: {
-    type: "Air" | "Ground";
+    type: 'Air' | 'Ground';
     height: number;
   };
-  Immune?: ("Blast" | "Deflect" | "Melee" | "Pierce" | "Pierce (Melee)" | "Range 1 Weapons")[];
+  Immune?: (
+    | 'Blast'
+    | 'Deflect'
+    | 'Melee'
+    | 'Pierce'
+    | 'Pierce (Melee)'
+    | 'Range 1 Weapons'
+  )[];
   Impervious?: null;
   Incognito?: null;
   Inconspicuous?: null;
   Indomitable?: null;
   Infiltrate?: null;
   Inspire?: number;
-  "Jedi Hunter"?: null;
-  "Juyo Mastery"?: null;
-  "Light Transport"?: {
-    type: "Open" | "Closed";
+  'Jedi Hunter'?: null;
+  'Juyo Mastery'?: null;
+  'Light Transport'?: {
+    type: 'Open' | 'Closed';
     capacity: number;
   };
   Loadout?: null;
-  "Low Profile"?: null;
-  "Makashi Mastery"?: null;
+  'Low Profile'?: null;
+  'Makashi Mastery'?: null;
   Marksman?: null;
-  "Master of the Force"?: number;
+  'Master of the Force'?: number;
   Nimble?: null;
   Outmaneuver?: null;
   Plodding?: null;
@@ -295,11 +296,11 @@ export interface PassiveKeywordSet {
   Retinue?: TargetSet;
   Scale?: null;
   Scout?: number;
-  "Scouting Party"?: number;
+  'Scouting Party'?: number;
   Sentinel?: null;
   Sharpshooter?: number;
   Shielded?: number;
-  "Soresu Mastery"?: null;
+  'Soresu Mastery'?: null;
   Speeder?: number;
   Spur?: null;
   Stationary?: null;
@@ -309,20 +310,30 @@ export interface PassiveKeywordSet {
   Teamwork?: TargetSet;
   Tempted?: null;
   Transport?: {
-    type: "Open" | "Closed";
+    type: 'Open' | 'Closed';
     capacity: number;
   };
-  "Uncanny Luck"?: number;
+  'Uncanny Luck'?: number;
   Unhindered?: null;
   Versatile?: null;
-  "Weak Point"?: NotchedBaseSide[];
-  "Wheel Mode"?: null;
+  'Weak Point'?: {
+    amount: number;
+    sides: NotchedBaseSide[];
+  };
+  'Wheel Mode'?: null;
   [k: string]:
     | undefined
     | null
-    | ("Attack" | "Dodge" | "Move")[]
+    | ('Attack' | 'Dodge' | 'Move')[]
     | number
-    | ("Blast" | "Deflect" | "Melee" | "Pierce" | "Pierce (Melee)" | "Range 1 Weapons")[]
+    | (
+        | 'Blast'
+        | 'Deflect'
+        | 'Melee'
+        | 'Pierce'
+        | 'Pierce (Melee)'
+        | 'Range 1 Weapons'
+      )[]
     | {
         amount: number;
         /**
@@ -330,14 +341,17 @@ export interface PassiveKeywordSet {
          */
         explosive: string;
       }
-    | NotchedBaseSide[]
+    | {
+        amount: number;
+        sides: NotchedBaseSide[];
+      }
     | TargetSet
     | {
-        type: "Open" | "Closed";
+        type: 'Open' | 'Closed';
         capacity: number;
       }
     | {
-        type: "Air" | "Ground";
+        type: 'Air' | 'Ground';
         height: number;
       };
 }
@@ -367,20 +381,20 @@ export interface WeaponKeywordSet {
   Critical?: number;
   Cumbersome?: null;
   Fixed?: NotchedBaseSide[];
-  "High Velocity"?: null;
+  'High Velocity'?: null;
   Immobilize?: number;
-  Immune?: "Deflect"[];
+  Immune?: 'Deflect'[];
   Impact?: number;
   Ion?: number;
   Lethal?: number;
-  "Long Shot"?: number;
+  'Long Shot'?: number;
   Pierce?: number;
   Poison?: number;
   Ram?: number;
   Scatter?: null;
   Spray?: null;
   Suppressive?: null;
-  "Tow Cable"?: null;
+  'Tow Cable'?: null;
   Versatile?: null;
   [k: string]: null | undefined | string[] | number | string;
 }
@@ -389,28 +403,28 @@ export interface WeaponKeywordSet {
  * Ranks that are part of the game. These values are not customizable for custom content.
  */
 export const enum UnitRank {
-  Commander = "Commander",
-  Operative = "Operative",
-  Corps = "Corps",
-  SpecialForces = "Special Forces",
-  Support = "Support",
-  Heavy = "Heavy"
+  Commander = 'Commander',
+  Operative = 'Operative',
+  Corps = 'Corps',
+  SpecialForces = 'Special Forces',
+  Support = 'Support',
+  Heavy = 'Heavy',
 }
 /**
  * Rank of the unit
  */
 export const enum UnitRank1 {
-  Commander = "Commander",
-  Operative = "Operative",
-  Corps = "Corps",
-  SpecialForces = "Special Forces",
-  Support = "Support",
-  Heavy = "Heavy"
+  Commander = 'Commander',
+  Operative = 'Operative',
+  Corps = 'Corps',
+  SpecialForces = 'Special Forces',
+  Support = 'Support',
+  Heavy = 'Heavy',
 }
 /**
  * Defense dice in the game.
  */
 export const enum DefenseDice {
-  white = "white",
-  red = "red"
+  white = 'white',
+  red = 'red',
 }

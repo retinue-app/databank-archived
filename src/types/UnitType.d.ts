@@ -8,19 +8,19 @@
 /**
  * Unit types and sub-types
  */
-export type UnitType = "Trooper" | Trooper | Vehicle;
+export type UnitType = 'Trooper' | Trooper | Vehicle;
 
 /**
  * A trooper subtype.
  */
 export interface Trooper {
-  primary: "Trooper";
+  primary: 'Trooper';
   secondary: string;
 }
 /**
  * A vehicle subtype.
  */
 export interface Vehicle {
-  primary: "Vehicle";
+  primary: 'Vehicle';
   secondary: string;
 }

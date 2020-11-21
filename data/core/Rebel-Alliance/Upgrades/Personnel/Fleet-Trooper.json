@@ -1,0 +1,9 @@
+{
+  "name": "Fleet Trooper",
+  "points": 11,
+  "type": "Personnel",
+
+  "restrictions": {
+    "units": ["Fleet Troopers"]
+  }
+}

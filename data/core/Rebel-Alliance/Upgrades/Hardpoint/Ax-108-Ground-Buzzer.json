@@ -1,0 +1,18 @@
+{
+  "name": "Ax-108 \"Ground Buzzer\"",
+  "points": 20,
+  "type": "Hardpoint",
+
+  "restrictions": {
+    "units": ["T-47 Airspeeder"]
+  },
+
+  "weapon": {
+    "name": "Ax-108 \"Ground Buzzer\"",
+    "dice": { "black": 4 },
+    "range": [1, 2],
+    "keywords": {
+      "Fixed": ["Rear"]
+    }
+  }
+}

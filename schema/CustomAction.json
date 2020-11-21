@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://schema.retinue.app/CustomAction.json",
+  "title": "CustomAction",
+
+  "description": "Defines a custom action.",
+  "additionalProperties": false,
+
+  "definitions": {
+    "CustomActionTarget": {
+      "properties": {
+        "range": {
+          "$ref": "./Range.json"
+        },
+
+        "is": {
+          "anyOf": [
+            {
+              "enum": ["Self"]
+            },
+            {
+              "$ref": "./TargetSet.json"
+            }
+          ]
+        },
+
+        "not": {
+          "$ref": "./TargetSet.json"
+        },
+
+        "miniature": {
+          "enum": [true]
+        }
+      },
+
+      "additionalProperties": false,
+      "minProperties": 1
+    }
+  },
+
+  "properties": {
+    "name": {
+      "description": "Name of the action.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 40
+    },
+
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+
+    "actions": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 2
+    },
+
+    "target": {
+      "$ref": "#/definitions/CustomActionTarget"
+    },
+
+    "grants": {
+      "$ref": "./PassiveKeywordSet.json"
+    }
+  },
+
+  "required": ["name", "actions"]
+}

@@ -1,0 +1,46 @@
+{
+  "name": "Leia Organa",
+  "title": "Fearless And Inventive",
+  "restrictions": {
+    "factions": ["Rebel Alliance"]
+  },
+  "points": 90,
+  "rank": "Commander",
+  "miniatures": 1,
+  "type": "Trooper",
+  "defense": {
+    "color": "white",
+    "wounds": 6,
+    "surges": true,
+    "courage": 2
+  },
+  "speed": 2,
+  "upgrades": {
+    "Command": 2,
+    "Gear": 1
+  },
+  "keywords": {
+    "Take Cover": {
+      "actions": 1,
+      "amount": 2
+    },
+    "Inspire": 2,
+    "Nimble": null,
+    "Sharpshooter": 2
+  },
+  "weapons": [
+    {
+      "name": "Martial Arts",
+      "range": ["Melee"],
+      "dice": { "black": 3 }
+    },
+    {
+      "name": "Leia's Defender Sporting Blaster",
+      "range": [1, 2],
+      "dice": { "black": 3 },
+      "keywords": {
+        "Pierce": 1
+      }
+    }
+  ]
+}

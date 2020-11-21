@@ -1,5 +1,6 @@
 {
   "name": "Darth Vader",
+  "title": "Dark Lord Of The Sith",
   "restrictions": {
     "factions": ["Galactic Empire"]
   },

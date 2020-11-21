@@ -1,0 +1,22 @@
+{
+  "name": "Force Push",
+  "points": 10,
+  "type": "Force",
+
+  "usage": "Exhaust",
+
+  "customActions": [
+    {
+      "name": "Force Push",
+      "description": "Choose an enemy trooper unit at range 1. Perform a speed-1 move with that unit, even if it is engaged.",
+      "actions": 0,
+      "target": {
+        "range": [1],
+        "is": {
+          "unitTypes": ["Trooper"],
+          "hostile": "Enemy"
+        }
+      }
+    }
+  ]
+}

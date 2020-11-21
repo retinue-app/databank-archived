@@ -1,0 +1,9 @@
+{
+  "name": "Environmental Gear",
+  "points": 3,
+  "type": "Gear",
+
+  "keywords": {
+    "Unhindered": null
+  }
+}

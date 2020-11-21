@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://schema.retinue.app/UpgradeCard.json",
+  "title": "UpgradeCard",
+
+  "description": "Defines an upgrade card.",
+  "additionalProperties": false,
+
+  "properties": {
+    "name": {
+      "description": "Name of the upgrade.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 40
+    },
+
+    "description": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 200
+    },
+
+    "actions": {
+      "$ref": "./ActionKeywordSet.json"
+    },
+
+    "keywords": {
+      "$ref": "./PassiveKeywordSet.json"
+    },
+
+    "customActions": {
+      "description": "Custom actions (i.e. not in the RRG).",
+      "type": "array",
+      "items": {
+        "$ref": "./CustomAction.json"
+      },
+      "minItems": 1
+    },
+
+    "usage": {
+      "enum": ["Discard", "Exhaust"]
+    },
+
+    "type": {
+      "$ref": "./UpgradeType.json"
+    },
+
+    "restrictions": {
+      "$ref": "./TargetSet.json"
+    },
+
+    "points": {
+      "type": "number",
+      "minimum": 0
+    },
+
+    "weapon": {
+      "$ref": "./Weapon.json"
+    }
+  },
+
+  "required": ["name", "type", "points"]
+}

@@ -8,43 +8,39 @@
 /**
  * Factions that are part of the game.
  */
-export type Faction = ("Galactic Empire" | "Rebel Alliance") | string;
-/**
- * Unit names.
- */
-export type UnitName = string;
+export type Faction = ('Galactic Empire' | 'Rebel Alliance') | string;
 /**
  * Unit types and sub-types
  */
 export type UnitType =
-  | "Trooper"
+  | 'Trooper'
   | {
-      primary: "Trooper";
+      primary: 'Trooper';
       secondary: string;
     }
   | {
-      primary: "Vehicle";
+      primary: 'Vehicle';
       secondary: string;
     };
 /**
  * Upgrade categories in the game.
  */
 export type UpgradeType =
-  | "Armament"
-  | "Command"
-  | "Comms"
-  | "Counterpart"
-  | "Crew"
-  | "Force"
-  | "Gear"
-  | "Generator"
-  | "Grenades"
-  | "Hardpoint"
-  | "Heavy Weapon"
-  | "Ordnance"
-  | "Personnel"
-  | "Pilot"
-  | "Training";
+  | 'Armament'
+  | 'Command'
+  | 'Comms'
+  | 'Counterpart'
+  | 'Crew'
+  | 'Force'
+  | 'Gear'
+  | 'Generator'
+  | 'Grenades'
+  | 'Hardpoint'
+  | 'Heavy Weapon'
+  | 'Ordnance'
+  | 'Personnel'
+  | 'Pilot'
+  | 'Training';
 
 /**
  * A set of units, types, ranks, targeted by an effect.
@@ -57,11 +53,14 @@ export interface TargetSet {
   /**
    * Force alignments. Multiple entries is treated as an OR.
    */
-  forceAlignment?: ["Light Side" | "Dark Side", ...("Light Side" | "Dark Side")[]];
+  forceAlignment?: [
+    'Light Side' | 'Dark Side',
+    ...('Light Side' | 'Dark Side')[]
+  ];
   /**
    * Unit names. Multiple entries is treated as an OR.
    */
-  units?: [UnitName, ...UnitName[]];
+  units?: [string, ...string[]];
   /**
    * Unit ranks. Multiple entries is treated as an OR.
    */
@@ -78,16 +77,17 @@ export interface TargetSet {
    * Units that have an upgrade icon. Multiple entries is treated as an OR.
    */
   hasUpgradeSlot?: [UpgradeType, ...UpgradeType[]];
+  hostile?: 'Enemy' | 'Friendly';
 }
 
 /**
  * Ranks that are part of the game. These values are not customizable for custom content.
  */
 export const enum UnitRank {
-  Commander = "Commander",
-  Operative = "Operative",
-  Corps = "Corps",
-  SpecialForces = "Special Forces",
-  Support = "Support",
-  Heavy = "Heavy"
+  Commander = 'Commander',
+  Operative = 'Operative',
+  Corps = 'Corps',
+  SpecialForces = 'Special Forces',
+  Support = 'Support',
+  Heavy = 'Heavy',
 }

@@ -113,8 +113,12 @@
       }
     },
 
+    "actions": {
+      "$ref": "./ActionKeywordSet.json"
+    },
+
     "keywords": {
-      "$ref": "./KeywordSet.json"
+      "$ref": "./PassiveKeywordSet.json"
     },
 
     "weapons": {
@@ -136,7 +140,6 @@
     "defense",
     "speed",
     "upgrades",
-    "keywords",
     "weapons"
   ]
 }

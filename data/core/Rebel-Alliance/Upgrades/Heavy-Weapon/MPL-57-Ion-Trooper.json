@@ -1,0 +1,21 @@
+{
+  "name": "MPL-57 Ion Trooper",
+  "points": 32,
+  "type": "Heavy Weapon",
+
+  "restrictions": {
+    "units": ["Rebel Troopers"]
+  },
+
+  "usage": "Exhaust",
+
+  "weapon": {
+    "name": "MPL-57 Ion Trooper",
+    "range": [1, 3],
+    "dice": { "red": 2 },
+    "keywords": {
+      "Impact": 1,
+      "Ion": 1
+    }
+  }
+}

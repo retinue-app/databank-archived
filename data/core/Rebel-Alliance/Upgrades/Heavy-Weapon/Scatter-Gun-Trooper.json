@@ -1,0 +1,15 @@
+{
+  "name": "Scatter Gun Trooper",
+  "points": 22,
+  "type": "Heavy Weapon",
+
+  "restrictions": {
+    "units": ["Fleet Troopers"]
+  },
+
+  "weapon": {
+    "name": "Scatter Gun Trooper",
+    "range": [1, 2],
+    "dice": { "red": 2 }
+  }
+}

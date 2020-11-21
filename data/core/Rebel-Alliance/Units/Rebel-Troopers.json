@@ -10,7 +10,8 @@
   "defense": {
     "color": "white",
     "wounds": 1,
-    "courage": 1
+    "courage": 1,
+    "surges": true
   },
   "speed": 2,
   "upgrades": {

@@ -1,0 +1,49 @@
+{
+  "name": "AT-ST",
+  "restrictions": {
+    "factions": ["Galactic Empire"]
+  },
+  "points": 195,
+  "rank": "Heavy",
+  "miniatures": 1,
+  "type": {
+    "primary": "Vehicle",
+    "secondary": "Ground Vehicle"
+  },
+  "defense": {
+    "color": "white",
+    "wounds": 11,
+    "surges": true,
+    "resilience": 8
+  },
+  "speed": 2,
+  "upgrades": {
+    "Pilot": 1,
+    "Hardpoint": 3,
+    "Comms": 1
+  },
+  "keywords": {
+    "Armor": null,
+    "Arsenal": 2,
+    "Weak Point": {
+      "amount": 1,
+      "sides": ["Rear"]
+    }
+  },
+  "weapons": [
+    {
+      "name": "Fence-Cutting Blades",
+      "range": ["Melee"],
+      "dice": { "red": 4 }
+    },
+    {
+      "name": "MS-4 Twin Blaster Cannon",
+      "range": [1, 4],
+      "dice": { "red": 2, "black": 2, "white": 2 },
+      "keywords": {
+        "Fixed": ["Front"],
+        "Impact": 3
+      }
+    }
+  ]
+}

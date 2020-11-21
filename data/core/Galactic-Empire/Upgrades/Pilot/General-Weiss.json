@@ -1,0 +1,32 @@
+{
+  "name": "General Weiss",
+  "points": 10,
+  "type": "Pilot",
+
+  "restrictions": {
+    "factions": ["Galactic Empire"],
+    "unitTypes": [
+      {
+        "primary": "Vehicle",
+        "secondary": "Ground Vehicle"
+      }
+    ],
+    "isUnique": true
+  },
+
+  "usage": "Exhaust",
+
+  "customActions": [
+    {
+      "name": "General Weiss",
+      "actions": 0,
+      "description": "Until the end of your activation, you gain Arsenal 2.",
+      "target": {
+        "is": "Self"
+      },
+      "grants": {
+        "Arsenal": 2
+      }
+    }
+  ]
+}
