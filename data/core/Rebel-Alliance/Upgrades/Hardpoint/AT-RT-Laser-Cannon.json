@@ -1,0 +1,19 @@
+{
+  "name": "AT-RT Laser Cannon",
+  "points": 35,
+  "type": "Hardpoint",
+
+  "restrictions": {
+    "units": ["AT-RT"]
+  },
+
+  "weapon": {
+    "name": "AT-RT Laser Cannon",
+    "dice": { "red": 1, "black": 2 },
+    "range": [2, 4],
+    "keywords": {
+      "Fixed": ["Front"],
+      "Impact": 3
+    }
+  }
+}

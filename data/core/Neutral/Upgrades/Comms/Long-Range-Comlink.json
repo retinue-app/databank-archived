@@ -1,0 +1,7 @@
+{
+  "name": "Long-Range Comlink",
+  "points": 10,
+  "type": "Comms",
+
+  "description": "During the Command Phase, you may be issued orders as though you are in range of the nominated commander."
+}

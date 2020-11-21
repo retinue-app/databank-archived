@@ -1,0 +1,7 @@
+{
+  "name": "Comms Jammer",
+  "points": 15,
+  "type": "Comms",
+
+  "description": "Enemy units at range 1 cannot be issued orders, unless they are issuing an order to themselves."
+}

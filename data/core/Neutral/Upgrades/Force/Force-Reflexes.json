@@ -1,0 +1,17 @@
+{
+  "name": "Force Reflexes",
+  "points": 15,
+  "type": "Force",
+  "usage": "Exhaust",
+
+  "actions": [
+    {
+      "name": "Force Reflexes",
+      "description": "Gain 1 dodge token.",
+      "actions": 0,
+      "target": {
+        "is": "Self"
+      }
+    }
+  ]
+}

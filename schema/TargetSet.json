@@ -30,7 +30,8 @@
       "description": "Unit names. Multiple entries is treated as an OR.",
       "type": "array",
       "items": {
-        "$ref": "./UnitName.json"
+        "type": "string",
+        "minLength": 3
       },
       "uniqueItems": true,
       "minItems": 1
@@ -69,6 +70,10 @@
       },
       "uniqueItems": true,
       "minItems": 1
+    },
+
+    "hostile": {
+      "enum": ["Enemy", "Friendly"]
     }
   },
 

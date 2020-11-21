@@ -1,0 +1,30 @@
+{
+  "name": "Force Choke",
+  "points": 5,
+  "type": "Force",
+
+  "restrictions": {
+    "forceAlignment": ["Dark Side"]
+  },
+
+  "usage": "Exhaust",
+
+  "actions": [
+    {
+      "name": "Force Choke",
+      "description": "Choose an enemy trooper mini at range 1 that is not a commander. It suffers 1 wound.",
+      "actions": 0,
+      "target": {
+        "range": [1],
+        "miniature": true,
+        "is": {
+          "unitTypes": ["Trooper"],
+          "hostile": "Enemy"
+        },
+        "not": {
+          "unitRanks": ["Commander"]
+        }
+      }
+    }
+  ]
+}

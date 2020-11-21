@@ -25,6 +25,11 @@
     {
       "fileMatch": ["data/*/Units/*.json"],
       "url": "/schema/UnitCard.json"
+    },
+
+    {
+      "fileMatch": ["data/*/Upgrades/*.json"],
+      "url": "/schema/UpgradeCard.json"
     }
   ],
   // Linting.

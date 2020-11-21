@@ -1,0 +1,14 @@
+{
+  "name": "Concussion Grenades",
+  "points": 5,
+  "type": "Grenades",
+
+  "weapon": {
+    "name": "Concussion Grenades",
+    "range": [1],
+    "dice": { "black": 1 },
+    "keywords": {
+      "Blast": null
+    }
+  }
+}
