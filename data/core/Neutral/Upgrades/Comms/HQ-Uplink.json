@@ -1,0 +1,7 @@
+{
+  "name": "HQ Uplink",
+  "points": 10,
+  "type": "Comms",
+
+  "description": "During the Issue Orders step of the Command Phase, issue an order to yourself."
+}

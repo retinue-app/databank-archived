@@ -1,0 +1,45 @@
+{
+  "name": "Scout Troopers",
+  "restrictions": {
+    "factions": ["Galactic Empire"]
+  },
+  "points": 60,
+  "rank": "Special Forces",
+  "miniatures": 4,
+  "type": "Trooper",
+  "defense": {
+    "color": "white",
+    "wounds": 1,
+    "courage": 2,
+    "surges": true
+  },
+  "speed": 2,
+  "upgrades": {
+    "Heavy Weapon": 1,
+    "Training": 1,
+    "Comms": 1,
+    "Gear": 1,
+    "Grenades": 1
+  },
+  "keywords": {
+    "Low Profile": null,
+    "Scout": 1,
+    "Sharpshooter": 1
+  },
+  "weapons": [
+    {
+      "name": "Unarmed",
+      "range": ["Melee"],
+      "dice": {
+        "black": 1
+      }
+    },
+    {
+      "name": "EC-17 Hold-out Blaster",
+      "range": [1, 2],
+      "dice": {
+        "black": 12
+      }
+    }
+  ]
+}

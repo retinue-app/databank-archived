@@ -1,0 +1,8 @@
+{
+  "name": "Overcharged  Generator",
+  "points": 10,
+  "type": "Generator",
+
+  "usage": "Exhaust",
+  "description": "While performing a ranged attack with a weapon that has Fixed, add 1 black attack dice and apply Impact 1 to your attack pool."
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Barrage Generator",
+  "points": 10,
+  "type": "Generator",
+
+  "usage": "Exhaust",
+  "description": "While performing a ranged attack with a weapon that has Fixed, add 2 white attack dice and apply Suppressive to your attack pool."
+}
