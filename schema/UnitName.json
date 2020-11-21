@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://schema.retinue.app/enums/UnitName.json",
+  "title": "UnitName",
+  "description": "Unit names.",
+
+  "enum": [
+    "74-Z Speeder Bike",
+    "AT-RT",
+    "Darth Vader",
+    "Luke Skywalker",
+    "Rebel Troopers",
+    "Stormtroopers"
+  ],
+
+  "$comment": "Used for auto-complete for the official schema only.",
+  "tsType": "string"
+}

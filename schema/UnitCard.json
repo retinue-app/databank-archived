@@ -1,0 +1,142 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://schema.retinue.app/UnitCard.json",
+  "title": "UnitCard",
+
+  "description": "Defines a unit card.",
+  "additionalProperties": false,
+
+  "definitions": {
+    "Defense": {
+      "title": "Defense",
+      "additionalProperties": false,
+
+      "properties": {
+        "color": {
+          "$ref": "./DefenseDice.json"
+        },
+        "surges": {
+          "enum": [true]
+        },
+        "wounds": {
+          "type": "number",
+          "minimum": 1
+        },
+        "courage": {
+          "type": "number",
+          "minimum": 1
+        },
+        "resilience": {
+          "type": "number",
+          "minimum": 1
+        }
+      },
+
+      "required": ["color", "wounds"]
+    },
+
+    "Offense": {
+      "title": "Offense",
+      "additionalProperties": false,
+
+      "properties": {
+        "surges": {
+          "enum": ["Hit", "Crit"]
+        }
+      },
+
+      "required": ["surges"]
+    }
+  },
+
+  "properties": {
+    "name": {
+      "description": "Name of the unit.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 40
+    },
+
+    "restrictions": {
+      "$ref": "./TargetSet.json"
+    },
+
+    "points": {
+      "type": "number",
+      "minimum": 0
+    },
+
+    "title": {
+      "description": "Optional sub-title for the unit card.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 40
+    },
+
+    "rank": {
+      "description": "Rank of the unit",
+      "$ref": "./UnitRank.json"
+    },
+
+    "miniatures": {
+      "type": "number",
+      "minimum": 1,
+      "description": "Number of miniatures in the unit."
+    },
+
+    "type": {
+      "$ref": "./UnitType.json"
+    },
+
+    "defense": {
+      "$ref": "#/definitions/Defense"
+    },
+
+    "attack": {
+      "$ref": "#/definitions/Offense"
+    },
+
+    "speed": {
+      "type": "number",
+      "enum": [0, 1, 2, 3],
+      "tsType": "number"
+    },
+
+    "upgrades": {
+      "propertyNames": {
+        "$ref": "./UpgradeType.json"
+      },
+
+      "additionalProperties": {
+        "type": "number",
+        "minimum": 1
+      }
+    },
+
+    "keywords": {
+      "$ref": "./KeywordSet.json"
+    },
+
+    "weapons": {
+      "items": {
+        "$ref": "./Weapon.json"
+      },
+      "minItems": 1,
+      "maxItems": 3
+    }
+  },
+
+  "required": [
+    "name",
+    "restrictions",
+    "points",
+    "rank",
+    "miniatures",
+    "type",
+    "defense",
+    "speed",
+    "upgrades",
+    "keywords",
+    "weapons"
+  ]
+}

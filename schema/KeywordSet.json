@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://schema.retinue.app/KeywordSet.json",
+  "title": "KeywordSet",
+
+  "description": "A set of keywords for a unit or upgrade.",
+
+  "allOf": [
+    {
+      "$ref": "./ActionKeywordSet.json"
+    },
+
+    {
+      "$ref": "./PassiveKeywordSet.json"
+    }
+  ]
+}
