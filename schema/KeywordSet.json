@@ -5,7 +5,7 @@
 
   "description": "A set of keywords for a unit or upgrade.",
 
-  "allOf": [
+  "anyOf": [
     {
       "$ref": "./ActionKeywordSet.json"
     },

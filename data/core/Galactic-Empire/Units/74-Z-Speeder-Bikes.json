@@ -12,7 +12,8 @@
   },
   "defense": {
     "color": "white",
-    "wounds": 3
+    "wounds": 3,
+    "surges": true
   },
   "attack": {
     "surges": "Hit"

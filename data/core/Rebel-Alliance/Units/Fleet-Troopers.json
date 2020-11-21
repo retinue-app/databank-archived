@@ -1,9 +1,9 @@
 {
-  "name": "Rebel Troopers",
+  "name": "Fleet Troopers",
   "restrictions": {
     "factions": ["Rebel Alliance"]
   },
-  "points": 40,
+  "points": 44,
   "rank": "Corps",
   "miniatures": 4,
   "type": "Trooper",
@@ -13,6 +13,9 @@
     "courage": 1,
     "surges": true
   },
+  "attack": {
+    "surges": "Hit"
+  },
   "speed": 2,
   "upgrades": {
     "Heavy Weapon": 1,
@@ -21,7 +24,7 @@
     "Grenades": 1
   },
   "keywords": {
-    "Nimble": null
+    "Ready": 1
   },
   "weapons": [
     {
@@ -32,10 +35,10 @@
       }
     },
     {
-      "name": "A-280 Blaster Rifle",
-      "range": [1, 3],
+      "name": "DH-17 Blaster Pistol",
+      "range": [1, 2],
       "dice": {
-        "black": 1
+        "white": 2
       }
     }
   ]

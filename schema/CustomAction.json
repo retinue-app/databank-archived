@@ -59,6 +59,10 @@
 
     "target": {
       "$ref": "#/definitions/CustomActionTarget"
+    },
+
+    "grants": {
+      "$ref": "./KeywordSet.json"
     }
   },
 
