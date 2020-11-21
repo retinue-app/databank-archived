@@ -62,7 +62,7 @@
     },
 
     "grants": {
-      "$ref": "./KeywordSet.json"
+      "$ref": "./PassiveKeywordSet.json"
     }
   },
 

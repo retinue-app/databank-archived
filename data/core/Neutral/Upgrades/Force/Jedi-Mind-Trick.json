@@ -9,7 +9,7 @@
 
   "usage": "Exhaust",
 
-  "actions": [
+  "customActions": [
     {
       "name": "Jedi Mind Trick",
       "description": "Choose an enemy trooper unit at range 1-2. It gains 2 suppression tokens.",

@@ -16,10 +16,6 @@ export type DefinePassive = null;
  */
 export type Faction = ('Galactic Empire' | 'Rebel Alliance') | string;
 /**
- * Unit names.
- */
-export type UnitName = string;
-/**
  * Unit types and sub-types
  */
 export type UnitType =
@@ -69,7 +65,6 @@ export type DefinePassiveWithEffects = [
     | 'Range 1 Weapons'
   )[]
 ];
-export type DefinePassiveWithSides = [NotchedBaseSide, ...NotchedBaseSide[]];
 /**
  * Sides of a notched base.
  */
@@ -194,7 +189,7 @@ export interface TargetSet {
   /**
    * Unit names. Multiple entries is treated as an OR.
    */
-  units?: UnitName[];
+  units?: string[];
   /**
    * Unit ranks. Multiple entries is treated as an OR.
    */
@@ -211,6 +206,7 @@ export interface TargetSet {
    * Units that have an upgrade icon. Multiple entries is treated as an OR.
    */
   hasUpgradeSlot?: UpgradeType[];
+  hostile?: 'Enemy' | 'Friendly';
 }
 export interface DefinePassiveWithExplosive {
   amount: number;
@@ -226,6 +222,10 @@ export interface DefinePassiveWithTerrain {
 export interface DefinePassiveWithTransport {
   type: 'Open' | 'Closed';
   capacity: number;
+}
+export interface DefinePassiveWithSides {
+  amount: number;
+  sides: [NotchedBaseSide, ...NotchedBaseSide[]];
 }
 
 /**

@@ -21,7 +21,7 @@ export interface ActionKeywordSet {
   Smoke?: DefineActionWithAmount;
   Spotter?: DefineActionWithAmount;
   Treat?: DefineActionWithCapacity;
-  TakeCover?: DefineActionWithAmount;
+  'Take Cover'?: DefineActionWithAmount;
   [k: string]:
     | undefined
     | DefineAction

@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "https://schema.retinue.app/enums/NotchedBaseSide.json",
+  "$id": "https://schema.retinue.app/NotchedBaseSide.json",
   "title": "NotchedBaseSide",
 
   "description": "Sides of a notched base.",

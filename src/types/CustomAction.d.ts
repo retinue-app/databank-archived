@@ -6,17 +6,13 @@
  */
 
 /**
- * A set of keywords for a unit or upgrade.
+ * Range in the game.
  */
-export type KeywordSet = ActionKeywordSet & PassiveKeywordSet;
+export type Range = ('Melee' | 'Infinite' | number)[];
 /**
  * Factions that are part of the game.
  */
 export type Faction = ('Galactic Empire' | 'Rebel Alliance') | string;
-/**
- * Unit names.
- */
-export type UnitName = string;
 /**
  * Unit types and sub-types
  */
@@ -55,84 +51,57 @@ export type UpgradeType =
 export type NotchedBaseSide = 'Front' | 'Sides' | 'Rear';
 
 /**
- * A set of keywords that provide an action.
+ * Defines a custom action.
  */
-export interface ActionKeywordSet {
-  Arm?: {
-    actions: number;
-    amount: number;
-    /**
-     * This name must be identical to a weapon on an upgrade or command card.
-     */
-    explosive: string;
-  };
-  'Calculate Odds'?: {
-    actions: number;
-  };
-  Distract?: {
-    actions: number;
-  };
-  Jump?: {
-    actions: number;
-    amount: number;
-  };
-  Observe?: {
-    actions: number;
-    amount: number;
-  };
-  'Pulling the Strings'?: {
-    actions: number;
-  };
-  'Quick Thinking'?: {
-    actions: number;
-  };
-  Repair?: {
-    actions: number;
-    amount: number;
-    capacity: number;
-  };
-  'Secret Mission'?: {
-    actions: number;
-  };
-  Smoke?: {
-    actions: number;
-    amount: number;
-  };
-  Spotter?: {
-    actions: number;
-    amount: number;
-  };
-  Treat?: {
-    actions: number;
-    amount: number;
-    capacity: number;
-  };
-  TakeCover?: {
-    actions: number;
-    amount: number;
-  };
-  [k: string]:
-    | undefined
-    | {
-        actions: number;
-      }
-    | {
-        actions: number;
-        amount: number;
-      }
-    | {
-        actions: number;
-        amount: number;
-        capacity: number;
-      }
-    | {
-        actions: number;
-        amount: number;
-        /**
-         * This name must be identical to a weapon on an upgrade or command card.
-         */
-        explosive: string;
-      };
+export interface CustomAction {
+  /**
+   * Name of the action.
+   */
+  name: string;
+  description?: string;
+  actions: number;
+  target?: CustomActionTarget;
+  grants?: PassiveKeywordSet;
+}
+export interface CustomActionTarget {
+  range?: Range;
+  is?: 'Self' | TargetSet;
+  not?: TargetSet;
+  miniature?: true;
+}
+/**
+ * A set of units, types, ranks, targeted by an effect.
+ */
+export interface TargetSet {
+  /**
+   * Factions. Multiple entries is treated as an OR.
+   */
+  factions?: Faction[];
+  /**
+   * Force alignments. Multiple entries is treated as an OR.
+   */
+  forceAlignment?: ('Light Side' | 'Dark Side')[];
+  /**
+   * Unit names. Multiple entries is treated as an OR.
+   */
+  units?: string[];
+  /**
+   * Unit ranks. Multiple entries is treated as an OR.
+   */
+  unitRanks?: UnitRank[];
+  /**
+   * Unit types. Multiple entries is treated as an OR.
+   */
+  unitTypes?: UnitType[];
+  /**
+   * This unit or effect is unique (once per list or per game).
+   */
+  isUnique?: true;
+  /**
+   * Units that have an upgrade icon. Multiple entries is treated as an OR.
+   */
+  hasUpgradeSlot?: UpgradeType[];
+  hostile?: 'Enemy' | 'Friendly';
 }
 /**
  * A set of keywords that provide a passive effect.
@@ -246,7 +215,10 @@ export interface PassiveKeywordSet {
   'Uncanny Luck'?: number;
   Unhindered?: null;
   Versatile?: null;
-  'Weak Point'?: NotchedBaseSide[];
+  'Weak Point'?: {
+    amount: number;
+    sides: NotchedBaseSide[];
+  };
   'Wheel Mode'?: null;
   [k: string]:
     | undefined
@@ -268,7 +240,10 @@ export interface PassiveKeywordSet {
          */
         explosive: string;
       }
-    | NotchedBaseSide[]
+    | {
+        amount: number;
+        sides: NotchedBaseSide[];
+      }
     | TargetSet
     | {
         type: 'Open' | 'Closed';
@@ -278,39 +253,6 @@ export interface PassiveKeywordSet {
         type: 'Air' | 'Ground';
         height: number;
       };
-}
-/**
- * A set of units, types, ranks, targeted by an effect.
- */
-export interface TargetSet {
-  /**
-   * Factions. Multiple entries is treated as an OR.
-   */
-  factions?: Faction[];
-  /**
-   * Force alignments. Multiple entries is treated as an OR.
-   */
-  forceAlignment?: ('Light Side' | 'Dark Side')[];
-  /**
-   * Unit names. Multiple entries is treated as an OR.
-   */
-  units?: UnitName[];
-  /**
-   * Unit ranks. Multiple entries is treated as an OR.
-   */
-  unitRanks?: UnitRank[];
-  /**
-   * Unit types. Multiple entries is treated as an OR.
-   */
-  unitTypes?: UnitType[];
-  /**
-   * This unit or effect is unique (once per list or per game).
-   */
-  isUnique?: true;
-  /**
-   * Units that have an upgrade icon. Multiple entries is treated as an OR.
-   */
-  hasUpgradeSlot?: UpgradeType[];
 }
 
 /**

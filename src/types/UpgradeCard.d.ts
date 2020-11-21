@@ -51,78 +51,25 @@ export type NotchedBaseSide = 'Front' | 'Sides' | 'Rear';
 export type Range = ('Melee' | 'Infinite' | number)[];
 
 /**
- * Defines a unit card.
+ * Defines an upgrade card.
  */
-export interface UnitCard {
+export interface UpgradeCard {
   /**
-   * Name of the unit.
+   * Name of the upgrade.
    */
   name: string;
-  restrictions: TargetSet;
-  points: number;
-  /**
-   * Optional sub-title for the unit card.
-   */
-  title?: string;
-  rank: UnitRank1;
-  /**
-   * Number of miniatures in the unit.
-   */
-  miniatures: number;
-  type: UnitType;
-  defense: Defense;
-  attack?: Offense;
-  speed: number;
-  upgrades: {
-    [k: string]: number;
-  };
+  description?: string;
   actions?: ActionKeywordSet;
   keywords?: PassiveKeywordSet;
-  weapons: [Weapon] | [Weapon, Weapon] | [Weapon, Weapon, Weapon];
-}
-/**
- * A set of units, types, ranks, targeted by an effect.
- */
-export interface TargetSet {
   /**
-   * Factions. Multiple entries is treated as an OR.
+   * Custom actions (i.e. not in the RRG).
    */
-  factions?: Faction[];
-  /**
-   * Force alignments. Multiple entries is treated as an OR.
-   */
-  forceAlignment?: ('Light Side' | 'Dark Side')[];
-  /**
-   * Unit names. Multiple entries is treated as an OR.
-   */
-  units?: string[];
-  /**
-   * Unit ranks. Multiple entries is treated as an OR.
-   */
-  unitRanks?: UnitRank[];
-  /**
-   * Unit types. Multiple entries is treated as an OR.
-   */
-  unitTypes?: UnitType[];
-  /**
-   * This unit or effect is unique (once per list or per game).
-   */
-  isUnique?: true;
-  /**
-   * Units that have an upgrade icon. Multiple entries is treated as an OR.
-   */
-  hasUpgradeSlot?: UpgradeType[];
-  hostile?: 'Enemy' | 'Friendly';
-}
-export interface Defense {
-  color: DefenseDice;
-  surges?: true;
-  wounds: number;
-  courage?: number;
-  resilience?: number;
-}
-export interface Offense {
-  surges: 'Hit' | 'Crit';
+  customActions?: [CustomAction, ...CustomAction[]];
+  usage?: 'Discard' | 'Exhaust';
+  type: UpgradeType;
+  restrictions?: TargetSet;
+  points: number;
+  weapon?: Weapon;
 }
 /**
  * A set of keywords that provide an action.
@@ -356,6 +303,58 @@ export interface PassiveKeywordSet {
       };
 }
 /**
+ * A set of units, types, ranks, targeted by an effect.
+ */
+export interface TargetSet {
+  /**
+   * Factions. Multiple entries is treated as an OR.
+   */
+  factions?: Faction[];
+  /**
+   * Force alignments. Multiple entries is treated as an OR.
+   */
+  forceAlignment?: ('Light Side' | 'Dark Side')[];
+  /**
+   * Unit names. Multiple entries is treated as an OR.
+   */
+  units?: string[];
+  /**
+   * Unit ranks. Multiple entries is treated as an OR.
+   */
+  unitRanks?: UnitRank[];
+  /**
+   * Unit types. Multiple entries is treated as an OR.
+   */
+  unitTypes?: UnitType[];
+  /**
+   * This unit or effect is unique (once per list or per game).
+   */
+  isUnique?: true;
+  /**
+   * Units that have an upgrade icon. Multiple entries is treated as an OR.
+   */
+  hasUpgradeSlot?: UpgradeType[];
+  hostile?: 'Enemy' | 'Friendly';
+}
+/**
+ * Defines a custom action.
+ */
+export interface CustomAction {
+  /**
+   * Name of the action.
+   */
+  name: string;
+  description?: string;
+  actions: number;
+  target?: {
+    range?: Range;
+    is?: 'Self' | TargetSet;
+    not?: TargetSet;
+    miniature?: true;
+  };
+  grants?: PassiveKeywordSet;
+}
+/**
  * Weapon definition.
  */
 export interface Weapon {
@@ -409,22 +408,4 @@ export const enum UnitRank {
   SpecialForces = 'Special Forces',
   Support = 'Support',
   Heavy = 'Heavy',
-}
-/**
- * Rank of the unit
- */
-export const enum UnitRank1 {
-  Commander = 'Commander',
-  Operative = 'Operative',
-  Corps = 'Corps',
-  SpecialForces = 'Special Forces',
-  Support = 'Support',
-  Heavy = 'Heavy',
-}
-/**
- * Defense dice in the game.
- */
-export const enum DefenseDice {
-  white = 'white',
-  red = 'red',
 }

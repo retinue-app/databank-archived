@@ -9,7 +9,7 @@
 
   "usage": "Exhaust",
 
-  "actions": [
+  "customActions": [
     {
       "name": "Force Choke",
       "description": "Choose an enemy trooper mini at range 1 that is not a commander. It suffers 1 wound.",

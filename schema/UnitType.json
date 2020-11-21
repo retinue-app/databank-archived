@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "https://schema.retinue.app/enums/UnitType.json",
+  "$id": "https://schema.retinue.app/UnitType.json",
   "title": "UnitType",
   "description": "Unit types and sub-types",
 

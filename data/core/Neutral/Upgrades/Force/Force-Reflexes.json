@@ -4,7 +4,7 @@
   "type": "Force",
   "usage": "Exhaust",
 
-  "actions": [
+  "customActions": [
     {
       "name": "Force Reflexes",
       "description": "Gain 1 dodge token.",

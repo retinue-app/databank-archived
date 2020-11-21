@@ -20,11 +20,15 @@
       "maxLength": 200
     },
 
-    "keywords": {
-      "$ref": "./KeywordSet.json"
+    "actions": {
+      "$ref": "./ActionKeywordSet.json"
     },
 
-    "actions": {
+    "keywords": {
+      "$ref": "./PassiveKeywordSet.json"
+    },
+
+    "customActions": {
       "description": "Custom actions (i.e. not in the RRG).",
       "type": "array",
       "items": {

@@ -1,9 +1,9 @@
 export { ActionKeywordSet } from './types/ActionKeywordSet';
 export { AttackDice } from './types/AttackDice';
 export { AttackPool } from './types/AttackPool';
+export { CustomAction } from './types/CustomAction';
 export { DefenseDice } from './types/DefenseDice';
 export { Faction, OfficialFaction } from './types/Faction';
-export { KeywordSet } from './types/KeywordSet';
 export { NotchedBaseSide } from './types/NotchedBaseSide';
 export { PassiveKeywordSet } from './types/PassiveKeywordSet';
 export { Range } from './types/Range';
@@ -12,6 +12,7 @@ export { Token } from './types/Token';
 export { UnitCard } from './types/UnitCard';
 export { UnitRank } from './types/UnitRank';
 export { Trooper, UnitType, Vehicle } from './types/UnitType';
+export { UpgradeCard } from './types/UpgradeCard';
 export { UpgradeType } from './types/UpgradeType';
 export { Weapon } from './types/Weapon';
 export { WeaponKeywordSet } from './types/WeaponKeywordSet';

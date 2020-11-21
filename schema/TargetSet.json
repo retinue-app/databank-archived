@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "https://schema.retinue.app/UnitCard.json",
+  "$id": "https://schema.retinue.app/TargetSet.json",
   "title": "TargetSet",
 
   "description": "A set of units, types, ranks, targeted by an effect.",

@@ -10,10 +10,6 @@
  */
 export type Faction = ('Galactic Empire' | 'Rebel Alliance') | string;
 /**
- * Unit names.
- */
-export type UnitName = string;
-/**
  * Unit types and sub-types
  */
 export type UnitType =
@@ -64,7 +60,7 @@ export interface TargetSet {
   /**
    * Unit names. Multiple entries is treated as an OR.
    */
-  units?: [UnitName, ...UnitName[]];
+  units?: [string, ...string[]];
   /**
    * Unit ranks. Multiple entries is treated as an OR.
    */
@@ -81,6 +77,7 @@ export interface TargetSet {
    * Units that have an upgrade icon. Multiple entries is treated as an OR.
    */
   hasUpgradeSlot?: [UpgradeType, ...UpgradeType[]];
+  hostile?: 'Enemy' | 'Friendly';
 }
 
 /**

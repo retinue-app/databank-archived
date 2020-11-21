@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "https://schema.retinue.app/enums/AttackDicePool.json",
+  "$id": "https://schema.retinue.app/AttackPool.json",
   "title": "AttackPool",
 
   "description": "A pool of attack dice.",

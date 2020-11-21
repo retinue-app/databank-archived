@@ -16,7 +16,7 @@
 
   "usage": "Exhaust",
 
-  "actions": [
+  "customActions": [
     {
       "name": "General Weiss",
       "actions": 0,
