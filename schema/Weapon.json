@@ -24,6 +24,10 @@
     "keywords": {
       "$ref": "./WeaponKeywordSet.json",
       "minProperties": 1
+    },
+
+    "explosive": {
+      "enum": ["Hit", "Crit"]
     }
   },
 

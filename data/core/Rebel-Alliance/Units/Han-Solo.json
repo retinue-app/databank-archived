@@ -1,0 +1,44 @@
+{
+  "name": "Han Solo",
+  "title": "Unorthodox General",
+  "restrictions": {
+    "factions": ["Rebel Alliance"]
+  },
+  "points": 120,
+  "rank": "Commander",
+  "miniatures": 1,
+  "type": "Trooper",
+  "defense": {
+    "color": "white",
+    "wounds": 6,
+    "surges": true,
+    "courage": 2
+  },
+  "speed": 2,
+  "upgrades": {
+    "Command": 1,
+    "Training": 1,
+    "Gear": 1
+  },
+  "keywords": {
+    "Low Profile": null,
+    "Gunslinger": null,
+    "Sharpshooter": 1,
+    "Uncanny Luck": 3
+  },
+  "weapons": [
+    {
+      "name": "Brawl",
+      "range": ["Melee"],
+      "dice": { "white": 3 }
+    },
+    {
+      "name": "Han's DL-44 Blaster Pistol",
+      "range": [1, 2],
+      "dice": { "red": 2 },
+      "keywords": {
+        "Pierce": 2
+      }
+    }
+  ]
+}

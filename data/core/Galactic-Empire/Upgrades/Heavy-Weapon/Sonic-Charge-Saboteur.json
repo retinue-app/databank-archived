@@ -1,0 +1,37 @@
+{
+  "name": "Sonic Charge Saboteur",
+  "points": 26,
+  "type": "Heavy Weapon",
+
+  "restrictions": {
+    "units": ["Scout Troopers"]
+  },
+
+  "usage": "Detonate",
+
+  "actions": {
+    "Arm": {
+      "actions": 1,
+      "amount": 1,
+      "explosive": "Sonic Charge"
+    }
+  },
+
+  "keywords": {
+    "Detonate": {
+      "amount": 1,
+      "explosive": "Sonic Charge"
+    }
+  },
+
+  "weapon": {
+    "name": "Sonic Charge",
+    "range": [1],
+    "dice": { "red": 1, "black": 1 },
+    "explosive": "Crit",
+    "keywords": {
+      "Blast": null,
+      "Suppressive": null
+    }
+  }
+}

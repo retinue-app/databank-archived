@@ -1,0 +1,19 @@
+{
+  "name": "DH-447 Sniper",
+  "points": 28,
+  "type": "Heavy Weapon",
+
+  "restrictions": {
+    "units": ["Rebel Commandos"]
+  },
+
+  "weapon": {
+    "name": "DH-447 Sniper",
+    "range": [1, "Infinite"],
+    "dice": { "black": 1, "white": 1 },
+    "keywords": {
+      "High Velocity": null,
+      "Pierce": 1
+    }
+  }
+}

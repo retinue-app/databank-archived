@@ -38,7 +38,7 @@
       "name": "EC-17 Hold-out Blaster",
       "range": [1, 2],
       "dice": {
-        "black": 12
+        "black": 2
       }
     }
   ]
