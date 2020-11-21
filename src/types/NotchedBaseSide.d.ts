@@ -6,10 +6,6 @@
  */
 
 /**
- * Attack dice in the game.
+ * Sides of a notched base.
  */
-export const enum AttackDice {
-  white = "white",
-  black = "black",
-  red = "red"
-}
+export type NotchedBaseSide = "Front" | "Sides" | "Rear";

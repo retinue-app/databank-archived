@@ -6,10 +6,10 @@
  */
 
 /**
- * Attack dice in the game.
+ * Defines the sides of a notched unit.
  */
-export const enum AttackDice {
-  white = "white",
-  black = "black",
-  red = "red"
+export const enum UnitSide {
+  Front = "Front",
+  Sides = "Sides",
+  Rear = "Rear"
 }

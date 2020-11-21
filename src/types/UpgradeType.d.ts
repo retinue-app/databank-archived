@@ -8,8 +8,7 @@
 /**
  * Upgrade categories in the game.
  */
-export type UpgradeType = OfficialUpgradeType | string;
-export type OfficialUpgradeType =
+export type UpgradeType =
   | "Armament"
   | "Command"
   | "Comms"

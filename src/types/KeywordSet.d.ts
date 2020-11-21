@@ -6,6 +6,10 @@
  */
 
 /**
+ * A set of keywords for a unit or upgrade.
+ */
+export type KeywordSet = ActionKeywordSet & PassiveKeywordSet;
+/**
  * Factions that are part of the game.
  */
 export type Faction = ("Galactic Empire" | "Rebel Alliance") | string;
@@ -46,90 +50,10 @@ export type UpgradeType =
   | "Pilot"
   | "Training";
 /**
- * A set of keywords for a unit or upgrade.
- */
-export type KeywordSet = ActionKeywordSet & PassiveKeywordSet;
-/**
  * Sides of a notched base.
  */
 export type NotchedBaseSide = "Front" | "Sides" | "Rear";
-/**
- * Range in the game.
- */
-export type Range = ("Melee" | "Infinite" | number)[];
 
-/**
- * Defines a unit card.
- */
-export interface UnitCard {
-  /**
-   * Name of the unit.
-   */
-  name: string;
-  restrictions: TargetSet;
-  points: number;
-  /**
-   * Optional sub-title for the unit card.
-   */
-  title?: string;
-  rank: UnitRank1;
-  /**
-   * Number of miniatures in the unit.
-   */
-  miniatures: number;
-  type: UnitType;
-  defense: Defense;
-  attack?: Offense;
-  speed: number;
-  upgrades: {
-    [k: string]: number;
-  };
-  keywords: KeywordSet;
-  weapons: [Weapon] | [Weapon, Weapon] | [Weapon, Weapon, Weapon];
-}
-/**
- * A set of units, types, ranks, targeted by an effect.
- */
-export interface TargetSet {
-  /**
-   * Factions. Multiple entries is treated as an OR.
-   */
-  factions?: Faction[];
-  /**
-   * Force alignments. Multiple entries is treated as an OR.
-   */
-  forceAlignment?: ("Light Side" | "Dark Side")[];
-  /**
-   * Unit names. Multiple entries is treated as an OR.
-   */
-  units?: UnitName[];
-  /**
-   * Unit ranks. Multiple entries is treated as an OR.
-   */
-  unitRanks?: UnitRank[];
-  /**
-   * Unit types. Multiple entries is treated as an OR.
-   */
-  unitTypes?: UnitType[];
-  /**
-   * This unit or effect is unique (once per list or per game).
-   */
-  isUnique?: true;
-  /**
-   * Units that have an upgrade icon. Multiple entries is treated as an OR.
-   */
-  hasUpgradeSlot?: UpgradeType[];
-}
-export interface Defense {
-  color: DefenseDice;
-  surges?: true;
-  wounds: number;
-  courage?: number;
-  resilience?: number;
-}
-export interface Offense {
-  surges: "Hit" | "Crit";
-}
 /**
  * A set of keywords that provide an action.
  */
@@ -342,47 +266,37 @@ export interface PassiveKeywordSet {
       };
 }
 /**
- * Weapon definition.
+ * A set of units, types, ranks, targeted by an effect.
  */
-export interface Weapon {
-  name: string;
-  range: Range;
-  dice: AttackPool;
-  keywords?: WeaponKeywordSet;
-}
-/**
- * A pool of attack dice.
- */
-export interface AttackPool {
-  white?: number;
-  black?: number;
-  red?: number;
-}
-/**
- * A set of weapon keywords (i.e. on a weapon).
- */
-export interface WeaponKeywordSet {
-  Beam?: number;
-  Blast?: null;
-  Critical?: number;
-  Cumbersome?: null;
-  Fixed?: NotchedBaseSide[];
-  "High Velocity"?: null;
-  Immobilize?: number;
-  Immune?: "Deflect"[];
-  Impact?: number;
-  Ion?: number;
-  Lethal?: number;
-  "Long Shot"?: number;
-  Pierce?: number;
-  Poison?: number;
-  Ram?: number;
-  Scatter?: null;
-  Spray?: null;
-  Suppressive?: null;
-  "Tow Cable"?: null;
-  Versatile?: null;
-  [k: string]: null | undefined | string[] | number | string;
+export interface TargetSet {
+  /**
+   * Factions. Multiple entries is treated as an OR.
+   */
+  factions?: Faction[];
+  /**
+   * Force alignments. Multiple entries is treated as an OR.
+   */
+  forceAlignment?: ("Light Side" | "Dark Side")[];
+  /**
+   * Unit names. Multiple entries is treated as an OR.
+   */
+  units?: UnitName[];
+  /**
+   * Unit ranks. Multiple entries is treated as an OR.
+   */
+  unitRanks?: UnitRank[];
+  /**
+   * Unit types. Multiple entries is treated as an OR.
+   */
+  unitTypes?: UnitType[];
+  /**
+   * This unit or effect is unique (once per list or per game).
+   */
+  isUnique?: true;
+  /**
+   * Units that have an upgrade icon. Multiple entries is treated as an OR.
+   */
+  hasUpgradeSlot?: UpgradeType[];
 }
 
 /**
@@ -395,22 +309,4 @@ export const enum UnitRank {
   SpecialForces = "Special Forces",
   Support = "Support",
   Heavy = "Heavy"
-}
-/**
- * Rank of the unit
- */
-export const enum UnitRank1 {
-  Commander = "Commander",
-  Operative = "Operative",
-  Corps = "Corps",
-  SpecialForces = "Special Forces",
-  Support = "Support",
-  Heavy = "Heavy"
-}
-/**
- * Defense dice in the game.
- */
-export const enum DefenseDice {
-  white = "white",
-  red = "red"
 }

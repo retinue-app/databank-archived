@@ -6,10 +6,8 @@
  */
 
 /**
- * Attack dice in the game.
+ * Tokens that are part of the game.
  */
-export const enum AttackDice {
-  white = "white",
-  black = "black",
-  red = "red"
+export interface Token {
+  [k: string]: unknown;
 }

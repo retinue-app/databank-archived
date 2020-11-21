@@ -6,10 +6,6 @@
  */
 
 /**
- * Attack dice in the game.
+ * Unit names.
  */
-export const enum AttackDice {
-  white = "white",
-  black = "black",
-  red = "red"
-}
+export type UnitName = string;

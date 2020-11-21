@@ -113,7 +113,8 @@
 
   "additionalProperties": {
     "anyOf": [
-      { "type": "null" },
+      { "type": "null", "tsType": "null | undefined" },
+      { "type": "array", "items": { "type": "string" } },
       { "type": "number", "minimum": 1 },
       { "type": "string", "minLength": 1 }
     ]

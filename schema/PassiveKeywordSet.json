@@ -8,13 +8,80 @@
       "type": "null"
     },
 
+    "DefinePassiveWithActions": {
+      "type": "array",
+      "items": {
+        "enum": ["Attack", "Dodge", "Move"]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+
     "DefinePassiveWithAmount": {
       "type": "number",
       "minimum": 1
     },
 
+    "DefinePassiveWithEffects": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "Blast",
+          "Deflect",
+          "Melee",
+          "Pierce",
+          "Pierce (Melee)",
+          "Range 1 Weapons"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+
+    "DefinePassiveWithExplosive": {
+      "properties": {
+        "amount": {
+          "type": "number",
+          "minimum": 1
+        },
+
+        "explosive": {
+          "type": "string",
+          "description": "This name must be identical to a weapon on an upgrade or command card."
+        }
+      },
+
+      "additionalProperties": false,
+      "required": ["amount", "explosive"]
+    },
+
+    "DefinePassiveWithSides": {
+      "type": "array",
+      "items": {
+        "$ref": "./NotchedBaseSide.json"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+
     "DefinePassiveWithTarget": {
       "$ref": "./TargetSet.json"
+    },
+
+    "DefinePassiveWithTerrain": {
+      "properties": {
+        "type": {
+          "enum": ["Air", "Ground"]
+        },
+
+        "height": {
+          "type": "number",
+          "minimum": 1
+        }
+      },
+
+      "additionalProperties": false,
+      "required": ["type", "height"]
     },
 
     "DefinePassiveWithTransport": {
@@ -36,12 +103,7 @@
 
   "properties": {
     "AI": {
-      "type": "array",
-      "items": {
-        "enum": ["Attack", "Dodge", "Move"]
-      },
-      "minItems": 1,
-      "uniqueItems": true
+      "$ref": "#/definitions/DefinePassiveWithActions"
     },
 
     "Agile": {
@@ -128,18 +190,7 @@
     },
 
     "Detonate": {
-      "properties": {
-        "amount": {
-          "type": "number",
-          "minimum": 1
-        },
-
-        "explosive": {
-          "type": "string",
-          "description": "This name must be identical to a weapon on an upgrade or command card."
-        }
-      },
-      "required": ["amount", "explosive"]
+      "$ref": "#/definitions/DefinePassiveWithExplosive"
     },
 
     "Disciplined": {
@@ -215,35 +266,11 @@
     },
 
     "Hover": {
-      "properties": {
-        "type": {
-          "enum": ["Air", "Ground"]
-        },
-
-        "height": {
-          "type": "number",
-          "minimum": 1
-        }
-      },
-
-      "additionalProperties": false,
-      "required": ["type", "height"]
+      "$ref": "#/definitions/DefinePassiveWithTerrain"
     },
 
     "Immune": {
-      "type": "array",
-      "items": {
-        "enum": [
-          "Blast",
-          "Deflect",
-          "Melee",
-          "Pierce",
-          "Pierce (Melee)",
-          "Range 1 Weapons"
-        ]
-      },
-      "minItems": 1,
-      "uniqueItems": true
+      "$ref": "#/definitions/DefinePassiveWithEffects"
     },
 
     "Impervious": {
@@ -423,12 +450,7 @@
     },
 
     "Weak Point": {
-      "type": "array",
-      "items": {
-        "$ref": "./NotchedBaseSide.json"
-      },
-      "minItems": 1,
-      "uniqueItems": true
+      "$ref": "#/definitions/DefinePassiveWithSides"
     },
 
     "Wheel Mode": {
@@ -440,9 +462,16 @@
 
   "additionalProperties": {
     "anyOf": [
+      { "type": "null", "tsType": "undefined " },
       { "$ref": "#/definitions/DefinePassive" },
+      { "$ref": "#/definitions/DefinePassiveWithActions" },
       { "$ref": "#/definitions/DefinePassiveWithAmount" },
-      { "$ref": "#/definitions/DefinePassiveWithTarget" }
+      { "$ref": "#/definitions/DefinePassiveWithEffects" },
+      { "$ref": "#/definitions/DefinePassiveWithExplosive" },
+      { "$ref": "#/definitions/DefinePassiveWithSides" },
+      { "$ref": "#/definitions/DefinePassiveWithTarget" },
+      { "$ref": "#/definitions/DefinePassiveWithTransport" },
+      { "$ref": "#/definitions/DefinePassiveWithTerrain" }
     ]
   }
 }

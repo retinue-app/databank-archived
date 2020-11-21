@@ -14,13 +14,13 @@ export type UnitType = "Trooper" | Trooper | Vehicle;
  * A trooper subtype.
  */
 export interface Trooper {
-  name: "Trooper";
-  type: string;
+  primary: "Trooper";
+  secondary: string;
 }
 /**
  * A vehicle subtype.
  */
 export interface Vehicle {
-  name: "Vehicle";
-  type: string;
+  primary: "Vehicle";
+  secondary: string;
 }

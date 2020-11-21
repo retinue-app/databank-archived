@@ -15,6 +15,7 @@
         }
       },
 
+      "additionalProperties": false,
       "required": ["actions"]
     },
 
@@ -32,6 +33,7 @@
         }
       },
 
+      "additionalProperties": false,
       "required": ["actions", "amount"]
     },
 
@@ -54,12 +56,11 @@
         }
       },
 
+      "additionalProperties": false,
       "required": ["actions", "amount", "capacity"]
-    }
-  },
+    },
 
-  "properties": {
-    "Arm": {
+    "DefineActionWithExplosive": {
       "$comment": "Arm is fairly unique for a keyword.",
       "properties": {
         "actions": {
@@ -79,7 +80,14 @@
         }
       },
 
+      "additionalProperties": false,
       "required": ["actions", "amount", "explosive"]
+    }
+  },
+
+  "properties": {
+    "Arm": {
+      "$ref": "#/definitions/DefineActionWithExplosive"
     },
 
     "Calculate Odds": {
@@ -115,11 +123,11 @@
     },
 
     "Smoke": {
-      "$ref": "#definitions/DefineActionWithAmount"
+      "$ref": "#/definitions/DefineActionWithAmount"
     },
 
     "Spotter": {
-      "$ref": "#definitions/DefineActionWithAmount"
+      "$ref": "#/definitions/DefineActionWithAmount"
     },
 
     "Treat": {
@@ -127,7 +135,7 @@
     },
 
     "TakeCover": {
-      "$ref": "#definitions/DefineActionWithAmount"
+      "$ref": "#/definitions/DefineActionWithAmount"
     }
   },
 
@@ -135,9 +143,11 @@
 
   "additionalProperties": {
     "anyOf": [
+      { "type": "null", "tsType": "undefined" },
       { "$ref": "#/definitions/DefineAction" },
       { "$ref": "#/definitions/DefineActionWithAmount" },
-      { "$ref": "#/definitions/DefineActionWithCapacity" }
+      { "$ref": "#/definitions/DefineActionWithCapacity" },
+      { "$ref": "#/definitions/DefineActionWithExplosive" }
     ]
   }
 }

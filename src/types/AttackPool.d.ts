@@ -9,7 +9,7 @@
  * A pool of attack dice.
  */
 export interface AttackPool {
-  White?: number;
-  Black?: number;
-  Red?: number;
+  white?: number;
+  black?: number;
+  red?: number;
 }
