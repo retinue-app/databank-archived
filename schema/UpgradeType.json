@@ -4,32 +4,21 @@
   "title": "UpgradeType",
   "description": "Upgrade categories in the game.",
 
-  "definitions": {
-    "OfficialUpgradeType": {
-      "enum": [
-        "Armament",
-        "Command",
-        "Comms",
-        "Counterpart",
-        "Crew",
-        "Force",
-        "Gear",
-        "Generator",
-        "Grenades",
-        "Hardpoint",
-        "Heavy Weapon",
-        "Ordnance",
-        "Personnel",
-        "Pilot",
-        "Training"
-      ]
-    }
-  },
-
-  "anyOf": [
-    { "$ref": "#/definitions/OfficialUpgradeType" },
-    { "type": "string" }
-  ],
-
-  "default": { "$ref": "#/definitions/OfficialUpgradeType" }
+  "enum": [
+    "Armament",
+    "Command",
+    "Comms",
+    "Counterpart",
+    "Crew",
+    "Force",
+    "Gear",
+    "Generator",
+    "Grenades",
+    "Hardpoint",
+    "Heavy Weapon",
+    "Ordnance",
+    "Personnel",
+    "Pilot",
+    "Training"
+  ]
 }

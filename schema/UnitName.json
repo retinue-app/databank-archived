@@ -4,27 +4,14 @@
   "title": "UnitName",
   "description": "Unit names.",
 
-  "definitions": {
-    "OfficialUnitName": {
-      "enum": [
-        "74-Z Speeder Bike",
-        "AT-RT",
-        "Darth Vader",
-        "Luke Skywalker",
-        "Rebel Troopers",
-        "Stormtroopers"
-      ]
-    }
-  },
-
-  "anyOf": [
-    { "$ref": "#/definitions/OfficialUnitName" },
-    { "type": "string", "minLength": 1 }
+  "enum": [
+    "74-Z Speeder Bike",
+    "AT-RT",
+    "Darth Vader",
+    "Luke Skywalker",
+    "Rebel Troopers",
+    "Stormtroopers"
   ],
-
-  "default": {
-    "$ref": "#/definitions/OfficialUnitName"
-  },
 
   "$comment": "Used for auto-complete for the official schema only.",
   "tsType": "string"
