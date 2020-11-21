@@ -5,13 +5,13 @@
 
   "description": "A set of keywords for a unit or upgrade.",
 
-  "properties": {
-    "actions": {
+  "allOf": [
+    {
       "$ref": "./ActionKeywordSet.json"
+    },
+
+    {
+      "$ref": "./PassiveKeywordSet.json"
     }
-  },
-
-  "minProperties": 1,
-
-  "additionalProperties": false
+  ]
 }

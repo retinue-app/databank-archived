@@ -29,5 +29,7 @@
   "anyOf": [
     { "$ref": "#/definitions/OfficialUpgradeType" },
     { "type": "string" }
-  ]
+  ],
+
+  "default": { "$ref": "#/definitions/OfficialUpgradeType" }
 }

@@ -6,15 +6,15 @@
   "description": "A pool of attack dice.",
 
   "properties": {
-    "White": {
+    "white": {
       "type": "number",
       "minimum": 1
     },
-    "Black": {
+    "black": {
       "type": "number",
       "minimum": 1
     },
-    "Red": {
+    "red": {
       "type": "number",
       "minimum": 1
     }

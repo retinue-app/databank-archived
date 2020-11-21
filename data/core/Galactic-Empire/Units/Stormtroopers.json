@@ -8,7 +8,7 @@
   "miniatures": 4,
   "type": "Trooper",
   "defense": {
-    "color": "Red",
+    "color": "red",
     "wounds": 1,
     "courage": 1
   },
@@ -22,19 +22,22 @@
     "Gear": 1,
     "Grenades": 1
   },
+  "keywords": {
+    "Precise": 1
+  },
   "weapons": [
     {
       "name": "Unarmed",
       "range": ["Melee"],
       "dice": {
-        "Black": 1
+        "black": 1
       }
     },
     {
       "name": "E-11 Blaster Rifle",
       "range": [1, 3],
       "dice": {
-        "White": 1
+        "white": 1
       }
     }
   ]

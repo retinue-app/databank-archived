@@ -23,7 +23,7 @@
     "Fixed": {
       "type": "array",
       "items": {
-        "enum": ["Front", "Sides", "Rear"]
+        "$ref": "./NotchedBaseSide.json"
       },
       "minItems": 1,
       "uniqueItems": true

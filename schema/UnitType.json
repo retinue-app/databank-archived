@@ -9,10 +9,10 @@
       "additionalProperties": false,
       "description": "A trooper subtype.",
       "properties": {
-        "name": {
+        "primary": {
           "enum": ["Trooper"]
         },
-        "type": {
+        "secondary": {
           "$comment": "To support custom trooper sub-types.",
           "tsType": "string",
           "enum": [
@@ -24,23 +24,23 @@
           ]
         }
       },
-      "required": ["name", "type"]
+      "required": ["primary", "secondary"]
     },
 
     "Vehicle": {
       "additionalProperties": false,
       "description": "A vehicle subtype.",
       "properties": {
-        "name": {
+        "primary": {
           "enum": ["Vehicle"]
         },
-        "type": {
+        "secondary": {
           "$comment": "To support custom vehicle sub-types.",
           "tsType": "string",
           "enum": ["Ground Vehicle", "Repulsor Vehicle"]
         }
       },
-      "required": ["name", "type"]
+      "required": ["primary", "secondary"]
     }
   },
 

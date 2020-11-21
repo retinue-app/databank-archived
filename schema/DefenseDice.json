@@ -5,8 +5,8 @@
 
   "description": "Defense dice in the game.",
 
-  "enum": ["White", "Red"],
+  "enum": ["white", "red"],
 
   "$comment": "To generate as TypeScript enum.",
-  "tsEnumNames": ["White", "Red"]
+  "tsEnumNames": ["white", "red"]
 }

@@ -18,9 +18,13 @@
   },
 
   "anyOf": [
-    { "type": "string", "minLength": 1 },
-    { "$ref": "#/definitions/OfficialUnitName" }
+    { "$ref": "#/definitions/OfficialUnitName" },
+    { "type": "string", "minLength": 1 }
   ],
+
+  "default": {
+    "$ref": "#/definitions/OfficialUnitName"
+  },
 
   "$comment": "Used for auto-complete for the official schema only.",
   "tsType": "string"

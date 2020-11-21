@@ -136,6 +136,7 @@
     "defense",
     "speed",
     "upgrades",
+    "keywords",
     "weapons"
   ]
 }

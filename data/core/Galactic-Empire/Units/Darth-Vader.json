@@ -1,0 +1,37 @@
+{
+  "name": "Darth Vader",
+  "restrictions": {
+    "factions": ["Galactic Empire"]
+  },
+  "points": 200,
+  "rank": "Commander",
+  "miniatures": 1,
+  "type": "Trooper",
+  "defense": {
+    "color": "red",
+    "wounds": 8
+  },
+  "speed": 1,
+  "upgrades": {
+    "Force": 3
+  },
+  "keywords": {
+    "Deflect": null,
+    "Immune": ["Pierce"],
+    "Master of the Force": 1,
+    "Relentless": null
+  },
+  "weapons": [
+    {
+      "name": "Vader's Lightsaber",
+      "range": ["Melee"],
+      "dice": {
+        "red": 6
+      },
+      "keywords": {
+        "Impact": 3,
+        "Pierce": 3
+      }
+    }
+  ]
+}
