@@ -30,6 +30,10 @@
 
         "miniature": {
           "enum": [true]
+        },
+
+        "inLineOfSight": {
+          "enum": [true]
         }
       },
 
@@ -62,11 +66,23 @@
 
         "duration": {
           "$ref": "./Duration.json"
+        },
+
+        "tokens": {
+          "type": "object",
+          "minProperties": 1,
+          "propertyNames": {
+            "$ref": "./Token.json"
+          },
+          "additionalProperties": {
+            "type": "number",
+            "minimum": 1
+          }
         }
       },
 
       "additionalProperties": false,
-      "required": ["keywords", "duration"]
+      "minProperties": 1
     }
   },
 

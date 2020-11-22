@@ -3,6 +3,10 @@
   "points": 6,
   "type": "Armament",
 
+  "restrictions": {
+    "units": ["Rebel Pathfinders"]
+  },
+
   "keywords": {
     "passiveForUpgrade": {
       "Reconfigure": "A-300 Short Range Config"
