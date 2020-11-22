@@ -3,9 +3,14 @@
   "$id": "https://schema.retinue.app/PassiveKeywordSet.json",
   "title": "PassiveKeywordSet",
   "description": "A set of keywords that provide a passive effect.",
+
   "definitions": {
     "DefinePassive": {
       "type": "null"
+    },
+
+    "DefinePassiveWithAttack": {
+      "enum": ["Melee", "Ranged"]
     },
 
     "DefinePassiveWithActions": {
@@ -112,10 +117,22 @@
 
       "additionalProperties": false,
       "required": ["type", "capacity"]
+    },
+
+    "DefinePassiveWithUpgrade": {
+      "$ref": "./UpgradeType.json"
     }
   },
 
   "properties": {
+    "$Add and Equip Upgrade": {
+      "$ref": "#/definitions/DefinePassiveWithUpgrade"
+    },
+
+    "$Increase Courage": {
+      "$ref": "#/definitions/DefinePassiveWithAmount"
+    },
+
     "AI": {
       "$ref": "#/definitions/DefinePassiveWithActions"
     },
@@ -411,6 +428,10 @@
       "$ref": "#/definitions/DefinePassiveWithAmount"
     },
 
+    "Sidearm": {
+      "$ref": "#/definitions/DefinePassiveWithAttack"
+    },
+
     "Soresu Mastery": {
       "$ref": "#/definitions/DefinePassive"
     },
@@ -480,12 +501,14 @@
       { "$ref": "#/definitions/DefinePassive" },
       { "$ref": "#/definitions/DefinePassiveWithActions" },
       { "$ref": "#/definitions/DefinePassiveWithAmount" },
+      { "$ref": "#/definitions/DefinePassiveWithAttack" },
       { "$ref": "#/definitions/DefinePassiveWithEffects" },
       { "$ref": "#/definitions/DefinePassiveWithExplosive" },
       { "$ref": "#/definitions/DefinePassiveWithSides" },
       { "$ref": "#/definitions/DefinePassiveWithTarget" },
       { "$ref": "#/definitions/DefinePassiveWithTransport" },
-      { "$ref": "#/definitions/DefinePassiveWithTerrain" }
+      { "$ref": "#/definitions/DefinePassiveWithTerrain" },
+      { "$ref": "#/definitions/DefinePassiveWithUpgrade" }
     ]
   }
 }

@@ -8,7 +8,7 @@
   "miniatures": 1,
   "type": "Trooper",
   "defense": {
-    "color": "red",
+    "color": "Red",
     "wounds": 5,
     "courage": 3,
     "surges": true

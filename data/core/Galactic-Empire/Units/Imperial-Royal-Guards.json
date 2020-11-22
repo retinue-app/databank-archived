@@ -1,36 +1,35 @@
 {
-  "name": "Scout Troopers",
+  "name": "Imperial Royal Guards",
   "restrictions": {
     "factions": ["Galactic Empire"]
   },
-  "points": 60,
+  "points": 75,
   "rank": "Special Forces",
-  "miniatures": 4,
+  "miniatures": 3,
   "type": "Trooper",
   "defense": {
-    "color": "White",
-    "wounds": 1,
-    "courage": 2,
-    "surges": true
+    "color": "Red",
+    "wounds": 2,
+    "courage": 2
   },
   "speed": 2,
   "upgrades": {
     "Heavy Weapon": 1,
-    "Training": 1,
-    "Comms": 1,
+    "Training": 2,
     "Gear": 1,
     "Grenades": 1
   },
   "keywords": {
-    "Low Profile": null,
-    "Scout": 1,
-    "Sharpshooter": 1
+    "Charge": null,
+    "Disciplined": 2,
+    "Guardian": 2
   },
   "weapons": [
     {
-      "name": "Unarmed",
+      "name": "Force Pike",
       "range": ["Melee"],
       "dice": {
+        "red": 1,
         "black": 1
       }
     },

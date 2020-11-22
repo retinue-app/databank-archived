@@ -9,7 +9,7 @@
   "miniatures": 1,
   "type": "Trooper",
   "defense": {
-    "color": "white",
+    "color": "White",
     "wounds": 6,
     "surges": true,
     "courage": 2
@@ -19,11 +19,13 @@
     "Command": 2,
     "Gear": 1
   },
-  "keywords": {
+  "actions": {
     "Take Cover": {
       "actions": 1,
       "amount": 2
-    },
+    }
+  },
+  "keywords": {
     "Inspire": 2,
     "Nimble": null,
     "Sharpshooter": 2

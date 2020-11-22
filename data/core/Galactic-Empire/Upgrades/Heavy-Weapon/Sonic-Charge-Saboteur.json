@@ -28,7 +28,7 @@
     "name": "Sonic Charge",
     "range": [1],
     "dice": { "red": 1, "black": 1 },
-    "explosive": "Crit",
+    "surge": "Crit",
     "keywords": {
       "Blast": null,
       "Suppressive": null

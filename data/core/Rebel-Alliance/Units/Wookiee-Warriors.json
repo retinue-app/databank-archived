@@ -1,0 +1,43 @@
+{
+  "name": "Wookiee Warriors",
+  "restrictions": {
+    "factions": ["Rebel Alliance"]
+  },
+  "points": 75,
+  "rank": "Special Forces",
+  "miniatures": 3,
+  "type": "Trooper",
+  "defense": {
+    "color": "White",
+    "wounds": 3,
+    "courage": 2
+  },
+  "attack": {
+    "surges": "Hit"
+  },
+  "speed": 2,
+  "upgrades": {
+    "Heavy Weapon": 1,
+    "Training": 2,
+    "Gear": 1,
+    "Grenades": 1
+  },
+  "keywords": {
+    "Charge": null,
+    "Expert Climber": null,
+    "Indomitable": null,
+    "Unhindered": null
+  },
+  "weapons": [
+    {
+      "name": "Ryyk Blade",
+      "range": ["Melee"],
+      "dice": { "black": 2 }
+    },
+    {
+      "name": "Kashyyyk Pistol",
+      "range": [1, 2],
+      "dice": { "black": 1, "white": 1 }
+    }
+  ]
+}

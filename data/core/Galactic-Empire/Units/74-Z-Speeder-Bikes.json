@@ -11,7 +11,7 @@
     "secondary": "Repulsor Vehicle"
   },
   "defense": {
-    "color": "white",
+    "color": "White",
     "wounds": 3,
     "surges": true
   },

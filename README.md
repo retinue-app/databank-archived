@@ -12,9 +12,9 @@ Community data for Star Wars: Legion
 
 - [x] Add rest of Legion Core Set (SWL-01 -> SWL-07).
 - [x] Add "wave 1" (SWL-08 -> SWL-13).
-
-- [ ] Add "wave 2" (SWL-14 -> SWL-21).
+- [x] Add "wave 2" (SWL-14 -> SWL-21).
 - [ ] Add "wave 3" (SWL-22 -> SWL-27).
+
 - [ ] Add "wave 4" (SWL-31 -> SWL-36).
 - [ ] Add "wave 5" (SWL-37 -> SWL-42).
 - [ ] Add "wave 6" (SWL-44 -> SWL-57).

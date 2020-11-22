@@ -11,7 +11,7 @@
     "secondary": "Emplacement Trooper"
   },
   "defense": {
-    "color": "red",
+    "color": "Red",
     "wounds": 4,
     "courage": 2
   },

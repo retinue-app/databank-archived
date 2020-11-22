@@ -11,7 +11,7 @@
     "secondary": "Ground Vehicle"
   },
   "defense": {
-    "color": "white",
+    "color": "White",
     "wounds": 11,
     "surges": true,
     "resilience": 8
