@@ -1,0 +1,18 @@
+{
+  "name": "T-Series Tactical Droid Pilot",
+  "points": 5,
+  "type": "Pilot",
+
+  "restrictions": {
+    "units": ["AAT Trade Federation Battle Tank"]
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "$Lose Keyword": {
+        "AI": ["Attack"]
+      },
+      "Field Commander": null
+    }
+  }
+}

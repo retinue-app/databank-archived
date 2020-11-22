@@ -74,6 +74,10 @@
           "$ref": "./Duration.json"
         },
 
+        "weapons": {
+          "$ref": "./WeaponKeywordSet.json"
+        },
+
         "tokens": {
           "type": "object",
           "minProperties": 1,
