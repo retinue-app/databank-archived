@@ -1,0 +1,15 @@
+{
+  "name": "RT-97C Rifle Pintle",
+  "points": 14,
+  "type": "Hardpoint",
+
+  "restrictions": {
+    "units": ["TX-225 GAVw Occupier Combat Assault Tank"]
+  },
+
+  "weapon": {
+    "name": "RT-97C Rifle Pintle",
+    "range": [1, 4],
+    "dice": { "red": 1, "white": 3 }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "Director Orson Krennic",
+  "title": "Architect Of Terror",
+  "restrictions": {
+    "factions": ["Galactic Empire"]
+  },
+  "points": 90,
+  "rank": "Commander",
+  "miniatures": 1,
+  "type": "Trooper",
+  "defense": {
+    "color": "White",
+    "wounds": 6,
+    "courage": 2,
+    "surges": true
+  },
+  "attack": {
+    "surges": "Crit"
+  },
+  "speed": 2,
+  "upgrades": {
+    "Command": 2,
+    "Gear": 1
+  },
+  "keywords": {
+    "passive": {
+      "Compel": null,
+      "Cunning": null,
+      "Entourage": {
+        "units": ["Imperial Death Troopers"]
+      },
+      "Sharpshooter": 1
+    }
+  },
+  "weapons": [
+    {
+      "name": "Unarmed",
+      "range": ["Melee"],
+      "dice": { "black": 1 }
+    },
+    {
+      "name": "Krennic's DT-29 Blaster Pistol",
+      "range": [1, 2],
+      "dice": { "red": 1, "black": 1, "white": 1 },
+      "keywords": {
+        "Pierce": 1
+      }
+    }
+  ]
+}

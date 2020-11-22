@@ -13,7 +13,11 @@
       "type": "null"
     },
 
-    "DefinePassiveWithAttack": {
+    "Reconfigure": {
+      "type": "string"
+    },
+
+    "Sidearm": {
       "enum": ["Melee", "Ranged"]
     }
   },

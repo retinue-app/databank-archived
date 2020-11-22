@@ -1,0 +1,18 @@
+{
+  "name": "DLT-19 Rifle Pintle",
+  "points": 18,
+  "type": "Hardpoint",
+
+  "restrictions": {
+    "units": ["TX-225 GAVw Occupier Combat Assault Tank"]
+  },
+
+  "weapon": {
+    "name": "DLT-19 Rifle Pintle",
+    "range": [1, 4],
+    "dice": { "red": 2 },
+    "keywords": {
+      "Impact": 1
+    }
+  }
+}

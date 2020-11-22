@@ -1,0 +1,59 @@
+{
+  "name": "TX-225 GAVw Occupier Combat Assault Tank",
+  "restrictions": {
+    "factions": ["Galactic Empire"]
+  },
+  "points": 165,
+  "rank": "Heavy",
+  "miniatures": 1,
+  "type": {
+    "primary": "Vehicle",
+    "secondary": "Ground Vehicle"
+  },
+  "defense": {
+    "color": "Red",
+    "wounds": 8,
+    "resilience": 6
+  },
+  "speed": 1,
+  "upgrades": {
+    "Pilot": 1,
+    "Hardpoint": 1,
+    "Comms": 1
+  },
+  "keywords": {
+    "passive": {
+      "Armor": null,
+      "Arsenal": 2,
+      "Reposition": null,
+      "Transport": {
+        "capacity": 1,
+        "type": "Open"
+      },
+      "Weak Point": {
+        "amount": 1,
+        "sides": ["Sides"]
+      }
+    }
+  },
+  "weapons": [
+    {
+      "name": "Forward Twin MK 2E/W Cannons",
+      "range": [1, 2],
+      "dice": { "red": 1, "black": 1 },
+      "keywords": {
+        "Fixed": ["Front"],
+        "Suppressive": null
+      }
+    },
+    {
+      "name": "MS-4 Twin Blaster Cannons",
+      "range": [1, 4],
+      "dice": { "red": 2, "black": 2 },
+      "keywords": {
+        "Fixed": ["Front"],
+        "Impact": 2
+      }
+    }
+  ]
+}

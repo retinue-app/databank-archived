@@ -79,6 +79,10 @@
       "required": ["amount", "sides"]
     },
 
+    "DefinePassiveWithSurge": {
+      "enum": ["Hit", "Crit"]
+    },
+
     "DefinePassiveWithTarget": {
       "$ref": "./TargetSet.json"
     },
@@ -127,6 +131,10 @@
 
     "$Increase Courage": {
       "$ref": "#/definitions/DefinePassiveWithAmount"
+    },
+
+    "$Surge": {
+      "$ref": "#/definitions/DefinePassiveWithSurge"
     },
 
     "AI": {
@@ -496,6 +504,7 @@
       { "$ref": "#/definitions/DefinePassiveWithEffects" },
       { "$ref": "#/definitions/DefinePassiveWithExplosive" },
       { "$ref": "#/definitions/DefinePassiveWithSides" },
+      { "$ref": "#/definitions/DefinePassiveWithSurge" },
       { "$ref": "#/definitions/DefinePassiveWithTarget" },
       { "$ref": "#/definitions/DefinePassiveWithTransport" },
       { "$ref": "#/definitions/DefinePassiveWithTerrain" },

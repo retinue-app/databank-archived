@@ -1,0 +1,20 @@
+{
+  "name": "Ryder Azadi",
+  "points": 5,
+  "type": "Pilot",
+
+  "restrictions": {
+    "factions": ["Rebel Alliance"],
+    "unitTypes": [
+      {
+        "primary": "Vehicle",
+        "secondary": "Repulsor Vehicle"
+      }
+    ],
+    "isUnique": true
+  },
+
+  "usage": "Exhaust",
+
+  "description": "While performing a move, increase or decrease your maximum speed by 1."
+}

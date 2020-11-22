@@ -1,0 +1,11 @@
+{
+  "name": "Overwatch",
+  "points": 4,
+  "type": "Training",
+
+  "keywords": {
+    "passiveForUnit": {
+      "Sentinel": null
+    }
+  }
+}

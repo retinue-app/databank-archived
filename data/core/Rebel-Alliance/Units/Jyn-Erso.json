@@ -1,0 +1,50 @@
+{
+  "name": "Jyn Erso",
+  "title": "Stardust",
+  "restrictions": {
+    "factions": ["Rebel Alliance"]
+  },
+  "points": 130,
+  "rank": "Commander",
+  "miniatures": 1,
+  "type": "Trooper",
+  "defense": {
+    "color": "White",
+    "wounds": 6,
+    "surges": true,
+    "courage": 3
+  },
+  "attack": {
+    "surges": "Crit"
+  },
+  "speed": 2,
+  "upgrades": {
+    "Command": 1,
+    "Training": 1,
+    "Gear": 1,
+    "Armament": 1
+  },
+  "keywords": {
+    "actions": {
+      "Quick Thinking": {
+        "actions": 1
+      }
+    },
+    "passive": {
+      "Danger Sense": 4,
+      "Infiltrate": null,
+      "Nimble": null,
+      "Sharpshooter": 1
+    }
+  },
+  "weapons": [
+    {
+      "name": "Collapsible Tonfa",
+      "range": ["Melee"],
+      "dice": { "black": 4 },
+      "keywords": {
+        "Suppressive": null
+      }
+    }
+  ]
+}

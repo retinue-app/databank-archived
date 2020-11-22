@@ -1,0 +1,22 @@
+{
+  "name": "First Sergeant Arbmab",
+  "points": 5,
+  "type": "Pilot",
+
+  "restrictions": {
+    "isUnique": true,
+    "factions": ["Galactic Empire"],
+    "unitTypes": [
+      {
+        "primary": "Vehicle",
+        "secondary": "Ground Vehicle"
+      }
+    ]
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "Tactical": 1
+    }
+  }
+}

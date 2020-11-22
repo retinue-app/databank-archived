@@ -1,0 +1,23 @@
+{
+  "name": "Pao",
+  "points": 22,
+  "type": "Heavy Weapon",
+
+  "keywords": {
+    "passiveForUnit": {
+      "Inspire": 1
+    },
+    "passiveForUpgrade": {
+      "Leader": null
+    }
+  },
+
+  "weapon": {
+    "name": "Pao",
+    "range": [1, 4],
+    "dice": {
+      "red": 1,
+      "white": 1
+    }
+  }
+}

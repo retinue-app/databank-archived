@@ -1,0 +1,27 @@
+{
+  "name": "DLT-19D Trooper",
+  "points": 34,
+  "type": "Heavy Weapon",
+
+  "restrictions": {
+    "units": ["Imperial Death Troopers"]
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "Compel": null
+    },
+    "passiveForUpgrade": {
+      "Leader": null
+    }
+  },
+
+  "weapon": {
+    "name": "DLT-19D Trooper",
+    "range": [1, 4],
+    "dice": { "red": 2, "white": 1 },
+    "keywords": {
+      "Impact": 1
+    }
+  }
+}

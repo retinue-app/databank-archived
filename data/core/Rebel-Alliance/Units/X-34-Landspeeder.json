@@ -1,0 +1,45 @@
+{
+  "name": "X-34 Landspeeder",
+  "restrictions": {
+    "factions": ["Rebel Alliance"]
+  },
+  "points": 75,
+  "rank": "Heavy",
+  "miniatures": 1,
+  "type": {
+    "primary": "Vehicle",
+    "secondary": "Repulsor Vehicle"
+  },
+  "defense": {
+    "color": "White",
+    "wounds": 6,
+    "resilience": 4,
+    "surges": true
+  },
+  "speed": 2,
+  "upgrades": {
+    "Pilot": 1,
+    "Crew": 2,
+    "Hardpoint": 1,
+    "Comms": 1
+  },
+  "keywords": {
+    "passive": {
+      "Armor": 2,
+      "Arsenal": 3,
+      "Cover": 1,
+      "Light Transport": {
+        "capacity": 1,
+        "type": "Open"
+      },
+      "Speeder": 1
+    }
+  },
+  "weapons": [
+    {
+      "name": "Driver's DH-17 Blaster Pistol",
+      "range": [1, 2],
+      "dice": { "white": 2 }
+    }
+  ]
+}

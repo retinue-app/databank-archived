@@ -1,0 +1,17 @@
+{
+  "name": "A-300 Long Range Config",
+  "points": 6,
+  "type": "Armament",
+
+  "keywords": {
+    "passiveForUpgrade": {
+      "Reconfigure": "A-300 Short Range Config"
+    }
+  },
+
+  "weapon": {
+    "name": "A-300 Long Range Config",
+    "range": [1, 4],
+    "dice": { "white": 1 }
+  }
+}
