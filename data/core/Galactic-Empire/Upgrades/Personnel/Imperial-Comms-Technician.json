@@ -1,0 +1,19 @@
+{
+  "name": "Imperial Comms Technician",
+  "points": 10,
+  "type": "Personnel",
+
+  "restrictions": {
+    "factions": ["Galactic Empire"]
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "$Add and Equip Upgrade": "Comms"
+    },
+
+    "passiveForUpgrade": {
+      "Leader": null
+    }
+  }
+}
