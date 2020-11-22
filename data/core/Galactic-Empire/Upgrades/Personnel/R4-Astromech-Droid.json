@@ -1,0 +1,23 @@
+{
+  "name": "R4 Astromech Droid",
+  "points": 9,
+  "type": "Personnel",
+
+  "restrictions": {
+    "factions": ["Galactic Empire"]
+  },
+
+  "keywords": {
+    "actions": {
+      "Repair": {
+        "actions": 0,
+        "amount": 1,
+        "capacity": 2
+      }
+    },
+
+    "passiveForUpgrade": {
+      "Noncombatant": null
+    }
+  }
+}

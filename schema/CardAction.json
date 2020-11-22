@@ -1,13 +1,13 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "https://schema.retinue.app/CustomAction.json",
-  "title": "CustomAction",
+  "$id": "https://schema.retinue.app/CardAction.json",
+  "title": "CardAction",
 
-  "description": "Defines a custom action.",
+  "description": "Defines a card-attached action.",
   "additionalProperties": false,
 
   "definitions": {
-    "CustomActionTarget": {
+    "CardActionTarget": {
       "properties": {
         "range": {
           "$ref": "./Range.json"
@@ -30,6 +30,10 @@
 
         "miniature": {
           "enum": [true]
+        },
+
+        "inLineOfSight": {
+          "enum": [true]
         }
       },
 
@@ -39,13 +43,6 @@
   },
 
   "properties": {
-    "name": {
-      "description": "Name of the action.",
-      "type": "string",
-      "minLength": 3,
-      "maxLength": 40
-    },
-
     "description": {
       "type": "string",
       "minLength": 1
@@ -58,13 +55,36 @@
     },
 
     "target": {
-      "$ref": "#/definitions/CustomActionTarget"
+      "$ref": "#/definitions/CardActionTarget"
     },
 
     "grants": {
-      "$ref": "./PassiveKeywordSet.json"
+      "properties": {
+        "keywords": {
+          "$ref": "./PassiveKeywordSet.json"
+        },
+
+        "duration": {
+          "$ref": "./Duration.json"
+        },
+
+        "tokens": {
+          "type": "object",
+          "minProperties": 1,
+          "propertyNames": {
+            "$ref": "./Token.json"
+          },
+          "additionalProperties": {
+            "type": "number",
+            "minimum": 1
+          }
+        }
+      },
+
+      "additionalProperties": false,
+      "minProperties": 1
     }
   },
 
-  "required": ["name", "actions"]
+  "required": ["actions"]
 }

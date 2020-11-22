@@ -9,7 +9,7 @@
   "miniatures": 1,
   "type": "Trooper",
   "defense": {
-    "color": "red",
+    "color": "Red",
     "wounds": 8
   },
   "speed": 1,
@@ -17,10 +17,12 @@
     "Force": 3
   },
   "keywords": {
-    "Deflect": null,
-    "Immune": ["Pierce"],
-    "Master of the Force": 1,
-    "Relentless": null
+    "passive": {
+      "Deflect": null,
+      "Immune": ["Pierce"],
+      "Master of the Force": 1,
+      "Relentless": null
+    }
   },
   "weapons": [
     {

@@ -1,0 +1,50 @@
+{
+  "name": "Tauntaun Riders",
+  "restrictions": {
+    "factions": ["Rebel Alliance"]
+  },
+  "points": 90,
+  "rank": "Support",
+  "miniatures": 2,
+  "type": {
+    "primary": "Trooper",
+    "secondary": "Creature Trooper"
+  },
+  "defense": {
+    "color": "White",
+    "wounds": 4,
+    "courage": 2
+  },
+  "attack": {
+    "surges": "Hit"
+  },
+  "speed": 2,
+  "upgrades": {
+    "Training": 1,
+    "Comms": 1
+  },
+  "keywords": {
+    "passive": {
+      "Agile": 1,
+      "Relentless": null,
+      "Reposition": null,
+      "Sharpshooter": 1,
+      "Unhindered": null
+    }
+  },
+  "weapons": [
+    {
+      "name": "Horns & Hind Claws",
+      "range": ["Melee"],
+      "dice": { "black": 2, "white": 1 },
+      "keywords": {
+        "Ram": 1
+      }
+    },
+    {
+      "name": "DL-44 Blaster Pistol",
+      "range": [1, 2],
+      "dice": { "red": 2 }
+    }
+  ]
+}

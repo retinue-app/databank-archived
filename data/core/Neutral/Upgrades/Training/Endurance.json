@@ -1,0 +1,7 @@
+{
+  "name": "Endurance",
+  "points": 6,
+  "type": "Training",
+
+  "description": "At the end of the Activation phase, you may remove 1 suppression token."
+}

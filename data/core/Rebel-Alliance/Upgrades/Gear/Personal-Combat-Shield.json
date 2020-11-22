@@ -1,0 +1,16 @@
+{
+  "name": "Personal Combat Shield",
+  "points": 10,
+  "type": "Gear",
+
+  "restrictions": {
+    "units": ["Sabine Wren"]
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "Recharge": 1,
+      "Shielded": 1
+    }
+  }
+}

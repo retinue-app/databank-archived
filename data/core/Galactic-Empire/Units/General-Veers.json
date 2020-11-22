@@ -9,7 +9,7 @@
   "miniatures": 1,
   "type": "Trooper",
   "defense": {
-    "color": "red",
+    "color": "Red",
     "wounds": 5,
     "courage": 2
   },
@@ -22,13 +22,17 @@
     "Gear": 1
   },
   "keywords": {
-    "Spotter": {
-      "actions": 1,
-      "amount": 2
+    "actions": {
+      "Spotter": {
+        "actions": 1,
+        "amount": 2
+      }
     },
-    "Inspire": 1,
-    "Precise": 1,
-    "Sharpshooter": 1
+    "passive": {
+      "Inspire": 1,
+      "Precise": 1,
+      "Sharpshooter": 1
+    }
   },
   "weapons": [
     {

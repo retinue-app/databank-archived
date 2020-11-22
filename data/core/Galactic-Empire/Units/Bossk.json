@@ -1,0 +1,46 @@
+{
+  "name": "Bossk",
+  "restrictions": {
+    "factions": ["Galactic Empire"]
+  },
+  "points": 115,
+  "rank": "Operative",
+  "miniatures": 1,
+  "type": "Trooper",
+  "defense": {
+    "color": "White",
+    "wounds": 7,
+    "courage": 2
+  },
+  "attack": {
+    "surges": "Crit"
+  },
+  "speed": 2,
+  "upgrades": {
+    "Training": 2,
+    "Gear": 1
+  },
+  "keywords": {
+    "passive": {
+      "Bounty": null,
+      "Enrage": 3,
+      "Expert Climber": null,
+      "Regenerate": 3,
+      "Unhindered": null
+    }
+  },
+  "weapons": [
+    {
+      "name": "Frenzy",
+      "range": ["Melee"],
+      "dice": { "red": 1, "black": 2, "white": 1 },
+      "keywords": { "Pierce": 1 }
+    },
+    {
+      "name": "Rely-v10 Mortar Rifle",
+      "range": [2, 4],
+      "dice": { "red": 1, "white": 4 },
+      "keywords": { "Pierce": 1 }
+    }
+  ]
+}

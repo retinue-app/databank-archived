@@ -1,0 +1,22 @@
+{
+  "name": "M-45 Ion Blaster",
+  "points": 38,
+  "type": "Hardpoint",
+
+  "restrictions": {
+    "units": ["X-34 Landspeeder"]
+  },
+
+  "usage": "Exhaust",
+
+  "weapon": {
+    "name": "M-45 Ion Blaster",
+    "dice": { "black": 1, "white": 4 },
+    "range": [1, 4],
+    "keywords": {
+      "Fixed": ["Front"],
+      "Impact": 1,
+      "Ion": 1
+    }
+  }
+}

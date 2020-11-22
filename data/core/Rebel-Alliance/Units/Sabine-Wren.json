@@ -1,0 +1,53 @@
+{
+  "name": "Sabine Wren",
+  "restrictions": {
+    "factions": ["Rebel Alliance"]
+  },
+  "points": 125,
+  "rank": "Operative",
+  "miniatures": 1,
+  "type": "Trooper",
+  "defense": {
+    "color": "Red",
+    "wounds": 5,
+    "courage": 2,
+    "surges": true
+  },
+  "attack": {
+    "surges": "Crit"
+  },
+  "speed": 3,
+  "upgrades": {
+    "Training": 1,
+    "Gear": 2,
+    "Armament": 1
+  },
+  "keywords": {
+    "actions": {
+      "Jump": {
+        "actions": 1,
+        "amount": 2
+      }
+    },
+    "passive": {
+      "Gunslinger": null,
+      "Impervious": null,
+      "Nimble": null
+    }
+  },
+  "weapons": [
+    {
+      "name": "Combat Expertise",
+      "range": ["Melee"],
+      "dice": { "black": 2 }
+    },
+    {
+      "name": "Dual Westar-35 Blaster Pistols",
+      "range": [1, 2],
+      "dice": { "red": 1, "black": 1, "white": 1 },
+      "keywords": {
+        "Pierce": 1
+      }
+    }
+  ]
+}

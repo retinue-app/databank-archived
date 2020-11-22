@@ -1,0 +1,61 @@
+{
+  "name": "1.4 FD Laser Cannon Team",
+  "restrictions": {
+    "factions": ["Rebel Alliance"]
+  },
+  "points": 70,
+  "rank": "Support",
+  "miniatures": 1,
+  "type": {
+    "primary": "Trooper",
+    "secondary": "Emplacement Trooper"
+  },
+  "defense": {
+    "color": "White",
+    "wounds": 6,
+    "courage": 2,
+    "surges": true
+  },
+  "attack": {
+    "surges": "Hit"
+  },
+  "speed": 0,
+  "upgrades": {
+    "Comms": 1,
+    "Generator": 1
+  },
+  "keywords": {
+    "passive": {
+      "Full Pivot": null,
+      "Sentinel": null,
+      "Stationary": null
+    }
+  },
+  "weapons": [
+    {
+      "name": "Unarmed",
+      "range": ["Melee"],
+      "dice": {
+        "black": 1
+      }
+    },
+    {
+      "name": "DH-17 Blaster Pistol",
+      "range": [1, 2],
+      "dice": {
+        "white": 4
+      }
+    },
+    {
+      "name": "1.4 FD Laser Cannon",
+      "range": [1, 4],
+      "dice": {
+        "black": 5
+      },
+      "keywords": {
+        "Fixed": ["Front"],
+        "Impact": 2
+      }
+    }
+  ]
+}

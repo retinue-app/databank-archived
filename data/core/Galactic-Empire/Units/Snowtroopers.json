@@ -8,7 +8,7 @@
   "miniatures": 4,
   "type": "Trooper",
   "defense": {
-    "color": "red",
+    "color": "Red",
     "wounds": 1,
     "courage": 1
   },
@@ -23,7 +23,9 @@
     "Grenades": 1
   },
   "keywords": {
-    "Steady": null
+    "passive": {
+      "Steady": null
+    }
   },
   "weapons": [
     {

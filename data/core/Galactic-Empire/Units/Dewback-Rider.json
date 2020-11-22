@@ -1,0 +1,47 @@
+{
+  "name": "Dewback Rider",
+  "restrictions": {
+    "factions": ["Galactic Empire"]
+  },
+  "points": 90,
+  "rank": "Support",
+  "miniatures": 1,
+  "type": {
+    "primary": "Trooper",
+    "secondary": "Creature Trooper"
+  },
+  "defense": {
+    "color": "Red",
+    "wounds": 6,
+    "courage": 2
+  },
+  "attack": {
+    "surges": "Hit"
+  },
+  "speed": 1,
+  "upgrades": {
+    "Training": 1,
+    "Comms": 1,
+    "Armament": 1
+  },
+  "keywords": {
+    "passive": {
+      "Armor": 1,
+      "Relentless": null,
+      "Reposition": null,
+      "Spur": null,
+      "Unhindered": null
+    }
+  },
+  "weapons": [
+    {
+      "name": "Razor Claws & Shock Prod",
+      "range": ["Melee"],
+      "dice": { "red": 3, "white": 3 },
+      "keywords": {
+        "Critical": 2,
+        "Suppressive": null
+      }
+    }
+  ]
+}

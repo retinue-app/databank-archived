@@ -1,0 +1,19 @@
+{
+  "name": "Rebel Comms Technician",
+  "points": 9,
+  "type": "Personnel",
+
+  "restrictions": {
+    "factions": ["Rebel Alliance"]
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "$Add and Equip Upgrade": "Comms"
+    },
+
+    "passiveForUpgrade": {
+      "Leader": null
+    }
+  }
+}

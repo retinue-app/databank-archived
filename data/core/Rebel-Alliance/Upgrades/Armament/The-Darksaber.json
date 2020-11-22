@@ -1,0 +1,25 @@
+{
+  "name": "The Darksaber",
+  "points": 25,
+  "type": "Armament",
+
+  "restrictions": {
+    "units": ["Sabine Wren"]
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "Dauntless": null,
+      "Immune": ["Pierce (Melee)"]
+    }
+  },
+
+  "weapon": {
+    "name": "The Darksaber",
+    "range": ["Melee"],
+    "dice": { "black": 5 },
+    "keywords": {
+      "Pierce": 1
+    }
+  }
+}

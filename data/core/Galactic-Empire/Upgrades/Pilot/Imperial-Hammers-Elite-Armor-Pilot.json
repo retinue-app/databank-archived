@@ -1,0 +1,22 @@
+{
+  "name": "Imperial Hammers Elite Armor Pilot",
+  "points": 10,
+  "type": "Pilot",
+
+  "restrictions": {
+    "isUnique": true,
+    "factions": ["Galactic Empire"],
+    "unitTypes": [
+      {
+        "primary": "Vehicle",
+        "secondary": "Ground Vehicle"
+      }
+    ]
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "$Surge": "Hit"
+    }
+  }
+}

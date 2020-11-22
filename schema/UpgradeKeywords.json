@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://schema.retinue.app/UpgradeKeywords.json",
+  "title": "UpgradeKeywords",
+
+  "description": "A collection of sets of keywords for upgrades.",
+  "additionalProperties": false,
+  "minProperties": 1,
+
+  "properties": {
+    "actions": {
+      "$ref": "./ActionKeywordSet.json"
+    },
+
+    "passiveForUnit": {
+      "$ref": "./PassiveKeywordSet.json"
+    },
+
+    "passiveForUpgrade": {
+      "$ref": "./UpgradeKeywordSet.json"
+    }
+  }
+}

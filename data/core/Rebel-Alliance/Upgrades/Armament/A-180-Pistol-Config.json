@@ -1,0 +1,24 @@
+{
+  "name": "A-180 Pistol Config",
+  "points": 0,
+  "type": "Armament",
+
+  "restrictions": {
+    "units": ["Jyn Erso"]
+  },
+
+  "keywords": {
+    "passiveForUpgrade": {
+      "Reconfigure": "A-180 Rifle Config"
+    }
+  },
+
+  "weapon": {
+    "name": "A-180 Pistol Config",
+    "range": [1, 2],
+    "dice": { "red": 2, "white": 1 },
+    "keywords": {
+      "Pierce": 1
+    }
+  }
+}

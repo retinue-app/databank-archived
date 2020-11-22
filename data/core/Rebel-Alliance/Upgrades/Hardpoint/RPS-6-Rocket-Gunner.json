@@ -1,0 +1,18 @@
+{
+  "name": "RPS-6 Rocket Gunner",
+  "points": 36,
+  "type": "Crew",
+
+  "restrictions": {
+    "units": ["X-34 Landspeeder"]
+  },
+
+  "weapon": {
+    "name": "RPS-6 Rocket Gunner",
+    "dice": { "red": 1, "black": 1, "white": 1 },
+    "range": [2, 4],
+    "keywords": {
+      "Impact": 2
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "Recon Intel",
+  "points": 2,
+  "type": "Gear",
+
+  "keywords": {
+    "Scout": 1
+  }
+}

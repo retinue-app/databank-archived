@@ -1,0 +1,7 @@
+{
+  "name": "Strict Orders",
+  "points": 5,
+  "type": "Command",
+
+  "description": "When a friendly trooper unit with a faceup order token activates, during its Rally step, it may remove 1 suppression token instead of rolling dice."
+}

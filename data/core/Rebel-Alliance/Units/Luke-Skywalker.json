@@ -9,7 +9,7 @@
   "miniatures": 1,
   "type": "Trooper",
   "defense": {
-    "color": "red",
+    "color": "Red",
     "wounds": 6,
     "courage": 3
   },
@@ -22,13 +22,17 @@
     "Gear": 1
   },
   "keywords": {
-    "Jump": {
-      "actions": 1,
-      "amount": 1
+    "actions": {
+      "Jump": {
+        "actions": 1,
+        "amount": 1
+      }
     },
-    "Charge": null,
-    "Deflect": null,
-    "Immune": ["Pierce"]
+    "passive": {
+      "Charge": null,
+      "Deflect": null,
+      "Immune": ["Pierce"]
+    }
   },
   "weapons": [
     {

@@ -1,0 +1,15 @@
+{
+  "name": "A-300 Rifle Gunner",
+  "points": 9,
+  "type": "Crew",
+
+  "restrictions": {
+    "units": ["X-34 Landspeeder"]
+  },
+
+  "weapon": {
+    "name": "A-300 Rifle Gunner",
+    "dice": { "white": 2 },
+    "range": [1, 3]
+  }
+}

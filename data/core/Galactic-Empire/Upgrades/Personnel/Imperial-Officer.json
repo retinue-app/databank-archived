@@ -1,0 +1,20 @@
+{
+  "name": "Imperial Officer",
+  "points": 20,
+  "type": "Personnel",
+
+  "restrictions": {
+    "factions": ["Galactic Empire"]
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "$Increase Courage": 1,
+      "Inspire": 1
+    },
+
+    "passiveForUpgrade": {
+      "Leader": null
+    }
+  }
+}

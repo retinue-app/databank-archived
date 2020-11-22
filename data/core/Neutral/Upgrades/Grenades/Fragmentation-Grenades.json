@@ -1,0 +1,12 @@
+{
+  "name": "Fragmentation Grenades",
+  "points": 5,
+  "type": "Grenades",
+
+  "weapon": {
+    "name": "Fragmentation Grenades",
+    "range": [1],
+    "dice": { "red": 1 },
+    "surge": "Crit"
+  }
+}

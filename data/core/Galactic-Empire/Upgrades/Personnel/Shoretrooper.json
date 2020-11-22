@@ -1,0 +1,9 @@
+{
+  "name": "Shoretrooper",
+  "points": 13,
+  "type": "Personnel",
+
+  "restrictions": {
+    "units": ["Shoretroopers"]
+  }
+}

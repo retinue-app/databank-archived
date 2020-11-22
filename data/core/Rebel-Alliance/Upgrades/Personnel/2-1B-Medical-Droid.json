@@ -1,0 +1,23 @@
+{
+  "name": "2-1B Medical Droid",
+  "points": 18,
+  "type": "Personnel",
+
+  "restrictions": {
+    "factions": ["Rebel Alliance"]
+  },
+
+  "keywords": {
+    "actions": {
+      "Treat": {
+        "actions": 0,
+        "amount": 1,
+        "capacity": 2
+      }
+    },
+
+    "passiveForUpgrade": {
+      "Noncombatant": null
+    }
+  }
+}

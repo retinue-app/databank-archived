@@ -16,14 +16,11 @@
 
   "usage": "Exhaust",
 
-  "actions": [
-    {
-      "name": "Wedge Antilles",
-      "actions": 0,
-      "description": "Perform a pivot.",
-      "target": {
-        "is": "Self"
-      }
+  "action": {
+    "actions": 0,
+    "description": "Perform a pivot.",
+    "target": {
+      "is": "Self"
     }
-  ]
+  }
 }
