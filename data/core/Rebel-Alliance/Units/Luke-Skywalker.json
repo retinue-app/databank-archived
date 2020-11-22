@@ -22,13 +22,17 @@
     "Gear": 1
   },
   "keywords": {
-    "Jump": {
-      "actions": 1,
-      "amount": 1
+    "actions": {
+      "Jump": {
+        "actions": 1,
+        "amount": 1
+      }
     },
-    "Charge": null,
-    "Deflect": null,
-    "Immune": ["Pierce"]
+    "passive": {
+      "Charge": null,
+      "Deflect": null,
+      "Immune": ["Pierce"]
+    }
   },
   "weapons": [
     {

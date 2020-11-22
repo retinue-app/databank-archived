@@ -21,7 +21,9 @@
     "Grenades": 1
   },
   "keywords": {
-    "Nimble": null
+    "passive": {
+      "Nimble": null
+    }
   },
   "weapons": [
     {

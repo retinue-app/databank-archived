@@ -9,18 +9,19 @@
 
   "usage": "Detonate",
 
-  "actions": {
-    "Arm": {
-      "actions": 1,
-      "amount": 1,
-      "explosive": "Sonic Charge"
-    }
-  },
-
   "keywords": {
-    "Detonate": {
-      "amount": 1,
-      "explosive": "Sonic Charge"
+    "actions": {
+      "Arm": {
+        "actions": 1,
+        "amount": 1,
+        "explosive": "Sonic Charge"
+      }
+    },
+    "passiveForUnit": {
+      "Detonate": {
+        "amount": 1,
+        "explosive": "Sonic Charge"
+      }
     }
   },
 

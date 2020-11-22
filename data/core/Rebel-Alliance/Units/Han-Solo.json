@@ -21,10 +21,12 @@
     "Gear": 1
   },
   "keywords": {
-    "Low Profile": null,
-    "Gunslinger": null,
-    "Sharpshooter": 1,
-    "Uncanny Luck": 3
+    "passive": {
+      "Low Profile": null,
+      "Gunslinger": null,
+      "Sharpshooter": 1,
+      "Uncanny Luck": 3
+    }
   },
   "weapons": [
     {

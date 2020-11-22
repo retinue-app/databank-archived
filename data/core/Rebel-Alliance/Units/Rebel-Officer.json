@@ -22,15 +22,17 @@
     "Command": 1,
     "Gear": 1
   },
-  "actions": {
-    "Take Cover": {
-      "actions": 1,
-      "amount": 1
-    }
-  },
   "keywords": {
-    "Inspire": 1,
-    "Sharpshooter": 1
+    "actions": {
+      "Take Cover": {
+        "actions": 1,
+        "amount": 1
+      }
+    },
+    "passive": {
+      "Inspire": 1,
+      "Sharpshooter": 1
+    }
   },
   "weapons": [
     {

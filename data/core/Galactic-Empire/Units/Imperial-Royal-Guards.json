@@ -20,9 +20,11 @@
     "Grenades": 1
   },
   "keywords": {
-    "Charge": null,
-    "Disciplined": 2,
-    "Guardian": 2
+    "passive": {
+      "Charge": null,
+      "Disciplined": 2,
+      "Guardian": 2
+    }
   },
   "weapons": [
     {

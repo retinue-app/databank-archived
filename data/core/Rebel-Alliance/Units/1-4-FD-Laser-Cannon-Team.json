@@ -25,9 +25,11 @@
     "Generator": 1
   },
   "keywords": {
-    "Full Pivot": null,
-    "Sentinel": null,
-    "Stationary": null
+    "passive": {
+      "Full Pivot": null,
+      "Sentinel": null,
+      "Stationary": null
+    }
   },
   "weapons": [
     {

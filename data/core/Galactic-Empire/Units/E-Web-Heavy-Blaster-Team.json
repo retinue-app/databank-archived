@@ -24,10 +24,12 @@
     "Generator": 1
   },
   "keywords": {
-    "Full Pivot": null,
-    "Plodding": null,
-    "Reposition": null,
-    "Sentinel": null
+    "passive": {
+      "Full Pivot": null,
+      "Plodding": null,
+      "Reposition": null,
+      "Sentinel": null
+    }
   },
   "weapons": [
     {

@@ -23,7 +23,9 @@
     "Grenades": 1
   },
   "keywords": {
-    "Steady": null
+    "passive": {
+      "Steady": null
+    }
   },
   "weapons": [
     {

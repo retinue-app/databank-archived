@@ -1,0 +1,49 @@
+{
+  "name": "Imperial Officer",
+  "title": "Ruthless Commander",
+  "restrictions": {
+    "factions": ["Galactic Empire"]
+  },
+  "points": 50,
+  "rank": "Commander",
+  "miniatures": 1,
+  "type": "Trooper",
+  "defense": {
+    "color": "White",
+    "wounds": 4,
+    "courage": 2,
+    "surges": true
+  },
+  "attack": {
+    "surges": "Hit"
+  },
+  "speed": 2,
+  "upgrades": {
+    "Command": 1,
+    "Gear": 1
+  },
+  "keywords": {
+    "actions": {
+      "Spotter": {
+        "actions": 1,
+        "amount": 1
+      }
+    },
+    "passive": {
+      "Inspire": 1,
+      "Sharpshooter": 1
+    }
+  },
+  "weapons": [
+    {
+      "name": "Unarmed",
+      "range": ["Melee"],
+      "dice": { "black": 1 }
+    },
+    {
+      "name": "Officer's A-180 Blaster Pistol",
+      "range": [1, 2],
+      "dice": { "black": 1, "white": 1 }
+    }
+  ]
+}

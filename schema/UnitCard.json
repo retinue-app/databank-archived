@@ -113,12 +113,8 @@
       }
     },
 
-    "actions": {
-      "$ref": "./ActionKeywordSet.json"
-    },
-
     "keywords": {
-      "$ref": "./PassiveKeywordSet.json"
+      "$ref": "./UnitKeywords.json"
     },
 
     "weapons": {

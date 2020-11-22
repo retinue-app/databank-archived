@@ -9,10 +9,6 @@
       "type": "null"
     },
 
-    "DefinePassiveWithAttack": {
-      "enum": ["Melee", "Ranged"]
-    },
-
     "DefinePassiveWithActions": {
       "type": "array",
       "items": {
@@ -428,10 +424,6 @@
       "$ref": "#/definitions/DefinePassiveWithAmount"
     },
 
-    "Sidearm": {
-      "$ref": "#/definitions/DefinePassiveWithAttack"
-    },
-
     "Soresu Mastery": {
       "$ref": "#/definitions/DefinePassive"
     },
@@ -501,7 +493,6 @@
       { "$ref": "#/definitions/DefinePassive" },
       { "$ref": "#/definitions/DefinePassiveWithActions" },
       { "$ref": "#/definitions/DefinePassiveWithAmount" },
-      { "$ref": "#/definitions/DefinePassiveWithAttack" },
       { "$ref": "#/definitions/DefinePassiveWithEffects" },
       { "$ref": "#/definitions/DefinePassiveWithExplosive" },
       { "$ref": "#/definitions/DefinePassiveWithSides" },

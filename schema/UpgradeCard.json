@@ -20,25 +20,12 @@
       "maxLength": 300
     },
 
-    "actions": {
-      "$ref": "./ActionKeywordSet.json"
-    },
-
     "keywords": {
-      "$ref": "./PassiveKeywordSet.json"
+      "$ref": "./UpgradeKeywords.json"
     },
 
-    "keywordsForUpgradeOnly": {
-      "$ref": "./UpgradeKeywordSet.json"
-    },
-
-    "customActions": {
-      "description": "Custom actions (i.e. not in the RRG).",
-      "type": "array",
-      "items": {
-        "$ref": "./CustomAction.json"
-      },
-      "minItems": 1
+    "action": {
+      "$ref": "./CardAction.json"
     },
 
     "usage": {

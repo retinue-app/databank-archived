@@ -23,10 +23,12 @@
     "Grenades": 1
   },
   "keywords": {
-    "Heavy Weapon Team": null,
-    "Low Profile": null,
-    "Scout": 2,
-    "Sharpshooter": 1
+    "passive": {
+      "Heavy Weapon Team": null,
+      "Low Profile": null,
+      "Scout": 2,
+      "Sharpshooter": 1
+    }
   },
   "weapons": [
     {

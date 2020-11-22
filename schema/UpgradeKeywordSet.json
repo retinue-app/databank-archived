@@ -11,10 +11,18 @@
 
     "Noncombatant": {
       "type": "null"
+    },
+
+    "DefinePassiveWithAttack": {
+      "enum": ["Melee", "Ranged"]
     }
   },
 
   "additionalProperties": {
-    "anyOf": [{ "type": "null", "tsType": "undefined " }, { "type": "number" }]
+    "anyOf": [
+      { "type": "null", "tsType": "undefined " },
+      { "type": "number" },
+      { "type": "string" }
+    ]
   }
 }

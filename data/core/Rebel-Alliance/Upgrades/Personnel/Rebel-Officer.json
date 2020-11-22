@@ -8,11 +8,13 @@
   },
 
   "keywords": {
-    "$Increase Courage": 1,
-    "Inspire": 1
-  },
+    "passiveForUnit": {
+      "$Increase Courage": 1,
+      "Inspire": 1
+    },
 
-  "keywordsForUpgradeOnly": {
-    "Leader": null
+    "passiveForUpgrade": {
+      "Leader": null
+    }
   }
 }

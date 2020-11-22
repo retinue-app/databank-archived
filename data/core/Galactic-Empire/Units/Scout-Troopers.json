@@ -22,9 +22,11 @@
     "Grenades": 1
   },
   "keywords": {
-    "Low Profile": null,
-    "Scout": 1,
-    "Sharpshooter": 1
+    "passive": {
+      "Low Profile": null,
+      "Scout": 1,
+      "Sharpshooter": 1
+    }
   },
   "weapons": [
     {

@@ -9,18 +9,20 @@
 
   "usage": "Detonate",
 
-  "actions": {
-    "Arm": {
-      "actions": 1,
-      "amount": 1,
-      "explosive": "Proton Charge"
-    }
-  },
-
   "keywords": {
-    "Detonate": {
-      "amount": 1,
-      "explosive": "Proton Charge"
+    "actions": {
+      "Arm": {
+        "actions": 1,
+        "amount": 1,
+        "explosive": "Proton Charge"
+      }
+    },
+
+    "passiveForUnit": {
+      "Detonate": {
+        "amount": 1,
+        "explosive": "Proton Charge"
+      }
     }
   },
 

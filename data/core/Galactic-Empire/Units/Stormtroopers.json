@@ -23,7 +23,9 @@
     "Grenades": 1
   },
   "keywords": {
-    "Precise": 1
+    "passive": {
+      "Precise": 1
+    }
   },
   "weapons": [
     {

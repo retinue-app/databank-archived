@@ -23,9 +23,11 @@
     "Comms": 1
   },
   "keywords": {
-    "Armor": null,
-    "Climbing Vehicle": null,
-    "Expert Climber": null
+    "passive": {
+      "Armor": null,
+      "Climbing Vehicle": null,
+      "Expert Climber": null
+    }
   },
   "weapons": [
     {

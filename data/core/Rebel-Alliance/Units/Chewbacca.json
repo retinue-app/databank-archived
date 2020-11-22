@@ -22,13 +22,15 @@
     "Gear": 1
   },
   "keywords": {
-    "Enrage": 4,
-    "Expert Climber": null,
-    "Guardian": 3,
-    "Teamwork": {
-      "units": ["Han Solo"]
-    },
-    "Unhindered": null
+    "passive": {
+      "Enrage": 4,
+      "Expert Climber": null,
+      "Guardian": 3,
+      "Teamwork": {
+        "units": ["Han Solo"]
+      },
+      "Unhindered": null
+    }
   },
   "weapons": [
     {

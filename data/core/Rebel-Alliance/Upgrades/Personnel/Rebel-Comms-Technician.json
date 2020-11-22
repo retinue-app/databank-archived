@@ -8,10 +8,12 @@
   },
 
   "keywords": {
-    "$Add and Equip Upgrade": "Comms"
-  },
+    "passiveForUnit": {
+      "$Add and Equip Upgrade": "Comms"
+    },
 
-  "keywordsForUpgradeOnly": {
-    "Leader": null
+    "passiveForUpgrade": {
+      "Leader": null
+    }
   }
 }

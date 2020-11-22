@@ -22,17 +22,19 @@
     "Command": 1,
     "Force": 3
   },
-  "actions": {
-    "Pulling the Strings": {
-      "actions": 1
-    }
-  },
   "keywords": {
-    "Entourage": {
-      "units": ["Imperial Royal Guards"]
+    "actions": {
+      "Pulling the Strings": {
+        "actions": 1
+      }
     },
-    "Immune": ["Pierce"],
-    "Master of the Force": 2
+    "passive": {
+      "Entourage": {
+        "units": ["Imperial Royal Guards"]
+      },
+      "Immune": ["Pierce"],
+      "Master of the Force": 2
+    }
   },
   "weapons": [
     {

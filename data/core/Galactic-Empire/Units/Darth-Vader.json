@@ -17,10 +17,12 @@
     "Force": 3
   },
   "keywords": {
-    "Deflect": null,
-    "Immune": ["Pierce"],
-    "Master of the Force": 1,
-    "Relentless": null
+    "passive": {
+      "Deflect": null,
+      "Immune": ["Pierce"],
+      "Master of the Force": 1,
+      "Relentless": null
+    }
   },
   "weapons": [
     {

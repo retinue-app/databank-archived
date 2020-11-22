@@ -21,16 +21,18 @@
     "Command": 2,
     "Gear": 1
   },
-  "actions": {
-    "Spotter": {
-      "actions": 1,
-      "amount": 2
-    }
-  },
   "keywords": {
-    "Inspire": 1,
-    "Precise": 1,
-    "Sharpshooter": 1
+    "actions": {
+      "Spotter": {
+        "actions": 1,
+        "amount": 2
+      }
+    },
+    "passive": {
+      "Inspire": 1,
+      "Precise": 1,
+      "Sharpshooter": 1
+    }
   },
   "weapons": [
     {

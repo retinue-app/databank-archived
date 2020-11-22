@@ -19,16 +19,18 @@
     "Command": 2,
     "Gear": 1
   },
-  "actions": {
-    "Take Cover": {
-      "actions": 1,
-      "amount": 2
-    }
-  },
   "keywords": {
-    "Inspire": 2,
-    "Nimble": null,
-    "Sharpshooter": 2
+    "actions": {
+      "Take Cover": {
+        "actions": 1,
+        "amount": 2
+      }
+    },
+    "passive": {
+      "Inspire": 2,
+      "Nimble": null,
+      "Sharpshooter": 2
+    }
   },
   "weapons": [
     {

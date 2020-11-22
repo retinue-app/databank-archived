@@ -16,17 +16,17 @@
 
   "usage": "Exhaust",
 
-  "customActions": [
-    {
-      "name": "General Weiss",
-      "actions": 0,
-      "description": "Until the end of your activation, you gain Arsenal 2.",
-      "target": {
-        "is": "Self"
-      },
-      "grants": {
+  "action": {
+    "actions": 0,
+    "description": "Until the end of your activation, you gain Arsenal 2.",
+    "target": {
+      "is": "Self"
+    },
+    "grants": {
+      "keywords": {
         "Arsenal": 2
-      }
+      },
+      "duration": "EndOfActivation"
     }
-  ]
+  }
 }

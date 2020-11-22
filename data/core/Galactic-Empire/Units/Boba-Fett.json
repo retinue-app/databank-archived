@@ -21,17 +21,19 @@
     "Training": 2,
     "Gear": 2
   },
-  "actions": {
-    "Jump": {
-      "actions": 1,
-      "amount": 2
-    }
-  },
   "keywords": {
-    "Arsenal": 2,
-    "Bounty": null,
-    "Impervious": null,
-    "Sharpshooter": 2
+    "actions": {
+      "Jump": {
+        "actions": 1,
+        "amount": 2
+      }
+    },
+    "passive": {
+      "Arsenal": 2,
+      "Bounty": null,
+      "Impervious": null,
+      "Sharpshooter": 2
+    }
   },
   "weapons": [
     {

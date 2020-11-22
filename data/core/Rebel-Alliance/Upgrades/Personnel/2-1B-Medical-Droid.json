@@ -7,15 +7,17 @@
     "factions": ["Rebel Alliance"]
   },
 
-  "actions": {
-    "Treat": {
-      "actions": 0,
-      "amount": 1,
-      "capacity": 2
-    }
-  },
+  "keywords": {
+    "actions": {
+      "Treat": {
+        "actions": 0,
+        "amount": 1,
+        "capacity": 2
+      }
+    },
 
-  "keywordsForUpgradeOnly": {
-    "Noncombatant": null
+    "passiveForUpgrade": {
+      "Noncombatant": null
+    }
   }
 }

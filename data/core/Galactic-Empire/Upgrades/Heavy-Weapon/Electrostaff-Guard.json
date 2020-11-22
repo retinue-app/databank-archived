@@ -8,8 +8,12 @@
   },
 
   "keywords": {
-    "Immune": ["Pierce (Melee)"],
-    "Sidearm": "Melee"
+    "passiveForUnit": {
+      "Immune": ["Pierce (Melee)"]
+    },
+    "passiveForUpgrade": {
+      "Sidearm": "Melee"
+    }
   },
 
   "weapon": {

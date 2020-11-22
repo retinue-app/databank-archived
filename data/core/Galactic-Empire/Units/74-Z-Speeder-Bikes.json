@@ -23,8 +23,10 @@
     "Comms": 1
   },
   "keywords": {
-    "Cover": 1,
-    "Speeder": 1
+    "passive": {
+      "Cover": 1,
+      "Speeder": 1
+    }
   },
   "weapons": [
     {

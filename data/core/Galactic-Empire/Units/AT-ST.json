@@ -23,11 +23,13 @@
     "Comms": 1
   },
   "keywords": {
-    "Armor": null,
-    "Arsenal": 2,
-    "Weak Point": {
-      "amount": 1,
-      "sides": ["Rear"]
+    "passive": {
+      "Armor": null,
+      "Arsenal": 2,
+      "Weak Point": {
+        "amount": 1,
+        "sides": ["Rear"]
+      }
     }
   },
   "weapons": [

@@ -23,11 +23,13 @@
     "Comms": 1
   },
   "keywords": {
-    "Armor": null,
-    "Arsenal": 2,
-    "Cover": 1,
-    "Immune": ["Blast", "Melee"],
-    "Speeder": 2
+    "passive": {
+      "Armor": null,
+      "Arsenal": 2,
+      "Cover": 1,
+      "Immune": ["Blast", "Melee"],
+      "Speeder": 2
+    }
   },
   "weapons": [
     {

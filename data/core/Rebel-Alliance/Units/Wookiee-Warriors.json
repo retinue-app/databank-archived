@@ -23,10 +23,12 @@
     "Grenades": 1
   },
   "keywords": {
-    "Charge": null,
-    "Expert Climber": null,
-    "Indomitable": null,
-    "Unhindered": null
+    "passive": {
+      "Charge": null,
+      "Expert Climber": null,
+      "Indomitable": null,
+      "Unhindered": null
+    }
   },
   "weapons": [
     {
