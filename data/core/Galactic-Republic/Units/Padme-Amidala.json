@@ -1,0 +1,56 @@
+{
+  "name": "Padme Amidala",
+  "title": "Spirited Senator",
+  "restrictions": {
+    "factions": ["Galactic Republic"],
+    "isUnique": true
+  },
+  "points": 90,
+  "rank": "Operative",
+  "miniatures": 1,
+  "type": "Trooper",
+  "defense": {
+    "color": "White",
+    "wounds": 6,
+    "courage": 3,
+    "surges": true
+  },
+  "attack": {
+    "surges": "Hit"
+  },
+  "speed": 2,
+  "upgrades": {
+    "Command": 1,
+    "Training": 1,
+    "Gear": 1,
+    "Armament": 1
+  },
+  "keywords": {
+    "actions": {
+      "Quick Thinking": {
+        "actions": 1
+      }
+    },
+    "passive": {
+      "Authoritative": null,
+      "Exemplar": null,
+      "Nimble": null,
+      "Sharpshooter": 2
+    }
+  },
+  "weapons": [
+    {
+      "name": "Martial Arts",
+      "range": ["Melee"],
+      "dice": { "black": 3 }
+    },
+    {
+      "name": "Padme's ELG-3A Blaster Pistol",
+      "range": [1, 2],
+      "dice": { "black": 3 },
+      "keywords": {
+        "Pierce": 1
+      }
+    }
+  ]
+}

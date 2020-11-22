@@ -156,6 +156,10 @@
       "$ref": "#/definitions/DefinePassiveWithAmount"
     },
 
+    "$Move While Engaged With Immobilized Unit": {
+      "type": "null"
+    },
+
     "$Surge": {
       "$ref": "#/definitions/DefinePassiveWithSurge"
     },

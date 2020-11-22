@@ -1,0 +1,26 @@
+{
+  "name": "JT-12 Jetpacks",
+  "points": 10,
+  "type": "Gear",
+
+  "restrictions": {
+    "units": ["Clone Captain Rex", "ARC Troopers"]
+  },
+
+  "pointAdjustments": {
+    "if": {
+      "units": ["Clone Captain Rex"]
+    },
+    "condition": "On Unit",
+    "adjustBy": -5
+  },
+
+  "keywords": {
+    "actions": {
+      "Jump": {
+        "actions": 1,
+        "amount": 2
+      }
+    }
+  }
+}

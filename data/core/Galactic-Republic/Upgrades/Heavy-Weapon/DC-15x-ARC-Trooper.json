@@ -1,0 +1,20 @@
+{
+  "name": "DC-15x ARC Trooper",
+  "points": 31,
+  "type": "Heavy Weapon",
+
+  "restrictions": {
+    "units": ["ARC Troopers"]
+  },
+
+  "weapon": {
+    "name": "DC-15x ARC Trooper",
+    "range": [1, 5],
+    "dice": { "red": 1, "black": 1 },
+    "keywords": {
+      "Critical": 1,
+      "Immune": ["Deflect"],
+      "Lethal": 1
+    }
+  }
+}

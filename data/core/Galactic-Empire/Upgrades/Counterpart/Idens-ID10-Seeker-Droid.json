@@ -2,6 +2,9 @@
   "name": "Iden's ID10 Seeker Droid",
   "points": 15,
   "type": "Counterpart",
+
+  "wounds": 1,
+
   "counterpart": {
     "type": {
       "primary": "Trooper",
@@ -9,8 +12,7 @@
     },
     "upgrades": {
       "Comms": 1
-    },
-    "wounds": 1
+    }
   },
 
   "restrictions": {

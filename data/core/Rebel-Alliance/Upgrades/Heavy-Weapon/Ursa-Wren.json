@@ -1,0 +1,29 @@
+{
+  "name": "Ursa Wren",
+  "points": 38,
+  "type": "Heavy Weapon",
+  "wounds": 2,
+
+  "restrictions": {
+    "units": ["Mandalorian Resistance"],
+    "isUnique": true
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "Dauntless": null
+    },
+    "passiveForUpgrade": {
+      "Leader": null
+    }
+  },
+
+  "weapon": {
+    "name": "Ursa Wren",
+    "range": [1, 2],
+    "dice": { "red": 1, "black": 1, "white": 1 },
+    "keywords": {
+      "Long Shot": 1
+    }
+  }
+}

@@ -57,6 +57,12 @@
       "$ref": "./UpgradeType.json"
     },
 
+    "wounds": {
+      "type": "number",
+      "minimum": 1,
+      "description": "Wounds if this is a miniature."
+    },
+
     "counterpart": {
       "additionalProperties": false,
 
@@ -74,15 +80,10 @@
             "type": "number",
             "minimum": 1
           }
-        },
-
-        "wounds": {
-          "type": "number",
-          "minimum": 1
         }
       },
 
-      "required": ["type", "wounds"]
+      "required": ["type"]
     },
 
     "restrictions": {
