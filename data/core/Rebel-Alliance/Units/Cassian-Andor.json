@@ -1,0 +1,51 @@
+{
+  "name": "Cassian Andor",
+  "title": "Capable Intelligence Agent",
+  "restrictions": {
+    "factions": ["Rebel Alliance"],
+    "isUnique": true
+  },
+  "points": 90,
+  "rank": "Commander",
+  "miniatures": 1,
+  "type": "Trooper",
+  "defense": {
+    "color": "White",
+    "wounds": 6,
+    "courage": 2,
+    "surges": true
+  },
+  "attack": {
+    "surges": "Hit"
+  },
+  "speed": 2,
+  "upgrades": {
+    "Training": 2,
+    "Gear": 1,
+    "Armament": 1
+  },
+  "keywords": {
+    "passive": {
+      "Covert Ops": null,
+      "Danger Sense": 3,
+      "Loadout": null,
+      "Marksman": null,
+      "Tactical": 1
+    }
+  },
+  "weapons": [
+    {
+      "name": "Advanced Combat Training",
+      "range": ["Melee"],
+      "dice": { "red": 2 }
+    },
+    {
+      "name": "Cassian's Covert Blaster",
+      "range": [1, 2],
+      "dice": { "red": 1, "white": 2 },
+      "keywords": {
+        "Pierce": 1
+      }
+    }
+  ]
+}

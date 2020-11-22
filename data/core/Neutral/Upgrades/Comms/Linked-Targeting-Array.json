@@ -1,0 +1,21 @@
+{
+  "name": "Linked Targeting Array",
+  "points": 5,
+  "type": "Comms",
+
+  "restrictions": {
+    "unitTypes": [
+      "Vehicle",
+      {
+        "primary": "Trooper",
+        "secondary": "Emplacement Trooper"
+      }
+    ]
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "Target": 1
+    }
+  }
+}

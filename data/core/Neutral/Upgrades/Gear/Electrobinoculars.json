@@ -1,0 +1,14 @@
+{
+  "name": "Electrobinoculars",
+  "points": 8,
+  "type": "Gear",
+
+  "keywords": {
+    "actions": {
+      "Spotter": {
+        "actions": 1,
+        "amount": 1
+      }
+    }
+  }
+}

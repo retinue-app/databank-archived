@@ -1,0 +1,11 @@
+{
+  "name": "Veteran Clone Pilot",
+  "points": 7,
+  "type": "Pilot",
+
+  "restrictions": {
+    "units": ["TX-130 Saber-class Fighter Tank"]
+  },
+
+  "description": "While you or a friendly clone trooper unit at range 1 and in line of sight attacks or defends, you and that units can spend each other's aim,dodge and surge tokens. During the End Phase, ready this card."
+}

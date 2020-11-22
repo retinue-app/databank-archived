@@ -1,0 +1,9 @@
+{
+  "name": "B2 Super Battle Droid",
+  "points": 16,
+  "type": "Personnel",
+
+  "restrictions": {
+    "units": ["B2 Super Battle Droids"]
+  }
+}

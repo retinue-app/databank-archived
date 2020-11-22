@@ -1,0 +1,22 @@
+{
+  "name": "Stormtrooper Captain",
+  "points": 15,
+  "type": "Personnel",
+
+  "restrictions": {
+    "units": ["Stormtroopers"]
+  },
+
+  "usage": "Exhaust",
+
+  "description": "When you activate, you cannot remove suppression tokens or be suppressed during this activation.",
+
+  "keywords": {
+    "passiveForUnit": {
+      "$Add Upgrade": "Training"
+    },
+    "passiveForUpgrade": {
+      "Leader": null
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "name": "K-2SO",
+  "title": "Sardonic Security Droid",
+  "restrictions": {
+    "factions": ["Rebel Alliance"],
+    "isUnique": true,
+    "units": ["Cassian Andor"]
+  },
+  "points": 70,
+  "rank": "Operative",
+  "miniatures": 1,
+  "type": {
+    "primary": "Trooper",
+    "secondary": "Droid Trooper"
+  },
+  "defense": {
+    "color": "Red",
+    "wounds": 5,
+    "courage": 2
+  },
+  "attack": {
+    "surges": "Crit"
+  },
+  "speed": 2,
+  "upgrades": {
+    "Comms": 1,
+    "Armament": 1
+  },
+  "keywords": {
+    "actions": {
+      "Calculate Odds": {
+        "actions": 1
+      }
+    },
+    "passive": {
+      "Armor": 1,
+      "Detachment": {
+        "units": ["Cassian Andor"]
+      },
+      "Incognito": null,
+      "Teamwork": {
+        "units": ["Cassian Andor"]
+      }
+    }
+  },
+  "weapons": [
+    {
+      "name": "Overpower",
+      "range": ["Melee"],
+      "dice": { "red": 4 }
+    }
+  ]
+}

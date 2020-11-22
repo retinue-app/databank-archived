@@ -1,0 +1,14 @@
+{
+  "name": "Smoke Grenades",
+  "points": 6,
+  "type": "Grenades",
+
+  "keywords": {
+    "actions": {
+      "Smoke": {
+        "actions": 1,
+        "amount": 1
+      }
+    }
+  }
+}

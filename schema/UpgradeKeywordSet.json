@@ -5,6 +5,10 @@
   "description": "A set of keywords that provide a passive effect for a specific upgrade/model.",
 
   "properties": {
+    "Cycle": {
+      "type": "null"
+    },
+
     "Leader": {
       "type": "null"
     },
@@ -19,6 +23,10 @@
 
     "Sidearm": {
       "enum": ["Melee", "Ranged"]
+    },
+
+    "Small": {
+      "type": "null"
     }
   },
 

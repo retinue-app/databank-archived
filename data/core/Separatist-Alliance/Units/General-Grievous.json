@@ -1,0 +1,53 @@
+{
+  "name": "General Grievous",
+  "title": "Sinister Cyborg",
+  "restrictions": {
+    "factions": ["Separatist Alliance"],
+    "isUnique": true
+  },
+  "points": 175,
+  "rank": "Commander",
+  "miniatures": 1,
+  "type": "Trooper",
+  "defense": {
+    "color": "Red",
+    "wounds": 8,
+    "courage": 2
+  },
+  "speed": 2,
+  "upgrades": {
+    "Command": 2,
+    "Training": 1,
+    "Armament": 1
+  },
+  "keywords": {
+    "passive": {
+      "Arsenal": 2,
+      "Block": null,
+      "Impervious": null,
+      "Jedi Hunter": null,
+      "Relentless": null,
+      "Scale": null
+    }
+  },
+  "weapons": [
+    {
+      "name": "Trophy Lightsabers (1/2)",
+      "range": ["Melee"],
+      "dice": { "red": 1, "black": 2, "white": 1 },
+      "keywords": {
+        "Impact": 1,
+        "Pierce": 1
+      }
+    },
+    {
+      "name": "Trophy Lightsabers (2/2)",
+      "range": ["Melee"],
+      "dice": { "red": 1, "black": 2, "white": 1 },
+      "keywords": {
+        "Impact": 1,
+        "Pierce": 1
+      }
+    }
+  ]
+}

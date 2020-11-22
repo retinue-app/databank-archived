@@ -1,0 +1,15 @@
+{
+  "name": "B2-ACM Trooper",
+  "points": 26,
+  "type": "Heavy Weapon",
+
+  "restrictions": {
+    "units": ["B2 Super Battle Droids"]
+  },
+
+  "weapon": {
+    "name": "B2-ACM Trooper",
+    "range": [1, 2],
+    "dice": { "red": 3 }
+  }
+}

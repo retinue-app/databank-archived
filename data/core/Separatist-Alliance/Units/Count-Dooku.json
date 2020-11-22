@@ -1,12 +1,12 @@
 {
-  "name": "Luke Skywalker",
-  "title": "Hero Of The Rebellion",
+  "name": "Count Dooku",
+  "title": "Darth Tyranus",
   "restrictions": {
-    "factions": ["Rebel Alliance"],
-    "forceAlignment": ["Light Side"],
+    "factions": ["Galactic Empire"],
+    "forceAlignment": ["Dark Side"],
     "isUnique": true
   },
-  "points": 160,
+  "points": 205,
   "rank": "Commander",
   "miniatures": 1,
   "type": "Trooper",
@@ -20,28 +20,24 @@
   },
   "speed": 2,
   "upgrades": {
-    "Force": 2,
-    "Gear": 1
+    "Force": 3,
+    "Command": 1
   },
   "keywords": {
-    "actions": {
-      "Jump": {
-        "actions": 1,
-        "amount": 1
-      }
-    },
     "passive": {
-      "Charge": null,
+      "Cunning": null,
       "Deflect": null,
-      "Immune": ["Pierce"]
+      "Immune": ["Pierce"],
+      "Makashi Mastery": null,
+      "Master of the Force": 2
     }
   },
   "weapons": [
     {
-      "name": "Anakin's Lightsaber",
+      "name": "Dooku's Lightsaber",
       "range": ["Melee"],
       "dice": {
-        "black": 6
+        "red": 5
       },
       "keywords": {
         "Impact": 2,
@@ -49,13 +45,14 @@
       }
     },
     {
-      "name": "Luke's DL-44 Blaster Pistol",
+      "name": "Dooku's Lightning",
       "range": [1, 2],
       "dice": {
-        "red": 2
+        "black": 5
       },
       "keywords": {
-        "Pierce": 2
+        "Pierce": 1,
+        "Scatter": null
       }
     }
   ]

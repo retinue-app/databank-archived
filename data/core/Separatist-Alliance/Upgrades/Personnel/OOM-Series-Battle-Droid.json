@@ -1,0 +1,19 @@
+{
+  "name": "OOM-Series Battle Droid",
+  "points": 12,
+  "type": "Personnel",
+
+  "restrictions": {
+    "units": ["B1 Battle Droids"]
+  },
+  "description": "When you use Coordinate, you can issue an order at range 1-2 instead of range 1.",
+
+  "keywords": {
+    "passiveForUpgrade": {
+      "Leader": null
+    },
+    "passiveForUnit": {
+      "$Coordinate: Range 1-2": null
+    }
+  }
+}

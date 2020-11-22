@@ -46,7 +46,7 @@
 
   "anyOf": [
     {
-      "enum": ["Trooper"]
+      "enum": ["Trooper", "Vehicle"]
     },
     {
       "$ref": "#/definitions/Trooper"

@@ -20,7 +20,9 @@
 
     "DefinePassiveWithAmount": {
       "type": "number",
-      "minimum": 1
+      "not": {
+        "enum": [0]
+      }
     },
 
     "DefinePassiveWithEffects": {
@@ -56,6 +58,10 @@
       "required": ["amount", "explosive"]
     },
 
+    "DefinePassiveWithKeyword": {
+      "$ref": "./PassiveKeywordSet.json"
+    },
+
     "DefinePassiveWithSides": {
       "type": "object",
 
@@ -88,19 +94,20 @@
     },
 
     "DefinePassiveWithTerrain": {
-      "properties": {
-        "type": {
-          "enum": ["Air", "Ground"]
-        },
+      "anyOf": [
+        { "enum": ["Ground"] },
+        {
+          "properties": {
+            "Air": {
+              "type": "number",
+              "minimum": 1
+            }
+          },
 
-        "height": {
-          "type": "number",
-          "minimum": 1
+          "additionalProperties": false,
+          "required": ["Air"]
         }
-      },
-
-      "additionalProperties": false,
-      "required": ["type", "height"]
+      ]
     },
 
     "DefinePassiveWithTransport": {
@@ -125,11 +132,27 @@
   },
 
   "properties": {
+    "$Add Upgrade": {
+      "$ref": "#/definitions/DefinePassiveWithUpgrade"
+    },
+
     "$Add and Equip Upgrade": {
       "$ref": "#/definitions/DefinePassiveWithUpgrade"
     },
 
+    "$Coordinate: Range 1-2": {
+      "$ref": "#/definitions/DefinePassive"
+    },
+
     "$Increase Courage": {
+      "$ref": "#/definitions/DefinePassiveWithAmount"
+    },
+
+    "$Lose Keyword": {
+      "$ref": "#/definitions/DefinePassiveWithKeyword"
+    },
+
+    "$Modify Maximum Speed": {
       "$ref": "#/definitions/DefinePassiveWithAmount"
     },
 
@@ -503,6 +526,7 @@
       { "$ref": "#/definitions/DefinePassiveWithAmount" },
       { "$ref": "#/definitions/DefinePassiveWithEffects" },
       { "$ref": "#/definitions/DefinePassiveWithExplosive" },
+      { "$ref": "#/definitions/DefinePassiveWithKeyword" },
       { "$ref": "#/definitions/DefinePassiveWithSides" },
       { "$ref": "#/definitions/DefinePassiveWithSurge" },
       { "$ref": "#/definitions/DefinePassiveWithTarget" },

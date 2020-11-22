@@ -1,0 +1,23 @@
+{
+  "name": "Armor-Piercing Shells",
+  "points": 10,
+  "type": "Ordnance",
+
+  "usage": "Exhaust",
+
+  "keywords": {
+    "passiveForUpgrade": {
+      "Cycle": null
+    }
+  },
+
+  "weapon": {
+    "name": "Armor-Piercing Shells",
+    "range": [2, 3],
+    "dice": { "red": 1, "black": 2 },
+    "keywords": {
+      "Fixed": ["Front"],
+      "Impact": 3
+    }
+  }
+}

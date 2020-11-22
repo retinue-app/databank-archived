@@ -1,0 +1,15 @@
+{
+  "name": "Fear",
+  "points": 3,
+  "type": "Force",
+
+  "restrictions": {
+    "forceAlignment": ["Dark Side"]
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "Demoralize": 1
+    }
+  }
+}

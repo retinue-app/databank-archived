@@ -1,12 +1,12 @@
 {
-  "name": "Luke Skywalker",
-  "title": "Hero Of The Rebellion",
+  "name": "Obi-Wan Kenobi",
+  "title": "Civilized Warrior",
   "restrictions": {
-    "factions": ["Rebel Alliance"],
+    "factions": ["Galactic Republic"],
     "forceAlignment": ["Light Side"],
     "isUnique": true
   },
-  "points": 160,
+  "points": 175,
   "rank": "Commander",
   "miniatures": 1,
   "type": "Trooper",
@@ -15,13 +15,11 @@
     "wounds": 6,
     "courage": 3
   },
-  "attack": {
-    "surges": "Crit"
-  },
   "speed": 2,
   "upgrades": {
     "Force": 2,
-    "Gear": 1
+    "Command": 1,
+    "Training": 1
   },
   "keywords": {
     "actions": {
@@ -32,29 +30,24 @@
     },
     "passive": {
       "Charge": null,
-      "Deflect": null,
-      "Immune": ["Pierce"]
+      "Guardian": 3,
+      "Immune": ["Pierce"],
+      "Master of the Force": 1,
+      "Soresu Mastery": null
     }
   },
   "weapons": [
     {
-      "name": "Anakin's Lightsaber",
+      "name": "Obi-Wan's Lightsaber",
       "range": ["Melee"],
       "dice": {
-        "black": 6
+        "red": 2,
+        "black": 2,
+        "white": 2
       },
       "keywords": {
+        "Critical": 2,
         "Impact": 2,
-        "Pierce": 2
-      }
-    },
-    {
-      "name": "Luke's DL-44 Blaster Pistol",
-      "range": [1, 2],
-      "dice": {
-        "red": 2
-      },
-      "keywords": {
         "Pierce": 2
       }
     }

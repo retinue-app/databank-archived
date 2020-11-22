@@ -1,0 +1,19 @@
+{
+  "name": "B1 Security Droid",
+  "points": 9,
+  "type": "Personnel",
+
+  "restrictions": {
+    "units": ["B1 Battle Droids"]
+  },
+
+  "usage": "Exhaust",
+
+  "keywords": {
+    "passiveForUnit": {
+      "$Lose Keyword": {
+        "AI": ["Attack"]
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "name": "Clone Captain Rex",
+  "title": "Honorable Soldier",
+  "restrictions": {
+    "factions": ["Galactic Republic"],
+    "isUnique": true
+  },
+  "points": 90,
+  "rank": "Commander",
+  "miniatures": 1,
+  "type": {
+    "primary": "Trooper",
+    "secondary": "Clone Trooper"
+  },
+  "defense": {
+    "color": "Red",
+    "wounds": 5,
+    "courage": 2
+  },
+  "attack": {
+    "surges": "Crit"
+  },
+  "speed": 2,
+  "upgrades": {
+    "Command": 1,
+    "Training": 1,
+    "Gear": 2,
+    "Grenades": 1
+  },
+  "keywords": {
+    "passive": {
+      "Gunslinger": null,
+      "Scout": 1,
+      "Scouting Party": 2,
+      "Sharpshooter": 1,
+      "Tactical": 1
+    }
+  },
+  "weapons": [
+    {
+      "name": "Advanced Combat Training",
+      "range": ["Melee"],
+      "dice": {
+        "red": 2
+      }
+    },
+    {
+      "name": "Dual DC-17 Hand Blasters",
+      "range": [1, 2],
+      "dice": {
+        "red": 3
+      }
+    }
+  ]
+}

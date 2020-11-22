@@ -1,0 +1,49 @@
+{
+  "name": "TX-130 Saber-class Fighter Tank",
+  "restrictions": {
+    "factions": ["Galactic Republic"]
+  },
+  "points": 170,
+  "rank": "Heavy",
+  "miniatures": 1,
+  "type": {
+    "primary": "Vehicle",
+    "secondary": "Repulsor Vehicle"
+  },
+  "defense": {
+    "color": "Red",
+    "wounds": 9,
+    "resilience": 6
+  },
+  "speed": 2,
+  "upgrades": {
+    "Pilot": 1,
+    "Hardpoint": 1,
+    "Ordnance": 1,
+    "Comms": 1
+  },
+  "keywords": {
+    "passive": {
+      "Armor": null,
+      "Arsenal": 2,
+      "Hover": "Ground",
+      "Outmaneuver": null,
+      "Weak Point": {
+        "amount": 1,
+        "sides": ["Rear", "Sides"]
+      }
+    }
+  },
+  "weapons": [
+    {
+      "name": "Twin Lateral GA-6n Laser Cannons",
+      "range": [1, 4],
+      "dice": { "red": 2, "black": 2, "white": 2 },
+      "keywords": {
+        "Critical": 1,
+        "Impact": 2,
+        "Fixed": ["Front"]
+      }
+    }
+  ]
+}

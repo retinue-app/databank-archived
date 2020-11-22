@@ -1,0 +1,19 @@
+{
+  "name": "Phase II Mortar Trooper",
+  "points": 25,
+  "type": "Heavy Weapon",
+
+  "restrictions": {
+    "units": ["Phase II Clone Troopers"]
+  },
+
+  "weapon": {
+    "name": "Phase II Mortar Trooper",
+    "range": [2, 4],
+    "dice": { "black": 2 },
+    "keywords": {
+      "Critical": 1,
+      "Suppressive": null
+    }
+  }
+}
