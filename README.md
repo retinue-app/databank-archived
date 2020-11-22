@@ -15,9 +15,9 @@ Community data for Star Wars: Legion
 - [x] Add "wave 2" (SWL-14 -> SWL-21).
 - [x] Add "wave 3" (SWL-22 -> SWL-27).
 - [x] Add "wave 4" (SWL-31 -> SWL-36).
-- [ ] Add "wave 5" (SWL-37 -> SWL-42).
-
+- [x] Add "wave 5" (SWL-37 -> SWL-42).
 - [ ] Add "wave 6" (SWL-44 -> SWL-57).
+
 - [ ] Add "wave 7" (SWL-59 -> SWL-65).
 - [ ] Add "wave 8" (SWL-66 -> SWL-73).
 - [ ] Add "wave 9" (as revealed, i.e. through SWL-77 partially).

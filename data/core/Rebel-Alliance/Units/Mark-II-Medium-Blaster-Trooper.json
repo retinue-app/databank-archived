@@ -1,7 +1,8 @@
 {
   "name": "Mark II Medium Blaster Trooper",
   "restrictions": {
-    "factions": ["Rebel Alliance"]
+    "factions": ["Rebel Alliance"],
+    "units": ["Rebel Veterans"]
   },
   "points": 38,
   "rank": "Corps",

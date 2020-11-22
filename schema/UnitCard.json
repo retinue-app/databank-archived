@@ -80,12 +80,14 @@
 
     "miniatures": {
       "type": "number",
+      "default": 1,
       "minimum": 1,
       "description": "Number of miniatures in the unit."
     },
 
     "type": {
-      "$ref": "./UnitType.json"
+      "$ref": "./UnitType.json",
+      "default": "Trooper"
     },
 
     "defense": {

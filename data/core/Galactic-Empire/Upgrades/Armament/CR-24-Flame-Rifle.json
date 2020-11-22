@@ -1,0 +1,19 @@
+{
+  "name": "CR-24 Flame Rifle",
+  "points": 20,
+  "type": "Armament",
+
+  "restrictions": {
+    "units": ["Dewback Rider"]
+  },
+
+  "weapon": {
+    "name": "CR-24 Flame Rifle",
+    "range": [1],
+    "dice": { "black": 1, "white": 1 },
+    "keywords": {
+      "Blast": null,
+      "Spray": null
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "RT-97C Blaster Rifle",
+  "points": 15,
+  "type": "Armament",
+
+  "restrictions": {
+    "units": ["Dewback Rider"]
+  },
+
+  "weapon": {
+    "name": "RT-97C Blaster Rifle",
+    "range": [1, 4],
+    "dice": { "red": 1, "white": 3 }
+  }
+}
