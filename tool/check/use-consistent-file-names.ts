@@ -22,7 +22,10 @@ function titleCase(input: string): string {
 }
 
 function normalizeNameToFileName(name: string): string {
-  name = name.replace(/\'|\"|\:|\.|\,|\!|\//g, '').replace(/\s+|\-+/g, ' ');
+  name = name
+    .replace(/\.|\//g, ' ')
+    .replace(/\'|\"|\:|\,|\!/g, '')
+    .replace(/\s+|\-+/g, ' ');
   name = titleCase(name);
   return name.replace(/\s/g, '-').replace(/\-+/g, '-');
 }
