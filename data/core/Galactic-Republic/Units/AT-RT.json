@@ -9,11 +9,7 @@
   "miniatures": 1,
   "type": {
     "primary": "Vehicle",
-<<<<<<< HEAD
     "secondary": "Ground Vehicle"
-=======
-    "secondary": "Repulsor Vehicle"
->>>>>>> e3ad9106dba0ca3553bfea3512301c6da44a22d6
   },
   "defense": {
     "color": "White",
@@ -42,11 +38,7 @@
       "name": "Grappling Claws",
       "range": ["Melee"],
       "dice": {
-<<<<<<< HEAD
-        "red": 4
-=======
         "red": 3
->>>>>>> e3ad9106dba0ca3553bfea3512301c6da44a22d6
       },
       "keywords": {
         "Impact": 1
@@ -55,14 +47,10 @@
     {
       "name": "Merr-Sonn RPC-2 Rocket Launcher",
       "range": [1, 3],
-<<<<<<< HEAD
-      "dice": { "black": 1, "white": 2 },
-=======
       "dice": {
         "black": 1,
         "white": 2
       },
->>>>>>> e3ad9106dba0ca3553bfea3512301c6da44a22d6
       "keywords": {
         "Critical": 1,
         "Impact": 1
