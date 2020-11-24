@@ -2,7 +2,9 @@
   "name": "Darth Vader",
   "title": "Dark Lord Of The Sith",
   "restrictions": {
-    "factions": ["Galactic Empire"]
+    "factions": ["Galactic Empire"],
+    "isUnique": true,
+    "forceAlignment": ["Dark Side"]
   },
   "points": 200,
   "rank": "Commander",

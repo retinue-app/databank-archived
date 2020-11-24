@@ -9,6 +9,12 @@
   "definitions": {
     "CardActionTarget": {
       "properties": {
+        "amount": {
+          "description": "Number of targets. If omitted, defaults to 1.",
+          "type": "number",
+          "minimum": 2
+        },
+
         "range": {
           "$ref": "./Range.json"
         },
@@ -68,6 +74,10 @@
           "$ref": "./Duration.json"
         },
 
+        "weapons": {
+          "$ref": "./WeaponKeywordSet.json"
+        },
+
         "tokens": {
           "type": "object",
           "minProperties": 1,
@@ -78,6 +88,12 @@
             "type": "number",
             "minimum": 1
           }
+        },
+
+        "maxTokensOfAnyType": {
+          "type": "number",
+          "minimum": 1,
+          "default": 1
         }
       },
 

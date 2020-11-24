@@ -1,0 +1,17 @@
+{
+  "name": "Ascension Cables",
+  "points": 4,
+  "type": "Gear",
+
+  "usage": "Exhaust",
+
+  "action": {
+    "actions": 0,
+    "grants": {
+      "keywords": {
+        "Scale": null
+      },
+      "duration": "EndOfActivation"
+    }
+  }
+}

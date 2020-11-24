@@ -1,0 +1,7 @@
+{
+  "name": "Aggressive Tactics",
+  "points": 10,
+  "type": "Command",
+
+  "description": "While you are the nominated commander, after issuing orders , choose up to 4 friendly units with faceup order tokens. Each chosen unit gains 1 surge token."
+}

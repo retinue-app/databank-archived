@@ -1,0 +1,40 @@
+{
+  "name": "Iden's ID10 Seeker Droid",
+  "points": 15,
+  "type": "Counterpart",
+
+  "wounds": 1,
+
+  "counterpart": {
+    "type": {
+      "Trooper": "Droid Trooper"
+    },
+    "upgrades": {
+      "Comms": 1
+    }
+  },
+
+  "restrictions": {
+    "units": ["Iden Versio"],
+    "isUnique": true
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "Recharge": 1,
+      "Shielded": 1
+    },
+    "passiveForUpgrade": {
+      "Small": null
+    }
+  },
+
+  "weapon": {
+    "name": "Electro-Shock",
+    "range": ["Melee", 1],
+    "dice": { "white": 3 },
+    "keywords": {
+      "Suppressive": null
+    }
+  }
+}

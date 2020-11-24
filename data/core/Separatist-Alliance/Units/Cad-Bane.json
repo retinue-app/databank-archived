@@ -1,0 +1,56 @@
+{
+  "name": "Cad Bane",
+  "title": "Needs No Introduction",
+  "restrictions": {
+    "factions": ["Separatist Alliance"]
+  },
+  "points": 125,
+  "rank": "Operative",
+  "miniatures": 1,
+  "type": "Trooper",
+  "defense": {
+    "color": "White",
+    "wounds": 6,
+    "courage": 3
+  },
+  "attack": {
+    "surges": "Hit"
+  },
+  "speed": 2,
+  "upgrades": {
+    "Training": 1,
+    "Comms": 1,
+    "Gear": 1,
+    "Armament": 1,
+    "Grenades": 1
+  },
+  "keywords": {
+    "actions": {
+      "Jump": {
+        "actions": 1,
+        "amount": 1
+      }
+    },
+    "passive": {
+      "Bounty": null,
+      "Danger Sense": 2,
+      "Sharpshooter": 1,
+      "Steady": null
+    }
+  },
+  "weapons": [
+    {
+      "name": "Martial ArtS",
+      "range": ["Melee"],
+      "dice": { "black": 3 }
+    },
+    {
+      "name": "Dual LL-30 Blaster Pistols",
+      "range": [1, 2],
+      "dice": { "black": 4 },
+      "keywords": {
+        "Pierce": 1
+      }
+    }
+  ]
+}

@@ -6,6 +6,27 @@
   "description": "Defines an upgrade card.",
   "additionalProperties": false,
 
+  "definitions": {
+    "PointAdjustments": {
+      "properties": {
+        "if": {
+          "$ref": "./TargetSet.json"
+        },
+
+        "condition": {
+          "enum": ["In Army", "On Unit"]
+        },
+
+        "adjustBy": {
+          "type": "number"
+        }
+      },
+
+      "additionalProperties": true,
+      "required": ["if", "condition", "adjustBy"]
+    }
+  },
+
   "properties": {
     "name": {
       "description": "Name of the upgrade.",
@@ -36,6 +57,35 @@
       "$ref": "./UpgradeType.json"
     },
 
+    "wounds": {
+      "type": "number",
+      "minimum": 1,
+      "description": "Wounds if this is a miniature. If omitted defaults to the unit."
+    },
+
+    "counterpart": {
+      "additionalProperties": false,
+
+      "properties": {
+        "type": {
+          "$ref": "./UnitType.json"
+        },
+
+        "upgrades": {
+          "propertyNames": {
+            "$ref": "./UpgradeType.json"
+          },
+
+          "additionalProperties": {
+            "type": "number",
+            "minimum": 1
+          }
+        }
+      },
+
+      "required": ["type"]
+    },
+
     "restrictions": {
       "$ref": "./TargetSet.json"
     },
@@ -47,6 +97,10 @@
     "points": {
       "type": "number",
       "minimum": 0
+    },
+
+    "pointAdjustments": {
+      "$ref": "#/definitions/PointAdjustments"
     },
 
     "weapon": {

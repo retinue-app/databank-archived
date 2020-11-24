@@ -1,0 +1,20 @@
+{
+  "name": "E-60R B1 Trooper",
+  "points": 20,
+  "type": "Heavy Weapon",
+
+  "restrictions": {
+    "units": ["B1 Battle Droids"]
+  },
+
+  "usage": "Exhaust",
+
+  "weapon": {
+    "name": "E-60R B1 Trooper",
+    "range": [2, 4],
+    "dice": { "red": 1, "black": 2 },
+    "keywords": {
+      "Impact": 2
+    }
+  }
+}

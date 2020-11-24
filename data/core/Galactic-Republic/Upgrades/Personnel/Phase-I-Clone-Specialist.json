@@ -1,0 +1,33 @@
+{
+  "name": "Phase I Clone Specialist",
+  "points": 17,
+  "type": "Personnel",
+
+  "restrictions": {
+    "units": ["Phase I Clone Troopers"]
+  },
+
+  "usage": "Exhaust",
+
+  "action": {
+    "actions": 0,
+    "description": "Gain 1 aim token, dodge, or 1 surge token.",
+    "target": {
+      "is": "Self"
+    },
+    "grants": {
+      "tokens": {
+        "Aim": 1,
+        "Dodge": 1,
+        "Surge": 1
+      },
+      "maxTokensOfAnyType": 1
+    }
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "$Add Upgrade": "Gear"
+    }
+  }
+}

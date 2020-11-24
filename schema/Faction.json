@@ -7,7 +7,12 @@
 
   "definitions": {
     "OfficialFaction": {
-      "enum": ["Galactic Empire", "Rebel Alliance"]
+      "enum": [
+        "Galactic Empire",
+        "Galactic Republic",
+        "Separatist Alliance",
+        "Rebel Alliance"
+      ]
     }
   },
 

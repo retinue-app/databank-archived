@@ -1,0 +1,22 @@
+{
+  "name": "Rebel Trooper Captain",
+  "points": 14,
+  "type": "Personnel",
+
+  "restrictions": {
+    "units": ["Rebel Troopers"]
+  },
+
+  "usage": "Exhaust",
+
+  "description": "When you activate, you cannot remove suppression tokens or be suppressed during this activation.",
+
+  "keywords": {
+    "passiveForUnit": {
+      "$Add Upgrade": "Training"
+    },
+    "passiveForUpgrade": {
+      "Leader": null
+    }
+  }
+}

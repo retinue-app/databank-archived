@@ -5,6 +5,14 @@
   "description": "A set of keywords that provide a passive effect for a specific upgrade/model.",
 
   "properties": {
+    "$May Flip At Start": {
+      "type": "string"
+    },
+
+    "Cycle": {
+      "type": "null"
+    },
+
     "Leader": {
       "type": "null"
     },
@@ -19,6 +27,10 @@
 
     "Sidearm": {
       "enum": ["Melee", "Ranged"]
+    },
+
+    "Small": {
+      "type": "null"
     }
   },
 

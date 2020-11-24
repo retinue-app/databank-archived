@@ -1,0 +1,17 @@
+{
+  "name": "Aayla Secura",
+  "points": 5,
+  "type": "Pilot",
+
+  "restrictions": {
+    "units": ["TX-130 Saber-class Fighter Tank"],
+    "isUnique": true
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "Field Commander": null,
+      "Inspire": 2
+    }
+  }
+}

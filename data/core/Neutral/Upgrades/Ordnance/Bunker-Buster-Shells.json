@@ -1,0 +1,24 @@
+{
+  "name": "\"Bunker Buster\" Shells",
+  "points": 12,
+  "type": "Ordnance",
+
+  "usage": "Exhaust",
+
+  "keywords": {
+    "passiveForUpgrade": {
+      "Cycle": null
+    }
+  },
+
+  "weapon": {
+    "name": "Armor-Piercing Shells",
+    "range": [1, 2],
+    "dice": { "black": 1, "white": 3 },
+    "keywords": {
+      "Blast": null,
+      "Fixed": ["Front"],
+      "Scatter": null
+    }
+  }
+}

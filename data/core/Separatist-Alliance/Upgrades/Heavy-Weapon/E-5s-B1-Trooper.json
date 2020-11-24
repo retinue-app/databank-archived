@@ -1,0 +1,18 @@
+{
+  "name": "E-5s B1 Trooper",
+  "points": 20,
+  "type": "Heavy Weapon",
+
+  "restrictions": {
+    "units": ["B1 Battle Droids"]
+  },
+
+  "weapon": {
+    "name": "E-5C B1 Trooper",
+    "range": [1, 4],
+    "dice": { "red": 1, "white": 1 },
+    "keywords": {
+      "Critical": 1
+    }
+  }
+}

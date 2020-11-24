@@ -16,6 +16,10 @@
       "$ref": "./PassiveKeywordSet.json"
     },
 
+    "passiveForUnitWhileExhausted": {
+      "$ref": "./PassiveKeywordSet.json"
+    },
+
     "passiveForUpgrade": {
       "$ref": "./UpgradeKeywordSet.json"
     }

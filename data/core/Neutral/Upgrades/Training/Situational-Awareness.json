@@ -1,0 +1,19 @@
+{
+  "name": "Situational Awareness",
+  "points": 2,
+  "type": "Training",
+
+  "pointAdjustments": {
+    "if": {
+      "unitRanks": ["Support"]
+    },
+    "condition": "On Unit",
+    "adjustBy": 4
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "Outmaneuver": null
+    }
+  }
+}

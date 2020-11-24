@@ -1,0 +1,28 @@
+{
+  "name": "Jyn's SE-14 Blaster",
+  "points": 10,
+  "type": "Armament",
+
+  "pointAdjustments": {
+    "if": {
+      "units": ["Jyn Erso"]
+    },
+    "condition": "In Army",
+    "adjustBy": -5
+  },
+
+  "restrictions": {
+    "units": ["Jyn Erso", "K-2SO"],
+    "isUnique": true
+  },
+
+  "weapon": {
+    "name": "Jyn's SE-14 Blaster",
+    "range": [1, 2],
+    "dice": { "white": 5 },
+    "keywords": {
+      "Pierce": 1,
+      "Suppressive": null
+    }
+  }
+}

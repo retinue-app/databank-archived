@@ -1,0 +1,13 @@
+{
+  "name": "Seize the Initiative",
+  "points": 5,
+  "type": "Training",
+
+  "restrictions": {
+    "unitRanks": ["Commander", "Operative"]
+  },
+
+  "usage": "Discard",
+
+  "description": "During the Issue Orders Step or the Command Phase, issue an order to yourself."
+}

@@ -2,7 +2,9 @@
   "name": "Luke Skywalker",
   "title": "Hero Of The Rebellion",
   "restrictions": {
-    "factions": ["Rebel Alliance"]
+    "factions": ["Rebel Alliance"],
+    "forceAlignment": ["Light Side"],
+    "isUnique": true
   },
   "points": 160,
   "rank": "Commander",

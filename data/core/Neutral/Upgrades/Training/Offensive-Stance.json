@@ -1,0 +1,17 @@
+{
+  "name": "Offensive Stance",
+  "points": 5,
+  "type": "Training",
+
+  "restrictions": {
+    "hasUpgradeSlot": ["Force"]
+  },
+
+  "description": "When you perform an aim action, gain 2 aim tokens instead of 1. You cannot spend dodge tokens.",
+
+  "keywords": {
+    "passiveForUpgrade": {
+      "$May Flip At Start": "Defensive Stance"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "name": "AAT Trade Federation Battle Tank",
+  "restrictions": {
+    "factions": ["Separatist Alliance"]
+  },
+  "points": 170,
+  "rank": "Heavy",
+  "miniatures": 1,
+  "type": {
+    "Vehicle": "Repulsor Vehicle"
+  },
+  "defense": {
+    "color": "Red",
+    "wounds": 9,
+    "resilience": 6
+  },
+  "speed": 1,
+  "upgrades": {
+    "Pilot": 1,
+    "Ordnance": 2,
+    "Comms": 1
+  },
+  "keywords": {
+    "passive": {
+      "AI": ["Attack"],
+      "Armor": null,
+      "Barrage": null,
+      "Hover": "Ground",
+      "Weak Point": {
+        "amount": 2,
+        "sides": ["Rear"]
+      }
+    }
+  },
+  "weapons": [
+    {
+      "name": "Lateral Anti-Personnel Lasers",
+      "range": [1, 2],
+      "dice": { "black": 3 },
+      "keywords": {
+        "Fixed": ["Front"]
+      }
+    },
+    {
+      "name": "MX-8 Artillery Laser Cannon",
+      "range": [2, 4],
+      "dice": { "red": 4 },
+      "keywords": {
+        "Critical": 2,
+        "High Velocity": null,
+        "Impact": 1
+      }
+    }
+  ]
+}

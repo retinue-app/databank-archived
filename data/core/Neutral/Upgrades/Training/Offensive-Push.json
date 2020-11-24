@@ -1,0 +1,13 @@
+{
+  "name": "Offensive Push",
+  "points": 4,
+  "type": "Training",
+
+  "usage": "Exhaust",
+
+  "keywords": {
+    "passiveForUnit": {
+      "Tactical": 1
+    }
+  }
+}

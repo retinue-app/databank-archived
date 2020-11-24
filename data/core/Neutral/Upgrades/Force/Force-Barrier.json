@@ -1,0 +1,9 @@
+{
+  "name": "Force Barrier",
+  "points": 10,
+  "type": "Force",
+
+  "usage": "Exhaust",
+
+  "description": "While another friendly trooper unit at range 1 is defending against a ranged attack, during the Modify Attack Dice step, cancel either 1 Dice Crit result or up to 2 Dice Hit results."
+}

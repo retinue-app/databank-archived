@@ -1,0 +1,15 @@
+{
+  "name": "Hope",
+  "points": 3,
+  "type": "Force",
+
+  "restrictions": {
+    "forceAlignment": ["Light Side"]
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "Inspire": 1
+    }
+  }
+}

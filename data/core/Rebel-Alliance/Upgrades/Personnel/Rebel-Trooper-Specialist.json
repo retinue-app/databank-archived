@@ -1,0 +1,32 @@
+{
+  "name": "Rebel Trooper Specialist",
+  "points": 14,
+  "type": "Personnel",
+
+  "restrictions": {
+    "units": ["Rebel Troopers"]
+  },
+
+  "usage": "Exhaust",
+
+  "action": {
+    "actions": 0,
+    "description": "Gain 1 dodge token or 1 surge token.",
+    "target": {
+      "is": "Self"
+    },
+    "grants": {
+      "tokens": {
+        "Dodge": 1,
+        "Surge": 1
+      },
+      "maxTokensOfAnyType": 1
+    }
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "$Add Upgrade": "Gear"
+    }
+  }
+}

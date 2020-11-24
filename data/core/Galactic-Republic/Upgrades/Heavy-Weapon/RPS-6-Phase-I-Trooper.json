@@ -1,0 +1,19 @@
+{
+  "name": "RPS-6 Phase I Trooper",
+  "points": 26,
+  "type": "Heavy Weapon",
+
+  "restrictions": {
+    "units": ["Phase I Clone Troopers"]
+  },
+
+  "weapon": {
+    "name": "RPS-6 Phase I Trooper",
+    "range": [2, 4],
+    "dice": { "red": 1, "black": 1, "white": 1 },
+    "keywords": {
+      "Cumbersome": null,
+      "Impact": 2
+    }
+  }
+}

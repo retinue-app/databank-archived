@@ -1,0 +1,21 @@
+{
+  "name": "Beskad Duelist",
+  "points": 28,
+  "type": "Heavy Weapon",
+
+  "restrictions": {
+    "units": ["Mandalorian Resistance"]
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "Duelist": null
+    }
+  },
+
+  "weapon": {
+    "name": "Beskad Duelist",
+    "range": ["Melee"],
+    "dice": { "red": 2 }
+  }
+}

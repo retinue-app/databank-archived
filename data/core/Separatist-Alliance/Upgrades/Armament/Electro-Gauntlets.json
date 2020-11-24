@@ -1,0 +1,27 @@
+{
+  "name": "Electro Gauntlets",
+  "points": 10,
+  "type": "Armament",
+
+  "restrictions": {
+    "units": ["Cad Bane"]
+  },
+
+  "usage": "Exhaust",
+
+  "keywords": {
+    "passiveForUnitWhileExhausted": {
+      "$Move While Engaged With Immobilized Unit": null
+    }
+  },
+
+  "weapon": {
+    "name": "Electro Gauntlets",
+    "range": ["Melee"],
+    "dice": { "red": 4 },
+    "keywords": {
+      "Immobilize": 3,
+      "Suppressive": null
+    }
+  }
+}

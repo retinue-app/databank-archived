@@ -1,0 +1,46 @@
+{
+  "name": "B2 Super Battle Droids",
+  "restrictions": {
+    "factions": ["Separatist Alliance"]
+  },
+  "points": 48,
+  "rank": "Corps",
+  "miniatures": 3,
+  "type": {
+    "Trooper": "Droid Trooper"
+  },
+  "defense": {
+    "color": "White",
+    "wounds": 2,
+    "courage": 2
+  },
+  "speed": 2,
+  "upgrades": {
+    "Heavy Weapon": 1,
+    "Personnel": 1,
+    "Comms": 1
+  },
+  "keywords": {
+    "passive": {
+      "AI": ["Attack"],
+      "Armor": 1
+    }
+  },
+  "weapons": [
+    {
+      "name": "Unarmed",
+      "range": ["Melee"],
+      "dice": {
+        "black": 1
+      }
+    },
+    {
+      "name": "Arm Cannons",
+      "range": [1, 2],
+      "dice": {
+        "black": 1,
+        "white": 1
+      }
+    }
+  ]
+}
