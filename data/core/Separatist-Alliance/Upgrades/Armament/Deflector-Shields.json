@@ -1,0 +1,16 @@
+{
+  "name": "Deflector Shields",
+  "points": 18,
+  "type": "Armament",
+
+  "restrictions": {
+    "units": ["BX-series Droid Commandos"]
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "Shielded": 2,
+      "Recharge": 2
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "BX-series Droid Sniper",
+  "points": 30,
+  "type": "Heavy Weapon",
+
+  "restrictions": {
+    "units": ["BX-series Droid Commandos"]
+  },
+
+  "weapon": {
+    "name": "BX-series Droid Sniper",
+    "range": [1, 5],
+    "dice": {
+      "red": 2
+    },
+    "keywords": {
+      "Lethal": 1,
+      "Immune": ["Deflect"]
+    }
+  }
+}

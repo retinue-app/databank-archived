@@ -1,10 +1,12 @@
 {
-  "name": "BX-series Commando Droids",
+  "name": "BX-series Droid Commandos",
+  "title": "Strike Team",
   "restrictions": {
     "factions": ["Separatist Alliance"]
   },
-  "points": 68,
-  "rank": "Heavy",
+  "points": 20,
+  "rank": "Special Forces",
+  "miniatures": 1,
   "type": {
     "primary": "Trooper",
     "secondary": "Droid Trooper"
@@ -28,6 +30,7 @@
   "keywords": {
     "passive": {
       "AI": ["Dodge", "Move"],
+      "Heavy Weapon Team": null,
       "Impervious": null,
       "Scale": null,
       "Scout": 3,

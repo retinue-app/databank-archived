@@ -60,7 +60,7 @@
     "wounds": {
       "type": "number",
       "minimum": 1,
-      "description": "Wounds if this is a miniature."
+      "description": "Wounds if this is a miniature. If omitted defaults to the unit."
     },
 
     "counterpart": {

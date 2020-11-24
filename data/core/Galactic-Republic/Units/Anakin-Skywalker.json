@@ -1,0 +1,47 @@
+{
+  "name": "Anakin Skywalker",
+  "restrictions": {
+    "factions": ["Galactic Republic"],
+    "forceAlignment": ["Light Side"],
+    "isUnique": true
+  },
+  "points": 160,
+  "rank": "Commander",
+  "miniatures": 1,
+  "type": "Trooper",
+  "defense": {
+    "color": "Red",
+    "wounds": 6,
+    "courage": 1
+  },
+  "speed": 2,
+  "upgrades": {
+    "Force": 2,
+    "Training": 2
+  },
+  "keywords": {
+    "actions": {
+      "Jump": {
+        "actions": 1,
+        "amount": 1
+      }
+    },
+    "passive": {
+      "Djem So Mastery": null,
+      "Flawed": null,
+      "Immune": ["Pierce"],
+      "Tempted": null
+    }
+  },
+  "weapons": [
+    {
+      "name": "Anakin's Lightsaber",
+      "range": ["Melee"],
+      "dice": { "red": 5 },
+      "keywords": {
+        "Impact": 3,
+        "Pierce": 3
+      }
+    }
+  ]
+}
