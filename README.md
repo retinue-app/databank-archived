@@ -21,7 +21,7 @@ Community data for Star Wars: Legion
 - [x] Add "wave 8" (SWL-66 -> SWL-73).
 - [x] Add "wave 9" (as revealed, i.e. through SWL-77 partially).
 
-- [ ] Change `unitTypes` to the format `{Trooper: 'Droid Trooper'}`.
+- [x] Change `unitTypes` to the format `{Trooper: 'Droid Trooper'}`.
 
 - [ ] Add command cards (wave 0 -> 9).
 
