@@ -1,5 +1,6 @@
 {
   "name": "ARC Troopers",
+  "title": "Strike Team",
   "restrictions": {
     "factions": ["Galactic Republic"]
   },
