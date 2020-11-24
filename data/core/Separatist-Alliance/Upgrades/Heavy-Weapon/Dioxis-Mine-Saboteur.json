@@ -1,0 +1,34 @@
+{
+  "name": "Dioxis Mine Saboteur",
+  "points": 28,
+  "type": "Heavy Weapon",
+
+  "restrictions": {
+    "units": ["BX-series Droid Commandos"]
+  },
+
+  "usage": "Detonate",
+
+  "keywords": {
+    "passiveForUnit": {
+      "Detonate": {
+        "amount": 1,
+        "explosive": "Dioxis Mine"
+      }
+    }
+  },
+
+  "weapon": {
+    "name": "Dioxis Mine",
+    "surge": "Hit",
+    "range": [1],
+    "dice": {
+      "black": 1,
+      "white": 2
+    },
+    "keywords": {
+      "Blast": null,
+      "Poison": 1
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "name": "DRK-1 Sith Probe Droids",
+  "restrictions": {
+    "factions": ["Separatist Alliance"],
+    "units": ["Maul"]
+  },
+  "points": 35,
+  "rank": "Special Forces",
+  "miniatures": 3,
+  "type": {
+    "primary": "Trooper",
+    "secondary": "Droid Trooper"
+  },
+  "defense": {
+    "color": "White",
+    "wounds": 1,
+    "courage": 1,
+    "surges": true
+  },
+  "attack": {
+    "surges": "Hit"
+  },
+  "speed": 2,
+  "upgrades": {
+    "Comms": 1
+  },
+  "keywords": {
+    "actions": {
+      "Observe": {
+        "actions": 1,
+        "amount": 3
+      }
+    },
+    "passive": {
+      "Detachment": {
+        "units": ["Maul"]
+      },
+      "Hover": {
+        "Air": 1
+      },
+      "Incognito": null
+    }
+  },
+  "weapons": [
+    {
+      "name": "Electro-stun Micro Blaster",
+      "range": ["Melee", 1, 2],
+      "dice": {
+        "white": 2
+      },
+      "keywords": {
+        "Suppressive": null
+      }
+    }
+  ]
+}
