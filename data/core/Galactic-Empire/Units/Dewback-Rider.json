@@ -7,8 +7,7 @@
   "rank": "Support",
   "miniatures": 1,
   "type": {
-    "primary": "Trooper",
-    "secondary": "Creature Trooper"
+    "Trooper": "Creature Trooper"
   },
   "defense": {
     "color": "Red",

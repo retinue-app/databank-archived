@@ -8,8 +8,7 @@
   "rank": "Corps",
   "miniatures": 1,
   "type": {
-    "primary": "Trooper",
-    "secondary": "Emplacement Trooper"
+    "Trooper": "Emplacement Trooper"
   },
   "defense": {
     "color": "Red",

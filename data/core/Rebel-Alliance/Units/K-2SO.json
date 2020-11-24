@@ -10,8 +10,7 @@
   "rank": "Operative",
   "miniatures": 1,
   "type": {
-    "primary": "Trooper",
-    "secondary": "Droid Trooper"
+    "Trooper": "Droid Trooper"
   },
   "defense": {
     "color": "Red",

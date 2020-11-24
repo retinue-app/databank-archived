@@ -7,7 +7,9 @@
   "points": 38,
   "rank": "Corps",
   "miniatures": 1,
-  "type": "Trooper",
+  "type": {
+    "Trooper": "Emplacement Trooper"
+  },
   "defense": {
     "color": "White",
     "wounds": 3,

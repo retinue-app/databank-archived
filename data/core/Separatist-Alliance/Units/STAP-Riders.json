@@ -7,8 +7,7 @@
   "rank": "Support",
   "miniatures": 2,
   "type": {
-    "primary": "Vehicle",
-    "secondary": "Repulsor Vehicle"
+    "Vehicle": "Repulsor Vehicle"
   },
   "defense": {
     "color": "White",
@@ -23,13 +22,7 @@
       "Agile": 1,
       "AI": ["Move"],
       "Coordinate": {
-        "unitTypes": [
-          {
-            "primary": "Trooper",
-            "secondary": "Droid Trooper"
-          },
-          "Vehicle"
-        ]
+        "unitTypes": [{ "Trooper": "Droid Trooper" }, "Vehicle"]
       },
       "Cover": 1,
       "Speeder": 1

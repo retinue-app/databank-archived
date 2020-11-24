@@ -7,8 +7,7 @@
   "rank": "Corps",
   "miniatures": 4,
   "type": {
-    "primary": "Trooper",
-    "secondary": "Clone Trooper"
+    "Trooper": "Clone Trooper"
   },
   "defense": {
     "color": "Red",

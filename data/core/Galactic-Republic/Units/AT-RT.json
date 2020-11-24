@@ -8,8 +8,7 @@
   "rank": "Support",
   "miniatures": 1,
   "type": {
-    "primary": "Vehicle",
-    "secondary": "Ground Vehicle"
+    "Vehicle": "Ground Vehicle"
   },
   "defense": {
     "color": "White",

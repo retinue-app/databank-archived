@@ -9,8 +9,7 @@
   "rank": "Commander",
   "miniatures": 1,
   "type": {
-    "primary": "Trooper",
-    "secondary": "Clone Trooper"
+    "Trooper": "Clone Trooper"
   },
   "defense": {
     "color": "Red",
