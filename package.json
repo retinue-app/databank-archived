@@ -2,7 +2,9 @@
   "name": "@retinue/databank",
   "version": "0.0.0",
   "scripts": {
-    "build:types": "json2ts --unknownAny --enableConstEnums --cwd src/schema -i src/schema/*.json -o src/types && prettier --ignore-path .gitignore --write src/types",
+    "build": "npm run build:types && npm run build:concat",
+    "build:concat": "ts-node ./tool/build/concat-data.ts",
+    "build:types": "rm -rf src/types && json2ts --unknownAny --enableConstEnums --cwd src/schema -i src/schema/*.json -o src/types && prettier --ignore-path .gitignore --write src/types",
     "lint": "npm run lint:format && npm run lint:eslint && npm run lint:file-names && npm run lint:errata-names && npm run lint:validate",
     "lint:errata-names": "ts-node ./tool/check/errata-names.ts",
     "lint:eslint": "eslint src",
