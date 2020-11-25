@@ -42,5 +42,5 @@ import glob from '../common/async-glob';
   )) {
     output.errata!.cards!.upgrades.push(await fs.readJson(file));
   }
-  await fs.writeJson(path.join('src', 'data.json'), output, { spaces: 2 });
+  await fs.writeJson(path.join('src', 'data.json'), output);
 })();

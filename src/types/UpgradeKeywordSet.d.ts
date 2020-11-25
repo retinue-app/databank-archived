@@ -16,5 +16,5 @@ export interface UpgradeKeywordSet {
   Reconfigure?: string;
   Sidearm?: 'Melee' | 'Ranged';
   Small?: null;
-  [k: string]: undefined | number | string;
+  [k: string]: undefined | null | number | string;
 }

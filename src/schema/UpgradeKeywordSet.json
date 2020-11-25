@@ -36,7 +36,7 @@
 
   "additionalProperties": {
     "anyOf": [
-      { "type": "null", "tsType": "undefined " },
+      { "type": "null", "tsType": "undefined | null" },
       { "type": "number" },
       { "type": "string" }
     ]
