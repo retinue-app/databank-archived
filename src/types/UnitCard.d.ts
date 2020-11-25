@@ -138,7 +138,6 @@ export interface TargetSet {
    * Units that have an upgrade icon. Multiple entries is treated as an OR.
    */
   hasUpgradeSlot?: UpgradeType[];
-  hostile?: 'Enemy' | 'Friendly';
 }
 export interface Defense {
   color: DefenseDice;

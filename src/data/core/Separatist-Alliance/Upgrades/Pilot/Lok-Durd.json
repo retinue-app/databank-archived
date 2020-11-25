@@ -1,0 +1,18 @@
+{
+  "name": "Lok Durd",
+  "points": 9,
+  "type": "Pilot",
+
+  "restrictions": {
+    "units": ["AAT Trade Federation Battle Tank"],
+    "isUnique": true
+  },
+
+  "keywords": {
+    "passiveForUnitWhileExhausted": {
+      "$Lose Keyword": {
+        "AI": ["Attack"]
+      }
+    }
+  }
+}

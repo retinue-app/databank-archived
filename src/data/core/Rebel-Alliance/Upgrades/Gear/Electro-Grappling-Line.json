@@ -1,0 +1,11 @@
+{
+  "name": "Electro Grappling Line",
+  "points": 5,
+  "type": "Gear",
+
+  "restrictions": {
+    "units": ["Sabine Wren"]
+  },
+
+  "usage": "Exhaust"
+}

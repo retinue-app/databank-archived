@@ -6,24 +6,15 @@
  */
 
 /**
- * Upgrade categories in the game.
+ * When this upgrade or errata/adjustment was last edited.
  */
-export type UpgradeType =
-  | 'Armament'
-  | 'Command'
-  | 'Comms'
-  | 'Counterpart'
-  | 'Crew'
-  | 'Force'
-  | 'Gear'
-  | 'Generator'
-  | 'Grenades'
-  | 'Hardpoint'
-  | 'Heavy Weapon'
-  | 'Ordnance'
-  | 'Personnel'
-  | 'Pilot'
-  | 'Training';
+export type RuleSet =
+  | {
+      SWL: number;
+    }
+  | {
+      RRG: string | ('Homebrew' | 'Unknown');
+    };
 /**
  * Factions that are part of the game.
  */
@@ -47,18 +38,151 @@ export type UnitType =
       Vehicle: string;
     };
 /**
+ * Upgrade categories in the game.
+ */
+export type UpgradeType =
+  | 'Armament'
+  | 'Command'
+  | 'Comms'
+  | 'Counterpart'
+  | 'Crew'
+  | 'Force'
+  | 'Gear'
+  | 'Generator'
+  | 'Grenades'
+  | 'Hardpoint'
+  | 'Heavy Weapon'
+  | 'Ordnance'
+  | 'Personnel'
+  | 'Pilot'
+  | 'Training';
+/**
+ * Unit types and sub-types
+ */
+export type UnitType1 =
+  | ('Trooper' | 'Vehicle')
+  | {
+      Trooper: string;
+    }
+  | {
+      Vehicle: string;
+    };
+/**
  * Sides of a notched base.
  */
 export type NotchedBaseSide = 'Front' | 'Sides' | 'Rear';
-
 /**
- * A collection of sets of keywords for upgrades.
+ * Range in the game.
  */
-export interface UpgradeKeywords {
+export type Range = ('Melee' | 'Infinite' | number)[];
+/**
+ * When this upgrade or errata/adjustment was last edited.
+ */
+export type RuleSet1 =
+  | {
+      SWL: number;
+    }
+  | {
+      RRG: string | ('Homebrew' | 'Unknown');
+    };
+export type RuleSet2 =
+  | {
+      SWL: number;
+    }
+  | {
+      RRG: string | ('Homebrew' | 'Unknown');
+    };
+
+export interface DataBank {
+  core: CardSet;
+  errata?: {
+    cards?: CardSet;
+    points?: PointAdjustments;
+  };
+}
+export interface CardSet {
+  units: UnitCard[];
+  upgrades: UpgradeCard[];
+}
+/**
+ * Defines a unit card.
+ */
+export interface UnitCard {
+  /**
+   * Name of the unit.
+   */
+  name: string;
+  since?: RuleSet;
+  restrictions: TargetSet;
+  points: number;
+  /**
+   * Optional sub-title for the unit card.
+   */
+  title?: string;
+  rank: UnitRank1;
+  /**
+   * Number of miniatures in the unit.
+   */
+  miniatures: number;
+  type: UnitType1;
+  defense: Defense;
+  attack?: Offense;
+  speed: number;
+  upgrades: {
+    [k: string]: number;
+  };
+  keywords?: UnitKeywords;
+  weapons: Weapon[];
+}
+/**
+ * A set of units, types, ranks, targeted by an effect.
+ */
+export interface TargetSet {
+  /**
+   * Factions. Multiple entries is treated as an OR.
+   */
+  factions?: Faction[];
+  /**
+   * Force alignments. Multiple entries is treated as an OR.
+   */
+  forceAlignment?: ('Light Side' | 'Dark Side')[];
+  /**
+   * Unit names. Multiple entries is treated as an OR.
+   */
+  units?: string[];
+  /**
+   * Unit ranks. Multiple entries is treated as an OR.
+   */
+  unitRanks?: UnitRank[];
+  /**
+   * Unit types. Multiple entries is treated as an OR.
+   */
+  unitTypes?: UnitType[];
+  /**
+   * This unit or effect is unique (once per list or per game).
+   */
+  isUnique?: true;
+  /**
+   * Units that have an upgrade icon. Multiple entries is treated as an OR.
+   */
+  hasUpgradeSlot?: UpgradeType[];
+}
+export interface Defense {
+  color: DefenseDice;
+  surges?: true;
+  wounds: number;
+  courage?: number;
+  resilience?: number;
+}
+export interface Offense {
+  surges: 'Hit' | 'Crit';
+}
+/**
+ * A collection of sets of keywords for units.
+ */
+export interface UnitKeywords {
   actions?: ActionKeywordSet;
-  passiveForUnit?: PassiveKeywordSet;
-  passiveForUnitWhileExhausted?: PassiveKeywordSet;
-  passiveForUpgrade?: UpgradeKeywordSet;
+  passive?: PassiveKeywordSet;
 }
 /**
  * A set of keywords that provide an action.
@@ -306,37 +430,91 @@ export interface PassiveKeywordSet {
     | UpgradeType;
 }
 /**
- * A set of units, types, ranks, targeted by an effect.
+ * Weapon definition.
  */
-export interface TargetSet {
+export interface Weapon {
+  name: string;
+  range: Range;
+  dice: AttackPool;
+  keywords?: WeaponKeywordSet;
+  surge?: 'Hit' | 'Crit';
+}
+/**
+ * A pool of attack dice.
+ */
+export interface AttackPool {
+  white?: number;
+  black?: number;
+  red?: number;
+}
+/**
+ * A set of weapon keywords (i.e. on a weapon).
+ */
+export interface WeaponKeywordSet {
+  Beam?: number;
+  Blast?: null;
+  Critical?: number;
+  Cumbersome?: null;
+  Fixed?: NotchedBaseSide[];
+  'High Velocity'?: null;
+  Immobilize?: number;
+  Immune?: 'Deflect'[];
+  Impact?: number;
+  Ion?: number;
+  Lethal?: number;
+  'Long Shot'?: number;
+  Pierce?: number;
+  Poison?: number;
+  Ram?: number;
+  Scatter?: null;
+  Spray?: null;
+  Suppressive?: null;
+  'Tow Cable'?: null;
+  Versatile?: null;
+  [k: string]: null | undefined | string[] | number | string;
+}
+/**
+ * Defines an upgrade card.
+ */
+export interface UpgradeCard {
   /**
-   * Factions. Multiple entries is treated as an OR.
+   * Name of the upgrade.
    */
-  factions?: Faction[];
+  name: string;
+  since?: RuleSet1;
+  description?: string;
+  keywords?: UpgradeKeywords;
+  usage?: 'Detonate' | 'Discard' | 'Exhaust';
+  type: UpgradeType;
   /**
-   * Force alignments. Multiple entries is treated as an OR.
+   * Wounds if this is a miniature. If omitted defaults to the unit.
    */
-  forceAlignment?: ('Light Side' | 'Dark Side')[];
-  /**
-   * Unit names. Multiple entries is treated as an OR.
-   */
-  units?: string[];
-  /**
-   * Unit ranks. Multiple entries is treated as an OR.
-   */
-  unitRanks?: UnitRank[];
-  /**
-   * Unit types. Multiple entries is treated as an OR.
-   */
-  unitTypes?: UnitType[];
-  /**
-   * This unit or effect is unique (once per list or per game).
-   */
-  isUnique?: true;
-  /**
-   * Units that have an upgrade icon. Multiple entries is treated as an OR.
-   */
-  hasUpgradeSlot?: UpgradeType[];
+  wounds?: number;
+  counterpart?: {
+    type: UnitType;
+    upgrades?: {
+      [k: string]: number;
+    };
+  };
+  restrictions?: TargetSet;
+  restrictionsNot?: TargetSet;
+  points: number;
+  pointAdjustments?: {
+    if: TargetSet;
+    condition: 'In Army' | 'On Unit';
+    adjustBy: number;
+    [k: string]: unknown;
+  };
+  weapon?: Weapon;
+}
+/**
+ * A collection of sets of keywords for upgrades.
+ */
+export interface UpgradeKeywords {
+  actions?: ActionKeywordSet;
+  passiveForUnit?: PassiveKeywordSet;
+  passiveForUnitWhileExhausted?: PassiveKeywordSet;
+  passiveForUpgrade?: UpgradeKeywordSet;
 }
 /**
  * A set of keywords that provide a passive effect for a specific upgrade/model.
@@ -351,6 +529,15 @@ export interface UpgradeKeywordSet {
   Small?: null;
   [k: string]: undefined | number | string;
 }
+export interface PointAdjustments {
+  since: RuleSet2;
+  units: {
+    [k: string]: number;
+  };
+  upgrades: {
+    [k: string]: number;
+  };
+}
 
 /**
  * Ranks that are part of the game. These values are not customizable for custom content.
@@ -362,4 +549,22 @@ export const enum UnitRank {
   SpecialForces = 'Special Forces',
   Support = 'Support',
   Heavy = 'Heavy',
+}
+/**
+ * Rank of the unit
+ */
+export const enum UnitRank1 {
+  Commander = 'Commander',
+  Operative = 'Operative',
+  Corps = 'Corps',
+  SpecialForces = 'Special Forces',
+  Support = 'Support',
+  Heavy = 'Heavy',
+}
+/**
+ * Defense dice in the game.
+ */
+export const enum DefenseDice {
+  White = 'White',
+  Red = 'Red',
 }

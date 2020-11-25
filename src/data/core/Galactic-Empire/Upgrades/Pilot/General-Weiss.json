@@ -1,0 +1,13 @@
+{
+  "name": "General Weiss",
+  "points": 10,
+  "type": "Pilot",
+
+  "restrictions": {
+    "factions": ["Galactic Empire"],
+    "unitTypes": [{ "Vehicle": "Ground Vehicle" }],
+    "isUnique": true
+  },
+
+  "usage": "Exhaust"
+}

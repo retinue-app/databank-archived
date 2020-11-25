@@ -2,15 +2,15 @@
   "name": "@retinue/databank",
   "version": "0.0.0",
   "scripts": {
-    "build:types": "json2ts --unknownAny --enableConstEnums --cwd schema -i schema/*.json -o src/types && prettier --ignore-path .gitignore --write src/types",
+    "build:types": "json2ts --unknownAny --enableConstEnums --cwd src/schema -i src/schema/*.json -o src/types && prettier --ignore-path .gitignore --write src/types",
     "lint": "npm run lint:format && npm run lint:eslint && npm run lint:file-names && npm run lint:errata-names && npm run lint:validate",
     "lint:errata-names": "ts-node ./tool/check/errata-names.ts",
     "lint:eslint": "eslint src",
     "lint:file-names": "ts-node ./tool/check/use-consistent-file-names.ts",
     "lint:format": "prettier --ignore-path .gitignore --list-different src",
     "lint:validate": "npm run lint:validate:units && npm run lint:validate:upgrades",
-    "lint:validate:units": "ajv -s \"schema/UnitCard.json\" -d \"data/**/Units/*.json\" -r \"schema/**/*.json\" --extend-refs=true",
-    "lint:validate:upgrades": "ajv -s \"schema/UpgradeCard.json\" -d \"data/**/Upgrades/**/*.json\" -r \"schema/**/*.json\" --extend-refs=true"
+    "lint:validate:units": "ajv -s \"src/schema/UnitCard.json\" -d \"src/data/**/Units/*.json\" -r \"src/schema/**/*.json\" --extend-refs=true",
+    "lint:validate:upgrades": "ajv -s \"src/schema/UpgradeCard.json\" -d \"src/data/**/Upgrades/**/*.json\" -r \"src/schema/**/*.json\" --extend-refs=true"
   },
   "license": "MIT",
   "devDependencies": {
