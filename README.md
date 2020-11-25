@@ -2,11 +2,9 @@
 
 Community data for Star Wars: Legion
 
+[![Node.js CI](https://github.com/retinue-app/databank/workflows/Node.js%20CI/badge.svg)](https://github.com/retinue-app/databank/actions)
+
 ## TODO
-
-### Release
-
-- [ ] (Re)-write concatenation script into a final `.json` file.
 
 ### Content
 
