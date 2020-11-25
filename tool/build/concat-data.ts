@@ -23,22 +23,22 @@ import glob from '../common/async-glob';
     },
   };
   for (const file of await glob(
-    path.join('src', 'data', 'core', '**', 'units', '**', '*.json'),
+    path.join('src', 'data', 'core', '**', 'Units', '**', '*.json'),
   )) {
     output.core.units.push(await fs.readJson(file));
   }
   for (const file of await glob(
-    path.join('src', 'data', 'core', '**', 'upgrades', '**', '*.json'),
+    path.join('src', 'data', 'core', '**', 'Upgrades', '**', '*.json'),
   )) {
     output.core.upgrades.push(await fs.readJson(file));
   }
   for (const file of await glob(
-    path.join('src', 'data', 'errata', '**', 'units', '**', '*.json'),
+    path.join('src', 'data', 'errata', '**', 'Units', '**', '*.json'),
   )) {
     output.errata!.cards!.units.push(await fs.readJson(file));
   }
   for (const file of await glob(
-    path.join('src', 'data', 'errata', '**', 'upgrades', '**', '*.json'),
+    path.join('src', 'data', 'errata', '**', 'Upgrades', '**', '*.json'),
   )) {
     output.errata!.cards!.upgrades.push(await fs.readJson(file));
   }
