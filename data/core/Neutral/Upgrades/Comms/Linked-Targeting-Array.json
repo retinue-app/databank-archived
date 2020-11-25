@@ -4,13 +4,7 @@
   "type": "Comms",
 
   "restrictions": {
-    "unitTypes": [
-      "Vehicle",
-      {
-        "primary": "Trooper",
-        "secondary": "Emplacement Trooper"
-      }
-    ]
+    "unitTypes": ["Vehicle", { "Trooper": "Emplacement Trooper" }]
   },
 
   "keywords": {

@@ -57,6 +57,11 @@
       "maxLength": 40
     },
 
+    "since": {
+      "description": "When this upgrade or errata/adjustment was last edited.",
+      "$ref": "./RuleSet.json"
+    },
+
     "restrictions": {
       "$ref": "./TargetSet.json"
     },

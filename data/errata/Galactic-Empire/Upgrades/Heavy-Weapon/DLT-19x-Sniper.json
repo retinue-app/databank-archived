@@ -1,0 +1,23 @@
+{
+  "name": "DLT-19x Sniper",
+  "points": 28,
+  "type": "Heavy Weapon",
+
+  "since": {
+    "RRG": "Unknown"
+  },
+
+  "restrictions": {
+    "units": ["Scout Troopers"]
+  },
+
+  "weapon": {
+    "name": "DLT-19x Sniper",
+    "range": [1, 5],
+    "dice": { "black": 2 },
+    "keywords": {
+      "High Velocity": null,
+      "Pierce": 1
+    }
+  }
+}

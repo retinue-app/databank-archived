@@ -5,12 +5,7 @@
 
   "restrictions": {
     "factions": ["Rebel Alliance"],
-    "unitTypes": [
-      {
-        "primary": "Vehicle",
-        "secondary": "Repulsor Vehicle"
-      }
-    ],
+    "unitTypes": [{ "Vehicle": "Repulsor Vehicle" }],
     "isUnique": true
   },
 
@@ -18,7 +13,11 @@
 
   "action": {
     "actions": 0,
-    "description": "Perform a pivot.",
+    "grants": {
+      "keywords": {
+        "Full Pivot": null
+      }
+    },
     "target": {
       "is": "Self"
     }

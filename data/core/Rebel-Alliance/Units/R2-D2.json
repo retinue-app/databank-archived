@@ -1,0 +1,56 @@
+{
+  "name": "R2-D2",
+  "title": "Hero of a Thousand Devices",
+  "restrictions": {
+    "factions": ["Rebel Alliance"],
+    "isUnique": true
+  },
+  "points": 35,
+  "rank": "Operative",
+  "miniatures": 1,
+  "type": {
+    "Trooper": "Droid Trooper"
+  },
+  "defense": {
+    "color": "White",
+    "wounds": 4,
+    "courage": 2,
+    "surges": true
+  },
+  "attack": {
+    "surges": "Hit"
+  },
+  "speed": 1,
+  "upgrades": {
+    "Comms": 1,
+    "Counterpart": 1
+  },
+  "keywords": {
+    "actions": {
+      "Repair": {
+        "actions": 1,
+        "amount": 2,
+        "capacity": 2
+      },
+      "Secret Mission": {
+        "actions": 0
+      }
+    },
+    "passive": {
+      "Grounded": null,
+      "Inconspicuous": null
+    }
+  },
+  "weapons": [
+    {
+      "name": "Electro-Shock",
+      "range": ["Melee", 1],
+      "dice": {
+        "white": 3
+      },
+      "keywords": {
+        "Suppressive": null
+      }
+    }
+  ]
+}

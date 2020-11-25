@@ -4,6 +4,8 @@
   "type": "Gear",
 
   "keywords": {
-    "Precise": 1
+    "passiveForUnit": {
+      "Precise": 1
+    }
   }
 }

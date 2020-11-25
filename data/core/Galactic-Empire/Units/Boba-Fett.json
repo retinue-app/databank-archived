@@ -1,5 +1,6 @@
 {
   "name": "Boba Fett",
+  "title": "Infamous Bounty Hunter",
   "restrictions": {
     "factions": ["Galactic Empire"]
   },

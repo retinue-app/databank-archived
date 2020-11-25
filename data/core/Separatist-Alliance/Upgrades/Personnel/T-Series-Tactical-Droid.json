@@ -5,12 +5,7 @@
   "wounds": 1,
 
   "restrictions": {
-    "unitTypes": [
-      {
-        "primary": "Trooper",
-        "secondary": "Droid Trooper"
-      }
-    ]
+    "unitTypes": [{ "Trooper": "Droid Trooper" }]
   },
 
   "keywords": {

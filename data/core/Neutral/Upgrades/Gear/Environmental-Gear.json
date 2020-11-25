@@ -4,6 +4,8 @@
   "type": "Gear",
 
   "keywords": {
-    "Unhindered": null
+    "passiveForUnit": {
+      "Unhindered": null
+    }
   }
 }

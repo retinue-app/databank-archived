@@ -35,6 +35,11 @@
       "maxLength": 40
     },
 
+    "since": {
+      "description": "When this upgrade or errata/adjustment was last edited.",
+      "$ref": "./RuleSet.json"
+    },
+
     "description": {
       "type": "string",
       "minLength": 3,

@@ -1,11 +1,12 @@
 {
   "name": "ARC Troopers",
+  "title": "Strike Team",
   "restrictions": {
     "factions": ["Galactic Republic"]
   },
-  "points": 72,
+  "points": 21,
   "rank": "Special Forces",
-  "miniatures": 4,
+  "miniatures": 1,
   "type": {
     "Trooper": "Clone Trooper"
   },
@@ -24,6 +25,7 @@
   },
   "keywords": {
     "passive": {
+      "Heavy Weapon Team": null,
       "Impervious": null,
       "Scout": 2,
       "Sharpshooter": 1,

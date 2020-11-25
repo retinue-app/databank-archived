@@ -8,19 +8,24 @@
 /**
  * Factions that are part of the game.
  */
-export type Faction = ('Galactic Empire' | 'Rebel Alliance') | string;
+export type Faction =
+  | (
+      | 'Galactic Empire'
+      | 'Galactic Republic'
+      | 'Separatist Alliance'
+      | 'Rebel Alliance'
+    )
+  | string;
 /**
  * Unit types and sub-types
  */
 export type UnitType =
-  | 'Trooper'
+  | ('Trooper' | 'Vehicle')
   | {
-      primary: 'Trooper';
-      secondary: string;
+      Trooper: string;
     }
   | {
-      primary: 'Vehicle';
-      secondary: string;
+      Vehicle: string;
     };
 /**
  * Upgrade categories in the game.

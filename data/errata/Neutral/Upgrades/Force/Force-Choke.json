@@ -1,0 +1,15 @@
+{
+  "name": "Force Choke",
+  "points": 5,
+  "type": "Force",
+
+  "since": {
+    "RRG": "Unknown"
+  },
+
+  "restrictions": {
+    "forceAlignment": ["Dark Side"]
+  },
+
+  "usage": "Exhaust"
+}

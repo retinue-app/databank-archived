@@ -12,19 +12,24 @@ export type Range = ('Melee' | 'Infinite' | number)[];
 /**
  * Factions that are part of the game.
  */
-export type Faction = ('Galactic Empire' | 'Rebel Alliance') | string;
+export type Faction =
+  | (
+      | 'Galactic Empire'
+      | 'Galactic Republic'
+      | 'Separatist Alliance'
+      | 'Rebel Alliance'
+    )
+  | string;
 /**
  * Unit types and sub-types
  */
 export type UnitType =
-  | 'Trooper'
+  | ('Trooper' | 'Vehicle')
   | {
-      primary: 'Trooper';
-      secondary: string;
+      Trooper: string;
     }
   | {
-      primary: 'Vehicle';
-      secondary: string;
+      Vehicle: string;
     };
 /**
  * Upgrade categories in the game.
@@ -49,25 +54,38 @@ export type UpgradeType =
  * Sides of a notched base.
  */
 export type NotchedBaseSide = 'Front' | 'Sides' | 'Rear';
+/**
+ * Defines a duration.
+ */
+export type Duration = 'EndOfActivation';
 
 /**
- * Defines a custom action.
+ * Defines a card-attached action.
  */
-export interface CustomAction {
-  /**
-   * Name of the action.
-   */
-  name: string;
+export interface CardAction {
   description?: string;
   actions: number;
-  target?: CustomActionTarget;
-  grants?: PassiveKeywordSet;
+  target?: CardActionTarget;
+  grants?: {
+    keywords?: PassiveKeywordSet;
+    duration?: Duration;
+    weapons?: WeaponKeywordSet;
+    tokens?: {
+      [k: string]: number;
+    };
+    maxTokensOfAnyType?: number;
+  };
 }
-export interface CustomActionTarget {
+export interface CardActionTarget {
+  /**
+   * Number of targets. If omitted, defaults to 1.
+   */
+  amount?: number;
   range?: Range;
   is?: 'Self' | TargetSet;
   not?: TargetSet;
   miniature?: true;
+  inLineOfSight?: true;
 }
 /**
  * A set of units, types, ranks, targeted by an effect.
@@ -107,6 +125,14 @@ export interface TargetSet {
  * A set of keywords that provide a passive effect.
  */
 export interface PassiveKeywordSet {
+  '$Add Upgrade'?: UpgradeType;
+  '$Add and Equip Upgrade'?: UpgradeType;
+  '$Coordinate: Range 1-2'?: null;
+  '$Increase Courage'?: number;
+  '$Lose Keyword'?: PassiveKeywordSet;
+  '$Modify Maximum Speed'?: number;
+  '$Move While Engaged With Immobilized Unit'?: null;
+  $Surge?: 'Hit' | 'Crit';
   AI?: ('Attack' | 'Dodge' | 'Move')[];
   Agile?: number;
   Armor?: null | number;
@@ -153,10 +179,11 @@ export interface PassiveKeywordSet {
   Guardian?: number;
   Gunslinger?: null;
   'Heavy Weapon Team'?: null;
-  Hover?: {
-    type: 'Air' | 'Ground';
-    height: number;
-  };
+  Hover?:
+    | 'Ground'
+    | {
+        Air: number;
+      };
   Immune?: (
     | 'Blast'
     | 'Deflect'
@@ -240,19 +267,50 @@ export interface PassiveKeywordSet {
          */
         explosive: string;
       }
+    | PassiveKeywordSet
     | {
         amount: number;
         sides: NotchedBaseSide[];
       }
+    | ('Hit' | 'Crit')
     | TargetSet
     | {
         type: 'Open' | 'Closed';
         capacity: number;
       }
-    | {
-        type: 'Air' | 'Ground';
-        height: number;
-      };
+    | (
+        | 'Ground'
+        | {
+            Air: number;
+          }
+      )
+    | UpgradeType;
+}
+/**
+ * A set of weapon keywords (i.e. on a weapon).
+ */
+export interface WeaponKeywordSet {
+  Beam?: number;
+  Blast?: null;
+  Critical?: number;
+  Cumbersome?: null;
+  Fixed?: NotchedBaseSide[];
+  'High Velocity'?: null;
+  Immobilize?: number;
+  Immune?: 'Deflect'[];
+  Impact?: number;
+  Ion?: number;
+  Lethal?: number;
+  'Long Shot'?: number;
+  Pierce?: number;
+  Poison?: number;
+  Ram?: number;
+  Scatter?: null;
+  Spray?: null;
+  Suppressive?: null;
+  'Tow Cable'?: null;
+  Versatile?: null;
+  [k: string]: null | undefined | string[] | number | string;
 }
 
 /**

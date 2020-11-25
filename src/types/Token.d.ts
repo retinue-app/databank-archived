@@ -8,6 +8,10 @@
 /**
  * Tokens that are part of the game.
  */
-export interface Token {
-  [k: string]: unknown;
-}
+export type Token =
+  | 'Aim'
+  | 'Dodge'
+  | 'Immobilize'
+  | 'Suppression'
+  | 'Surge'
+  | 'Standby';

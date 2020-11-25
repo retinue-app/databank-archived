@@ -22,6 +22,7 @@ export interface Weapon {
   range: Range;
   dice: AttackPool;
   keywords?: WeaponKeywordSet;
+  surge?: 'Hit' | 'Crit';
 }
 /**
  * A pool of attack dice.

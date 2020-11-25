@@ -1,0 +1,28 @@
+{
+  "name": "Pao",
+  "points": 22,
+  "type": "Heavy Weapon",
+  "wounds": 2,
+
+  "since": {
+    "RRG": "2020-11-20"
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "Inspire": 1
+    },
+    "passiveForUpgrade": {
+      "Leader": null
+    }
+  },
+
+  "weapon": {
+    "name": "Pao",
+    "range": [1, 4],
+    "dice": {
+      "red": 1,
+      "white": 1
+    }
+  }
+}

@@ -1,11 +1,11 @@
 export { ActionKeywordSet } from './types/ActionKeywordSet';
 export { AttackDice } from './types/AttackDice';
 export { AttackPool } from './types/AttackPool';
-export { CustomAction } from './types/CustomAction';
 export { DefenseDice } from './types/DefenseDice';
 export { Faction, OfficialFaction } from './types/Faction';
 export { NotchedBaseSide } from './types/NotchedBaseSide';
 export { PassiveKeywordSet } from './types/PassiveKeywordSet';
+export { PointAdjustments } from './types/PointAdjustments';
 export { Range } from './types/Range';
 export { TargetSet } from './types/TargetSet';
 export { Token } from './types/Token';

@@ -1,6 +1,5 @@
 {
   "name": "AT-RT",
-  "title": "Republic AT-RT",
   "restrictions": {
     "factions": ["Galactic Republic"]
   },

@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://schema.retinue.app/PointAdjustments.json",
+  "title": "PointAdjustments",
+
+  "definitions": {
+    "NamedCards": {
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {
+        "type": "number",
+        "minimum": 0
+      }
+    }
+  },
+
+  "additionalProperties": false,
+
+  "properties": {
+    "since": {
+      "$ref": "./RuleSet.json"
+    },
+
+    "units": {
+      "$ref": "#/definitions/NamedCards"
+    },
+
+    "upgrades": {
+      "$ref": "#/definitions/NamedCards"
+    }
+  },
+
+  "required": ["since", "units", "upgrades"]
+}
