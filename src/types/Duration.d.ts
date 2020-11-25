@@ -6,10 +6,6 @@
  */
 
 /**
- * Defines the sides of a notched unit.
+ * Defines a duration.
  */
-export const enum UnitSide {
-  Front = 'Front',
-  Sides = 'Sides',
-  Rear = 'Rear',
-}
+export type Duration = 'EndOfActivation';

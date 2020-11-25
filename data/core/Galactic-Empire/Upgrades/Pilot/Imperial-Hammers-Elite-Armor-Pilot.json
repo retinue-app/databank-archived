@@ -6,12 +6,7 @@
   "restrictions": {
     "isUnique": true,
     "factions": ["Galactic Empire"],
-    "unitTypes": [
-      {
-        "primary": "Vehicle",
-        "secondary": "Ground Vehicle"
-      }
-    ]
+    "unitTypes": [{ "Vehicle": "Ground Vehicle" }]
   },
 
   "keywords": {

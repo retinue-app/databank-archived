@@ -5,7 +5,11 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-/**
- * Unit names.
- */
-export type UnitName = string;
+export type RuleSet = SWL | RRG;
+
+export interface SWL {
+  SWL: number;
+}
+export interface RRG {
+  RRG: string | ('Homebrew' | 'Unknown');
+}

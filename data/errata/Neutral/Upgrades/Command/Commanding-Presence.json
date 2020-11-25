@@ -1,0 +1,7 @@
+{
+  "name": "Commanding Presence",
+  "points": 10,
+  "type": "Command",
+
+  "description": "When issuing orders, you can issue orders at range 1–4."
+}

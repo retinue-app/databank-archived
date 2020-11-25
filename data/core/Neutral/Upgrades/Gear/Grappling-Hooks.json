@@ -4,6 +4,8 @@
   "type": "Gear",
 
   "keywords": {
-    "Expert Climber": null
+    "passiveForUnit": {
+      "Expert Climber": null
+    }
   }
 }

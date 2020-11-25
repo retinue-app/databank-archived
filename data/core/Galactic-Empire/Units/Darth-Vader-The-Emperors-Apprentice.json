@@ -1,6 +1,6 @@
 {
   "name": "Darth Vader",
-  "title": "The Emperors Apprentice",
+  "title": "The Emperor's Apprentice",
   "restrictions": {
     "factions": ["Galactic Empire"],
     "isUnique": true,

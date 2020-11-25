@@ -1,0 +1,15 @@
+{
+  "name": "Jedi Mind Trick",
+  "points": 5,
+  "type": "Force",
+
+  "since": {
+    "RRG": "2020-11-20"
+  },
+
+  "restrictions": {
+    "forceAlignment": ["Light Side"]
+  },
+
+  "usage": "Exhaust"
+}

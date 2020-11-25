@@ -1,19 +1,5 @@
 {
   "name": "Saber Throw",
   "points": 10,
-  "type": "Force",
-
-  "customActions": [
-    {
-      "name": "Saber Throw",
-      "description": "Choose 1 of your melee weapons. Perform a ranged attack with that weapon against an enemy unit at range 1-2, using half of that weapon's dice, rounded up. This is treated as an attack action.",
-      "actions": 1,
-      "target": {
-        "range": [1, 2],
-        "is": {
-          "hostile": "Enemy"
-        }
-      }
-    }
-  ]
+  "type": "Force"
 }

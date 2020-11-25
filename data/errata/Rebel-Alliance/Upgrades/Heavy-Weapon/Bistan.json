@@ -1,0 +1,25 @@
+{
+  "name": "Bistan",
+  "points": 32,
+  "type": "Heavy Weapon",
+  "wounds": 2,
+
+  "since": {
+    "RRG": "2020-11-20"
+  },
+
+  "usage": "Exhaust",
+
+  "weapon": {
+    "name": "Bistan",
+    "range": [1, 4],
+    "dice": {
+      "black": 1,
+      "white": 4
+    },
+    "keywords": {
+      "Impact": 1,
+      "Ion": 1
+    }
+  }
+}

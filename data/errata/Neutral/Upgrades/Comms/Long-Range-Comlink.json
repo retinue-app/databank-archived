@@ -1,0 +1,11 @@
+{
+  "name": "Long Range Comlink",
+  "points": 10,
+  "type": "Comms",
+
+  "since": {
+    "RRG": "Unknown"
+  },
+
+  "description": "During the Command Phase, you can be issued orders by friendly {RANK:COMMANDER} or {RANK:OPERATIVE} units regardless of range.."
+}

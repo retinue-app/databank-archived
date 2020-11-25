@@ -1,6 +1,6 @@
 {
   "name": "Emperor Palpatine",
-  "title": "Ruler Of The Galactic Empire",
+  "title": "Ruler of the Galactic Empire",
   "restrictions": {
     "factions": ["Galactic Empire"]
   },

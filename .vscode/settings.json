@@ -23,13 +23,18 @@
   // Schema Validation.
   "json.schemas": [
     {
-      "fileMatch": ["data/*/Units/*.json"],
+      "fileMatch": ["data/**/Units/*.json"],
       "url": "/schema/UnitCard.json"
     },
 
     {
-      "fileMatch": ["data/*/Upgrades/*.json"],
+      "fileMatch": ["data/**/Upgrades/*.json"],
       "url": "/schema/UpgradeCard.json"
+    },
+
+    {
+      "fileMatch": ["errata/Points.json"],
+      "url": "/schema/PointAdjustments.json"
     }
   ],
   // Linting.

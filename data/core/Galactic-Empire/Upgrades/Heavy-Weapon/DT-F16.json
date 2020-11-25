@@ -4,7 +4,8 @@
   "type": "Heavy Weapon",
 
   "restrictions": {
-    "units": ["Imperial Death Troopers"]
+    "units": ["Imperial Death Troopers"],
+    "isUnique": true
   },
 
   "keywords": {

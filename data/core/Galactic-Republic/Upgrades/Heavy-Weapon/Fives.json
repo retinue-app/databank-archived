@@ -6,12 +6,7 @@
 
   "restrictions": {
     "units": ["ARC Troopers"],
-    "unitTypes": [
-      {
-        "primary": "Trooper",
-        "secondary": "Clone Trooper"
-      }
-    ],
+    "unitTypes": [{ "Trooper": "Clone Trooper" }],
     "unitRanks": ["Corps"],
     "isUnique": true
   },
@@ -20,12 +15,7 @@
     "passiveForUnit": {
       "$Increase Courage": 1,
       "Coordinate": {
-        "unitTypes": [
-          {
-            "primary": "Trooper",
-            "secondary": "Clone Trooper"
-          }
-        ]
+        "unitTypes": [{ "Trooper": "Clone Trooper" }]
       }
     },
     "passiveForUpgrade": {

@@ -4,6 +4,8 @@
   "type": "Gear",
 
   "keywords": {
-    "Scout": 1
+    "passiveForUnit": {
+      "Scout": 1
+    }
   }
 }

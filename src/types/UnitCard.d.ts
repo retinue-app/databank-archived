@@ -6,21 +6,36 @@
  */
 
 /**
+ * When this upgrade or errata/adjustment was last edited.
+ */
+export type RuleSet =
+  | {
+      SWL: number;
+    }
+  | {
+      RRG: string | ('Homebrew' | 'Unknown');
+    };
+/**
  * Factions that are part of the game.
  */
-export type Faction = ('Galactic Empire' | 'Rebel Alliance') | string;
+export type Faction =
+  | (
+      | 'Galactic Empire'
+      | 'Galactic Republic'
+      | 'Separatist Alliance'
+      | 'Rebel Alliance'
+    )
+  | string;
 /**
  * Unit types and sub-types
  */
 export type UnitType =
-  | 'Trooper'
+  | ('Trooper' | 'Vehicle')
   | {
-      primary: 'Trooper';
-      secondary: string;
+      Trooper: string;
     }
   | {
-      primary: 'Vehicle';
-      secondary: string;
+      Vehicle: string;
     };
 /**
  * Upgrade categories in the game.
@@ -42,6 +57,17 @@ export type UpgradeType =
   | 'Pilot'
   | 'Training';
 /**
+ * Unit types and sub-types
+ */
+export type UnitType1 =
+  | ('Trooper' | 'Vehicle')
+  | {
+      Trooper: string;
+    }
+  | {
+      Vehicle: string;
+    };
+/**
  * Sides of a notched base.
  */
 export type NotchedBaseSide = 'Front' | 'Sides' | 'Rear';
@@ -58,6 +84,7 @@ export interface UnitCard {
    * Name of the unit.
    */
   name: string;
+  since?: RuleSet;
   restrictions: TargetSet;
   points: number;
   /**
@@ -69,15 +96,14 @@ export interface UnitCard {
    * Number of miniatures in the unit.
    */
   miniatures: number;
-  type: UnitType;
+  type: UnitType1;
   defense: Defense;
   attack?: Offense;
   speed: number;
   upgrades: {
     [k: string]: number;
   };
-  actions?: ActionKeywordSet;
-  keywords?: PassiveKeywordSet;
+  keywords?: UnitKeywords;
   weapons: [Weapon] | [Weapon, Weapon] | [Weapon, Weapon, Weapon];
 }
 /**
@@ -123,6 +149,13 @@ export interface Defense {
 }
 export interface Offense {
   surges: 'Hit' | 'Crit';
+}
+/**
+ * A collection of sets of keywords for units.
+ */
+export interface UnitKeywords {
+  actions?: ActionKeywordSet;
+  passive?: PassiveKeywordSet;
 }
 /**
  * A set of keywords that provide an action.
@@ -208,6 +241,14 @@ export interface ActionKeywordSet {
  * A set of keywords that provide a passive effect.
  */
 export interface PassiveKeywordSet {
+  '$Add Upgrade'?: UpgradeType;
+  '$Add and Equip Upgrade'?: UpgradeType;
+  '$Coordinate: Range 1-2'?: null;
+  '$Increase Courage'?: number;
+  '$Lose Keyword'?: PassiveKeywordSet;
+  '$Modify Maximum Speed'?: number;
+  '$Move While Engaged With Immobilized Unit'?: null;
+  $Surge?: 'Hit' | 'Crit';
   AI?: ('Attack' | 'Dodge' | 'Move')[];
   Agile?: number;
   Armor?: null | number;
@@ -254,10 +295,11 @@ export interface PassiveKeywordSet {
   Guardian?: number;
   Gunslinger?: null;
   'Heavy Weapon Team'?: null;
-  Hover?: {
-    type: 'Air' | 'Ground';
-    height: number;
-  };
+  Hover?:
+    | 'Ground'
+    | {
+        Air: number;
+      };
   Immune?: (
     | 'Blast'
     | 'Deflect'
@@ -341,19 +383,24 @@ export interface PassiveKeywordSet {
          */
         explosive: string;
       }
+    | PassiveKeywordSet
     | {
         amount: number;
         sides: NotchedBaseSide[];
       }
+    | ('Hit' | 'Crit')
     | TargetSet
     | {
         type: 'Open' | 'Closed';
         capacity: number;
       }
-    | {
-        type: 'Air' | 'Ground';
-        height: number;
-      };
+    | (
+        | 'Ground'
+        | {
+            Air: number;
+          }
+      )
+    | UpgradeType;
 }
 /**
  * Weapon definition.
@@ -363,6 +410,7 @@ export interface Weapon {
   range: Range;
   dice: AttackPool;
   keywords?: WeaponKeywordSet;
+  surge?: 'Hit' | 'Crit';
 }
 /**
  * A pool of attack dice.
@@ -425,6 +473,6 @@ export const enum UnitRank1 {
  * Defense dice in the game.
  */
 export const enum DefenseDice {
-  white = 'white',
-  red = 'red',
+  White = 'White',
+  Red = 'Red',
 }

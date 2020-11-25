@@ -1,0 +1,22 @@
+{
+  "name": "CM-O/93 Trooper",
+  "points": 31,
+  "type": "Heavy Weapon",
+
+  "since": {
+    "RRG": "2020-11-20"
+  },
+
+  "restrictions": {
+    "units": ["Rebel Veterans"]
+  },
+
+  "weapon": {
+    "name": "CM-O/93 Trooper",
+    "range": [1, 4],
+    "dice": { "black": 4 },
+    "keywords": {
+      "Critical": 2
+    }
+  }
+}

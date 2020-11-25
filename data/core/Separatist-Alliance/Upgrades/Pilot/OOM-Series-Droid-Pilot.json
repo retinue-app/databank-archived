@@ -10,12 +10,7 @@
   "keywords": {
     "passiveForUnit": {
       "Coordinate": {
-        "unitTypes": [
-          {
-            "primary": "Trooper",
-            "secondary": "Droid Trooper"
-          }
-        ]
+        "unitTypes": [{ "Trooper": "Droid Trooper" }]
       }
     }
   }

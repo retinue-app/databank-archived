@@ -27,12 +27,7 @@
   "keywords": {
     "passive": {
       "Coordinate": {
-        "unitTypes": [
-          {
-            "primary": "Trooper",
-            "secondary": "Emplacement Trooper"
-          }
-        ]
+        "unitTypes": [{ "Trooper": "Emplacement Trooper" }]
       },
       "Defend": 1
     }

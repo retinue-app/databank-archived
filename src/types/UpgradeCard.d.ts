@@ -6,21 +6,14 @@
  */
 
 /**
- * Factions that are part of the game.
+ * When this upgrade or errata/adjustment was last edited.
  */
-export type Faction = ('Galactic Empire' | 'Rebel Alliance') | string;
-/**
- * Unit types and sub-types
- */
-export type UnitType =
-  | 'Trooper'
+export type RuleSet =
   | {
-      primary: 'Trooper';
-      secondary: string;
+      SWL: number;
     }
   | {
-      primary: 'Vehicle';
-      secondary: string;
+      RRG: string | ('Homebrew' | 'Unknown');
     };
 /**
  * Upgrade categories in the game.
@@ -42,6 +35,28 @@ export type UpgradeType =
   | 'Pilot'
   | 'Training';
 /**
+ * Factions that are part of the game.
+ */
+export type Faction =
+  | (
+      | 'Galactic Empire'
+      | 'Galactic Republic'
+      | 'Separatist Alliance'
+      | 'Rebel Alliance'
+    )
+  | string;
+/**
+ * Unit types and sub-types
+ */
+export type UnitType =
+  | ('Trooper' | 'Vehicle')
+  | {
+      Trooper: string;
+    }
+  | {
+      Vehicle: string;
+    };
+/**
  * Sides of a notched base.
  */
 export type NotchedBaseSide = 'Front' | 'Sides' | 'Rear';
@@ -49,6 +64,10 @@ export type NotchedBaseSide = 'Front' | 'Sides' | 'Rear';
  * Range in the game.
  */
 export type Range = ('Melee' | 'Infinite' | number)[];
+/**
+ * Defines a duration.
+ */
+export type Duration = 'EndOfActivation';
 
 /**
  * Defines an upgrade card.
@@ -58,18 +77,36 @@ export interface UpgradeCard {
    * Name of the upgrade.
    */
   name: string;
+  since?: RuleSet;
   description?: string;
-  actions?: ActionKeywordSet;
-  keywords?: PassiveKeywordSet;
-  /**
-   * Custom actions (i.e. not in the RRG).
-   */
-  customActions?: [CustomAction, ...CustomAction[]];
-  usage?: 'Discard' | 'Exhaust';
+  keywords?: UpgradeKeywords;
+  action?: CardAction;
+  usage?: 'Detonate' | 'Discard' | 'Exhaust';
   type: UpgradeType;
+  /**
+   * Wounds if this is a miniature. If omitted defaults to the unit.
+   */
+  wounds?: number;
+  counterpart?: {
+    type: UnitType;
+    upgrades?: {
+      [k: string]: number;
+    };
+  };
   restrictions?: TargetSet;
+  restrictionsNot?: TargetSet;
   points: number;
+  pointAdjustments?: PointAdjustments;
   weapon?: Weapon;
+}
+/**
+ * A collection of sets of keywords for upgrades.
+ */
+export interface UpgradeKeywords {
+  actions?: ActionKeywordSet;
+  passiveForUnit?: PassiveKeywordSet;
+  passiveForUnitWhileExhausted?: PassiveKeywordSet;
+  passiveForUpgrade?: UpgradeKeywordSet;
 }
 /**
  * A set of keywords that provide an action.
@@ -155,6 +192,14 @@ export interface ActionKeywordSet {
  * A set of keywords that provide a passive effect.
  */
 export interface PassiveKeywordSet {
+  '$Add Upgrade'?: UpgradeType;
+  '$Add and Equip Upgrade'?: UpgradeType;
+  '$Coordinate: Range 1-2'?: null;
+  '$Increase Courage'?: number;
+  '$Lose Keyword'?: PassiveKeywordSet;
+  '$Modify Maximum Speed'?: number;
+  '$Move While Engaged With Immobilized Unit'?: null;
+  $Surge?: 'Hit' | 'Crit';
   AI?: ('Attack' | 'Dodge' | 'Move')[];
   Agile?: number;
   Armor?: null | number;
@@ -201,10 +246,11 @@ export interface PassiveKeywordSet {
   Guardian?: number;
   Gunslinger?: null;
   'Heavy Weapon Team'?: null;
-  Hover?: {
-    type: 'Air' | 'Ground';
-    height: number;
-  };
+  Hover?:
+    | 'Ground'
+    | {
+        Air: number;
+      };
   Immune?: (
     | 'Blast'
     | 'Deflect'
@@ -288,19 +334,24 @@ export interface PassiveKeywordSet {
          */
         explosive: string;
       }
+    | PassiveKeywordSet
     | {
         amount: number;
         sides: NotchedBaseSide[];
       }
+    | ('Hit' | 'Crit')
     | TargetSet
     | {
         type: 'Open' | 'Closed';
         capacity: number;
       }
-    | {
-        type: 'Air' | 'Ground';
-        height: number;
-      };
+    | (
+        | 'Ground'
+        | {
+            Air: number;
+          }
+      )
+    | UpgradeType;
 }
 /**
  * A set of units, types, ranks, targeted by an effect.
@@ -337,22 +388,76 @@ export interface TargetSet {
   hostile?: 'Enemy' | 'Friendly';
 }
 /**
- * Defines a custom action.
+ * A set of keywords that provide a passive effect for a specific upgrade/model.
  */
-export interface CustomAction {
-  /**
-   * Name of the action.
-   */
-  name: string;
+export interface UpgradeKeywordSet {
+  '$May Flip At Start'?: string;
+  Cycle?: null;
+  Leader?: null;
+  Noncombatant?: null;
+  Reconfigure?: string;
+  Sidearm?: 'Melee' | 'Ranged';
+  Small?: null;
+  [k: string]: undefined | number | string;
+}
+/**
+ * Defines a card-attached action.
+ */
+export interface CardAction {
   description?: string;
   actions: number;
   target?: {
+    /**
+     * Number of targets. If omitted, defaults to 1.
+     */
+    amount?: number;
     range?: Range;
     is?: 'Self' | TargetSet;
     not?: TargetSet;
     miniature?: true;
+    inLineOfSight?: true;
   };
-  grants?: PassiveKeywordSet;
+  grants?: {
+    keywords?: PassiveKeywordSet;
+    duration?: Duration;
+    weapons?: WeaponKeywordSet;
+    tokens?: {
+      [k: string]: number;
+    };
+    maxTokensOfAnyType?: number;
+  };
+}
+/**
+ * A set of weapon keywords (i.e. on a weapon).
+ */
+export interface WeaponKeywordSet {
+  Beam?: number;
+  Blast?: null;
+  Critical?: number;
+  Cumbersome?: null;
+  Fixed?: NotchedBaseSide[];
+  'High Velocity'?: null;
+  Immobilize?: number;
+  Immune?: 'Deflect'[];
+  Impact?: number;
+  Ion?: number;
+  Lethal?: number;
+  'Long Shot'?: number;
+  Pierce?: number;
+  Poison?: number;
+  Ram?: number;
+  Scatter?: null;
+  Spray?: null;
+  Suppressive?: null;
+  'Tow Cable'?: null;
+  Versatile?: null;
+  [k: string]: null | undefined | string[] | number | string;
+}
+export interface PointAdjustments {
+  if: TargetSet;
+  condition: 'In Army' | 'On Unit';
+  adjustBy: number;
+  [k: string]: unknown;
 }
 /**
  * Weapon definition.
@@ -361,7 +466,8 @@ export interface Weapon {
   name: string;
   range: Range;
   dice: AttackPool;
-  keywords?: WeaponKeywordSet;
+  keywords?: WeaponKeywordSet1;
+  surge?: 'Hit' | 'Crit';
 }
 /**
  * A pool of attack dice.
@@ -374,7 +480,7 @@ export interface AttackPool {
 /**
  * A set of weapon keywords (i.e. on a weapon).
  */
-export interface WeaponKeywordSet {
+export interface WeaponKeywordSet1 {
   Beam?: number;
   Blast?: null;
   Critical?: number;
