@@ -1,7 +1,4924 @@
 {
-  "core": { "units": [], "upgrades": [] },
+  "core": {
+    "units": [
+      {
+        "name": "74-Z Speeder Bikes",
+        "restrictions": { "factions": ["Galactic Empire"] },
+        "points": 90,
+        "rank": "Support",
+        "miniatures": 2,
+        "type": { "Vehicle": "Repulsor Vehicle" },
+        "defense": { "color": "White", "wounds": 3, "surges": true },
+        "attack": { "surges": "Hit" },
+        "speed": 3,
+        "upgrades": { "Comms": 1 },
+        "keywords": { "passive": { "Cover": 1, "Speeder": 1 } },
+        "weapons": [
+          {
+            "name": "EC-17 Hold-out Blaster",
+            "range": [1, 2],
+            "dice": { "black": 2 }
+          },
+          {
+            "name": "Ax-20 Blaster Cannon",
+            "range": [1, 3],
+            "dice": { "red": 1, "black": 1, "white": 1 },
+            "keywords": { "Fixed": ["Front"], "Impact": 1 }
+          }
+        ]
+      },
+      {
+        "name": "AT-ST",
+        "restrictions": { "factions": ["Galactic Empire"] },
+        "points": 195,
+        "rank": "Heavy",
+        "miniatures": 1,
+        "type": { "Vehicle": "Ground Vehicle" },
+        "defense": {
+          "color": "White",
+          "wounds": 11,
+          "surges": true,
+          "resilience": 8
+        },
+        "speed": 2,
+        "upgrades": { "Pilot": 1, "Hardpoint": 3, "Comms": 1 },
+        "keywords": {
+          "passive": {
+            "Armor": null,
+            "Arsenal": 2,
+            "Weak Point": { "amount": 1, "sides": ["Rear"] }
+          }
+        },
+        "weapons": [
+          {
+            "name": "Fence-Cutting Blades",
+            "range": ["Melee"],
+            "dice": { "red": 4 }
+          },
+          {
+            "name": "MS-4 Twin Blaster Cannon",
+            "range": [1, 4],
+            "dice": { "red": 2, "black": 2, "white": 2 },
+            "keywords": { "Fixed": ["Front"], "Impact": 3 }
+          }
+        ]
+      },
+      {
+        "name": "Boba Fett",
+        "title": "Infamous Bounty Hunter",
+        "restrictions": { "factions": ["Galactic Empire"] },
+        "points": 140,
+        "rank": "Operative",
+        "miniatures": 1,
+        "type": "Trooper",
+        "defense": {
+          "color": "Red",
+          "wounds": 5,
+          "courage": 3,
+          "surges": true
+        },
+        "attack": { "surges": "Crit" },
+        "speed": 3,
+        "upgrades": { "Training": 2, "Gear": 2 },
+        "keywords": {
+          "actions": { "Jump": { "actions": 1, "amount": 2 } },
+          "passive": {
+            "Arsenal": 2,
+            "Bounty": null,
+            "Impervious": null,
+            "Sharpshooter": 2
+          }
+        },
+        "weapons": [
+          { "name": "Boot Spikes", "range": ["Melee"], "dice": { "red": 2 } },
+          {
+            "name": "Wrist Rocket",
+            "range": [1, 2],
+            "dice": { "black": 2 },
+            "keywords": { "Impact": 1 }
+          },
+          {
+            "name": "Fett's EE-3 Carbine",
+            "range": [1, 3],
+            "dice": { "black": 2 },
+            "keywords": { "Pierce": 1 }
+          }
+        ]
+      },
+      {
+        "name": "Bossk",
+        "restrictions": { "factions": ["Galactic Empire"] },
+        "points": 115,
+        "rank": "Operative",
+        "miniatures": 1,
+        "type": "Trooper",
+        "defense": { "color": "White", "wounds": 7, "courage": 2 },
+        "attack": { "surges": "Crit" },
+        "speed": 2,
+        "upgrades": { "Training": 2, "Gear": 1 },
+        "keywords": {
+          "passive": {
+            "Bounty": null,
+            "Enrage": 3,
+            "Expert Climber": null,
+            "Regenerate": 3,
+            "Unhindered": null
+          }
+        },
+        "weapons": [
+          {
+            "name": "Frenzy",
+            "range": ["Melee"],
+            "dice": { "red": 1, "black": 2, "white": 1 },
+            "keywords": { "Pierce": 1 }
+          },
+          {
+            "name": "Rely-v10 Mortar Rifle",
+            "range": [2, 4],
+            "dice": { "red": 1, "white": 4 },
+            "keywords": { "Pierce": 1 }
+          }
+        ]
+      },
+      {
+        "name": "Darth Vader",
+        "title": "The Emperor's Apprentice",
+        "restrictions": {
+          "factions": ["Galactic Empire"],
+          "isUnique": true,
+          "forceAlignment": ["Dark Side"]
+        },
+        "points": 170,
+        "rank": "Operative",
+        "miniatures": 1,
+        "type": "Trooper",
+        "defense": { "color": "Red", "wounds": 6, "courage": 3 },
+        "speed": 1,
+        "upgrades": { "Force": 2, "Training": 1 },
+        "keywords": {
+          "passive": {
+            "Deflect": null,
+            "Immune": ["Pierce"],
+            "Jedi Hunter": null,
+            "Master of the Force": 1,
+            "Relentless": null,
+            "Spur": null
+          }
+        },
+        "weapons": [
+          {
+            "name": "Vader's Lightsaber",
+            "range": ["Melee"],
+            "dice": { "red": 5 },
+            "keywords": { "Impact": 3, "Pierce": 3 }
+          },
+          {
+            "name": "Force Throw",
+            "range": [1, 2],
+            "dice": { "black": 2 },
+            "keywords": { "Blast": null, "Scatter": null }
+          }
+        ]
+      },
+      {
+        "name": "Darth Vader",
+        "title": "Dark Lord of the Sith",
+        "restrictions": {
+          "factions": ["Galactic Empire"],
+          "isUnique": true,
+          "forceAlignment": ["Dark Side"]
+        },
+        "points": 200,
+        "rank": "Commander",
+        "miniatures": 1,
+        "type": "Trooper",
+        "defense": { "color": "Red", "wounds": 8 },
+        "speed": 1,
+        "upgrades": { "Force": 3 },
+        "keywords": {
+          "passive": {
+            "Deflect": null,
+            "Immune": ["Pierce"],
+            "Master of the Force": 1,
+            "Relentless": null
+          }
+        },
+        "weapons": [
+          {
+            "name": "Vader's Lightsaber",
+            "range": ["Melee"],
+            "dice": { "red": 6 },
+            "keywords": { "Impact": 3, "Pierce": 3 }
+          }
+        ]
+      },
+      {
+        "name": "Dewback Rider",
+        "restrictions": { "factions": ["Galactic Empire"] },
+        "points": 90,
+        "rank": "Support",
+        "miniatures": 1,
+        "type": { "Trooper": "Creature Trooper" },
+        "defense": { "color": "Red", "wounds": 6, "courage": 2 },
+        "attack": { "surges": "Hit" },
+        "speed": 1,
+        "upgrades": { "Training": 1, "Comms": 1, "Armament": 1 },
+        "keywords": {
+          "passive": {
+            "Armor": 1,
+            "Relentless": null,
+            "Reposition": null,
+            "Spur": null,
+            "Unhindered": null
+          }
+        },
+        "weapons": [
+          {
+            "name": "Razor Claws & Shock Prod",
+            "range": ["Melee"],
+            "dice": { "red": 3, "white": 3 },
+            "keywords": { "Critical": 2, "Suppressive": null }
+          }
+        ]
+      },
+      {
+        "name": "DF-90 Mortar Trooper",
+        "restrictions": {
+          "factions": ["Galactic Empire"],
+          "units": ["Shoretroopers"]
+        },
+        "points": 36,
+        "rank": "Corps",
+        "miniatures": 1,
+        "type": { "Trooper": "Emplacement Trooper" },
+        "defense": { "color": "Red", "wounds": 3, "courage": 2 },
+        "speed": 1,
+        "upgrades": { "Comms": 1 },
+        "keywords": {
+          "passive": {
+            "Detachment": { "units": ["Shoretroopers"] },
+            "Fire Support": null,
+            "Full Pivot": null,
+            "Reposition": null,
+            "Sentinel": null
+          }
+        },
+        "weapons": [
+          { "name": "Unarmed", "range": ["Melee"], "dice": { "black": 1 } },
+          {
+            "name": "E-22 Blaster Rifle",
+            "range": [1, 3],
+            "dice": { "black": 1 }
+          },
+          {
+            "name": "DF-90 Mortar",
+            "range": [3, 4],
+            "dice": { "white": 3 },
+            "keywords": {
+              "Critical": 1,
+              "Cumbersome": null,
+              "Fixed": ["Front"],
+              "Suppressive": null
+            }
+          }
+        ]
+      },
+      {
+        "name": "Director Orson Krennic",
+        "title": "Architect Of Terror",
+        "restrictions": { "factions": ["Galactic Empire"] },
+        "points": 90,
+        "rank": "Commander",
+        "miniatures": 1,
+        "type": "Trooper",
+        "defense": {
+          "color": "White",
+          "wounds": 6,
+          "courage": 2,
+          "surges": true
+        },
+        "attack": { "surges": "Crit" },
+        "speed": 2,
+        "upgrades": { "Command": 2, "Gear": 1 },
+        "keywords": {
+          "passive": {
+            "Compel": null,
+            "Cunning": null,
+            "Entourage": { "units": ["Imperial Death Troopers"] },
+            "Sharpshooter": 1
+          }
+        },
+        "weapons": [
+          { "name": "Unarmed", "range": ["Melee"], "dice": { "black": 1 } },
+          {
+            "name": "Krennic's DT-29 Blaster Pistol",
+            "range": [1, 2],
+            "dice": { "red": 1, "black": 1, "white": 1 },
+            "keywords": { "Pierce": 1 }
+          }
+        ]
+      },
+      {
+        "name": "E-Web Heavy Blaster Team",
+        "restrictions": { "factions": ["Galactic Empire"] },
+        "points": 55,
+        "rank": "Support",
+        "miniatures": 1,
+        "type": { "Trooper": "Emplacement Trooper" },
+        "defense": { "color": "Red", "wounds": 4, "courage": 2 },
+        "attack": { "surges": "Crit" },
+        "speed": 1,
+        "upgrades": { "Comms": 1, "Generator": 1 },
+        "keywords": {
+          "passive": {
+            "Full Pivot": null,
+            "Plodding": null,
+            "Reposition": null,
+            "Sentinel": null
+          }
+        },
+        "weapons": [
+          { "name": "Unarmed", "range": ["Melee"], "dice": { "black": 2 } },
+          {
+            "name": "E-11 Blaster Rifle",
+            "range": [1, 3],
+            "dice": { "white": 2 }
+          },
+          {
+            "name": "E-Web Heavy Blaster",
+            "range": [1, 3],
+            "dice": { "red": 1, "black": 2, "white": 2 },
+            "keywords": { "Cumbersome": null, "Fixed": ["Front"] }
+          }
+        ]
+      },
+      {
+        "name": "Emperor Palpatine",
+        "title": "Ruler of the Galactic Empire",
+        "restrictions": { "factions": ["Galactic Empire"] },
+        "points": 210,
+        "rank": "Commander",
+        "miniatures": 1,
+        "type": "Trooper",
+        "defense": {
+          "color": "Red",
+          "wounds": 5,
+          "courage": 4,
+          "surges": true
+        },
+        "attack": { "surges": "Crit" },
+        "speed": 1,
+        "upgrades": { "Command": 1, "Force": 3 },
+        "keywords": {
+          "actions": { "Pulling the Strings": { "actions": 1 } },
+          "passive": {
+            "Entourage": { "units": ["Imperial Royal Guards"] },
+            "Immune": ["Pierce"],
+            "Master of the Force": 2
+          }
+        },
+        "weapons": [
+          {
+            "name": "Force Lightning",
+            "range": ["Melee", 1, 2],
+            "dice": { "red": 2, "black": 2, "white": 2 },
+            "keywords": { "Pierce": 2, "Suppressive": null }
+          }
+        ]
+      },
+      {
+        "name": "General Veers",
+        "title": "Master Tactician",
+        "restrictions": { "factions": ["Galactic Empire"] },
+        "points": 80,
+        "rank": "Commander",
+        "miniatures": 1,
+        "type": "Trooper",
+        "defense": { "color": "Red", "wounds": 5, "courage": 2 },
+        "attack": { "surges": "Crit" },
+        "speed": 2,
+        "upgrades": { "Command": 2, "Gear": 1 },
+        "keywords": {
+          "actions": { "Spotter": { "actions": 1, "amount": 2 } },
+          "passive": { "Inspire": 1, "Precise": 1, "Sharpshooter": 1 }
+        },
+        "weapons": [
+          {
+            "name": "Combat Expertise",
+            "range": ["Melee"],
+            "dice": { "black": 2 }
+          },
+          {
+            "name": "Veers' E-11 Blaster Rifle",
+            "range": [1, 3],
+            "dice": { "white": 3 },
+            "keywords": { "Pierce": 1 }
+          }
+        ]
+      },
+      {
+        "name": "Iden Versio",
+        "title": "Inferno Squad Leader",
+        "restrictions": { "factions": ["Galactic Empire"], "isUnique": true },
+        "points": 100,
+        "rank": "Commander",
+        "miniatures": 1,
+        "type": "Trooper",
+        "defense": { "color": "Red", "wounds": 6, "courage": 3 },
+        "attack": { "surges": "Hit" },
+        "speed": 2,
+        "upgrades": {
+          "Training": 2,
+          "Gear": 1,
+          "Armament": 1,
+          "Counterpart": 1
+        },
+        "keywords": {
+          "actions": { "Quick Thinking": { "actions": 1 } },
+          "passive": {
+            "Covert Ops": null,
+            "Loadout": null,
+            "Marksman": null,
+            "Nimble": null
+          }
+        },
+        "weapons": [
+          {
+            "name": "Advanced Combat Training",
+            "range": ["Melee"],
+            "dice": { "red": 2 }
+          },
+          {
+            "name": "Iden's E-11 Blaster Rifle",
+            "range": [1, 3],
+            "dice": { "white": 3 },
+            "keywords": { "Pierce": 1 }
+          }
+        ]
+      },
+      {
+        "name": "Imperial Death Troopers",
+        "restrictions": { "factions": ["Galactic Empire"] },
+        "points": 76,
+        "rank": "Special Forces",
+        "miniatures": 4,
+        "type": "Trooper",
+        "defense": {
+          "color": "Red",
+          "wounds": 1,
+          "courage": 2,
+          "surges": true
+        },
+        "attack": { "surges": "Hit" },
+        "speed": 2,
+        "upgrades": {
+          "Heavy Weapon": 1,
+          "Training": 1,
+          "Comms": 1,
+          "Gear": 1,
+          "Armament": 1,
+          "Grenades": 1
+        },
+        "keywords": {
+          "passive": { "Disciplined": 1, "Precise": 2, "Ready": 1 }
+        },
+        "weapons": [
+          {
+            "name": "Close Combat Quarters",
+            "range": ["Melee"],
+            "dice": { "red": 1 }
+          },
+          {
+            "name": "SE-14r Light Blaster",
+            "range": [1, 2],
+            "dice": { "white": 2 }
+          },
+          {
+            "name": "E-11D Blaster Rifle",
+            "range": [1, 3],
+            "dice": { "black": 1 }
+          }
+        ]
+      },
+      {
+        "name": "Imperial Officer",
+        "title": "Ruthless Commander",
+        "restrictions": { "factions": ["Galactic Empire"] },
+        "points": 50,
+        "rank": "Commander",
+        "miniatures": 1,
+        "type": "Trooper",
+        "defense": {
+          "color": "White",
+          "wounds": 4,
+          "courage": 2,
+          "surges": true
+        },
+        "attack": { "surges": "Hit" },
+        "speed": 2,
+        "upgrades": { "Command": 1, "Gear": 1 },
+        "keywords": {
+          "actions": { "Spotter": { "actions": 1, "amount": 1 } },
+          "passive": { "Inspire": 1, "Sharpshooter": 1 }
+        },
+        "weapons": [
+          { "name": "Unarmed", "range": ["Melee"], "dice": { "black": 1 } },
+          {
+            "name": "Officer's A-180 Blaster Pistol",
+            "range": [1, 2],
+            "dice": { "black": 1, "white": 1 }
+          }
+        ]
+      },
+      {
+        "name": "Imperial Royal Guards",
+        "restrictions": { "factions": ["Galactic Empire"] },
+        "points": 75,
+        "rank": "Special Forces",
+        "miniatures": 3,
+        "type": "Trooper",
+        "defense": { "color": "Red", "wounds": 2, "courage": 2 },
+        "speed": 2,
+        "upgrades": {
+          "Heavy Weapon": 1,
+          "Training": 2,
+          "Gear": 1,
+          "Grenades": 1
+        },
+        "keywords": {
+          "passive": { "Charge": null, "Disciplined": 2, "Guardian": 2 }
+        },
+        "weapons": [
+          {
+            "name": "Force Pike",
+            "range": ["Melee"],
+            "dice": { "red": 1, "black": 1 }
+          },
+          {
+            "name": "EC-17 Hold-out Blaster",
+            "range": [1, 2],
+            "dice": { "black": 2 }
+          }
+        ]
+      },
+      {
+        "name": "Imperial Special Forces",
+        "title": "Inferno Squad",
+        "restrictions": { "factions": ["Galactic Empire"], "isUnique": true },
+        "points": 34,
+        "rank": "Special Forces",
+        "miniatures": 1,
+        "type": "Trooper",
+        "defense": { "color": "Red", "wounds": 2, "courage": 2 },
+        "attack": { "surges": "Hit" },
+        "speed": 2,
+        "upgrades": {
+          "Heavy Weapon": 2,
+          "Training": 2,
+          "Comms": 1,
+          "Gear": 1,
+          "Grenades": 1
+        },
+        "keywords": {
+          "passive": {
+            "Equip": { "units": ["Del Meeko", "Gideon Hask"] },
+            "Infiltrate": null,
+            "Marksman": null,
+            "Reliable": 1,
+            "Retinue": { "units": ["Iden Versio"] }
+          }
+        },
+        "weapons": [
+          {
+            "name": "Close Quarters Combat",
+            "range": ["Melee"],
+            "dice": { "red": 1 }
+          },
+          {
+            "name": "Inferno Squad E-11 Blaster Rifle",
+            "range": [1, 3],
+            "dice": { "black": 2 }
+          }
+        ]
+      },
+      {
+        "name": "Imperial Special Forces",
+        "restrictions": { "factions": ["Galactic Empire"] },
+        "points": 68,
+        "rank": "Special Forces",
+        "miniatures": 4,
+        "type": "Trooper",
+        "defense": { "color": "Red", "wounds": 1, "courage": 2 },
+        "attack": { "surges": "Hit" },
+        "speed": 2,
+        "upgrades": {
+          "Heavy Weapon": 1,
+          "Training": 2,
+          "Comms": 1,
+          "Gear": 1,
+          "Grenades": 1
+        },
+        "keywords": {
+          "passive": { "Infiltrate": null, "Marksman": null, "Reliable": 1 }
+        },
+        "weapons": [
+          { "name": "Unarmed", "range": ["Melee"], "dice": { "black": 1 } },
+          {
+            "name": "Special Forces E-11 Blaster Rifle",
+            "range": [1, 3],
+            "dice": { "black": 1 }
+          }
+        ]
+      },
+      {
+        "name": "Scout Troopers",
+        "title": "Strike Team",
+        "restrictions": { "factions": ["Galactic Empire"] },
+        "points": 16,
+        "rank": "Special Forces",
+        "miniatures": 1,
+        "type": "Trooper",
+        "defense": {
+          "color": "White",
+          "wounds": 1,
+          "courage": 2,
+          "surges": true
+        },
+        "speed": 2,
+        "upgrades": {
+          "Heavy Weapon": 1,
+          "Training": 1,
+          "Comms": 1,
+          "Gear": 1,
+          "Grenades": 1
+        },
+        "keywords": {
+          "passive": {
+            "Heavy Weapon Team": null,
+            "Low Profile": null,
+            "Scout": 1,
+            "Sharpshooter": 1
+          }
+        },
+        "weapons": [
+          { "name": "Unarmed", "range": ["Melee"], "dice": { "black": 1 } },
+          {
+            "name": "EC-17 Hold-out Blaster",
+            "range": [1, 2],
+            "dice": { "black": 12 }
+          }
+        ]
+      },
+      {
+        "name": "Scout Troopers",
+        "restrictions": { "factions": ["Galactic Empire"] },
+        "points": 60,
+        "rank": "Special Forces",
+        "miniatures": 4,
+        "type": "Trooper",
+        "defense": {
+          "color": "White",
+          "wounds": 1,
+          "courage": 2,
+          "surges": true
+        },
+        "speed": 2,
+        "upgrades": {
+          "Heavy Weapon": 1,
+          "Training": 1,
+          "Comms": 1,
+          "Gear": 1,
+          "Grenades": 1
+        },
+        "keywords": {
+          "passive": { "Low Profile": null, "Scout": 1, "Sharpshooter": 1 }
+        },
+        "weapons": [
+          { "name": "Unarmed", "range": ["Melee"], "dice": { "black": 1 } },
+          {
+            "name": "EC-17 Hold-out Blaster",
+            "range": [1, 2],
+            "dice": { "black": 2 }
+          }
+        ]
+      },
+      {
+        "name": "Shoretroopers",
+        "restrictions": { "factions": ["Galactic Empire"] },
+        "points": 52,
+        "rank": "Corps",
+        "miniatures": 4,
+        "type": "Trooper",
+        "defense": { "color": "Red", "wounds": 1, "courage": 1 },
+        "speed": 2,
+        "upgrades": {
+          "Heavy Weapon": 1,
+          "Personnel": 1,
+          "Training": 1,
+          "Gear": 1,
+          "Grenades": 1
+        },
+        "keywords": {
+          "passive": {
+            "Coordinate": { "unitTypes": ["Emplacement Trooper"] },
+            "Target": 1
+          }
+        },
+        "weapons": [
+          { "name": "Unarmed", "range": ["Melee"], "dice": { "black": 1 } },
+          {
+            "name": "E-22 Blaster Rifle",
+            "range": [1, 3],
+            "dice": { "black": 1 }
+          }
+        ]
+      },
+      {
+        "name": "Snowtroopers",
+        "restrictions": { "factions": ["Galactic Empire"] },
+        "points": 48,
+        "rank": "Corps",
+        "miniatures": 4,
+        "type": "Trooper",
+        "defense": { "color": "Red", "wounds": 1, "courage": 1 },
+        "attack": { "surges": "Hit" },
+        "speed": 1,
+        "upgrades": {
+          "Heavy Weapon": 1,
+          "Personnel": 1,
+          "Gear": 1,
+          "Grenades": 1
+        },
+        "keywords": { "passive": { "Steady": null } },
+        "weapons": [
+          { "name": "Unarmed", "range": ["Melee"], "dice": { "black": 1 } },
+          {
+            "name": "E-11 Blaster Rifle",
+            "range": [1, 3],
+            "dice": { "white": 1 }
+          }
+        ]
+      },
+      {
+        "name": "Stormtroopers",
+        "restrictions": { "factions": ["Galactic Empire"] },
+        "points": 40,
+        "rank": "Corps",
+        "miniatures": 4,
+        "type": "Trooper",
+        "defense": { "color": "Red", "wounds": 1, "courage": 1 },
+        "attack": { "surges": "Hit" },
+        "speed": 2,
+        "upgrades": {
+          "Heavy Weapon": 1,
+          "Personnel": 1,
+          "Gear": 1,
+          "Grenades": 1
+        },
+        "keywords": { "passive": { "Precise": 1 } },
+        "weapons": [
+          { "name": "Unarmed", "range": ["Melee"], "dice": { "black": 1 } },
+          {
+            "name": "E-11 Blaster Rifle",
+            "range": [1, 3],
+            "dice": { "white": 1 }
+          }
+        ]
+      },
+      {
+        "name": "TX-225 GAVw Occupier Combat Assault Tank",
+        "restrictions": { "factions": ["Galactic Empire"] },
+        "points": 165,
+        "rank": "Heavy",
+        "miniatures": 1,
+        "type": { "Vehicle": "Ground Vehicle" },
+        "defense": { "color": "Red", "wounds": 8, "resilience": 6 },
+        "speed": 1,
+        "upgrades": { "Pilot": 1, "Hardpoint": 1, "Comms": 1 },
+        "keywords": {
+          "passive": {
+            "Armor": null,
+            "Arsenal": 2,
+            "Reposition": null,
+            "Transport": { "capacity": 1, "type": "Open" },
+            "Weak Point": { "amount": 1, "sides": ["Sides"] }
+          }
+        },
+        "weapons": [
+          {
+            "name": "Forward Twin MK 2E/W Cannons",
+            "range": [1, 2],
+            "dice": { "red": 1, "black": 1 },
+            "keywords": { "Fixed": ["Front"], "Suppressive": null }
+          },
+          {
+            "name": "MS-4 Twin Blaster Cannons",
+            "range": [1, 4],
+            "dice": { "red": 2, "black": 2 },
+            "keywords": { "Fixed": ["Front"], "Impact": 2 }
+          }
+        ]
+      },
+      {
+        "name": "Anakin Skywalker",
+        "restrictions": {
+          "factions": ["Galactic Republic"],
+          "forceAlignment": ["Light Side"],
+          "isUnique": true
+        },
+        "points": 160,
+        "rank": "Commander",
+        "miniatures": 1,
+        "type": "Trooper",
+        "defense": { "color": "Red", "wounds": 6, "courage": 1 },
+        "speed": 2,
+        "upgrades": { "Force": 2, "Training": 2 },
+        "keywords": {
+          "actions": { "Jump": { "actions": 1, "amount": 1 } },
+          "passive": {
+            "Djem So Mastery": null,
+            "Flawed": null,
+            "Immune": ["Pierce"],
+            "Tempted": null
+          }
+        },
+        "weapons": [
+          {
+            "name": "Anakin's Lightsaber",
+            "range": ["Melee"],
+            "dice": { "red": 5 },
+            "keywords": { "Impact": 3, "Pierce": 3 }
+          }
+        ]
+      },
+      {
+        "name": "ARC Troopers",
+        "title": "Strike Team",
+        "restrictions": { "factions": ["Galactic Republic"] },
+        "points": 21,
+        "rank": "Special Forces",
+        "miniatures": 1,
+        "type": { "Trooper": "Clone Trooper" },
+        "defense": { "color": "Red", "wounds": 1, "courage": 2 },
+        "speed": 2,
+        "upgrades": {
+          "Heavy Weapon": 1,
+          "Personnel": 1,
+          "Training": 1,
+          "Gear": 2,
+          "Grenades": 1
+        },
+        "keywords": {
+          "passive": {
+            "Heavy Weapon Team": null,
+            "Impervious": null,
+            "Scout": 2,
+            "Sharpshooter": 1,
+            "Tactical": 1
+          }
+        },
+        "weapons": [
+          {
+            "name": "Combat Training",
+            "range": ["Melee"],
+            "dice": { "black": 1, "white": 1 }
+          },
+          {
+            "name": "DC-17 Hand Blasters",
+            "range": [1, 2],
+            "dice": { "black": 1, "white": 1 }
+          },
+          {
+            "name": "DC-15A Blaster Rifle",
+            "range": [1, 3],
+            "dice": { "black": 1 }
+          }
+        ]
+      },
+      {
+        "name": "ARC Troopers",
+        "restrictions": { "factions": ["Galactic Republic"] },
+        "points": 72,
+        "rank": "Special Forces",
+        "miniatures": 4,
+        "type": { "Trooper": "Clone Trooper" },
+        "defense": { "color": "Red", "wounds": 1, "courage": 2 },
+        "speed": 2,
+        "upgrades": {
+          "Heavy Weapon": 1,
+          "Personnel": 1,
+          "Training": 1,
+          "Gear": 2,
+          "Grenades": 1
+        },
+        "keywords": {
+          "passive": {
+            "Impervious": null,
+            "Scout": 2,
+            "Sharpshooter": 1,
+            "Tactical": 1
+          }
+        },
+        "weapons": [
+          {
+            "name": "Combat Training",
+            "range": ["Melee"],
+            "dice": { "black": 1, "white": 1 }
+          },
+          {
+            "name": "DC-17 Hand Blasters",
+            "range": [1, 2],
+            "dice": { "black": 1, "white": 1 }
+          },
+          {
+            "name": "DC-15A Blaster Rifle",
+            "range": [1, 3],
+            "dice": { "black": 1 }
+          }
+        ]
+      },
+      {
+        "name": "AT-RT",
+        "restrictions": { "factions": ["Galactic Republic"] },
+        "points": 65,
+        "rank": "Support",
+        "miniatures": 1,
+        "type": { "Vehicle": "Ground Vehicle" },
+        "defense": {
+          "color": "White",
+          "wounds": 6,
+          "resilience": 4,
+          "surges": true
+        },
+        "attack": { "surges": "Hit" },
+        "speed": 2,
+        "upgrades": { "Hardpoint": 1, "Comms": 1 },
+        "keywords": {
+          "passive": {
+            "Armor": null,
+            "Climbing Vehicle": null,
+            "Expert Climber": null,
+            "Scout": 1
+          }
+        },
+        "weapons": [
+          {
+            "name": "Grappling Claws",
+            "range": ["Melee"],
+            "dice": { "red": 3 },
+            "keywords": { "Impact": 1 }
+          },
+          {
+            "name": "Merr-Sonn RPC-2 Rocket Launcher",
+            "range": [1, 3],
+            "dice": { "black": 1, "white": 2 },
+            "keywords": { "Critical": 1, "Impact": 1 }
+          }
+        ]
+      },
+      {
+        "name": "BARC Speeder",
+        "restrictions": { "factions": ["Separatist Alliance"] },
+        "points": 75,
+        "rank": "Support",
+        "miniatures": 1,
+        "type": { "Vehicle": "Repulsor Vehicle" },
+        "defense": { "color": "Red", "wounds": 5, "resilience": 3 },
+        "attack": { "surges": "Hit" },
+        "speed": 3,
+        "upgrades": { "Crew": 1, "Comms": 1 },
+        "keywords": { "passive": { "Arsenal": 2, "Cover": 1, "Speeder": 1 } },
+        "weapons": [
+          {
+            "name": "DC-15A Blaster Pistol",
+            "range": [1, 3],
+            "dice": { "black": 1 }
+          },
+          {
+            "name": "Twin Light Blaster Cannons",
+            "range": [1, 3],
+            "dice": { "red": 1, "black": 1, "white": 1 },
+            "keywords": { "Fixed": ["Front"] }
+          }
+        ]
+      },
+      {
+        "name": "Clone Captain Rex",
+        "title": "Honorable Soldier",
+        "restrictions": { "factions": ["Galactic Republic"], "isUnique": true },
+        "points": 90,
+        "rank": "Commander",
+        "miniatures": 1,
+        "type": { "Trooper": "Clone Trooper" },
+        "defense": { "color": "Red", "wounds": 5, "courage": 2 },
+        "attack": { "surges": "Crit" },
+        "speed": 2,
+        "upgrades": { "Command": 1, "Training": 1, "Gear": 2, "Grenades": 1 },
+        "keywords": {
+          "passive": {
+            "Gunslinger": null,
+            "Scout": 1,
+            "Scouting Party": 2,
+            "Sharpshooter": 1,
+            "Tactical": 1
+          }
+        },
+        "weapons": [
+          {
+            "name": "Advanced Combat Training",
+            "range": ["Melee"],
+            "dice": { "red": 2 }
+          },
+          {
+            "name": "Dual DC-17 Hand Blasters",
+            "range": [1, 2],
+            "dice": { "red": 3 }
+          }
+        ]
+      },
+      {
+        "name": "Obi-Wan Kenobi",
+        "title": "Civilized Warrior",
+        "restrictions": {
+          "factions": ["Galactic Republic"],
+          "forceAlignment": ["Light Side"],
+          "isUnique": true
+        },
+        "points": 175,
+        "rank": "Commander",
+        "miniatures": 1,
+        "type": "Trooper",
+        "defense": { "color": "Red", "wounds": 6, "courage": 3 },
+        "speed": 2,
+        "upgrades": { "Force": 2, "Command": 1, "Training": 1 },
+        "keywords": {
+          "actions": { "Jump": { "actions": 1, "amount": 1 } },
+          "passive": {
+            "Charge": null,
+            "Guardian": 3,
+            "Immune": ["Pierce"],
+            "Master of the Force": 1,
+            "Soresu Mastery": null
+          }
+        },
+        "weapons": [
+          {
+            "name": "Obi-Wan's Lightsaber",
+            "range": ["Melee"],
+            "dice": { "red": 2, "black": 2, "white": 2 },
+            "keywords": { "Critical": 2, "Impact": 2, "Pierce": 2 }
+          }
+        ]
+      },
+      {
+        "name": "Padme Amidala",
+        "title": "Spirited Senator",
+        "restrictions": { "factions": ["Galactic Republic"], "isUnique": true },
+        "points": 90,
+        "rank": "Operative",
+        "miniatures": 1,
+        "type": "Trooper",
+        "defense": {
+          "color": "White",
+          "wounds": 6,
+          "courage": 3,
+          "surges": true
+        },
+        "attack": { "surges": "Hit" },
+        "speed": 2,
+        "upgrades": { "Command": 1, "Training": 1, "Gear": 1, "Armament": 1 },
+        "keywords": {
+          "actions": { "Quick Thinking": { "actions": 1 } },
+          "passive": {
+            "Authoritative": null,
+            "Exemplar": null,
+            "Nimble": null,
+            "Sharpshooter": 2
+          }
+        },
+        "weapons": [
+          {
+            "name": "Martial Arts",
+            "range": ["Melee"],
+            "dice": { "black": 3 }
+          },
+          {
+            "name": "Padme's ELG-3A Blaster Pistol",
+            "range": [1, 2],
+            "dice": { "black": 3 },
+            "keywords": { "Pierce": 1 }
+          }
+        ]
+      },
+      {
+        "name": "Phase I Clone Troopers",
+        "restrictions": { "factions": ["Galactic Republic"] },
+        "points": 52,
+        "rank": "Corps",
+        "miniatures": 4,
+        "type": { "Trooper": "Clone Trooper" },
+        "defense": { "color": "Red", "wounds": 1, "courage": 1 },
+        "speed": 2,
+        "upgrades": {
+          "Heavy Weapon": 1,
+          "Personnel": 1,
+          "Gear": 1,
+          "Grenades": 1
+        },
+        "keywords": { "passive": { "Fire Support": null } },
+        "weapons": [
+          { "name": "Unarmed", "range": ["Melee"], "dice": { "black": 1 } },
+          {
+            "name": "DC-15A Blaster Rifle",
+            "range": [1, 3],
+            "dice": { "black": 1 }
+          }
+        ]
+      },
+      {
+        "name": "Phase II Clone Troopers",
+        "restrictions": { "factions": ["Galactic Republic"] },
+        "points": 60,
+        "rank": "Corps",
+        "miniatures": 4,
+        "type": { "Trooper": "Clone Trooper" },
+        "defense": { "color": "Red", "wounds": 1, "courage": 2 },
+        "speed": 2,
+        "upgrades": {
+          "Heavy Weapon": 1,
+          "Personnel": 1,
+          "Training": 1,
+          "Gear": 1,
+          "Grenades": 1
+        },
+        "keywords": { "passive": { "Fire Support": null, "Reliable": 1 } },
+        "weapons": [
+          { "name": "Unarmed", "range": ["Melee"], "dice": { "black": 1 } },
+          {
+            "name": "DC-15A Blaster Rifle",
+            "range": [1, 3],
+            "dice": { "black": 1 }
+          }
+        ]
+      },
+      {
+        "name": "R2-D2",
+        "title": "Independent Astromech",
+        "restrictions": { "factions": ["Galactic Republic"], "isUnique": true },
+        "points": 35,
+        "rank": "Operative",
+        "miniatures": 1,
+        "type": { "Trooper": "Droid Trooper" },
+        "defense": {
+          "color": "White",
+          "wounds": 4,
+          "courage": 2,
+          "surges": true
+        },
+        "attack": { "surges": "Hit" },
+        "speed": 1,
+        "upgrades": { "Comms": 1, "Counterpart": 1 },
+        "keywords": {
+          "actions": {
+            "Repair": { "actions": 1, "amount": 2, "capacity": 2 },
+            "Secret Mission": { "actions": 0 }
+          },
+          "passive": { "Grounded": null, "Inconspicuous": null }
+        },
+        "weapons": [
+          {
+            "name": "Electro-Shock",
+            "range": ["Melee", 1],
+            "dice": { "white": 3 },
+            "keywords": { "Suppressive": null }
+          }
+        ]
+      },
+      {
+        "name": "TX-130 Saber-class Fighter Tank",
+        "restrictions": { "factions": ["Galactic Republic"] },
+        "points": 170,
+        "rank": "Heavy",
+        "miniatures": 1,
+        "type": { "Vehicle": "Repulsor Vehicle" },
+        "defense": { "color": "Red", "wounds": 9, "resilience": 6 },
+        "speed": 2,
+        "upgrades": { "Pilot": 1, "Hardpoint": 1, "Ordnance": 1, "Comms": 1 },
+        "keywords": {
+          "passive": {
+            "Armor": null,
+            "Arsenal": 2,
+            "Hover": "Ground",
+            "Outmaneuver": null,
+            "Weak Point": { "amount": 1, "sides": ["Rear", "Sides"] }
+          }
+        },
+        "weapons": [
+          {
+            "name": "Twin Lateral GA-6n Laser Cannons",
+            "range": [1, 4],
+            "dice": { "red": 2, "black": 2, "white": 2 },
+            "keywords": { "Critical": 1, "Impact": 2, "Fixed": ["Front"] }
+          }
+        ]
+      },
+      {
+        "name": "1.4 FD Laser Cannon Team",
+        "restrictions": { "factions": ["Rebel Alliance"] },
+        "points": 70,
+        "rank": "Support",
+        "miniatures": 1,
+        "type": { "Trooper": "Emplacement Trooper" },
+        "defense": {
+          "color": "White",
+          "wounds": 6,
+          "courage": 2,
+          "surges": true
+        },
+        "attack": { "surges": "Hit" },
+        "speed": 0,
+        "upgrades": { "Comms": 1, "Generator": 1 },
+        "keywords": {
+          "passive": {
+            "Full Pivot": null,
+            "Sentinel": null,
+            "Stationary": null
+          }
+        },
+        "weapons": [
+          { "name": "Unarmed", "range": ["Melee"], "dice": { "black": 1 } },
+          {
+            "name": "DH-17 Blaster Pistol",
+            "range": [1, 2],
+            "dice": { "white": 4 }
+          },
+          {
+            "name": "1.4 FD Laser Cannon",
+            "range": [1, 4],
+            "dice": { "black": 5 },
+            "keywords": { "Fixed": ["Front"], "Impact": 2 }
+          }
+        ]
+      },
+      {
+        "name": "AT-RT",
+        "restrictions": { "factions": ["Rebel Alliance"] },
+        "points": 55,
+        "rank": "Support",
+        "miniatures": 1,
+        "type": { "Vehicle": "Ground Vehicle" },
+        "defense": { "color": "White", "wounds": 6, "resilience": 4 },
+        "attack": { "surges": "Crit" },
+        "speed": 2,
+        "upgrades": { "Comms": 1 },
+        "keywords": {
+          "passive": {
+            "Armor": null,
+            "Climbing Vehicle": null,
+            "Expert Climber": null
+          }
+        },
+        "weapons": [
+          {
+            "name": "Grappling Claws",
+            "range": ["Melee"],
+            "dice": { "red": 1 },
+            "keywords": { "Impact": 1 }
+          },
+          {
+            "name": "A-300 Blaster Rifle",
+            "range": [1, 3],
+            "dice": { "white": 2 }
+          }
+        ]
+      },
+      {
+        "name": "Cassian Andor",
+        "title": "Capable Intelligence Agent",
+        "restrictions": { "factions": ["Rebel Alliance"], "isUnique": true },
+        "points": 90,
+        "rank": "Commander",
+        "miniatures": 1,
+        "type": "Trooper",
+        "defense": {
+          "color": "White",
+          "wounds": 6,
+          "courage": 2,
+          "surges": true
+        },
+        "attack": { "surges": "Hit" },
+        "speed": 2,
+        "upgrades": { "Training": 2, "Gear": 1, "Armament": 1 },
+        "keywords": {
+          "passive": {
+            "Covert Ops": null,
+            "Danger Sense": 3,
+            "Loadout": null,
+            "Marksman": null,
+            "Tactical": 1
+          }
+        },
+        "weapons": [
+          {
+            "name": "Advanced Combat Training",
+            "range": ["Melee"],
+            "dice": { "red": 2 }
+          },
+          {
+            "name": "Cassian's Covert Blaster",
+            "range": [1, 2],
+            "dice": { "red": 1, "white": 2 },
+            "keywords": { "Pierce": 1 }
+          }
+        ]
+      },
+      {
+        "name": "Chewbacca",
+        "title": "Walking Carpet",
+        "restrictions": { "factions": ["Rebel Alliance"] },
+        "points": 110,
+        "rank": "Operative",
+        "miniatures": 1,
+        "type": "Trooper",
+        "defense": { "color": "White", "wounds": 9, "courage": 2 },
+        "attack": { "surges": "Crit" },
+        "speed": 2,
+        "upgrades": { "Training": 2, "Gear": 1 },
+        "keywords": {
+          "passive": {
+            "Enrage": 4,
+            "Expert Climber": null,
+            "Guardian": 3,
+            "Teamwork": { "units": ["Han Solo"] },
+            "Unhindered": null
+          }
+        },
+        "weapons": [
+          { "name": "Overpower", "range": ["Melee"], "dice": { "red": 4 } },
+          {
+            "name": "Chewbacca's Bowcaster",
+            "range": [1, 3],
+            "dice": { "red": 2, "white": 2 },
+            "keywords": { "Impact": 1, "Pierce": 1 }
+          }
+        ]
+      },
+      {
+        "name": "Fleet Troopers",
+        "restrictions": { "factions": ["Rebel Alliance"] },
+        "points": 44,
+        "rank": "Corps",
+        "miniatures": 4,
+        "type": "Trooper",
+        "defense": {
+          "color": "White",
+          "wounds": 1,
+          "courage": 1,
+          "surges": true
+        },
+        "attack": { "surges": "Hit" },
+        "speed": 2,
+        "upgrades": {
+          "Heavy Weapon": 1,
+          "Personnel": 1,
+          "Gear": 1,
+          "Grenades": 1
+        },
+        "keywords": { "passive": { "Ready": 1 } },
+        "weapons": [
+          { "name": "Unarmed", "range": ["Melee"], "dice": { "black": 1 } },
+          {
+            "name": "DH-17 Blaster Pistol",
+            "range": [1, 2],
+            "dice": { "white": 2 }
+          }
+        ]
+      },
+      {
+        "name": "Han Solo",
+        "title": "Unorthodox General",
+        "restrictions": { "factions": ["Rebel Alliance"] },
+        "points": 120,
+        "rank": "Commander",
+        "miniatures": 1,
+        "type": "Trooper",
+        "defense": {
+          "color": "White",
+          "wounds": 6,
+          "surges": true,
+          "courage": 2
+        },
+        "speed": 2,
+        "upgrades": { "Command": 1, "Training": 1, "Gear": 1 },
+        "keywords": {
+          "passive": {
+            "Low Profile": null,
+            "Gunslinger": null,
+            "Sharpshooter": 1,
+            "Uncanny Luck": 3
+          }
+        },
+        "weapons": [
+          { "name": "Brawl", "range": ["Melee"], "dice": { "white": 3 } },
+          {
+            "name": "Han's DL-44 Blaster Pistol",
+            "range": [1, 2],
+            "dice": { "red": 2 },
+            "keywords": { "Pierce": 2 }
+          }
+        ]
+      },
+      {
+        "name": "Jyn Erso",
+        "title": "Stardust",
+        "restrictions": { "factions": ["Rebel Alliance"] },
+        "points": 130,
+        "rank": "Commander",
+        "miniatures": 1,
+        "type": "Trooper",
+        "defense": {
+          "color": "White",
+          "wounds": 6,
+          "surges": true,
+          "courage": 3
+        },
+        "attack": { "surges": "Crit" },
+        "speed": 2,
+        "upgrades": { "Command": 1, "Training": 1, "Gear": 1, "Armament": 1 },
+        "keywords": {
+          "actions": { "Quick Thinking": { "actions": 1 } },
+          "passive": {
+            "Danger Sense": 4,
+            "Infiltrate": null,
+            "Nimble": null,
+            "Sharpshooter": 1
+          }
+        },
+        "weapons": [
+          {
+            "name": "Collapsible Tonfa",
+            "range": ["Melee"],
+            "dice": { "black": 4 },
+            "keywords": { "Suppressive": null }
+          }
+        ]
+      },
+      {
+        "name": "K-2SO",
+        "title": "Sardonic Security Droid",
+        "restrictions": {
+          "factions": ["Rebel Alliance"],
+          "isUnique": true,
+          "units": ["Cassian Andor"]
+        },
+        "points": 70,
+        "rank": "Operative",
+        "miniatures": 1,
+        "type": { "Trooper": "Droid Trooper" },
+        "defense": { "color": "Red", "wounds": 5, "courage": 2 },
+        "attack": { "surges": "Crit" },
+        "speed": 2,
+        "upgrades": { "Comms": 1, "Armament": 1 },
+        "keywords": {
+          "actions": { "Calculate Odds": { "actions": 1 } },
+          "passive": {
+            "Armor": 1,
+            "Detachment": { "units": ["Cassian Andor"] },
+            "Incognito": null,
+            "Teamwork": { "units": ["Cassian Andor"] }
+          }
+        },
+        "weapons": [
+          { "name": "Overpower", "range": ["Melee"], "dice": { "red": 4 } }
+        ]
+      },
+      {
+        "name": "Leia Organa",
+        "title": "Fearless And Inventive",
+        "restrictions": { "factions": ["Rebel Alliance"] },
+        "points": 90,
+        "rank": "Commander",
+        "miniatures": 1,
+        "type": "Trooper",
+        "defense": {
+          "color": "White",
+          "wounds": 6,
+          "surges": true,
+          "courage": 2
+        },
+        "speed": 2,
+        "upgrades": { "Command": 2, "Gear": 1 },
+        "keywords": {
+          "actions": { "Take Cover": { "actions": 1, "amount": 2 } },
+          "passive": { "Inspire": 2, "Nimble": null, "Sharpshooter": 2 }
+        },
+        "weapons": [
+          {
+            "name": "Martial Arts",
+            "range": ["Melee"],
+            "dice": { "black": 3 }
+          },
+          {
+            "name": "Leia's Defender Sporting Blaster",
+            "range": [1, 2],
+            "dice": { "black": 3 },
+            "keywords": { "Pierce": 1 }
+          }
+        ]
+      },
+      {
+        "name": "Luke Skywalker",
+        "title": "Jedi Knight",
+        "restrictions": {
+          "factions": ["Rebel Alliance"],
+          "forceAlignment": ["Light Side"],
+          "isUnique": true
+        },
+        "points": 200,
+        "rank": "Operative",
+        "miniatures": 1,
+        "type": "Trooper",
+        "defense": { "color": "Red", "wounds": 7, "courage": 4 },
+        "attack": { "surges": "Crit" },
+        "speed": 2,
+        "upgrades": { "Force": 3, "Training": 1 },
+        "keywords": {
+          "actions": { "Jump": { "actions": 1, "amount": 1 } },
+          "passive": {
+            "Charge": null,
+            "Deflect": null,
+            "Disengage": null,
+            "Immune": ["Pierce"],
+            "Master of the Force": 1
+          }
+        },
+        "weapons": [
+          {
+            "name": "Luke's Lightsaber",
+            "range": ["Melee"],
+            "dice": { "black": 7 },
+            "keywords": { "Impact": 2, "Pierce": 2 }
+          }
+        ]
+      },
+      {
+        "name": "Luke Skywalker",
+        "title": "Hero Of The Rebellion",
+        "restrictions": {
+          "factions": ["Rebel Alliance"],
+          "forceAlignment": ["Light Side"],
+          "isUnique": true
+        },
+        "points": 160,
+        "rank": "Commander",
+        "miniatures": 1,
+        "type": "Trooper",
+        "defense": { "color": "Red", "wounds": 6, "courage": 3 },
+        "attack": { "surges": "Crit" },
+        "speed": 2,
+        "upgrades": { "Force": 2, "Gear": 1 },
+        "keywords": {
+          "actions": { "Jump": { "actions": 1, "amount": 1 } },
+          "passive": { "Charge": null, "Deflect": null, "Immune": ["Pierce"] }
+        },
+        "weapons": [
+          {
+            "name": "Anakin's Lightsaber",
+            "range": ["Melee"],
+            "dice": { "black": 6 },
+            "keywords": { "Impact": 2, "Pierce": 2 }
+          },
+          {
+            "name": "Luke's DL-44 Blaster Pistol",
+            "range": [1, 2],
+            "dice": { "red": 2 },
+            "keywords": { "Pierce": 2 }
+          }
+        ]
+      },
+      {
+        "name": "Mandalorian Resistance",
+        "title": "Clan Wren",
+        "restrictions": { "factions": ["Rebel Alliance"], "isUnique": true },
+        "points": 34,
+        "rank": "Special Forces",
+        "miniatures": 1,
+        "type": "Trooper",
+        "defense": {
+          "color": "Red",
+          "wounds": 2,
+          "courage": 2,
+          "surges": true
+        },
+        "attack": { "surges": "Hit" },
+        "speed": 3,
+        "upgrades": {
+          "Heavy Weapon": 2,
+          "Training": 1,
+          "Comms": 1,
+          "Gear": 1,
+          "Armament": 1,
+          "Grenades": 1
+        },
+        "keywords": {
+          "actions": { "Jump": { "actions": 1, "amount": 2 } },
+          "passive": {
+            "Equip": { "units": ["Tristan Wren", "Ursa Wren"] },
+            "Impervious": null,
+            "Nimble": null,
+            "Retinue": { "units": ["Sabine Wren"] }
+          }
+        },
+        "weapons": [
+          {
+            "name": "Combat Expertise",
+            "range": ["Melee"],
+            "dice": { "black": 2 }
+          },
+          {
+            "name": "Westar 35 Blaster Pistols",
+            "range": [1, 2],
+            "dice": { "black": 2 }
+          }
+        ]
+      },
+      {
+        "name": "Mandalorian Resistance",
+        "restrictions": { "factions": ["Rebel Alliance"] },
+        "points": 72,
+        "rank": "Special Forces",
+        "miniatures": 3,
+        "type": "Trooper",
+        "defense": {
+          "color": "Red",
+          "wounds": 1,
+          "courage": 2,
+          "surges": true
+        },
+        "attack": { "surges": "Hit" },
+        "speed": 3,
+        "upgrades": {
+          "Heavy Weapon": 1,
+          "Training": 1,
+          "Comms": 1,
+          "Gear": 1,
+          "Armament": 1,
+          "Grenades": 1
+        },
+        "keywords": {
+          "actions": { "Jump": { "actions": 1, "amount": 2 } },
+          "passive": { "Impervious": null, "Nimble": null }
+        },
+        "weapons": [
+          {
+            "name": "Combat Training",
+            "range": ["Melee"],
+            "dice": { "black": 1, "white": 1 }
+          },
+          {
+            "name": "Westar 35 Blaster Pistols",
+            "range": [1, 2],
+            "dice": { "black": 2 }
+          }
+        ]
+      },
+      {
+        "name": "Mark II Medium Blaster Trooper",
+        "restrictions": {
+          "factions": ["Rebel Alliance"],
+          "units": ["Rebel Veterans"]
+        },
+        "points": 38,
+        "rank": "Corps",
+        "miniatures": 1,
+        "type": { "Trooper": "Emplacement Trooper" },
+        "defense": {
+          "color": "White",
+          "wounds": 3,
+          "courage": 2,
+          "surges": true
+        },
+        "attack": { "surges": "Hit" },
+        "speed": 1,
+        "upgrades": { "Comms": 1 },
+        "keywords": {
+          "passive": {
+            "Detachment": { "units": ["Rebel Veterans"] },
+            "Fire Support": null,
+            "Full Pivot": null,
+            "Reposition": null,
+            "Sentinel": null
+          }
+        },
+        "weapons": [
+          { "name": "Unarmed", "range": ["Melee"], "dice": { "black": 1 } },
+          {
+            "name": "A-280 Blaster Rifle",
+            "range": [1, 3],
+            "dice": { "black": 1 }
+          },
+          {
+            "name": "Mark II Medium Blaster",
+            "range": [1, 3],
+            "dice": { "black": 4 },
+            "keywords": {
+              "Critical": 2,
+              "Cumbersome": null,
+              "Fixed": ["Front"]
+            }
+          }
+        ]
+      },
+      {
+        "name": "R2-D2",
+        "title": "Hero of a Thousand Devices",
+        "restrictions": { "factions": ["Rebel Alliance"], "isUnique": true },
+        "points": 35,
+        "rank": "Operative",
+        "miniatures": 1,
+        "type": { "Trooper": "Droid Trooper" },
+        "defense": {
+          "color": "White",
+          "wounds": 4,
+          "courage": 2,
+          "surges": true
+        },
+        "attack": { "surges": "Hit" },
+        "speed": 1,
+        "upgrades": { "Comms": 1, "Counterpart": 1 },
+        "keywords": {
+          "actions": {
+            "Repair": { "actions": 1, "amount": 2, "capacity": 2 },
+            "Secret Mission": { "actions": 0 }
+          },
+          "passive": { "Grounded": null, "Inconspicuous": null }
+        },
+        "weapons": [
+          {
+            "name": "Electro-Shock",
+            "range": ["Melee", 1],
+            "dice": { "white": 3 },
+            "keywords": { "Suppressive": null }
+          }
+        ]
+      },
+      {
+        "name": "Rebel Commandos",
+        "title": "Strike Team",
+        "restrictions": { "factions": ["Rebel Alliance"] },
+        "points": 16,
+        "rank": "Special Forces",
+        "miniatures": 1,
+        "type": "Trooper",
+        "defense": {
+          "color": "White",
+          "wounds": 1,
+          "courage": 2,
+          "surges": true
+        },
+        "speed": 2,
+        "upgrades": {
+          "Heavy Weapon": 1,
+          "Training": 1,
+          "Comms": 1,
+          "Gear": 1,
+          "Grenades": 1
+        },
+        "keywords": {
+          "passive": {
+            "Heavy Weapon Team": null,
+            "Low Profile": null,
+            "Scout": 2,
+            "Sharpshooter": 1
+          }
+        },
+        "weapons": [
+          { "name": "Unarmed", "range": ["Melee"], "dice": { "black": 1 } },
+          {
+            "name": "A-280 Blaster Rifle",
+            "range": [1, 3],
+            "dice": { "black": 1 }
+          }
+        ]
+      },
+      {
+        "name": "Rebel Commandos",
+        "restrictions": { "factions": ["Rebel Alliance"] },
+        "points": 60,
+        "rank": "Special Forces",
+        "miniatures": 4,
+        "type": "Trooper",
+        "defense": {
+          "color": "White",
+          "wounds": 1,
+          "courage": 2,
+          "surges": true
+        },
+        "speed": 2,
+        "upgrades": {
+          "Heavy Weapon": 1,
+          "Training": 1,
+          "Comms": 1,
+          "Gear": 1,
+          "Grenades": 1
+        },
+        "keywords": {
+          "passive": { "Low Profile": null, "Scout": 2, "Sharpshooter": 1 }
+        },
+        "weapons": [
+          { "name": "Unarmed", "range": ["Melee"], "dice": { "black": 1 } },
+          {
+            "name": "A-280 Blaster Rifle",
+            "range": [1, 3],
+            "dice": { "black": 1 }
+          }
+        ]
+      },
+      {
+        "name": "Rebel Officer",
+        "title": "Resolute Commander",
+        "restrictions": { "factions": ["Rebel Alliance"] },
+        "points": 50,
+        "rank": "Commander",
+        "miniatures": 1,
+        "type": "Trooper",
+        "defense": {
+          "color": "White",
+          "wounds": 4,
+          "courage": 2,
+          "surges": true
+        },
+        "attack": { "surges": "Hit" },
+        "speed": 2,
+        "upgrades": { "Command": 1, "Gear": 1 },
+        "keywords": {
+          "actions": { "Take Cover": { "actions": 1, "amount": 1 } },
+          "passive": { "Inspire": 1, "Sharpshooter": 1 }
+        },
+        "weapons": [
+          { "name": "Unarmed", "range": ["Melee"], "dice": { "black": 1 } },
+          {
+            "name": "Officer's A-180 Blaster Pistol",
+            "range": [1, 2],
+            "dice": { "black": 1, "white": 1 }
+          }
+        ]
+      },
+      {
+        "name": "Rebel Pathfinders",
+        "restrictions": { "factions": ["Rebel Alliance"] },
+        "points": 60,
+        "rank": "Special Forces",
+        "miniatures": 4,
+        "type": "Trooper",
+        "defense": {
+          "color": "White",
+          "wounds": 1,
+          "courage": 2,
+          "surges": true
+        },
+        "speed": 2,
+        "upgrades": {
+          "Heavy Weapon": 1,
+          "Training": 1,
+          "Comms": 1,
+          "Gear": 1,
+          "Armament": 1,
+          "Grenades": 1
+        },
+        "keywords": {
+          "passive": {
+            "Danger Sense": 3,
+            "Dauntless": null,
+            "Infiltrate": null
+          }
+        },
+        "weapons": [
+          { "name": "Unarmed", "range": ["Melee"], "dice": { "black": 1 } },
+          {
+            "name": "A-300 Blaster Rifle",
+            "range": [1, 3],
+            "dice": { "white": 2 }
+          }
+        ]
+      },
+      {
+        "name": "Rebel Troopers",
+        "restrictions": { "factions": ["Rebel Alliance"] },
+        "points": 40,
+        "rank": "Corps",
+        "miniatures": 4,
+        "type": "Trooper",
+        "defense": {
+          "color": "White",
+          "wounds": 1,
+          "courage": 1,
+          "surges": true
+        },
+        "speed": 2,
+        "upgrades": {
+          "Heavy Weapon": 1,
+          "Personnel": 1,
+          "Gear": 1,
+          "Grenades": 1
+        },
+        "keywords": { "passive": { "Nimble": null } },
+        "weapons": [
+          { "name": "Unarmed", "range": ["Melee"], "dice": { "black": 1 } },
+          {
+            "name": "A-280 Blaster Rifle",
+            "range": [1, 3],
+            "dice": { "black": 1 }
+          }
+        ]
+      },
+      {
+        "name": "Rebel Veterans",
+        "restrictions": { "factions": ["Rebel Alliance"] },
+        "points": 48,
+        "rank": "Corps",
+        "miniatures": 4,
+        "type": "Trooper",
+        "defense": {
+          "color": "White",
+          "wounds": 1,
+          "courage": 1,
+          "surges": true
+        },
+        "attack": { "surges": "Hit" },
+        "speed": 2,
+        "upgrades": {
+          "Heavy Weapon": 1,
+          "Personnel": 1,
+          "Training": 1,
+          "Gear": 1,
+          "Grenades": 1
+        },
+        "keywords": {
+          "passive": {
+            "Coordinate": {
+              "unitTypes": [{ "Trooper": "Emplacement Trooper" }]
+            },
+            "Defend": 1
+          }
+        },
+        "weapons": [
+          { "name": "Unarmed", "range": ["Melee"], "dice": { "black": 1 } },
+          {
+            "name": "A-280 Blaster Rifle",
+            "range": [1, 3],
+            "dice": { "black": 1 }
+          }
+        ]
+      },
+      {
+        "name": "Sabine Wren",
+        "restrictions": { "factions": ["Rebel Alliance"] },
+        "points": 125,
+        "rank": "Operative",
+        "miniatures": 1,
+        "type": "Trooper",
+        "defense": {
+          "color": "Red",
+          "wounds": 5,
+          "courage": 2,
+          "surges": true
+        },
+        "attack": { "surges": "Crit" },
+        "speed": 3,
+        "upgrades": { "Training": 1, "Gear": 2, "Armament": 1 },
+        "keywords": {
+          "actions": { "Jump": { "actions": 1, "amount": 2 } },
+          "passive": { "Gunslinger": null, "Impervious": null, "Nimble": null }
+        },
+        "weapons": [
+          {
+            "name": "Combat Expertise",
+            "range": ["Melee"],
+            "dice": { "black": 2 }
+          },
+          {
+            "name": "Dual Westar-35 Blaster Pistols",
+            "range": [1, 2],
+            "dice": { "red": 1, "black": 1, "white": 1 },
+            "keywords": { "Pierce": 1 }
+          }
+        ]
+      },
+      {
+        "name": "T-47 Airspeeder",
+        "restrictions": { "factions": ["Rebel Alliance"] },
+        "points": 175,
+        "rank": "Heavy",
+        "miniatures": 1,
+        "type": { "Vehicle": "Repulsor Vehicle" },
+        "defense": {
+          "color": "White",
+          "wounds": 7,
+          "surges": true,
+          "resilience": 5
+        },
+        "speed": 3,
+        "upgrades": { "Pilot": 1, "Hardpoint": 1, "Comms": 1 },
+        "keywords": {
+          "passive": {
+            "Armor": null,
+            "Arsenal": 2,
+            "Cover": 1,
+            "Immune": ["Blast", "Melee"],
+            "Speeder": 2
+          }
+        },
+        "weapons": [
+          {
+            "name": "Ap/11 Double Laser Cannon",
+            "range": [1, 3],
+            "dice": { "red": 3, "black": 3 },
+            "keywords": { "Fixed": ["Front"], "Impact": 3 }
+          }
+        ]
+      },
+      {
+        "name": "Tauntaun Riders",
+        "restrictions": { "factions": ["Rebel Alliance"] },
+        "points": 90,
+        "rank": "Support",
+        "miniatures": 2,
+        "type": { "Trooper": "Creature Trooper" },
+        "defense": { "color": "White", "wounds": 4, "courage": 2 },
+        "attack": { "surges": "Hit" },
+        "speed": 2,
+        "upgrades": { "Training": 1, "Comms": 1 },
+        "keywords": {
+          "passive": {
+            "Agile": 1,
+            "Relentless": null,
+            "Reposition": null,
+            "Sharpshooter": 1,
+            "Unhindered": null
+          }
+        },
+        "weapons": [
+          {
+            "name": "Horns & Hind Claws",
+            "range": ["Melee"],
+            "dice": { "black": 2, "white": 1 },
+            "keywords": { "Ram": 1 }
+          },
+          {
+            "name": "DL-44 Blaster Pistol",
+            "range": [1, 2],
+            "dice": { "red": 2 }
+          }
+        ]
+      },
+      {
+        "name": "Wookiee Warriors",
+        "restrictions": { "factions": ["Rebel Alliance"] },
+        "points": 75,
+        "rank": "Special Forces",
+        "miniatures": 3,
+        "type": "Trooper",
+        "defense": { "color": "White", "wounds": 3, "courage": 2 },
+        "attack": { "surges": "Hit" },
+        "speed": 2,
+        "upgrades": {
+          "Heavy Weapon": 1,
+          "Training": 2,
+          "Gear": 1,
+          "Grenades": 1
+        },
+        "keywords": {
+          "passive": {
+            "Charge": null,
+            "Expert Climber": null,
+            "Indomitable": null,
+            "Unhindered": null
+          }
+        },
+        "weapons": [
+          { "name": "Ryyk Blade", "range": ["Melee"], "dice": { "black": 2 } },
+          {
+            "name": "Kashyyyk Pistol",
+            "range": [1, 2],
+            "dice": { "black": 1, "white": 1 }
+          }
+        ]
+      },
+      {
+        "name": "X-34 Landspeeder",
+        "restrictions": { "factions": ["Rebel Alliance"] },
+        "points": 75,
+        "rank": "Heavy",
+        "miniatures": 1,
+        "type": { "Vehicle": "Repulsor Vehicle" },
+        "defense": {
+          "color": "White",
+          "wounds": 6,
+          "resilience": 4,
+          "surges": true
+        },
+        "speed": 2,
+        "upgrades": { "Pilot": 1, "Crew": 2, "Hardpoint": 1, "Comms": 1 },
+        "keywords": {
+          "passive": {
+            "Armor": 2,
+            "Arsenal": 3,
+            "Cover": 1,
+            "Light Transport": { "capacity": 1, "type": "Open" },
+            "Speeder": 1
+          }
+        },
+        "weapons": [
+          {
+            "name": "Driver's DH-17 Blaster Pistol",
+            "range": [1, 2],
+            "dice": { "white": 2 }
+          }
+        ]
+      },
+      {
+        "name": "AAT Trade Federation Battle Tank",
+        "restrictions": { "factions": ["Separatist Alliance"] },
+        "points": 170,
+        "rank": "Heavy",
+        "miniatures": 1,
+        "type": { "Vehicle": "Repulsor Vehicle" },
+        "defense": { "color": "Red", "wounds": 9, "resilience": 6 },
+        "speed": 1,
+        "upgrades": { "Pilot": 1, "Ordnance": 2, "Comms": 1 },
+        "keywords": {
+          "passive": {
+            "AI": ["Attack"],
+            "Armor": null,
+            "Barrage": null,
+            "Hover": "Ground",
+            "Weak Point": { "amount": 2, "sides": ["Rear"] }
+          }
+        },
+        "weapons": [
+          {
+            "name": "Lateral Anti-Personnel Lasers",
+            "range": [1, 2],
+            "dice": { "black": 3 },
+            "keywords": { "Fixed": ["Front"] }
+          },
+          {
+            "name": "MX-8 Artillery Laser Cannon",
+            "range": [2, 4],
+            "dice": { "red": 4 },
+            "keywords": { "Critical": 2, "High Velocity": null, "Impact": 1 }
+          }
+        ]
+      },
+      {
+        "name": "B1 Battle Droids",
+        "restrictions": { "factions": ["Separatist Alliance"] },
+        "points": 36,
+        "rank": "Corps",
+        "miniatures": 6,
+        "type": { "Trooper": "Droid Trooper" },
+        "defense": { "color": "White", "wounds": 1, "courage": 1 },
+        "speed": 2,
+        "upgrades": { "Heavy Weapon": 1, "Personnel": 1, "Comms": 1 },
+        "keywords": {
+          "passive": {
+            "AI": ["Attack"],
+            "Coordinate": { "unitTypes": [{ "Trooper": "Droid Trooper" }] }
+          }
+        },
+        "weapons": [
+          { "name": "Bludgeon", "range": ["Melee"], "dice": { "white": 1 } },
+          {
+            "name": "E-5 Blaster Rifle",
+            "range": [1, 3],
+            "dice": { "white": 1 }
+          }
+        ]
+      },
+      {
+        "name": "B2 Super Battle Droids",
+        "restrictions": { "factions": ["Separatist Alliance"] },
+        "points": 48,
+        "rank": "Corps",
+        "miniatures": 3,
+        "type": { "Trooper": "Droid Trooper" },
+        "defense": { "color": "White", "wounds": 2, "courage": 2 },
+        "speed": 2,
+        "upgrades": { "Heavy Weapon": 1, "Personnel": 1, "Comms": 1 },
+        "keywords": { "passive": { "AI": ["Attack"], "Armor": 1 } },
+        "weapons": [
+          { "name": "Unarmed", "range": ["Melee"], "dice": { "black": 1 } },
+          {
+            "name": "Arm Cannons",
+            "range": [1, 2],
+            "dice": { "black": 1, "white": 1 }
+          }
+        ]
+      },
+      {
+        "name": "BX-series Droid Commandos",
+        "title": "Strike Team",
+        "restrictions": { "factions": ["Separatist Alliance"] },
+        "points": 20,
+        "rank": "Special Forces",
+        "miniatures": 1,
+        "type": { "Trooper": "Droid Trooper" },
+        "defense": { "color": "Red", "wounds": 1, "courage": 2 },
+        "attack": { "surges": "Hit" },
+        "speed": 2,
+        "upgrades": {
+          "Heavy Weapon": 1,
+          "Training": 1,
+          "Comms": 1,
+          "Armament": 1,
+          "Grenades": 1
+        },
+        "keywords": {
+          "passive": {
+            "AI": ["Dodge", "Move"],
+            "Heavy Weapon Team": null,
+            "Impervious": null,
+            "Scale": null,
+            "Scout": 3,
+            "Sharpshooter": 1
+          }
+        },
+        "weapons": [
+          { "name": "Unarmed", "range": ["Melee"], "dice": { "black": 1 } },
+          {
+            "name": "Commando E-5 Blaster Rifle",
+            "range": [1, 3],
+            "dice": { "white": 2 }
+          }
+        ]
+      },
+      {
+        "name": "BX-series Droid Commandos",
+        "restrictions": { "factions": ["Separatist Alliance"] },
+        "points": 68,
+        "rank": "Special Forces",
+        "miniatures": 4,
+        "type": { "Trooper": "Droid Trooper" },
+        "defense": { "color": "Red", "wounds": 1, "courage": 2 },
+        "attack": { "surges": "Hit" },
+        "speed": 2,
+        "upgrades": {
+          "Heavy Weapon": 1,
+          "Training": 1,
+          "Comms": 1,
+          "Armament": 1,
+          "Grenades": 1
+        },
+        "keywords": {
+          "passive": {
+            "AI": ["Dodge", "Move"],
+            "Impervious": null,
+            "Scale": null,
+            "Scout": 3,
+            "Sharpshooter": 1
+          }
+        },
+        "weapons": [
+          { "name": "Unarmed", "range": ["Melee"], "dice": { "black": 1 } },
+          {
+            "name": "Commando E-5 Blaster Rifle",
+            "range": [1, 3],
+            "dice": { "white": 2 }
+          }
+        ]
+      },
+      {
+        "name": "Cad Bane",
+        "title": "Needs No Introduction",
+        "restrictions": { "factions": ["Separatist Alliance"] },
+        "points": 125,
+        "rank": "Operative",
+        "miniatures": 1,
+        "type": "Trooper",
+        "defense": { "color": "White", "wounds": 6, "courage": 3 },
+        "attack": { "surges": "Hit" },
+        "speed": 2,
+        "upgrades": {
+          "Training": 1,
+          "Comms": 1,
+          "Gear": 1,
+          "Armament": 1,
+          "Grenades": 1
+        },
+        "keywords": {
+          "actions": { "Jump": { "actions": 1, "amount": 1 } },
+          "passive": {
+            "Bounty": null,
+            "Danger Sense": 2,
+            "Sharpshooter": 1,
+            "Steady": null
+          }
+        },
+        "weapons": [
+          {
+            "name": "Martial ArtS",
+            "range": ["Melee"],
+            "dice": { "black": 3 }
+          },
+          {
+            "name": "Dual LL-30 Blaster Pistols",
+            "range": [1, 2],
+            "dice": { "black": 4 },
+            "keywords": { "Pierce": 1 }
+          }
+        ]
+      },
+      {
+        "name": "Count Dooku",
+        "title": "Darth Tyranus",
+        "restrictions": {
+          "factions": ["Galactic Empire"],
+          "forceAlignment": ["Dark Side"],
+          "isUnique": true
+        },
+        "points": 205,
+        "rank": "Commander",
+        "miniatures": 1,
+        "type": "Trooper",
+        "defense": { "color": "Red", "wounds": 6, "courage": 3 },
+        "attack": { "surges": "Crit" },
+        "speed": 2,
+        "upgrades": { "Force": 3, "Command": 1 },
+        "keywords": {
+          "passive": {
+            "Cunning": null,
+            "Deflect": null,
+            "Immune": ["Pierce"],
+            "Makashi Mastery": null,
+            "Master of the Force": 2
+          }
+        },
+        "weapons": [
+          {
+            "name": "Dooku's Lightsaber",
+            "range": ["Melee"],
+            "dice": { "red": 5 },
+            "keywords": { "Impact": 2, "Pierce": 2 }
+          },
+          {
+            "name": "Dooku's Lightning",
+            "range": [1, 2],
+            "dice": { "black": 5 },
+            "keywords": { "Pierce": 1, "Scatter": null }
+          }
+        ]
+      },
+      {
+        "name": "DRK-1 Sith Probe Droids",
+        "restrictions": {
+          "factions": ["Separatist Alliance"],
+          "units": ["Maul"]
+        },
+        "points": 35,
+        "rank": "Special Forces",
+        "miniatures": 3,
+        "type": { "Trooper": "Droid Trooper" },
+        "defense": {
+          "color": "White",
+          "wounds": 1,
+          "courage": 1,
+          "surges": true
+        },
+        "attack": { "surges": "Hit" },
+        "speed": 2,
+        "upgrades": { "Comms": 1 },
+        "keywords": {
+          "actions": { "Observe": { "actions": 1, "amount": 3 } },
+          "passive": {
+            "Detachment": { "units": ["Maul"] },
+            "Hover": { "Air": 1 },
+            "Incognito": null
+          }
+        },
+        "weapons": [
+          {
+            "name": "Electro-stun Micro Blaster",
+            "range": ["Melee", 1, 2],
+            "dice": { "white": 2 },
+            "keywords": { "Suppressive": null }
+          }
+        ]
+      },
+      {
+        "name": "Droidekas",
+        "restrictions": { "factions": ["Separatist Alliance"] },
+        "points": 100,
+        "rank": "Support",
+        "miniatures": 2,
+        "type": { "Vehicle": "Ground Vehicle" },
+        "defense": { "color": "White", "wounds": 3, "surges": true },
+        "speed": 1,
+        "upgrades": { "Comms": 1 },
+        "keywords": {
+          "passive": {
+            "AI": ["Attack", "Move"],
+            "Generator": 1,
+            "Shielded": 4,
+            "Wheel Mode": null
+          }
+        },
+        "weapons": [
+          {
+            "name": "Dual Twin Blaster Cannons",
+            "range": [1, 3],
+            "dice": { "red": 1, "black": 2 },
+            "keywords": {
+              "Suppressive": null,
+              "Fixed": ["Front"],
+              "Immune": ["Deflect"]
+            }
+          }
+        ]
+      },
+      {
+        "name": "General Grievous",
+        "title": "Sinister Cyborg",
+        "restrictions": {
+          "factions": ["Separatist Alliance"],
+          "isUnique": true
+        },
+        "points": 175,
+        "rank": "Commander",
+        "miniatures": 1,
+        "type": "Trooper",
+        "defense": { "color": "Red", "wounds": 8, "courage": 2 },
+        "speed": 2,
+        "upgrades": { "Command": 2, "Training": 1, "Armament": 1 },
+        "keywords": {
+          "passive": {
+            "Arsenal": 2,
+            "Block": null,
+            "Impervious": null,
+            "Jedi Hunter": null,
+            "Relentless": null,
+            "Scale": null
+          }
+        },
+        "weapons": [
+          {
+            "name": "Trophy Lightsabers (1/2)",
+            "range": ["Melee"],
+            "dice": { "red": 1, "black": 2, "white": 1 },
+            "keywords": { "Impact": 1, "Pierce": 1 }
+          },
+          {
+            "name": "Trophy Lightsabers (2/2)",
+            "range": ["Melee"],
+            "dice": { "red": 1, "black": 2, "white": 1 },
+            "keywords": { "Impact": 1, "Pierce": 1 }
+          }
+        ]
+      },
+      {
+        "name": "Maul",
+        "title": "Impatient Apprentice",
+        "restrictions": {
+          "factions": ["Galactic Empire"],
+          "forceAlignment": ["Dark Side"],
+          "isUnique": true
+        },
+        "points": 160,
+        "rank": "Operative",
+        "miniatures": 1,
+        "type": "Trooper",
+        "defense": { "color": "Red", "wounds": 6, "courage": 3 },
+        "speed": 2,
+        "upgrades": { "Force": 2, "Training": 2 },
+        "keywords": {
+          "actions": { "Jump": { "actions": 1, "amount": 1 } },
+          "passive": {
+            "Deflect": null,
+            "Immune": ["Pierce"],
+            "Juyo Mastery": null
+          }
+        },
+        "weapons": [
+          {
+            "name": "Maul's Double-bladed Lightsaber",
+            "range": ["Melee"],
+            "dice": { "red": 4, "white": 4 },
+            "keywords": { "Impact": 2, "Pierce": 2 }
+          }
+        ]
+      },
+      {
+        "name": "STAP Riders",
+        "restrictions": { "factions": ["Separatist Alliance"] },
+        "points": 73,
+        "rank": "Support",
+        "miniatures": 2,
+        "type": { "Vehicle": "Repulsor Vehicle" },
+        "defense": { "color": "White", "wounds": 3 },
+        "speed": 3,
+        "upgrades": { "Comms": 1 },
+        "keywords": {
+          "passive": {
+            "Agile": 1,
+            "AI": ["Move"],
+            "Coordinate": {
+              "unitTypes": [{ "Trooper": "Droid Trooper" }, "Vehicle"]
+            },
+            "Cover": 1,
+            "Speeder": 1
+          }
+        },
+        "weapons": [
+          {
+            "name": "Repeating Dual Blaster Cannons",
+            "range": [1, 3],
+            "dice": { "black": 3 },
+            "keywords": { "Critical": 1, "Fixed": ["Front"] }
+          }
+        ]
+      }
+    ],
+    "upgrades": [
+      {
+        "name": "CR-24 Flame Rifle",
+        "points": 20,
+        "type": "Armament",
+        "restrictions": { "units": ["Dewback Rider"] },
+        "weapon": {
+          "name": "CR-24 Flame Rifle",
+          "range": [1],
+          "dice": { "black": 1, "white": 1 },
+          "keywords": { "Blast": null, "Spray": null }
+        }
+      },
+      {
+        "name": "E-11D Focus Fire Config",
+        "points": 8,
+        "type": "Armament",
+        "restrictions": { "units": ["Imperial Death Troopers"] },
+        "usage": "Exhaust",
+        "keywords": {
+          "passiveForUpgrade": {
+            "Reconfigure": "E-11D Grenade Launcher Config"
+          }
+        },
+        "weapon": {
+          "name": "E-11D Focus Fire Config",
+          "range": [1, 4],
+          "dice": { "black": 1 },
+          "keywords": { "Suppressive": null }
+        }
+      },
+      {
+        "name": "E-11D Grenade Launcher Config",
+        "points": 8,
+        "type": "Armament",
+        "restrictions": { "units": ["Imperial Death Troopers"] },
+        "usage": "Exhaust",
+        "keywords": {
+          "passiveForUpgrade": { "Reconfigure": "E-11D Focus Fire Config" }
+        },
+        "weapon": {
+          "name": "E-11D Grenade Launcher Config",
+          "range": [1, 2],
+          "dice": { "red": 1 },
+          "keywords": { "Blast": null }
+        }
+      },
+      {
+        "name": "Iden's DLT-20A Rifle",
+        "points": 15,
+        "type": "Armament",
+        "restrictions": { "units": ["Iden Versio"], "isUnique": true },
+        "weapon": {
+          "name": "Iden's DLT-20A Rifle",
+          "range": [1, "Infinite"],
+          "dice": { "black": 2 },
+          "keywords": { "High Velocity": null, "Pierce": 1 }
+        }
+      },
+      {
+        "name": "Iden's TL-50 Repeater",
+        "points": 15,
+        "type": "Armament",
+        "restrictions": { "units": ["Iden Versio"], "isUnique": true },
+        "weapon": {
+          "name": "Iden's TL-50 Repeater",
+          "range": [1, 3],
+          "dice": { "red": 2, "black": 1, "white": 2 },
+          "keywords": { "Critical": 1, "Impact": 1 }
+        }
+      },
+      {
+        "name": "RT-97C Blaster Rifle",
+        "points": 15,
+        "type": "Armament",
+        "restrictions": { "units": ["Dewback Rider"] },
+        "weapon": {
+          "name": "RT-97C Blaster Rifle",
+          "range": [1, 4],
+          "dice": { "red": 1, "white": 3 }
+        }
+      },
+      {
+        "name": "T-21 Blaster Rifle",
+        "points": 10,
+        "type": "Armament",
+        "restrictions": { "units": ["Dewback Rider"] },
+        "weapon": {
+          "name": "T-21 Blaster Rifle",
+          "range": [1, 3],
+          "dice": { "white": 4 },
+          "keywords": { "Critical": 2 }
+        }
+      },
+      {
+        "name": "Iden's ID10 Seeker Droid",
+        "points": 15,
+        "type": "Counterpart",
+        "wounds": 1,
+        "counterpart": {
+          "type": { "Trooper": "Droid Trooper" },
+          "upgrades": { "Comms": 1 }
+        },
+        "restrictions": { "units": ["Iden Versio"], "isUnique": true },
+        "keywords": {
+          "passiveForUnit": { "Recharge": 1, "Shielded": 1 },
+          "passiveForUpgrade": { "Small": null }
+        },
+        "weapon": {
+          "name": "Electro-Shock",
+          "range": ["Melee", 1],
+          "dice": { "white": 3 },
+          "keywords": { "Suppressive": null }
+        }
+      },
+      {
+        "name": "88 Twin Light Blaster Cannon",
+        "points": 20,
+        "type": "Hardpoint",
+        "restrictions": { "units": ["AT-ST"] },
+        "weapon": {
+          "name": "88 Twin Light Blaster Cannon",
+          "dice": { "red": 1, "black": 1, "white": 1 },
+          "range": [1, 3],
+          "keywords": { "Fixed": ["Front"], "Impact": 1 }
+        }
+      },
+      {
+        "name": "AT-ST Mortar Launcher",
+        "points": 10,
+        "type": "Hardpoint",
+        "restrictions": { "units": ["AT-ST"] },
+        "weapon": {
+          "name": "AT-ST Mortar Launcher",
+          "dice": { "white": 3 },
+          "range": [4, "Infinite"],
+          "keywords": { "Fixed": ["Front"], "Suppressive": null }
+        }
+      },
+      {
+        "name": "DLT-19 Rifle Pintle",
+        "points": 18,
+        "type": "Hardpoint",
+        "restrictions": {
+          "units": ["TX-225 GAVw Occupier Combat Assault Tank"]
+        },
+        "weapon": {
+          "name": "DLT-19 Rifle Pintle",
+          "range": [1, 4],
+          "dice": { "red": 2 },
+          "keywords": { "Impact": 1 }
+        }
+      },
+      {
+        "name": "DW-3 Concussion Grenade Launcher",
+        "points": 15,
+        "type": "Hardpoint",
+        "restrictions": { "units": ["AT-ST"] },
+        "weapon": {
+          "name": "DW-3 Concussion Grenade Launcher",
+          "dice": { "black": 2 },
+          "range": [1, 2],
+          "keywords": { "Blast": null, "Fixed": ["Front"] }
+        }
+      },
+      {
+        "name": "RT-97C Rifle Pintle",
+        "points": 14,
+        "type": "Hardpoint",
+        "restrictions": {
+          "units": ["TX-225 GAVw Occupier Combat Assault Tank"]
+        },
+        "weapon": {
+          "name": "RT-97C Rifle Pintle",
+          "range": [1, 4],
+          "dice": { "red": 1, "white": 3 }
+        }
+      },
+      {
+        "name": "Del Meeko",
+        "points": 38,
+        "type": "Heavy Weapon",
+        "wounds": 2,
+        "restrictions": {
+          "factions": ["Galactic Empire"],
+          "units": ["Imperial Special Forces"],
+          "unitRanks": ["Corps"],
+          "unitTypes": ["Trooper"]
+        },
+        "keywords": {
+          "actions": { "Repair": { "actions": 0, "amount": 2, "capacity": 1 } }
+        },
+        "weapon": {
+          "name": "Del Meeko",
+          "range": [1, 5],
+          "dice": { "black": 2 },
+          "keywords": { "High Velocity": null, "Lethal": 1 }
+        }
+      },
+      {
+        "name": "DLT-19 Stormtrooper",
+        "points": 24,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["Stormtroopers"] },
+        "weapon": {
+          "name": "DLT-19 Stormtrooper",
+          "range": [1, 4],
+          "dice": { "red": 2 },
+          "keywords": { "Impact": 1 }
+        }
+      },
+      {
+        "name": "DLT-19D Trooper",
+        "points": 34,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["Imperial Death Troopers"] },
+        "keywords": {
+          "passiveForUnit": { "Compel": null },
+          "passiveForUpgrade": { "Leader": null }
+        },
+        "weapon": {
+          "name": "DLT-19D Trooper",
+          "range": [1, 4],
+          "dice": { "red": 2, "white": 1 },
+          "keywords": { "Impact": 1 }
+        }
+      },
+      {
+        "name": "DLT-19x Sniper",
+        "points": 28,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["Scout Troopers"] },
+        "weapon": {
+          "name": "DLT-19x Sniper",
+          "range": [1, "Infinite"],
+          "dice": { "black": 2 },
+          "keywords": { "High Velocity": null, "Pierce": 1 }
+        }
+      },
+      {
+        "name": "DT-F16",
+        "points": 22,
+        "type": "Heavy Weapon",
+        "restrictions": {
+          "units": ["Imperial Death Troopers"],
+          "isUnique": true
+        },
+        "keywords": {
+          "passiveForUnit": { "Compel": null },
+          "passiveForUpgrade": { "Leader": null }
+        },
+        "weapon": {
+          "name": "DT-F16",
+          "range": [1, 3],
+          "dice": { "black": 1, "white": 1 }
+        }
+      },
+      {
+        "name": "Electrostaff Guard",
+        "points": 25,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["Imperial Royal Guards"] },
+        "keywords": {
+          "passiveForUnit": { "Immune": ["Pierce (Melee)"] },
+          "passiveForUpgrade": { "Sidearm": "Melee" }
+        },
+        "weapon": {
+          "name": "Electrostaff Guard",
+          "range": ["Melee"],
+          "dice": { "black": 2 }
+        }
+      },
+      {
+        "name": "Flametrooper",
+        "points": 20,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["Snowtroopers"] },
+        "weapon": {
+          "name": "Flametrooper",
+          "range": [1],
+          "dice": { "black": 1 },
+          "keywords": { "Blast": null, "Spray": null }
+        }
+      },
+      {
+        "name": "Gideon Hask",
+        "points": 38,
+        "type": "Heavy Weapon",
+        "wounds": 2,
+        "restrictions": {
+          "factions": ["Galactic Empire"],
+          "units": ["Imperial Special Forces"],
+          "unitRanks": ["Corps"],
+          "unitTypes": ["Trooper"]
+        },
+        "keywords": {
+          "passiveForUnit": {
+            "$Increase Courage": 1,
+            "Coordinate": { "unitRanks": ["Corps"], "unitTypes": ["Trooper"] }
+          },
+          "passiveForUpgrade": { "Leader": null }
+        },
+        "weapon": {
+          "name": "Gideon Hask",
+          "range": [1, 3],
+          "dice": { "red": 2 }
+        }
+      },
+      {
+        "name": "HH-12 Stormtrooper",
+        "points": 34,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["Stormtroopers"] },
+        "usage": "Exhaust",
+        "weapon": {
+          "name": "HH-12 Stormtrooper",
+          "range": [2, 4],
+          "dice": { "black": 3 },
+          "keywords": { "Cumbersome": null, "Impact": 3 }
+        }
+      },
+      {
+        "name": "RT-97C Stormtrooper",
+        "points": 26,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["Stormtroopers"] },
+        "weapon": {
+          "name": "RT-97C Stormtrooper",
+          "range": [1, 4],
+          "dice": { "red": 1, "white": 3 }
+        }
+      },
+      {
+        "name": "Sonic Charge Saboteur",
+        "points": 26,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["Scout Troopers"] },
+        "usage": "Detonate",
+        "keywords": {
+          "actions": {
+            "Arm": { "actions": 1, "amount": 1, "explosive": "Sonic Charge" }
+          },
+          "passiveForUnit": {
+            "Detonate": { "amount": 1, "explosive": "Sonic Charge" }
+          }
+        },
+        "weapon": {
+          "name": "Sonic Charge",
+          "range": [1],
+          "dice": { "red": 1, "black": 1 },
+          "surge": "Crit",
+          "keywords": { "Blast": null, "Suppressive": null }
+        }
+      },
+      {
+        "name": "T-21 Special Forces Trooper",
+        "points": 29,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["Imperial Special Forces"] },
+        "weapon": {
+          "name": "T-21 Special Forces Trooper",
+          "range": [1, 3],
+          "dice": { "white": 4 },
+          "keywords": { "Critical": 2 }
+        }
+      },
+      {
+        "name": "T-21 Stormtrooper",
+        "points": 27,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["Stormtroopers"] },
+        "weapon": {
+          "name": "T-21 Stormtrooper",
+          "range": [1, 3],
+          "dice": { "white": 4 },
+          "keywords": { "Critical": 2 }
+        }
+      },
+      {
+        "name": "T-21B Trooper",
+        "points": 32,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["Shoretroopers"] },
+        "weapon": {
+          "name": "T-21B Trooper",
+          "range": [1, 4],
+          "dice": { "black": 2, "white": 2 },
+          "keywords": { "Critical": 1 }
+        }
+      },
+      {
+        "name": "T-7 Ion Snowtrooper",
+        "points": 34,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["Snowtroopers"] },
+        "usage": "Exhaust",
+        "weapon": {
+          "name": "T-7 Ion Snowtrooper",
+          "range": [1, 2],
+          "dice": { "black": 1, "white": 2 },
+          "keywords": { "Impact": 1, "Ion": 1 }
+        }
+      },
+      {
+        "name": "FX-9 Medical Droid",
+        "points": 19,
+        "type": "Personnel",
+        "restrictions": { "factions": ["Galactic Empire"] },
+        "keywords": {
+          "actions": { "Treat": { "actions": 0, "amount": 1, "capacity": 2 } },
+          "passiveForUpgrade": { "Noncombatant": null }
+        }
+      },
+      {
+        "name": "Imperial Comms Technician",
+        "points": 10,
+        "type": "Personnel",
+        "restrictions": { "factions": ["Galactic Empire"] },
+        "keywords": {
+          "passiveForUnit": { "$Add and Equip Upgrade": "Comms" },
+          "passiveForUpgrade": { "Leader": null }
+        }
+      },
+      {
+        "name": "Imperial Officer",
+        "points": 20,
+        "type": "Personnel",
+        "restrictions": { "factions": ["Galactic Empire"] },
+        "keywords": {
+          "passiveForUnit": { "$Increase Courage": 1, "Inspire": 1 },
+          "passiveForUpgrade": { "Leader": null }
+        }
+      },
+      {
+        "name": "R4 Astromech Droid",
+        "points": 9,
+        "type": "Personnel",
+        "restrictions": { "factions": ["Galactic Empire"] },
+        "keywords": {
+          "actions": { "Repair": { "actions": 0, "amount": 1, "capacity": 2 } },
+          "passiveForUpgrade": { "Noncombatant": null }
+        }
+      },
+      {
+        "name": "Shoretrooper",
+        "points": 13,
+        "type": "Personnel",
+        "restrictions": { "units": ["Shoretroopers"] }
+      },
+      {
+        "name": "Snowtrooper",
+        "points": 12,
+        "type": "Personnel",
+        "restrictions": { "units": ["Snowtroopers"] }
+      },
+      {
+        "name": "Stormtrooper Captain",
+        "points": 15,
+        "type": "Personnel",
+        "restrictions": { "units": ["Stormtroopers"] },
+        "usage": "Exhaust",
+        "description": "When you activate, you cannot remove suppression tokens or be suppressed during this activation.",
+        "keywords": {
+          "passiveForUnit": { "$Add Upgrade": "Training" },
+          "passiveForUpgrade": { "Leader": null }
+        }
+      },
+      {
+        "name": "Stormtrooper Specialist",
+        "points": 15,
+        "type": "Personnel",
+        "restrictions": { "units": ["Stormtroopers"] },
+        "usage": "Exhaust",
+        "keywords": { "passiveForUnit": { "$Add Upgrade": "Gear" } }
+      },
+      {
+        "name": "Stormtrooper",
+        "points": 11,
+        "type": "Personnel",
+        "restrictions": { "units": ["Stormtroopers"] }
+      },
+      {
+        "name": "First Sergeant Arbmab",
+        "points": 5,
+        "type": "Pilot",
+        "restrictions": {
+          "isUnique": true,
+          "factions": ["Galactic Empire"],
+          "unitTypes": [{ "Vehicle": "Ground Vehicle" }]
+        },
+        "keywords": { "passiveForUnit": { "Tactical": 1 } }
+      },
+      {
+        "name": "General Weiss",
+        "points": 10,
+        "type": "Pilot",
+        "restrictions": {
+          "factions": ["Galactic Empire"],
+          "unitTypes": [{ "Vehicle": "Ground Vehicle" }],
+          "isUnique": true
+        },
+        "usage": "Exhaust"
+      },
+      {
+        "name": "Imperial Hammers Elite Armor Pilot",
+        "points": 10,
+        "type": "Pilot",
+        "restrictions": {
+          "isUnique": true,
+          "factions": ["Galactic Empire"],
+          "unitTypes": [{ "Vehicle": "Ground Vehicle" }]
+        },
+        "keywords": { "passiveForUnit": { "$Surge": "Hit" } }
+      },
+      {
+        "name": "Looted E-5 Blaster",
+        "points": 5,
+        "type": "Armament",
+        "restrictions": { "units": ["Padme Amidala"] },
+        "weapon": {
+          "name": "Looted E-5 Blaster",
+          "range": [1, 3],
+          "dice": { "red": 1, "white": 1 },
+          "keywords": { "Pierce": 1 }
+        }
+      },
+      {
+        "name": "C-3PO",
+        "points": 15,
+        "type": "Counterpart",
+        "wounds": 2,
+        "counterpart": { "type": { "Trooper": "Droid Trooper" } },
+        "restrictions": {
+          "factions": ["Galactic Republic"],
+          "units": ["C-3PO"]
+        },
+        "keywords": {
+          "actions": {
+            "Calculate Odds": { "actions": 1 },
+            "Distract": { "actions": 0 }
+          }
+        },
+        "weapon": {
+          "name": "Clumsy Kick",
+          "range": ["Melee"],
+          "dice": { "white": 1 }
+        }
+      },
+      {
+        "name": "BARC Ion Gunner",
+        "points": 28,
+        "type": "Crew",
+        "restrictions": { "units": ["BARC Speeder"] },
+        "usage": "Exhaust",
+        "keywords": { "passiveForUnit": { "$Modify Maximum Speed": -1 } },
+        "weapon": {
+          "name": "BARC Ion Gunner",
+          "range": [1, 3],
+          "dice": { "black": 3, "white": 1 },
+          "keywords": { "Fixed": ["Front", "Rear"], "Ion": 1, "Impact": 1 }
+        }
+      },
+      {
+        "name": "BARC RPS-6 Gunner",
+        "points": 24,
+        "type": "Crew",
+        "restrictions": { "units": ["BARC Speeder"] },
+        "keywords": { "passiveForUnit": { "$Modify Maximum Speed": -1 } },
+        "weapon": {
+          "name": "BARC RPS-6 Gunner",
+          "range": [2, 4],
+          "dice": { "red": 1, "black": 1, "white": 1 },
+          "keywords": { "Impact": 2 }
+        }
+      },
+      {
+        "name": "BARC Twin Laser Gunner",
+        "points": 18,
+        "type": "Crew",
+        "restrictions": { "units": ["BARC Speeder"] },
+        "keywords": { "passiveForUnit": { "$Modify Maximum Speed": -1 } },
+        "weapon": {
+          "name": "BARC Twin Laser Gunner",
+          "range": [1, 3],
+          "dice": { "black": 2, "white": 2 },
+          "keywords": { "Fixed": ["Front", "Rear"] }
+        }
+      },
+      {
+        "name": "JT-12 Jetpacks",
+        "points": 10,
+        "type": "Gear",
+        "restrictions": { "units": ["Clone Captain Rex", "ARC Troopers"] },
+        "pointAdjustments": {
+          "if": { "units": ["Clone Captain Rex"] },
+          "condition": "On Unit",
+          "adjustBy": -5
+        },
+        "keywords": { "actions": { "Jump": { "actions": 1, "amount": 2 } } }
+      },
+      {
+        "name": "TX-130 Beam Cannon Turret",
+        "points": 30,
+        "type": "Hardpoint",
+        "weapon": {
+          "name": "TX-130 Beam Cannon Turret",
+          "range": [1, 4],
+          "dice": { "red": 2 },
+          "keywords": { "Beam": 2 }
+        }
+      },
+      {
+        "name": "TX-130 Twin Laser Turret",
+        "points": 14,
+        "type": "Hardpoint",
+        "weapon": {
+          "name": "TX-130 Twin Laser Turret",
+          "range": [1, 3],
+          "dice": { "black": 3 },
+          "keywords": { "Critical": 1 }
+        }
+      },
+      {
+        "name": "DC-15 Phase I Trooper",
+        "points": 30,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["Phase I Clone Troopers"] },
+        "weapon": {
+          "name": "DC-15 Phase I Trooper",
+          "range": [1, 4],
+          "dice": { "red": 2 },
+          "keywords": { "Critical": 1 }
+        }
+      },
+      {
+        "name": "DC-15x ARC Trooper",
+        "points": 31,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["ARC Troopers"] },
+        "weapon": {
+          "name": "DC-15x ARC Trooper",
+          "range": [1, 5],
+          "dice": { "red": 1, "black": 1 },
+          "keywords": { "Critical": 1, "Immune": ["Deflect"], "Lethal": 1 }
+        }
+      },
+      {
+        "name": "DP-23 Phase I Trooper",
+        "points": 27,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["Phase I Clone Troopers"] },
+        "weapon": {
+          "name": "DP-23 Phase I Trooper",
+          "range": [1, 2],
+          "dice": { "black": 2, "white": 1 },
+          "keywords": { "Pierce": 1 }
+        }
+      },
+      {
+        "name": "Echo",
+        "points": 40,
+        "type": "Heavy Weapon",
+        "wounds": 2,
+        "restrictions": {
+          "units": ["ARC Troopers"],
+          "unitTypes": [{ "Trooper": "Clone Trooper" }],
+          "unitRanks": ["Corps"],
+          "isUnique": true
+        },
+        "keywords": {
+          "passiveForUnit": { "Reliable": 1 },
+          "passiveForUpgrade": { "Leader": null }
+        },
+        "weapon": {
+          "name": "Echo",
+          "range": [1, 5],
+          "dice": { "red": 2 },
+          "keywords": { "Critical": 1, "Immune": ["Deflect"], "Lethal": 1 }
+        }
+      },
+      {
+        "name": "Fives",
+        "points": 36,
+        "type": "Heavy Weapon",
+        "wounds": 2,
+        "restrictions": {
+          "units": ["ARC Troopers"],
+          "unitTypes": [{ "Trooper": "Clone Trooper" }],
+          "unitRanks": ["Corps"],
+          "isUnique": true
+        },
+        "keywords": {
+          "passiveForUnit": {
+            "$Increase Courage": 1,
+            "Coordinate": { "unitTypes": [{ "Trooper": "Clone Trooper" }] }
+          },
+          "passiveForUpgrade": { "Leader": null }
+        },
+        "weapon": { "name": "Fives", "range": [1, 3], "dice": { "black": 3 } }
+      },
+      {
+        "name": "Phase II Mortar Trooper",
+        "points": 25,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["Phase II Clone Troopers"] },
+        "weapon": {
+          "name": "Phase II Mortar Trooper",
+          "range": [2, 4],
+          "dice": { "black": 2 },
+          "keywords": { "Critical": 1, "Suppressive": null }
+        }
+      },
+      {
+        "name": "RPS-6 Phase I Trooper",
+        "points": 26,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["Phase I Clone Troopers"] },
+        "weapon": {
+          "name": "RPS-6 Phase I Trooper",
+          "range": [2, 4],
+          "dice": { "red": 1, "black": 1, "white": 1 },
+          "keywords": { "Cumbersome": null, "Impact": 2 }
+        }
+      },
+      {
+        "name": "Z-6 Phase I Trooper",
+        "points": 25,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["Phase I Clone Troopers"] },
+        "weapon": {
+          "name": "Z-6 Phase I Trooper",
+          "range": [1, 3],
+          "dice": { "white": 6 }
+        }
+      },
+      {
+        "name": "Z-6 Phase II Trooper",
+        "points": 27,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["Phase II Clone Troopers"] },
+        "weapon": {
+          "name": "Z-6 Phase II Trooper",
+          "range": [1, 3],
+          "dice": { "white": 6 }
+        }
+      },
+      {
+        "name": "Phase I Clone Captain",
+        "points": 15,
+        "type": "Personnel",
+        "restrictions": { "units": ["Phase I Clone Troopers"] },
+        "usage": "Exhaust",
+        "description": "When you activate, you cannot remove suppression tokens or be suppressed during this activation.",
+        "keywords": {
+          "passiveForUnit": { "$Add Upgrade": "Training" },
+          "passiveForUpgrade": { "Leader": null }
+        }
+      },
+      {
+        "name": "Phase I Clone Specialist",
+        "points": 17,
+        "type": "Personnel",
+        "restrictions": { "units": ["Phase I Clone Troopers"] },
+        "usage": "Exhaust"
+      },
+      {
+        "name": "Phase I Clone Trooper",
+        "points": 13,
+        "type": "Personnel",
+        "restrictions": { "units": ["Phase I Clone Trooper"] }
+      },
+      {
+        "name": "Phase II Clone Trooper",
+        "points": 15,
+        "type": "Personnel",
+        "restrictions": { "units": ["Phase II Clone Trooper"] }
+      },
+      {
+        "name": "Aayla Secura",
+        "points": 5,
+        "type": "Pilot",
+        "restrictions": {
+          "units": ["TX-130 Saber-class Fighter Tank"],
+          "isUnique": true
+        },
+        "keywords": {
+          "passiveForUnit": { "Field Commander": null, "Inspire": 2 }
+        }
+      },
+      {
+        "name": "Plo Koon",
+        "points": 9,
+        "type": "Pilot",
+        "restrictions": {
+          "units": ["TX-130 Saber-class Fighter Tank"],
+          "isUnique": true
+        },
+        "usage": "Exhaust",
+        "keywords": { "passiveForUnit": { "Agile": 2 } }
+      },
+      {
+        "name": "Veteran Clone Pilot",
+        "points": 7,
+        "type": "Pilot",
+        "restrictions": { "units": ["TX-130 Saber-class Fighter Tank"] },
+        "description": "While you or a friendly clone trooper unit at range 1 and in line of sight attacks or defends, you and that units can spend each other's aim,dodge and surge tokens. During the End Phase, ready this card."
+      },
+      {
+        "name": "Aggressive Tactics",
+        "points": 10,
+        "type": "Command",
+        "description": "While you are the nominated commander, after issuing orders , choose up to 4 friendly units with faceup order tokens. Each chosen unit gains 1 surge token."
+      },
+      {
+        "name": "Commanding Presence",
+        "points": 10,
+        "type": "Command",
+        "description": "When issuing orders, you can issue orders at range 4."
+      },
+      {
+        "name": "Esteemed Leader",
+        "points": 5,
+        "type": "Command",
+        "description": "While you are defending, each friendly corps trooper unit at range 1 gains Guardian 1."
+      },
+      {
+        "name": "Improvised Orders",
+        "points": 10,
+        "type": "Command",
+        "usage": "Exhaust",
+        "description": "After an order token is drawn from a friendly order pool, draw a second order token from that pool. Choose 1 to use and shuffle the other back into the order pool. If you do, during the End Phase, ready this card."
+      },
+      {
+        "name": "Strict Orders",
+        "points": 5,
+        "type": "Command",
+        "description": "When a friendly trooper unit with a faceup order token activates, during its Rally step, it may remove 1 suppression token instead of rolling dice."
+      },
+      {
+        "name": "Command Control Array",
+        "points": 2,
+        "type": "Comms",
+        "restrictions": { "unitTypes": ["Vehicle"] },
+        "keywords": { "passiveForUnit": { "$Coordinate: Range 1-2": null } }
+      },
+      {
+        "name": "Comms Jammer",
+        "points": 15,
+        "type": "Comms",
+        "description": "Enemy units at range 1 cannot be issued orders, unless they are issuing an order to themselves."
+      },
+      {
+        "name": "Comms Relay",
+        "points": 5,
+        "type": "Comms",
+        "description": "When you would be issued an order, you may choose a friendly unit at range 1-2. Issue an order to the chosen unit instead. If you do, you cannot be issued another order during this round."
+      },
+      {
+        "name": "HQ Uplink",
+        "points": 10,
+        "type": "Comms",
+        "description": "During the Issue Orders step of the Command Phase, issue an order to yourself."
+      },
+      {
+        "name": "Integrated Comms Antenna",
+        "points": 3,
+        "type": "Comms",
+        "restrictions": { "unitTypes": [{ "Trooper": "Droid Trooper" }] },
+        "description": "During the Command Phase, you can be issued orders by friendly Commander or Operative inits at range 1-4."
+      },
+      {
+        "name": "Linked Targeting Array",
+        "points": 5,
+        "type": "Comms",
+        "restrictions": {
+          "unitTypes": ["Vehicle", { "Trooper": "Emplacement Trooper" }]
+        },
+        "keywords": { "passiveForUnit": { "Target": 1 } }
+      },
+      {
+        "name": "Long Range Comlink",
+        "points": 10,
+        "type": "Comms",
+        "description": "During the Command Phase, you may be issued orders as though you are in range of the nominated commander."
+      },
+      {
+        "name": "Anger",
+        "points": 5,
+        "type": "Force",
+        "description": "After you suffer 1 or more wounds, gain 1 aim token."
+      },
+      {
+        "name": "Battle Meditation",
+        "points": 10,
+        "type": "Force",
+        "description": "When you issue orders, one of those orders can be issued to any friendly unit on the battlefield."
+      },
+      {
+        "name": "Fear",
+        "points": 3,
+        "type": "Force",
+        "restrictions": { "forceAlignment": ["Dark Side"] },
+        "keywords": { "passiveForUnit": { "Demoralize": 1 } }
+      },
+      {
+        "name": "Force Barrier",
+        "points": 10,
+        "type": "Force",
+        "usage": "Exhaust",
+        "description": "While another friendly trooper unit at range 1 is defending against a ranged attack, during the Modify Attack Dice step, cancel either 1 Dice Crit result or up to 2 Dice Hit results."
+      },
+      {
+        "name": "Force Choke",
+        "points": 5,
+        "type": "Force",
+        "restrictions": { "forceAlignment": ["Dark Side"] },
+        "usage": "Exhaust"
+      },
+      {
+        "name": "Force Guidance",
+        "points": 10,
+        "type": "Force",
+        "usage": "Exhaust"
+      },
+      {
+        "name": "Force Push",
+        "points": 10,
+        "type": "Force",
+        "usage": "Exhaust"
+      },
+      {
+        "name": "Force Reflexes",
+        "points": 15,
+        "type": "Force",
+        "usage": "Exhaust"
+      },
+      {
+        "name": "Hope",
+        "points": 3,
+        "type": "Force",
+        "restrictions": { "forceAlignment": ["Light Side"] },
+        "keywords": { "passiveForUnit": { "Inspire": 1 } }
+      },
+      {
+        "name": "Jedi Mind Trick",
+        "points": 5,
+        "type": "Force",
+        "restrictions": { "forceAlignment": ["Light Side"] },
+        "usage": "Exhaust"
+      },
+      { "name": "Saber Throw", "points": 10, "type": "Force" },
+      {
+        "name": "Ascension Cables",
+        "points": 4,
+        "type": "Gear",
+        "usage": "Exhaust"
+      },
+      {
+        "name": "Electrobinoculars",
+        "points": 8,
+        "type": "Gear",
+        "keywords": { "actions": { "Spotter": { "actions": 1, "amount": 1 } } }
+      },
+      {
+        "name": "Emergency Stims",
+        "points": 8,
+        "type": "Gear",
+        "description": "During an attack, when you would suffer wounds, prevent up to 2 wounds and place an equal number of wound tokens on this card instead. If you do, at the end of your next activation, discard each token on this card and suffer wounds equal to the number of tokens discarded."
+      },
+      {
+        "name": "Environmental Gear",
+        "points": 3,
+        "type": "Gear",
+        "keywords": { "passiveForUnit": { "Unhindered": null } }
+      },
+      {
+        "name": "Grappling Hooks",
+        "points": 3,
+        "type": "Gear",
+        "keywords": { "passiveForUnit": { "Expert Climber": null } }
+      },
+      {
+        "name": "Portable Scanner",
+        "points": 6,
+        "type": "Gear",
+        "keywords": {
+          "actions": { "Take Cover": { "actions": 1, "amount": 1 } }
+        }
+      },
+      {
+        "name": "Recon Intel",
+        "points": 2,
+        "type": "Gear",
+        "keywords": { "passiveForUnit": { "Scout": 1 } }
+      },
+      {
+        "name": "Targeting Scopes",
+        "points": 6,
+        "type": "Gear",
+        "keywords": { "passiveForUnit": { "Precise": 1 } }
+      },
+      {
+        "name": "Barrage Generator",
+        "points": 10,
+        "type": "Generator",
+        "usage": "Exhaust",
+        "description": "While performing a ranged attack with a weapon that has Fixed, add 2 white attack dice and apply Suppressive to your attack pool."
+      },
+      {
+        "name": "Overcharged Generator",
+        "points": 10,
+        "type": "Generator",
+        "usage": "Exhaust",
+        "description": "While performing a ranged attack with a weapon that has Fixed, add 1 black attack dice and apply Impact 1 to your attack pool."
+      },
+      {
+        "name": "Concussion Grenades",
+        "points": 5,
+        "type": "Grenades",
+        "weapon": {
+          "name": "Concussion Grenades",
+          "range": [1],
+          "dice": { "black": 1 },
+          "keywords": { "Blast": null }
+        }
+      },
+      {
+        "name": "EMP \"Droid Poppers\"",
+        "points": 3,
+        "type": "Grenades",
+        "description": "While one or more of this weapon is in your attack pool, your attack pool gains Ion 1.",
+        "weapon": {
+          "name": "EMP \"Droid Poppers\"",
+          "range": [1],
+          "dice": { "black": 1 }
+        }
+      },
+      {
+        "name": "Fragmentation Grenades",
+        "points": 5,
+        "type": "Grenades",
+        "weapon": {
+          "name": "Fragmentation Grenades",
+          "range": [1],
+          "dice": { "red": 1 },
+          "surge": "Crit"
+        }
+      },
+      {
+        "name": "Impact Grenades",
+        "points": 5,
+        "type": "Grenades",
+        "weapon": {
+          "name": "Impact Grenades",
+          "range": [1],
+          "dice": { "black": 1 },
+          "keywords": { "Impact": 1 }
+        }
+      },
+      {
+        "name": "Smoke Grenades",
+        "points": 6,
+        "type": "Grenades",
+        "keywords": { "actions": { "Smoke": { "actions": 1, "amount": 1 } } }
+      },
+      {
+        "name": "Armor-Piercing Shells",
+        "points": 10,
+        "type": "Ordnance",
+        "usage": "Exhaust",
+        "keywords": { "passiveForUpgrade": { "Cycle": null } },
+        "weapon": {
+          "name": "Armor-Piercing Shells",
+          "range": [2, 3],
+          "dice": { "red": 1, "black": 2 },
+          "keywords": { "Fixed": ["Front"], "Impact": 3 }
+        }
+      },
+      {
+        "name": "\"Bunker Buster\" Shells",
+        "points": 12,
+        "type": "Ordnance",
+        "usage": "Exhaust",
+        "keywords": { "passiveForUpgrade": { "Cycle": null } },
+        "weapon": {
+          "name": "Armor-Piercing Shells",
+          "range": [1, 2],
+          "dice": { "black": 1, "white": 3 },
+          "keywords": { "Blast": null, "Fixed": ["Front"], "Scatter": null }
+        }
+      },
+      {
+        "name": "High-Energy Shells",
+        "points": 8,
+        "type": "Ordnance",
+        "usage": "Exhaust",
+        "keywords": { "passiveForUpgrade": { "Cycle": null } },
+        "weapon": {
+          "name": "High-Energy Shells",
+          "range": [2, 4],
+          "dice": { "red": 2, "white": 1 },
+          "keywords": {
+            "Critical": 1,
+            "High Velocity": null,
+            "Fixed": ["Front"]
+          }
+        }
+      },
+      {
+        "name": "Defensive Stance",
+        "points": 5,
+        "type": "Training",
+        "restrictions": { "hasUpgradeSlot": ["Force"] },
+        "description": "When you perform an dodge action, gain 2 dodge tokens instead of 1. You cannot spend aim tokens.",
+        "keywords": {
+          "passiveForUpgrade": { "$May Flip At Start": "Offensive Stance" }
+        }
+      },
+      {
+        "name": "Duck and Cover",
+        "points": 8,
+        "type": "Training",
+        "description": "While defending against a ranged attack, during the Apply Dodge and Cover step, you may gain 1 suppression token."
+      },
+      {
+        "name": "Endurance",
+        "points": 6,
+        "type": "Training",
+        "description": "At the end of the Activation phase, you may remove 1 suppression token."
+      },
+      {
+        "name": "Hunter",
+        "points": 6,
+        "type": "Training",
+        "description": "While attacking a wounded trooper unit, during the Roll Attack Dice step, you may gain 1 aim token."
+      },
+      {
+        "name": "Offensive Push",
+        "points": 4,
+        "type": "Training",
+        "usage": "Exhaust",
+        "keywords": { "passiveForUnit": { "Tactical": 1 } }
+      },
+      {
+        "name": "Offensive Stance",
+        "points": 5,
+        "type": "Training",
+        "restrictions": { "hasUpgradeSlot": ["Force"] },
+        "description": "When you perform an aim action, gain 2 aim tokens instead of 1. You cannot spend dodge tokens.",
+        "keywords": {
+          "passiveForUpgrade": { "$May Flip At Start": "Defensive Stance" }
+        }
+      },
+      {
+        "name": "Overwatch",
+        "points": 4,
+        "type": "Training",
+        "keywords": { "passiveForUnit": { "Sentinel": null } }
+      },
+      {
+        "name": "Seize the Initiative",
+        "points": 5,
+        "type": "Training",
+        "restrictions": { "unitRanks": ["Commander", "Operative"] },
+        "usage": "Discard",
+        "description": "During the Issue Orders Step or the Command Phase, issue an order to yourself."
+      },
+      {
+        "name": "Situational Awareness",
+        "points": 2,
+        "type": "Training",
+        "pointAdjustments": {
+          "if": { "unitRanks": ["Support"] },
+          "condition": "On Unit",
+          "adjustBy": 4
+        },
+        "keywords": { "passiveForUnit": { "Outmaneuver": null } }
+      },
+      {
+        "name": "Tenacity",
+        "points": 4,
+        "type": "Training",
+        "description": "While performing a melee attack, if you are wounded or if one or more of your minis have been defeated, add 1 red attack die to your attack pool."
+      },
+      {
+        "name": "A-180 Pistol Config",
+        "points": 0,
+        "type": "Armament",
+        "restrictions": { "units": ["Jyn Erso"] },
+        "keywords": {
+          "passiveForUpgrade": { "Reconfigure": "A-180 Rifle Config" }
+        },
+        "weapon": {
+          "name": "A-180 Pistol Config",
+          "range": [1, 2],
+          "dice": { "red": 2, "white": 1 },
+          "keywords": { "Pierce": 1 }
+        }
+      },
+      {
+        "name": "A-180 Rifle Config",
+        "points": 0,
+        "type": "Armament",
+        "restrictions": { "units": ["Jyn Erso"] },
+        "keywords": {
+          "passiveForUpgrade": { "Reconfigure": "A-180 Pistol Config" }
+        },
+        "weapon": {
+          "name": "A-180 Rifle Config",
+          "range": [1, 3],
+          "dice": { "black": 2, "white": 1 },
+          "keywords": { "Pierce": 1 }
+        }
+      },
+      {
+        "name": "A-280-CFE Pistol Config",
+        "points": 10,
+        "type": "Armament",
+        "restrictions": { "units": ["Cassian Andor"] },
+        "keywords": {
+          "passiveForUpgrade": { "Reconfigure": "A-280-CFE Sniper Config" }
+        },
+        "weapon": {
+          "name": "A-280-CFE Pistol Config",
+          "range": [1, 2],
+          "dice": { "red": 2, "black": 1 },
+          "keywords": { "Long Shot": 1, "Pierce": 1 }
+        }
+      },
+      {
+        "name": "A-280-CFE Sniper Config",
+        "points": 10,
+        "type": "Armament",
+        "restrictions": { "units": ["Cassian Andor"] },
+        "keywords": {
+          "passiveForUpgrade": { "Reconfigure": "A-280-CFE Pistol Config" }
+        },
+        "weapon": {
+          "name": "A-280-CFE Sniper Config",
+          "range": [1, "Infinite"],
+          "dice": { "red": 1, "black": 1 },
+          "keywords": { "Cumbersome": null, "High Velocity": null, "Pierce": 1 }
+        }
+      },
+      {
+        "name": "A-300 Long Range Config",
+        "points": 6,
+        "type": "Armament",
+        "restrictions": { "units": ["Rebel Pathfinders"] },
+        "keywords": {
+          "passiveForUpgrade": { "Reconfigure": "A-300 Short Range Config" }
+        },
+        "weapon": {
+          "name": "A-300 Long Range Config",
+          "range": [1, 4],
+          "dice": { "white": 1 }
+        }
+      },
+      {
+        "name": "A-300 Short Range Config",
+        "points": 6,
+        "type": "Armament",
+        "restrictions": { "units": ["Rebel Pathfinders"] },
+        "keywords": {
+          "passiveForUpgrade": { "Reconfigure": "A-300 Long Range Config" }
+        },
+        "weapon": {
+          "name": "A-300 Short Range Config",
+          "range": [1, 2],
+          "dice": { "red": 1 }
+        }
+      },
+      {
+        "name": "Jetpack Rockets",
+        "points": 8,
+        "type": "Armament",
+        "restrictions": { "units": ["Mandalorian Resistance"] },
+        "usage": "Discard",
+        "weapon": {
+          "name": "Jetpack Rockets",
+          "range": [3, 4],
+          "dice": { "red": 1 },
+          "keywords": { "Blast": null, "Impact": 1 }
+        }
+      },
+      {
+        "name": "Jyn's SE-14 Blaster",
+        "points": 10,
+        "type": "Armament",
+        "pointAdjustments": {
+          "if": { "units": ["Jyn Erso"] },
+          "condition": "In Army",
+          "adjustBy": -5
+        },
+        "restrictions": { "units": ["Jyn Erso", "K-2SO"], "isUnique": true },
+        "weapon": {
+          "name": "Jyn's SE-14 Blaster",
+          "range": [1, 2],
+          "dice": { "white": 5 },
+          "keywords": { "Pierce": 1, "Suppressive": null }
+        }
+      },
+      {
+        "name": "The Darksaber",
+        "points": 25,
+        "type": "Armament",
+        "restrictions": { "units": ["Sabine Wren"] },
+        "keywords": {
+          "passiveForUnit": { "Dauntless": null, "Immune": ["Pierce (Melee)"] }
+        },
+        "weapon": {
+          "name": "The Darksaber",
+          "range": ["Melee"],
+          "dice": { "black": 5 },
+          "keywords": { "Pierce": 1 }
+        }
+      },
+      {
+        "name": "C-3PO",
+        "points": 15,
+        "type": "Counterpart",
+        "wounds": 2,
+        "counterpart": { "type": { "Trooper": "Droid Trooper" } },
+        "restrictions": { "factions": ["Rebel Alliance"], "units": ["C-3PO"] },
+        "keywords": {
+          "actions": {
+            "Calculate Odds": { "actions": 1 },
+            "Distract": { "actions": 0 }
+          }
+        },
+        "weapon": {
+          "name": "Clumsy Kick",
+          "range": ["Melee"],
+          "dice": { "white": 1 }
+        }
+      },
+      {
+        "name": "Electro Grappling Line",
+        "points": 5,
+        "type": "Gear",
+        "restrictions": { "units": ["Sabine Wren"] },
+        "usage": "Exhaust"
+      },
+      {
+        "name": "Personal Combat Shield",
+        "points": 10,
+        "type": "Gear",
+        "restrictions": { "units": ["Sabine Wren"] },
+        "keywords": { "passiveForUnit": { "Recharge": 1, "Shielded": 1 } }
+      },
+      {
+        "name": "A-300 Rifle Gunner",
+        "points": 9,
+        "type": "Crew",
+        "restrictions": { "units": ["X-34 Landspeeder"] },
+        "weapon": {
+          "name": "A-300 Rifle Gunner",
+          "dice": { "white": 2 },
+          "range": [1, 3]
+        }
+      },
+      {
+        "name": "AT-RT Flamethrower",
+        "points": 25,
+        "type": "Hardpoint",
+        "restrictions": { "units": ["AT-RT"] },
+        "weapon": {
+          "name": "AT-RT Flamethrower",
+          "dice": { "black": 2 },
+          "range": [1],
+          "keywords": { "Blast": null, "Fixed": ["Front"], "Spray": null }
+        }
+      },
+      {
+        "name": "AT-RT Laser Cannon",
+        "points": 35,
+        "type": "Hardpoint",
+        "restrictions": { "units": ["AT-RT"] },
+        "weapon": {
+          "name": "AT-RT Laser Cannon",
+          "dice": { "red": 1, "black": 2 },
+          "range": [2, 4],
+          "keywords": { "Fixed": ["Front"], "Impact": 3 }
+        }
+      },
+      {
+        "name": "AT-RT Rotary Blaster",
+        "points": 30,
+        "type": "Hardpoint",
+        "restrictions": { "units": ["AT-RT"] },
+        "weapon": {
+          "name": "AT-RT Rotary Blaster",
+          "dice": { "black": 5 },
+          "range": [1, 3],
+          "keywords": { "Fixed": ["Front"] }
+        }
+      },
+      {
+        "name": "Ax-108 \"Ground Buzzer\"",
+        "points": 20,
+        "type": "Hardpoint",
+        "restrictions": { "units": ["T-47 Airspeeder"] },
+        "weapon": {
+          "name": "Ax-108 \"Ground Buzzer\"",
+          "dice": { "black": 4 },
+          "range": [1, 2],
+          "keywords": { "Fixed": ["Rear"] }
+        }
+      },
+      {
+        "name": "M-45 Ion Blaster",
+        "points": 38,
+        "type": "Hardpoint",
+        "restrictions": { "units": ["X-34 Landspeeder"] },
+        "usage": "Exhaust",
+        "weapon": {
+          "name": "M-45 Ion Blaster",
+          "dice": { "black": 1, "white": 4 },
+          "range": [1, 4],
+          "keywords": { "Fixed": ["Front"], "Impact": 1, "Ion": 1 }
+        }
+      },
+      {
+        "name": "Mark II Medium Blaster",
+        "points": 34,
+        "type": "Hardpoint",
+        "restrictions": { "units": ["X-34 Landspeeder"] },
+        "weapon": {
+          "name": "Mark II Medium Blaster",
+          "dice": { "black": 4 },
+          "range": [1, 3],
+          "keywords": { "Fixed": ["Front"] }
+        }
+      },
+      {
+        "name": "Mo/Dk Power Harpoon",
+        "points": 8,
+        "type": "Hardpoint",
+        "restrictions": { "units": ["T-47 Airspeeder"] },
+        "weapon": {
+          "name": "Mo/Dk Power Harpoon",
+          "dice": { "red": 1 },
+          "range": [1, 2],
+          "keywords": { "Fixed": ["Rear"], "Impact": 1, "Tow Cable": null }
+        }
+      },
+      {
+        "name": "RPS-6 Rocket Gunner",
+        "points": 36,
+        "type": "Crew",
+        "restrictions": { "units": ["X-34 Landspeeder"] },
+        "weapon": {
+          "name": "RPS-6 Rocket Gunner",
+          "dice": { "red": 1, "black": 1, "white": 1 },
+          "range": [2, 4],
+          "keywords": { "Impact": 2 }
+        }
+      },
+      {
+        "name": "Beskad Duelist",
+        "points": 28,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["Mandalorian Resistance"] },
+        "keywords": { "passiveForUnit": { "Duelist": null } },
+        "weapon": {
+          "name": "Beskad Duelist",
+          "range": ["Melee"],
+          "dice": { "red": 2 }
+        }
+      },
+      {
+        "name": "Bistan",
+        "points": 32,
+        "type": "Heavy Weapon",
+        "usage": "Exhaust",
+        "weapon": {
+          "name": "Bistan",
+          "range": [1, 4],
+          "dice": { "black": 1, "white": 4 },
+          "keywords": { "Impact": 1, "Ion": 1 }
+        }
+      },
+      {
+        "name": "Bowcaster Wookiee",
+        "points": 35,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["Wookiee Warriors"] },
+        "weapon": {
+          "name": "Bowcaster Wookiee",
+          "range": [1, 3],
+          "dice": { "red": 1, "white": 1 },
+          "keywords": { "Impact": 1, "Pierce": 1 }
+        }
+      },
+      {
+        "name": "CM-O/93 Trooper",
+        "points": 31,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["Rebel Veterans"] },
+        "weapon": {
+          "name": "CM-O/93 Trooper",
+          "range": [1, 3],
+          "dice": { "black": 4 },
+          "keywords": { "Critical": 2 }
+        }
+      },
+      {
+        "name": "DH-447 Sniper",
+        "points": 28,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["Rebel Commandos"] },
+        "weapon": {
+          "name": "DH-447 Sniper",
+          "range": [1, "Infinite"],
+          "dice": { "black": 1, "white": 1 },
+          "keywords": { "High Velocity": null, "Pierce": 1 }
+        }
+      },
+      {
+        "name": "DLT-20A Trooper",
+        "points": 26,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["Rebel Troopers"] },
+        "weapon": {
+          "name": "DLT-20A Trooper",
+          "range": [1, 4],
+          "dice": { "black": 2, "white": 1 },
+          "keywords": { "Critical": 1 }
+        }
+      },
+      {
+        "name": "MPL-57 Barrage Trooper",
+        "points": 33,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["Fleet Troopers"] },
+        "usage": "Exhaust",
+        "weapon": {
+          "name": "MPL-57 Barrage Trooper",
+          "range": [1, 3],
+          "dice": { "black": 1, "white": 2 },
+          "keywords": { "Blast": null, "Impact": 2 }
+        }
+      },
+      {
+        "name": "MPL-57 Ion Trooper",
+        "points": 32,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["Rebel Troopers"] },
+        "usage": "Exhaust",
+        "weapon": {
+          "name": "MPL-57 Ion Trooper",
+          "range": [1, 3],
+          "dice": { "red": 2 },
+          "keywords": { "Impact": 1, "Ion": 1 }
+        }
+      },
+      {
+        "name": "Pao",
+        "points": 22,
+        "type": "Heavy Weapon",
+        "keywords": {
+          "passiveForUnit": { "Inspire": 1 },
+          "passiveForUpgrade": { "Leader": null }
+        },
+        "weapon": {
+          "name": "Pao",
+          "range": [1, 4],
+          "dice": { "red": 1, "white": 1 }
+        }
+      },
+      {
+        "name": "Proton Charge Saboteur",
+        "points": 26,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["Rebel Commandos"] },
+        "usage": "Detonate",
+        "keywords": {
+          "actions": {
+            "Arm": { "actions": 1, "amount": 1, "explosive": "Proton Charge" }
+          },
+          "passiveForUnit": {
+            "Detonate": { "amount": 1, "explosive": "Proton Charge" }
+          }
+        },
+        "weapon": {
+          "name": "Proton Charge",
+          "range": [1],
+          "dice": { "red": 1, "white": 2 },
+          "surge": "Crit",
+          "keywords": { "Blast": null, "Impact": 1 }
+        }
+      },
+      {
+        "name": "Scatter Gun Trooper",
+        "points": 22,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["Fleet Troopers"] },
+        "weapon": {
+          "name": "Scatter Gun Trooper",
+          "range": [1, 2],
+          "dice": { "red": 2 }
+        }
+      },
+      {
+        "name": "SX-21 Trooper",
+        "points": 20,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["Rebel Troopers"] },
+        "weapon": {
+          "name": "SX-21 Trooper",
+          "range": [1, 2],
+          "dice": { "red": 2, "white": 2 },
+          "keywords": { "Impact": 1 }
+        }
+      },
+      {
+        "name": "Tristan Wren",
+        "points": 28,
+        "type": "Heavy Weapon",
+        "wounds": 2,
+        "restrictions": {
+          "units": ["Mandalorian Resistance"],
+          "isUnique": true
+        },
+        "weapon": {
+          "name": "Tristan Wren",
+          "range": [1, 3],
+          "dice": { "black": 2 },
+          "keywords": { "Lethal": 1, "Suppressive": null }
+        }
+      },
+      {
+        "name": "Ursa Wren",
+        "points": 38,
+        "type": "Heavy Weapon",
+        "wounds": 2,
+        "restrictions": {
+          "units": ["Mandalorian Resistance"],
+          "isUnique": true
+        },
+        "keywords": {
+          "passiveForUnit": { "Dauntless": null },
+          "passiveForUpgrade": { "Leader": null }
+        },
+        "weapon": {
+          "name": "Ursa Wren",
+          "range": [1, 2],
+          "dice": { "red": 1, "black": 1, "white": 1 },
+          "keywords": { "Long Shot": 1 }
+        }
+      },
+      {
+        "name": "Z-6 Trooper",
+        "points": 22,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["Rebel Troopers"] },
+        "weapon": {
+          "name": "Z-6 Trooper",
+          "range": [1, 3],
+          "dice": { "white": 6 }
+        }
+      },
+      {
+        "name": "2-1B Medical Droid",
+        "points": 18,
+        "type": "Personnel",
+        "restrictions": { "factions": ["Rebel Alliance"] },
+        "keywords": {
+          "actions": { "Treat": { "actions": 0, "amount": 1, "capacity": 2 } },
+          "passiveForUpgrade": { "Noncombatant": null }
+        }
+      },
+      {
+        "name": "Fleet Trooper",
+        "points": 11,
+        "type": "Personnel",
+        "restrictions": { "units": ["Fleet Troopers"] }
+      },
+      {
+        "name": "R5 Astromech Droid",
+        "points": 8,
+        "type": "Personnel",
+        "restrictions": { "factions": ["Rebel Alliance"] },
+        "keywords": {
+          "actions": { "Repair": { "actions": 0, "amount": 1, "capacity": 2 } },
+          "passiveForUpgrade": { "Noncombatant": null }
+        }
+      },
+      {
+        "name": "Rebel Comms Technician",
+        "points": 9,
+        "type": "Personnel",
+        "restrictions": { "factions": ["Rebel Alliance"] },
+        "keywords": {
+          "passiveForUnit": { "$Add and Equip Upgrade": "Comms" },
+          "passiveForUpgrade": { "Leader": null }
+        }
+      },
+      {
+        "name": "Rebel Officer",
+        "points": 19,
+        "type": "Personnel",
+        "restrictions": { "factions": ["Rebel Alliance"] },
+        "keywords": {
+          "passiveForUnit": { "$Increase Courage": 1, "Inspire": 1 },
+          "passiveForUpgrade": { "Leader": null }
+        }
+      },
+      {
+        "name": "Rebel Trooper Captain",
+        "points": 14,
+        "type": "Personnel",
+        "restrictions": { "units": ["Rebel Troopers"] },
+        "usage": "Exhaust",
+        "description": "When you activate, you cannot remove suppression tokens or be suppressed during this activation.",
+        "keywords": {
+          "passiveForUnit": { "$Add Upgrade": "Training" },
+          "passiveForUpgrade": { "Leader": null }
+        }
+      },
+      {
+        "name": "Rebel Trooper Specialist",
+        "points": 14,
+        "type": "Personnel",
+        "restrictions": { "units": ["Rebel Troopers"] },
+        "usage": "Exhaust"
+      },
+      {
+        "name": "Rebel Trooper",
+        "points": 10,
+        "type": "Personnel",
+        "restrictions": { "units": ["Rebel Troopers"] }
+      },
+      {
+        "name": "Rebel Veteran",
+        "points": 12,
+        "type": "Personnel",
+        "restrictions": { "units": ["Rebel Veterans"] }
+      },
+      {
+        "name": "Outer Rim Speeder Jockey",
+        "points": 10,
+        "type": "Pilot",
+        "restrictions": {
+          "factions": ["Rebel Alliance"],
+          "unitTypes": [{ "Vehicle": "Repulsor Vehicle" }]
+        },
+        "keywords": { "passiveForUnit": { "Cover": 1 } }
+      },
+      {
+        "name": "Ryder Azadi",
+        "points": 5,
+        "type": "Pilot",
+        "restrictions": {
+          "factions": ["Rebel Alliance"],
+          "unitTypes": [{ "Vehicle": "Repulsor Vehicle" }],
+          "isUnique": true
+        },
+        "usage": "Exhaust",
+        "description": "While performing a move, increase or decrease your maximum speed by 1."
+      },
+      {
+        "name": "Wedge Antilles",
+        "points": 5,
+        "type": "Pilot",
+        "restrictions": {
+          "factions": ["Rebel Alliance"],
+          "unitTypes": [{ "Vehicle": "Repulsor Vehicle" }],
+          "isUnique": true
+        },
+        "usage": "Exhaust"
+      },
+      {
+        "name": "Deflector Shields",
+        "points": 18,
+        "type": "Armament",
+        "restrictions": { "units": ["BX-series Droid Commandos"] },
+        "keywords": { "passiveForUnit": { "Shielded": 2, "Recharge": 2 } }
+      },
+      {
+        "name": "DT-57 \"Annihilator\"",
+        "points": 12,
+        "type": "Armament",
+        "restrictions": { "units": ["General Grievous"], "isUnique": true },
+        "weapon": {
+          "name": "DT-57 \"Annihilator\"",
+          "range": ["Melee", 1, 2],
+          "dice": { "black": 2, "white": 2 },
+          "keywords": { "Critical": 1, "Pierce": 1, "Versatile": null }
+        }
+      },
+      {
+        "name": "Electro Gauntlets",
+        "points": 10,
+        "type": "Armament",
+        "restrictions": { "units": ["Cad Bane"] },
+        "usage": "Exhaust",
+        "keywords": {
+          "passiveForUnitWhileExhausted": {
+            "$Move While Engaged With Immobilized Unit": null
+          }
+        },
+        "weapon": {
+          "name": "Electro Gauntlets",
+          "range": ["Melee"],
+          "dice": { "red": 4 },
+          "keywords": { "Immobilize": 3, "Suppressive": null }
+        }
+      },
+      {
+        "name": "Vibroswords",
+        "points": 6,
+        "type": "Armament",
+        "restrictions": { "units": ["BX-series Droid Commandos"] },
+        "keywords": { "passiveForUnit": { "Charge": null } },
+        "weapon": {
+          "name": "Vibroswords",
+          "range": ["Melee"],
+          "dice": { "red": 1, "white": 1 }
+        }
+      },
+      {
+        "name": "B2-ACM Trooper",
+        "points": 26,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["B2 Super Battle Droids"] },
+        "weapon": {
+          "name": "B2-ACM Trooper",
+          "range": [1, 2],
+          "dice": { "red": 3 }
+        }
+      },
+      {
+        "name": "B2-HA Trooper",
+        "points": 32,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["B2 Super Battle Droids"] },
+        "usage": "Exhaust",
+        "keywords": { "passiveForUpgrade": { "Cycle": null } },
+        "weapon": {
+          "name": "B2-HA Trooper",
+          "range": [2, 3],
+          "dice": { "red": 2, "white": 1 },
+          "keywords": { "Blast": null, "Impact": 2 }
+        }
+      },
+      {
+        "name": "BX-series Droid Sniper",
+        "points": 30,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["BX-series Droid Commandos"] },
+        "weapon": {
+          "name": "BX-series Droid Sniper",
+          "range": [1, 5],
+          "dice": { "red": 2 },
+          "keywords": { "Lethal": 1, "Immune": ["Deflect"] }
+        }
+      },
+      {
+        "name": "Dioxis Mine Saboteur",
+        "points": 28,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["BX-series Droid Commandos"] },
+        "usage": "Detonate",
+        "keywords": {
+          "passiveForUnit": {
+            "Detonate": { "amount": 1, "explosive": "Dioxis Mine" }
+          }
+        },
+        "weapon": {
+          "name": "Dioxis Mine",
+          "surge": "Hit",
+          "range": [1],
+          "dice": { "black": 1, "white": 2 },
+          "keywords": { "Blast": null, "Poison": 1 }
+        }
+      },
+      {
+        "name": "E-5C B1 Trooper",
+        "points": 18,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["B1 Battle Droids"] },
+        "weapon": {
+          "name": "E-5C B1 Trooper",
+          "range": [1, 3],
+          "dice": { "black": 3 }
+        }
+      },
+      {
+        "name": "E-5s B1 Trooper",
+        "points": 20,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["B1 Battle Droids"] },
+        "weapon": {
+          "name": "E-5C B1 Trooper",
+          "range": [1, 4],
+          "dice": { "red": 1, "white": 1 },
+          "keywords": { "Critical": 1 }
+        }
+      },
+      {
+        "name": "E-60R B1 Trooper",
+        "points": 20,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["B1 Battle Droids"] },
+        "usage": "Exhaust",
+        "weapon": {
+          "name": "E-60R B1 Trooper",
+          "range": [2, 4],
+          "dice": { "red": 1, "black": 2 },
+          "keywords": { "Impact": 2 }
+        }
+      },
+      {
+        "name": "Radiation Cannon B1 Trooper",
+        "points": 22,
+        "type": "Heavy Weapon",
+        "restrictions": { "units": ["B1 Battle Droids"] },
+        "weapon": {
+          "name": "E-5C B1 Trooper",
+          "range": [1, 2],
+          "dice": { "red": 2 },
+          "keywords": { "Poison": 1 }
+        }
+      },
+      {
+        "name": "B1 Battle Droid",
+        "points": 6,
+        "type": "Personnel",
+        "restrictions": { "units": ["B1 Battle Droids"] }
+      },
+      {
+        "name": "B1 Security Droid",
+        "points": 9,
+        "type": "Personnel",
+        "restrictions": { "units": ["B1 Battle Droids"] },
+        "usage": "Exhaust",
+        "keywords": {
+          "passiveForUnit": { "$Lose Keyword": { "AI": ["Attack"] } }
+        }
+      },
+      {
+        "name": "B2 Super Battle Droid",
+        "points": 16,
+        "type": "Personnel",
+        "restrictions": { "units": ["B2 Super Battle Droids"] }
+      },
+      {
+        "name": "OOM-series Battle Droid",
+        "points": 12,
+        "type": "Personnel",
+        "restrictions": { "units": ["B1 Battle Droids"] },
+        "description": "When you use Coordinate, you can issue an order at range 1-2 instead of range 1.",
+        "keywords": {
+          "passiveForUpgrade": { "Leader": null },
+          "passiveForUnit": { "$Coordinate: Range 1-2": null }
+        }
+      },
+      {
+        "name": "T-series Tactical Droid",
+        "points": 18,
+        "type": "Personnel",
+        "wounds": 1,
+        "restrictions": { "unitTypes": [{ "Trooper": "Droid Trooper" }] },
+        "keywords": {
+          "passiveForUnit": {
+            "$Lose Keyword": { "AI": ["Attack"] },
+            "Reliable": 1
+          },
+          "passiveForUpgrade": { "Leader": null, "Sidearm": "Ranged" }
+        },
+        "weapon": {
+          "name": "T-series Tactical Droid",
+          "range": [1, 3],
+          "dice": { "red": 1 }
+        }
+      },
+      {
+        "name": "Lok Durd",
+        "points": 9,
+        "type": "Pilot",
+        "restrictions": {
+          "units": ["AAT Trade Federation Battle Tank"],
+          "isUnique": true
+        },
+        "keywords": {
+          "passiveForUnitWhileExhausted": {
+            "$Lose Keyword": { "AI": ["Attack"] }
+          }
+        }
+      },
+      {
+        "name": "OOM-Series Droid Pilot",
+        "points": 7,
+        "type": "Pilot",
+        "restrictions": { "units": ["AAT Trade Federation Battle Tank"] },
+        "keywords": {
+          "passiveForUnit": {
+            "Coordinate": { "unitTypes": [{ "Trooper": "Droid Trooper" }] }
+          }
+        }
+      },
+      {
+        "name": "T-Series Tactical Droid Pilot",
+        "points": 5,
+        "type": "Pilot",
+        "restrictions": { "units": ["AAT Trade Federation Battle Tank"] },
+        "keywords": {
+          "passiveForUnit": {
+            "$Lose Keyword": { "AI": ["Attack"] },
+            "Field Commander": null
+          }
+        }
+      }
+    ]
+  },
   "errata": {
-    "cards": { "units": [], "upgrades": [] },
+    "cards": {
+      "units": [
+        {
+          "name": "E-Web Heavy Blaster Team",
+          "restrictions": { "factions": ["Galactic Empire"] },
+          "points": 55,
+          "rank": "Support",
+          "miniatures": 1,
+          "type": { "Trooper": "Emplacement Trooper" },
+          "defense": { "color": "Red", "wounds": 4, "courage": 2 },
+          "attack": { "surges": "Crit" },
+          "speed": 1,
+          "upgrades": { "Comms": 1, "Generator": 1 },
+          "keywords": {
+            "passive": {
+              "Full Pivot": null,
+              "Plodding": null,
+              "Sentinel": null
+            }
+          },
+          "weapons": [
+            { "name": "Unarmed", "range": ["Melee"], "dice": { "black": 2 } },
+            {
+              "name": "E-11 Blaster Rifle",
+              "range": [1, 3],
+              "dice": { "white": 2 }
+            },
+            {
+              "name": "E-Web Heavy Blaster",
+              "range": [1, 3],
+              "dice": { "red": 1, "black": 2, "white": 2 },
+              "keywords": { "Cumbersome": null, "Fixed": ["Front"] }
+            }
+          ]
+        },
+        {
+          "name": "1.4 FD Laser Cannon Team",
+          "since": { "RRG": "Unknown" },
+          "restrictions": { "factions": ["Rebel Alliance"] },
+          "points": 70,
+          "rank": "Support",
+          "miniatures": 1,
+          "type": { "Trooper": "Emplacement Trooper" },
+          "defense": {
+            "color": "White",
+            "wounds": 6,
+            "courage": 2,
+            "surges": true
+          },
+          "attack": { "surges": "Hit" },
+          "speed": 0,
+          "upgrades": { "Comms": 1, "Generator": 1 },
+          "keywords": {
+            "passive": {
+              "Full Pivot": null,
+              "Sentinel": null,
+              "Stationary": null
+            }
+          },
+          "weapons": [
+            { "name": "Unarmed", "range": ["Melee"], "dice": { "black": 1 } },
+            {
+              "name": "DH-17 Blaster Pistol",
+              "range": [1, 2],
+              "dice": { "white": 4 }
+            },
+            {
+              "name": "1.4 FD Laser Cannon",
+              "range": [1, 5],
+              "dice": { "black": 5 },
+              "keywords": { "Fixed": ["Front"], "Impact": 2 }
+            }
+          ]
+        },
+        {
+          "name": "Chewbacca",
+          "title": "Walking Carpet",
+          "since": { "RRG": "2020-11-20" },
+          "restrictions": { "factions": ["Rebel Alliance"] },
+          "points": 110,
+          "rank": "Operative",
+          "miniatures": 1,
+          "type": "Trooper",
+          "defense": { "color": "White", "wounds": 9, "courage": 2 },
+          "attack": { "surges": "Crit" },
+          "speed": 2,
+          "upgrades": { "Training": 2, "Gear": 1 },
+          "keywords": {
+            "passive": {
+              "Enrage": 4,
+              "Guardian": 3,
+              "Scale": null,
+              "Teamwork": { "units": ["Han Solo"] }
+            }
+          },
+          "weapons": [
+            {
+              "name": "Overwhelm",
+              "range": ["Melee"],
+              "dice": { "red": 4 },
+              "keywords": { "Lethal": 1 }
+            },
+            {
+              "name": "Chewbacca's Bowcaster",
+              "range": [1, 3],
+              "dice": { "red": 2, "white": 2 },
+              "keywords": { "Impact": 1, "Pierce": 1 }
+            }
+          ]
+        },
+        {
+          "name": "Mark II Medium Blaster Trooper",
+          "since": { "RRG": "2020-11-20" },
+          "restrictions": {
+            "factions": ["Rebel Alliance"],
+            "units": ["Rebel Veterans"]
+          },
+          "points": 38,
+          "rank": "Corps",
+          "miniatures": 1,
+          "type": { "Trooper": "Emplacement Trooper" },
+          "defense": {
+            "color": "White",
+            "wounds": 4,
+            "courage": 2,
+            "surges": true
+          },
+          "attack": { "surges": "Hit" },
+          "speed": 1,
+          "upgrades": { "Comms": 1 },
+          "keywords": {
+            "passive": {
+              "Detachment": { "units": ["Rebel Veterans"] },
+              "Fire Support": null,
+              "Full Pivot": null,
+              "Reposition": null,
+              "Sentinel": null
+            }
+          },
+          "weapons": [
+            { "name": "Unarmed", "range": ["Melee"], "dice": { "black": 1 } },
+            {
+              "name": "A-280 Blaster Rifle",
+              "range": [1, 3],
+              "dice": { "black": 1 }
+            },
+            {
+              "name": "Mark II Medium Blaster",
+              "range": [1, 3],
+              "dice": { "black": 4 },
+              "keywords": {
+                "Critical": 2,
+                "Cumbersome": null,
+                "Fixed": ["Front"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "T-47 Airspeeder",
+          "since": { "RRG": "2020-11-20" },
+          "restrictions": { "factions": ["Rebel Alliance"] },
+          "points": 175,
+          "rank": "Heavy",
+          "miniatures": 1,
+          "type": { "Vehicle": "Repulsor Vehicle" },
+          "defense": {
+            "color": "White",
+            "wounds": 7,
+            "surges": true,
+            "resilience": 5
+          },
+          "attack": { "surges": "Crit" },
+          "speed": 3,
+          "upgrades": { "Pilot": 1, "Hardpoint": 1, "Comms": 1 },
+          "keywords": {
+            "passive": {
+              "Armor": null,
+              "Arsenal": 2,
+              "Cover": 1,
+              "Immune": ["Blast", "Melee", "Range 1 Weapons"],
+              "Speeder": 2
+            }
+          },
+          "weapons": [
+            {
+              "name": "Ap/11 Double Laser Cannon",
+              "range": [1, 3],
+              "dice": { "red": 3, "black": 3 },
+              "keywords": { "Fixed": ["Front"], "Impact": 3 }
+            }
+          ]
+        }
+      ],
+      "upgrades": [
+        {
+          "name": "DLT-19x Sniper",
+          "points": 28,
+          "type": "Heavy Weapon",
+          "since": { "RRG": "Unknown" },
+          "restrictions": { "units": ["Scout Troopers"] },
+          "weapon": {
+            "name": "DLT-19x Sniper",
+            "range": [1, 5],
+            "dice": { "black": 2 },
+            "keywords": { "High Velocity": null, "Pierce": 1 }
+          }
+        },
+        {
+          "name": "DT-F16",
+          "points": 22,
+          "type": "Heavy Weapon",
+          "wounds": 2,
+          "since": { "RRG": "2020-11-20" },
+          "restrictions": {
+            "units": ["Imperial Death Troopers"],
+            "isUnique": true
+          },
+          "keywords": {
+            "passiveForUnit": { "Compel": null },
+            "passiveForUpgrade": { "Leader": null }
+          },
+          "weapon": {
+            "name": "DT-F16",
+            "range": [1, 3],
+            "dice": { "black": 1, "white": 1 }
+          }
+        },
+        {
+          "name": "T-7 Ion Snowtrooper",
+          "points": 34,
+          "type": "Heavy Weapon",
+          "since": { "RRG": "2020-11-20" },
+          "restrictions": { "units": ["Snowtroopers"] },
+          "usage": "Exhaust",
+          "weapon": {
+            "name": "T-7 Ion Snowtrooper",
+            "range": [1, 3],
+            "dice": { "black": 1, "white": 2 },
+            "keywords": { "Impact": 1, "Ion": 1 }
+          }
+        },
+        {
+          "name": "Aggressive Tactics",
+          "points": 15,
+          "type": "Command",
+          "since": { "RRG": "2020-11-20" },
+          "description": "During the Command Phase, if you were nominated, after issuing orders choose up to 4 friendly units with faceup order tokens. Each chosen unit gains 1 surge token."
+        },
+        {
+          "name": "Commanding Presence",
+          "points": 10,
+          "type": "Command",
+          "description": "When issuing orders, you can issue orders at range 1–4."
+        },
+        {
+          "name": "Comms Relay",
+          "points": 5,
+          "type": "Comms",
+          "since": { "RRG": "Unknown" },
+          "restrictionsNot": {
+            "unitTypes": [{ "Trooper": "Emplacement Trooper" }]
+          },
+          "description": "When you would be issued an order, you may choose a friendly unit at range 1-2. Issue an order to the chosen unit instead. If you do, you cannot be issued another order during this round."
+        },
+        {
+          "name": "Long Range Comlink",
+          "points": 10,
+          "type": "Comms",
+          "since": { "RRG": "Unknown" },
+          "description": "During the Command Phase, you can be issued orders by friendly {RANK:COMMANDER} or {RANK:OPERATIVE} units regardless of range.."
+        },
+        {
+          "name": "Battle Meditation",
+          "points": 5,
+          "type": "Force",
+          "since": { "RRG": "Unknown" },
+          "description": "While you are issuing orders using a command card, you may issue 1 of those orders to any friendly unit on the battlefield, instead of a unit indicated on the command card."
+        },
+        {
+          "name": "Force Choke",
+          "points": 5,
+          "type": "Force",
+          "since": { "RRG": "Unknown" },
+          "restrictions": { "forceAlignment": ["Dark Side"] },
+          "usage": "Exhaust"
+        },
+        {
+          "name": "Jedi Mind Trick",
+          "points": 5,
+          "type": "Force",
+          "since": { "RRG": "2020-11-20" },
+          "restrictions": { "forceAlignment": ["Light Side"] },
+          "usage": "Exhaust"
+        },
+        {
+          "name": "Bistan",
+          "points": 32,
+          "type": "Heavy Weapon",
+          "wounds": 2,
+          "since": { "RRG": "2020-11-20" },
+          "usage": "Exhaust",
+          "weapon": {
+            "name": "Bistan",
+            "range": [1, 4],
+            "dice": { "black": 1, "white": 4 },
+            "keywords": { "Impact": 1, "Ion": 1 }
+          }
+        },
+        {
+          "name": "CM-O/93 Trooper",
+          "points": 31,
+          "type": "Heavy Weapon",
+          "since": { "RRG": "2020-11-20" },
+          "restrictions": { "units": ["Rebel Veterans"] },
+          "weapon": {
+            "name": "CM-O/93 Trooper",
+            "range": [1, 4],
+            "dice": { "black": 4 },
+            "keywords": { "Critical": 2 }
+          }
+        },
+        {
+          "name": "DH-447 Sniper",
+          "points": 28,
+          "type": "Heavy Weapon",
+          "since": { "RRG": "Unknown" },
+          "restrictions": { "units": ["Rebel Commandos"] },
+          "weapon": {
+            "name": "DH-447 Sniper",
+            "range": [1, 5],
+            "dice": { "black": 1, "white": 1 },
+            "keywords": { "High Velocity": null, "Pierce": 1 }
+          }
+        },
+        {
+          "name": "Pao",
+          "points": 22,
+          "type": "Heavy Weapon",
+          "wounds": 2,
+          "since": { "RRG": "2020-11-20" },
+          "keywords": {
+            "passiveForUnit": { "Inspire": 1 },
+            "passiveForUpgrade": { "Leader": null }
+          },
+          "weapon": {
+            "name": "Pao",
+            "range": [1, 4],
+            "dice": { "red": 1, "white": 1 }
+          }
+        },
+        {
+          "name": "Wedge Antilles",
+          "points": 5,
+          "type": "Pilot",
+          "restrictions": {
+            "factions": ["Rebel Alliance"],
+            "unitTypes": [{ "Vehicle": "Repulsor Vehicle" }],
+            "isUnique": true
+          },
+          "usage": "Exhaust"
+        }
+      ]
+    },
     "points": {
       "since": { "RRG": "2020-11-20" },
       "units": {
