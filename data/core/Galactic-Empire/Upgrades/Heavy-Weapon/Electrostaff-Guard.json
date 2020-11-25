@@ -1,0 +1,24 @@
+{
+  "name": "Electrostaff Guard",
+  "points": 25,
+  "type": "Heavy Weapon",
+
+  "restrictions": {
+    "units": ["Imperial Royal Guards"]
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "Immune": ["Pierce (Melee)"]
+    },
+    "passiveForUpgrade": {
+      "Sidearm": "Melee"
+    }
+  },
+
+  "weapon": {
+    "name": "Electrostaff Guard",
+    "range": ["Melee"],
+    "dice": { "black": 2 }
+  }
+}

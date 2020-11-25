@@ -1,0 +1,51 @@
+{
+  "name": "Rebel Veterans",
+  "restrictions": {
+    "factions": ["Rebel Alliance"]
+  },
+  "points": 48,
+  "rank": "Corps",
+  "miniatures": 4,
+  "type": "Trooper",
+  "defense": {
+    "color": "White",
+    "wounds": 1,
+    "courage": 1,
+    "surges": true
+  },
+  "attack": {
+    "surges": "Hit"
+  },
+  "speed": 2,
+  "upgrades": {
+    "Heavy Weapon": 1,
+    "Personnel": 1,
+    "Training": 1,
+    "Gear": 1,
+    "Grenades": 1
+  },
+  "keywords": {
+    "passive": {
+      "Coordinate": {
+        "unitTypes": [{ "Trooper": "Emplacement Trooper" }]
+      },
+      "Defend": 1
+    }
+  },
+  "weapons": [
+    {
+      "name": "Unarmed",
+      "range": ["Melee"],
+      "dice": {
+        "black": 1
+      }
+    },
+    {
+      "name": "A-280 Blaster Rifle",
+      "range": [1, 3],
+      "dice": {
+        "black": 1
+      }
+    }
+  ]
+}

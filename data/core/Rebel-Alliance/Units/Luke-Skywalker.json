@@ -1,0 +1,62 @@
+{
+  "name": "Luke Skywalker",
+  "title": "Hero Of The Rebellion",
+  "restrictions": {
+    "factions": ["Rebel Alliance"],
+    "forceAlignment": ["Light Side"],
+    "isUnique": true
+  },
+  "points": 160,
+  "rank": "Commander",
+  "miniatures": 1,
+  "type": "Trooper",
+  "defense": {
+    "color": "Red",
+    "wounds": 6,
+    "courage": 3
+  },
+  "attack": {
+    "surges": "Crit"
+  },
+  "speed": 2,
+  "upgrades": {
+    "Force": 2,
+    "Gear": 1
+  },
+  "keywords": {
+    "actions": {
+      "Jump": {
+        "actions": 1,
+        "amount": 1
+      }
+    },
+    "passive": {
+      "Charge": null,
+      "Deflect": null,
+      "Immune": ["Pierce"]
+    }
+  },
+  "weapons": [
+    {
+      "name": "Anakin's Lightsaber",
+      "range": ["Melee"],
+      "dice": {
+        "black": 6
+      },
+      "keywords": {
+        "Impact": 2,
+        "Pierce": 2
+      }
+    },
+    {
+      "name": "Luke's DL-44 Blaster Pistol",
+      "range": [1, 2],
+      "dice": {
+        "red": 2
+      },
+      "keywords": {
+        "Pierce": 2
+      }
+    }
+  ]
+}

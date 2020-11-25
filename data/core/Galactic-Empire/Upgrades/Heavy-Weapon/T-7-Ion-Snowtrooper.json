@@ -1,0 +1,21 @@
+{
+  "name": "T-7 Ion Snowtrooper",
+  "points": 34,
+  "type": "Heavy Weapon",
+
+  "restrictions": {
+    "units": ["Snowtroopers"]
+  },
+
+  "usage": "Exhaust",
+
+  "weapon": {
+    "name": "T-7 Ion Snowtrooper",
+    "range": [1, 2],
+    "dice": { "black": 1, "white": 2 },
+    "keywords": {
+      "Impact": 1,
+      "Ion": 1
+    }
+  }
+}

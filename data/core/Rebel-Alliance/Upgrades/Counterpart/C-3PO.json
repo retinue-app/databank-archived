@@ -1,0 +1,35 @@
+{
+  "name": "C-3PO",
+  "points": 15,
+  "type": "Counterpart",
+
+  "wounds": 2,
+
+  "counterpart": {
+    "type": {
+      "Trooper": "Droid Trooper"
+    }
+  },
+
+  "restrictions": {
+    "factions": ["Rebel Alliance"],
+    "units": ["C-3PO"]
+  },
+
+  "keywords": {
+    "actions": {
+      "Calculate Odds": {
+        "actions": 1
+      },
+      "Distract": {
+        "actions": 0
+      }
+    }
+  },
+
+  "weapon": {
+    "name": "Clumsy Kick",
+    "range": ["Melee"],
+    "dice": { "white": 1 }
+  }
+}

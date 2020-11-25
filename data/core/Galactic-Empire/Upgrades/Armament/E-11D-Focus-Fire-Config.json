@@ -1,0 +1,26 @@
+{
+  "name": "E-11D Focus Fire Config",
+  "points": 8,
+  "type": "Armament",
+
+  "restrictions": {
+    "units": ["Imperial Death Troopers"]
+  },
+
+  "usage": "Exhaust",
+
+  "keywords": {
+    "passiveForUpgrade": {
+      "Reconfigure": "E-11D Grenade Launcher Config"
+    }
+  },
+
+  "weapon": {
+    "name": "E-11D Focus Fire Config",
+    "range": [1, 4],
+    "dice": { "black": 1 },
+    "keywords": {
+      "Suppressive": null
+    }
+  }
+}

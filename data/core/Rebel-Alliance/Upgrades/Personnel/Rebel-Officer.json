@@ -1,0 +1,20 @@
+{
+  "name": "Rebel Officer",
+  "points": 19,
+  "type": "Personnel",
+
+  "restrictions": {
+    "factions": ["Rebel Alliance"]
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "$Increase Courage": 1,
+      "Inspire": 1
+    },
+
+    "passiveForUpgrade": {
+      "Leader": null
+    }
+  }
+}

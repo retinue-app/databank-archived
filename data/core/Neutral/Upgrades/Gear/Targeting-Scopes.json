@@ -1,0 +1,11 @@
+{
+  "name": "Targeting Scopes",
+  "points": 6,
+  "type": "Gear",
+
+  "keywords": {
+    "passiveForUnit": {
+      "Precise": 1
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "FX-9 Medical Droid",
+  "points": 19,
+  "type": "Personnel",
+
+  "restrictions": {
+    "factions": ["Galactic Empire"]
+  },
+
+  "keywords": {
+    "actions": {
+      "Treat": {
+        "actions": 0,
+        "amount": 1,
+        "capacity": 2
+      }
+    },
+
+    "passiveForUpgrade": {
+      "Noncombatant": null
+    }
+  }
+}

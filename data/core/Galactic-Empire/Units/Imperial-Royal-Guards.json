@@ -1,0 +1,46 @@
+{
+  "name": "Imperial Royal Guards",
+  "restrictions": {
+    "factions": ["Galactic Empire"]
+  },
+  "points": 75,
+  "rank": "Special Forces",
+  "miniatures": 3,
+  "type": "Trooper",
+  "defense": {
+    "color": "Red",
+    "wounds": 2,
+    "courage": 2
+  },
+  "speed": 2,
+  "upgrades": {
+    "Heavy Weapon": 1,
+    "Training": 2,
+    "Gear": 1,
+    "Grenades": 1
+  },
+  "keywords": {
+    "passive": {
+      "Charge": null,
+      "Disciplined": 2,
+      "Guardian": 2
+    }
+  },
+  "weapons": [
+    {
+      "name": "Force Pike",
+      "range": ["Melee"],
+      "dice": {
+        "red": 1,
+        "black": 1
+      }
+    },
+    {
+      "name": "EC-17 Hold-out Blaster",
+      "range": [1, 2],
+      "dice": {
+        "black": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Esteemed Leader",
+  "points": 5,
+  "type": "Command",
+
+  "description": "While you are defending, each friendly corps trooper unit at range 1 gains Guardian 1."
+}

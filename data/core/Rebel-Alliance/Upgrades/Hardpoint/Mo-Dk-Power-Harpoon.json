@@ -1,0 +1,20 @@
+{
+  "name": "Mo/Dk Power Harpoon",
+  "points": 8,
+  "type": "Hardpoint",
+
+  "restrictions": {
+    "units": ["T-47 Airspeeder"]
+  },
+
+  "weapon": {
+    "name": "Mo/Dk Power Harpoon",
+    "dice": { "red": 1 },
+    "range": [1, 2],
+    "keywords": {
+      "Fixed": ["Rear"],
+      "Impact": 1,
+      "Tow Cable": null
+    }
+  }
+}

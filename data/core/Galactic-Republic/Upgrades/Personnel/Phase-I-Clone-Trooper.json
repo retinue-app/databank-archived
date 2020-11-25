@@ -1,0 +1,9 @@
+{
+  "name": "Phase I Clone Trooper",
+  "points": 13,
+  "type": "Personnel",
+
+  "restrictions": {
+    "units": ["Phase I Clone Trooper"]
+  }
+}

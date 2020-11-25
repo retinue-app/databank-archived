@@ -1,0 +1,11 @@
+{
+  "name": "Jedi Mind Trick",
+  "points": 5,
+  "type": "Force",
+
+  "restrictions": {
+    "forceAlignment": ["Light Side"]
+  },
+
+  "usage": "Exhaust"
+}

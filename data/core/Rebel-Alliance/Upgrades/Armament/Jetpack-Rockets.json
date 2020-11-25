@@ -1,0 +1,21 @@
+{
+  "name": "Jetpack Rockets",
+  "points": 8,
+  "type": "Armament",
+
+  "restrictions": {
+    "units": ["Mandalorian Resistance"]
+  },
+
+  "usage": "Discard",
+
+  "weapon": {
+    "name": "Jetpack Rockets",
+    "range": [3, 4],
+    "dice": { "red": 1 },
+    "keywords": {
+      "Blast": null,
+      "Impact": 1
+    }
+  }
+}

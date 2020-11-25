@@ -1,0 +1,19 @@
+{
+  "name": "DW-3 Concussion Grenade Launcher",
+  "points": 15,
+  "type": "Hardpoint",
+
+  "restrictions": {
+    "units": ["AT-ST"]
+  },
+
+  "weapon": {
+    "name": "DW-3 Concussion Grenade Launcher",
+    "dice": { "black": 2 },
+    "range": [1, 2],
+    "keywords": {
+      "Blast": null,
+      "Fixed": ["Front"]
+    }
+  }
+}

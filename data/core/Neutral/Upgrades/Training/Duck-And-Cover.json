@@ -1,0 +1,7 @@
+{
+  "name": "Duck and Cover",
+  "points": 8,
+  "type": "Training",
+
+  "description": "While defending against a ranged attack, during the Apply Dodge and Cover step, you may gain 1 suppression token."
+}

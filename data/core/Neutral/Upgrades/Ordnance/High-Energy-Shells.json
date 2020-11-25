@@ -1,0 +1,24 @@
+{
+  "name": "High-Energy Shells",
+  "points": 8,
+  "type": "Ordnance",
+
+  "usage": "Exhaust",
+
+  "keywords": {
+    "passiveForUpgrade": {
+      "Cycle": null
+    }
+  },
+
+  "weapon": {
+    "name": "High-Energy Shells",
+    "range": [2, 4],
+    "dice": { "red": 2, "white": 1 },
+    "keywords": {
+      "Critical": 1,
+      "High Velocity": null,
+      "Fixed": ["Front"]
+    }
+  }
+}

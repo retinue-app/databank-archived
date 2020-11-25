@@ -1,0 +1,18 @@
+{
+  "name": "DC-15 Phase I Trooper",
+  "points": 30,
+  "type": "Heavy Weapon",
+
+  "restrictions": {
+    "units": ["Phase I Clone Troopers"]
+  },
+
+  "weapon": {
+    "name": "DC-15 Phase I Trooper",
+    "range": [1, 4],
+    "dice": { "red": 2 },
+    "keywords": {
+      "Critical": 1
+    }
+  }
+}

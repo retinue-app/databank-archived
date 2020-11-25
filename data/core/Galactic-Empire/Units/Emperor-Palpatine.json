@@ -1,0 +1,54 @@
+{
+  "name": "Emperor Palpatine",
+  "title": "Ruler of the Galactic Empire",
+  "restrictions": {
+    "factions": ["Galactic Empire"]
+  },
+  "points": 210,
+  "rank": "Commander",
+  "miniatures": 1,
+  "type": "Trooper",
+  "defense": {
+    "color": "Red",
+    "wounds": 5,
+    "courage": 4,
+    "surges": true
+  },
+  "attack": {
+    "surges": "Crit"
+  },
+  "speed": 1,
+  "upgrades": {
+    "Command": 1,
+    "Force": 3
+  },
+  "keywords": {
+    "actions": {
+      "Pulling the Strings": {
+        "actions": 1
+      }
+    },
+    "passive": {
+      "Entourage": {
+        "units": ["Imperial Royal Guards"]
+      },
+      "Immune": ["Pierce"],
+      "Master of the Force": 2
+    }
+  },
+  "weapons": [
+    {
+      "name": "Force Lightning",
+      "range": ["Melee", 1, 2],
+      "dice": {
+        "red": 2,
+        "black": 2,
+        "white": 2
+      },
+      "keywords": {
+        "Pierce": 2,
+        "Suppressive": null
+      }
+    }
+  ]
+}

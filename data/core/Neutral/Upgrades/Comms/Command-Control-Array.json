@@ -1,0 +1,15 @@
+{
+  "name": "Command Control Array",
+  "points": 2,
+  "type": "Comms",
+
+  "restrictions": {
+    "unitTypes": ["Vehicle"]
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "$Coordinate: Range 1-2": null
+    }
+  }
+}

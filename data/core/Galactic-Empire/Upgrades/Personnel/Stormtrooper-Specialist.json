@@ -1,0 +1,17 @@
+{
+  "name": "Stormtrooper Specialist",
+  "points": 15,
+  "type": "Personnel",
+
+  "restrictions": {
+    "units": ["Stormtroopers"]
+  },
+
+  "usage": "Exhaust",
+
+  "keywords": {
+    "passiveForUnit": {
+      "$Add Upgrade": "Gear"
+    }
+  }
+}

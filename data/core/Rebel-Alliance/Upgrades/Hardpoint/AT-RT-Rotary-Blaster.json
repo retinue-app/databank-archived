@@ -1,0 +1,18 @@
+{
+  "name": "AT-RT Rotary Blaster",
+  "points": 30,
+  "type": "Hardpoint",
+
+  "restrictions": {
+    "units": ["AT-RT"]
+  },
+
+  "weapon": {
+    "name": "AT-RT Rotary Blaster",
+    "dice": { "black": 5 },
+    "range": [1, 3],
+    "keywords": {
+      "Fixed": ["Front"]
+    }
+  }
+}

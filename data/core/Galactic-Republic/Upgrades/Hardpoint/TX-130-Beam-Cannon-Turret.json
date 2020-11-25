@@ -1,0 +1,14 @@
+{
+  "name": "TX-130 Beam Cannon Turret",
+  "points": 30,
+  "type": "Hardpoint",
+
+  "weapon": {
+    "name": "TX-130 Beam Cannon Turret",
+    "range": [1, 4],
+    "dice": { "red": 2 },
+    "keywords": {
+      "Beam": 2
+    }
+  }
+}

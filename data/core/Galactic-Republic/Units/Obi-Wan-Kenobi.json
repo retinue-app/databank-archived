@@ -1,0 +1,55 @@
+{
+  "name": "Obi-Wan Kenobi",
+  "title": "Civilized Warrior",
+  "restrictions": {
+    "factions": ["Galactic Republic"],
+    "forceAlignment": ["Light Side"],
+    "isUnique": true
+  },
+  "points": 175,
+  "rank": "Commander",
+  "miniatures": 1,
+  "type": "Trooper",
+  "defense": {
+    "color": "Red",
+    "wounds": 6,
+    "courage": 3
+  },
+  "speed": 2,
+  "upgrades": {
+    "Force": 2,
+    "Command": 1,
+    "Training": 1
+  },
+  "keywords": {
+    "actions": {
+      "Jump": {
+        "actions": 1,
+        "amount": 1
+      }
+    },
+    "passive": {
+      "Charge": null,
+      "Guardian": 3,
+      "Immune": ["Pierce"],
+      "Master of the Force": 1,
+      "Soresu Mastery": null
+    }
+  },
+  "weapons": [
+    {
+      "name": "Obi-Wan's Lightsaber",
+      "range": ["Melee"],
+      "dice": {
+        "red": 2,
+        "black": 2,
+        "white": 2
+      },
+      "keywords": {
+        "Critical": 2,
+        "Impact": 2,
+        "Pierce": 2
+      }
+    }
+  ]
+}

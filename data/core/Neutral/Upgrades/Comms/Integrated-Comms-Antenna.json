@@ -1,0 +1,11 @@
+{
+  "name": "Integrated Comms Antenna",
+  "points": 3,
+  "type": "Comms",
+
+  "restrictions": {
+    "unitTypes": [{ "Trooper": "Droid Trooper" }]
+  },
+
+  "description": "During the Command Phase, you can be issued orders by friendly Commander or Operative inits at range 1-4."
+}

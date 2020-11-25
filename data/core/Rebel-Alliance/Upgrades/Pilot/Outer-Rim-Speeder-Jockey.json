@@ -1,0 +1,16 @@
+{
+  "name": "Outer Rim Speeder Jockey",
+  "points": 10,
+  "type": "Pilot",
+
+  "restrictions": {
+    "factions": ["Rebel Alliance"],
+    "unitTypes": [{ "Vehicle": "Repulsor Vehicle" }]
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "Cover": 1
+    }
+  }
+}

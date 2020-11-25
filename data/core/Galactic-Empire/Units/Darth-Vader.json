@@ -1,0 +1,42 @@
+{
+  "name": "Darth Vader",
+  "title": "Dark Lord of the Sith",
+  "restrictions": {
+    "factions": ["Galactic Empire"],
+    "isUnique": true,
+    "forceAlignment": ["Dark Side"]
+  },
+  "points": 200,
+  "rank": "Commander",
+  "miniatures": 1,
+  "type": "Trooper",
+  "defense": {
+    "color": "Red",
+    "wounds": 8
+  },
+  "speed": 1,
+  "upgrades": {
+    "Force": 3
+  },
+  "keywords": {
+    "passive": {
+      "Deflect": null,
+      "Immune": ["Pierce"],
+      "Master of the Force": 1,
+      "Relentless": null
+    }
+  },
+  "weapons": [
+    {
+      "name": "Vader's Lightsaber",
+      "range": ["Melee"],
+      "dice": {
+        "red": 6
+      },
+      "keywords": {
+        "Impact": 3,
+        "Pierce": 3
+      }
+    }
+  ]
+}

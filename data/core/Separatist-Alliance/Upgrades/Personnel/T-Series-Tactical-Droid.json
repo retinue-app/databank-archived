@@ -1,0 +1,30 @@
+{
+  "name": "T-series Tactical Droid",
+  "points": 18,
+  "type": "Personnel",
+  "wounds": 1,
+
+  "restrictions": {
+    "unitTypes": [{ "Trooper": "Droid Trooper" }]
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "$Lose Keyword": {
+        "AI": ["Attack"]
+      },
+      "Reliable": 1
+    },
+
+    "passiveForUpgrade": {
+      "Leader": null,
+      "Sidearm": "Ranged"
+    }
+  },
+
+  "weapon": {
+    "name": "T-series Tactical Droid",
+    "range": [1, 3],
+    "dice": { "red": 1 }
+  }
+}

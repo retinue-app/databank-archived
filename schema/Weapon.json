@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://schema.retinue.app/Weapon.json",
+  "title": "Weapon",
+  "description": "Weapon definition.",
+
+  "additionalProperties": false,
+
+  "properties": {
+    "name": {
+      "type": "string",
+      "minimum": 3,
+      "maximum": 40
+    },
+
+    "range": {
+      "$ref": "./Range.json"
+    },
+
+    "dice": {
+      "$ref": "./AttackPool.json"
+    },
+
+    "keywords": {
+      "$ref": "./WeaponKeywordSet.json",
+      "minProperties": 1
+    },
+
+    "surge": {
+      "enum": ["Hit", "Crit"]
+    }
+  },
+
+  "required": ["name", "range", "dice"]
+}

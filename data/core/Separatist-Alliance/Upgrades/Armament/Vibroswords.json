@@ -1,0 +1,21 @@
+{
+  "name": "Vibroswords",
+  "points": 6,
+  "type": "Armament",
+
+  "restrictions": {
+    "units": ["BX-series Droid Commandos"]
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "Charge": null
+    }
+  },
+
+  "weapon": {
+    "name": "Vibroswords",
+    "range": ["Melee"],
+    "dice": { "red": 1, "white": 1 }
+  }
+}

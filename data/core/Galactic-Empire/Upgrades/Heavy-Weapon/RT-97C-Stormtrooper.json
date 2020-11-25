@@ -1,0 +1,15 @@
+{
+  "name": "RT-97C Stormtrooper",
+  "points": 26,
+  "type": "Heavy Weapon",
+
+  "restrictions": {
+    "units": ["Stormtroopers"]
+  },
+
+  "weapon": {
+    "name": "RT-97C Stormtrooper",
+    "range": [1, 4],
+    "dice": { "red": 1, "white": 3 }
+  }
+}

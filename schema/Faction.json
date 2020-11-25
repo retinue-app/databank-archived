@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://schema.retinue.app/Faction.json",
+  "title": "Faction",
+
+  "description": "Factions that are part of the game.",
+
+  "definitions": {
+    "OfficialFaction": {
+      "enum": [
+        "Galactic Empire",
+        "Galactic Republic",
+        "Separatist Alliance",
+        "Rebel Alliance"
+      ]
+    }
+  },
+
+  "anyOf": [
+    { "$ref": "#/definitions/OfficialFaction" },
+    { "type": "string", "$comment": "To support custom factions." }
+  ]
+}

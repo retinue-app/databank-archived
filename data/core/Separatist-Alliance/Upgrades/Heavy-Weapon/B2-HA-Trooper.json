@@ -1,0 +1,27 @@
+{
+  "name": "B2-HA Trooper",
+  "points": 32,
+  "type": "Heavy Weapon",
+
+  "restrictions": {
+    "units": ["B2 Super Battle Droids"]
+  },
+
+  "usage": "Exhaust",
+
+  "keywords": {
+    "passiveForUpgrade": {
+      "Cycle": null
+    }
+  },
+
+  "weapon": {
+    "name": "B2-HA Trooper",
+    "range": [2, 3],
+    "dice": { "red": 2, "white": 1 },
+    "keywords": {
+      "Blast": null,
+      "Impact": 2
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "name": "Mandalorian Resistance",
+  "title": "Clan Wren",
+  "restrictions": {
+    "factions": ["Rebel Alliance"],
+    "isUnique": true
+  },
+  "points": 34,
+  "rank": "Special Forces",
+  "miniatures": 1,
+  "type": "Trooper",
+  "defense": {
+    "color": "Red",
+    "wounds": 2,
+    "courage": 2,
+    "surges": true
+  },
+  "attack": {
+    "surges": "Hit"
+  },
+  "speed": 3,
+  "upgrades": {
+    "Heavy Weapon": 2,
+    "Training": 1,
+    "Comms": 1,
+    "Gear": 1,
+    "Armament": 1,
+    "Grenades": 1
+  },
+  "keywords": {
+    "actions": {
+      "Jump": {
+        "actions": 1,
+        "amount": 2
+      }
+    },
+    "passive": {
+      "Equip": {
+        "units": ["Tristan Wren", "Ursa Wren"]
+      },
+      "Impervious": null,
+      "Nimble": null,
+      "Retinue": {
+        "units": ["Sabine Wren"]
+      }
+    }
+  },
+  "weapons": [
+    {
+      "name": "Combat Expertise",
+      "range": ["Melee"],
+      "dice": { "black": 2 }
+    },
+    {
+      "name": "Westar 35 Blaster Pistols",
+      "range": [1, 2],
+      "dice": { "black": 2 }
+    }
+  ]
+}

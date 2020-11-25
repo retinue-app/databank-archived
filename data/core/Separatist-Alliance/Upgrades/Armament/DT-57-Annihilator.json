@@ -1,0 +1,21 @@
+{
+  "name": "DT-57 \"Annihilator\"",
+  "points": 12,
+  "type": "Armament",
+
+  "restrictions": {
+    "units": ["General Grievous"],
+    "isUnique": true
+  },
+
+  "weapon": {
+    "name": "DT-57 \"Annihilator\"",
+    "range": ["Melee", 1, 2],
+    "dice": { "black": 2, "white": 2 },
+    "keywords": {
+      "Critical": 1,
+      "Pierce": 1,
+      "Versatile": null
+    }
+  }
+}

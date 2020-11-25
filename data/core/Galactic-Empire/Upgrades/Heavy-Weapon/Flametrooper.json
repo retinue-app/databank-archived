@@ -1,0 +1,19 @@
+{
+  "name": "Flametrooper",
+  "points": 20,
+  "type": "Heavy Weapon",
+
+  "restrictions": {
+    "units": ["Snowtroopers"]
+  },
+
+  "weapon": {
+    "name": "Flametrooper",
+    "range": [1],
+    "dice": { "black": 1 },
+    "keywords": {
+      "Blast": null,
+      "Spray": null
+    }
+  }
+}

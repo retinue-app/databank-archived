@@ -1,0 +1,20 @@
+{
+  "name": "Iden's DLT-20A Rifle",
+  "points": 15,
+  "type": "Armament",
+
+  "restrictions": {
+    "units": ["Iden Versio"],
+    "isUnique": true
+  },
+
+  "weapon": {
+    "name": "Iden's DLT-20A Rifle",
+    "range": [1, "Infinite"],
+    "dice": { "black": 2 },
+    "keywords": {
+      "High Velocity": null,
+      "Pierce": 1
+    }
+  }
+}

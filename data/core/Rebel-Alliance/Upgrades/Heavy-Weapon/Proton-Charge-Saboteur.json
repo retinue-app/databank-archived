@@ -1,0 +1,39 @@
+{
+  "name": "Proton Charge Saboteur",
+  "points": 26,
+  "type": "Heavy Weapon",
+
+  "restrictions": {
+    "units": ["Rebel Commandos"]
+  },
+
+  "usage": "Detonate",
+
+  "keywords": {
+    "actions": {
+      "Arm": {
+        "actions": 1,
+        "amount": 1,
+        "explosive": "Proton Charge"
+      }
+    },
+
+    "passiveForUnit": {
+      "Detonate": {
+        "amount": 1,
+        "explosive": "Proton Charge"
+      }
+    }
+  },
+
+  "weapon": {
+    "name": "Proton Charge",
+    "range": [1],
+    "dice": { "red": 1, "white": 2 },
+    "surge": "Crit",
+    "keywords": {
+      "Blast": null,
+      "Impact": 1
+    }
+  }
+}

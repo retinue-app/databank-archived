@@ -1,0 +1,33 @@
+{
+  "name": "Del Meeko",
+  "points": 38,
+  "type": "Heavy Weapon",
+  "wounds": 2,
+
+  "restrictions": {
+    "factions": ["Galactic Empire"],
+    "units": ["Imperial Special Forces"],
+    "unitRanks": ["Corps"],
+    "unitTypes": ["Trooper"]
+  },
+
+  "keywords": {
+    "actions": {
+      "Repair": {
+        "actions": 0,
+        "amount": 2,
+        "capacity": 1
+      }
+    }
+  },
+
+  "weapon": {
+    "name": "Del Meeko",
+    "range": [1, 5],
+    "dice": { "black": 2 },
+    "keywords": {
+      "High Velocity": null,
+      "Lethal": 1
+    }
+  }
+}

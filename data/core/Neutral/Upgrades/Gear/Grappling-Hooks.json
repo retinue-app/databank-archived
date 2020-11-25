@@ -1,0 +1,11 @@
+{
+  "name": "Grappling Hooks",
+  "points": 3,
+  "type": "Gear",
+
+  "keywords": {
+    "passiveForUnit": {
+      "Expert Climber": null
+    }
+  }
+}

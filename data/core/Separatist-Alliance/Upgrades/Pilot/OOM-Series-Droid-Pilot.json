@@ -1,0 +1,17 @@
+{
+  "name": "OOM-Series Droid Pilot",
+  "points": 7,
+  "type": "Pilot",
+
+  "restrictions": {
+    "units": ["AAT Trade Federation Battle Tank"]
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "Coordinate": {
+        "unitTypes": [{ "Trooper": "Droid Trooper" }]
+      }
+    }
+  }
+}

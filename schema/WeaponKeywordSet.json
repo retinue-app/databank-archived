@@ -1,0 +1,122 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://schema.retinue.app/WeaponKeywordSet.json",
+  "title": "WeaponKeywordSet",
+
+  "description": "A set of weapon keywords (i.e. on a weapon).",
+
+  "properties": {
+    "Beam": {
+      "type": "number",
+      "minimum": 1
+    },
+
+    "Blast": {
+      "type": "null"
+    },
+
+    "Critical": {
+      "type": "number",
+      "minimum": 1
+    },
+
+    "Cumbersome": {
+      "type": "null"
+    },
+
+    "Fixed": {
+      "type": "array",
+      "items": {
+        "$ref": "./NotchedBaseSide.json"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+
+    "High Velocity": {
+      "type": "null"
+    },
+
+    "Immobilize": {
+      "type": "number",
+      "minimum": 1
+    },
+
+    "Immune": {
+      "type": "array",
+      "items": {
+        "enum": ["Deflect"]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+
+    "Impact": {
+      "type": "number",
+      "minimum": 1
+    },
+
+    "Ion": {
+      "type": "number",
+      "minimum": 1
+    },
+
+    "Lethal": {
+      "type": "number",
+      "minimum": 1
+    },
+
+    "Long Shot": {
+      "type": "number",
+      "minimum": 1
+    },
+
+    "Pierce": {
+      "type": "number",
+      "minimum": 1
+    },
+
+    "Poison": {
+      "type": "number",
+      "minimum": 1
+    },
+
+    "Ram": {
+      "type": "number",
+      "minimum": 1
+    },
+
+    "Scatter": {
+      "type": "null"
+    },
+
+    "Spray": {
+      "type": "null"
+    },
+
+    "Suppressive": {
+      "type": "null"
+    },
+
+    "Tow Cable": {
+      "type": "null"
+    },
+
+    "Versatile": {
+      "type": "null"
+    }
+  },
+
+  "propertyNames": {
+    "type": "string"
+  },
+
+  "additionalProperties": {
+    "anyOf": [
+      { "type": "null", "tsType": "null | undefined" },
+      { "type": "array", "items": { "type": "string" } },
+      { "type": "number", "minimum": 1 },
+      { "type": "string", "minLength": 1 }
+    ]
+  }
+}

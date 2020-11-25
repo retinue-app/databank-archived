@@ -1,0 +1,11 @@
+{
+  "name": "Recon Intel",
+  "points": 2,
+  "type": "Gear",
+
+  "keywords": {
+    "passiveForUnit": {
+      "Scout": 1
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "AT-ST Mortar Launcher",
+  "points": 10,
+  "type": "Hardpoint",
+
+  "restrictions": {
+    "units": ["AT-ST"]
+  },
+
+  "weapon": {
+    "name": "AT-ST Mortar Launcher",
+    "dice": { "white": 3 },
+    "range": [4, "Infinite"],
+    "keywords": {
+      "Fixed": ["Front"],
+      "Suppressive": null
+    }
+  }
+}

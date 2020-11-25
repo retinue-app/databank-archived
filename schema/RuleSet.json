@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://schema.retinue.app/RuleSet.json",
+  "title": "RuleSet",
+
+  "definitions": {
+    "SWL": {
+      "additionalProperties": false,
+
+      "properties": {
+        "SWL": {
+          "type": "number",
+          "minimum": 1
+        }
+      },
+
+      "required": ["SWL"]
+    },
+
+    "RRG": {
+      "additionalProperties": false,
+
+      "properties": {
+        "RRG": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "enum": ["Homebrew", "Unknown"]
+            }
+          ]
+        }
+      },
+
+      "required": ["RRG"]
+    }
+  },
+
+  "anyOf": [
+    {
+      "$ref": "#/definitions/SWL"
+    },
+    {
+      "$ref": "#/definitions/RRG"
+    }
+  ]
+}

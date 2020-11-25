@@ -1,0 +1,13 @@
+{
+  "name": "EMP \"Droid Poppers\"",
+  "points": 3,
+  "type": "Grenades",
+
+  "description": "While one or more of this weapon is in your attack pool, your attack pool gains Ion 1.",
+
+  "weapon": {
+    "name": "EMP \"Droid Poppers\"",
+    "range": [1],
+    "dice": { "black": 1 }
+  }
+}

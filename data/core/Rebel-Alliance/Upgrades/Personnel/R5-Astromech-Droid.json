@@ -1,0 +1,23 @@
+{
+  "name": "R5 Astromech Droid",
+  "points": 8,
+  "type": "Personnel",
+
+  "restrictions": {
+    "factions": ["Rebel Alliance"]
+  },
+
+  "keywords": {
+    "actions": {
+      "Repair": {
+        "actions": 0,
+        "amount": 1,
+        "capacity": 2
+      }
+    },
+
+    "passiveForUpgrade": {
+      "Noncombatant": null
+    }
+  }
+}

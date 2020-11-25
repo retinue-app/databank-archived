@@ -1,0 +1,25 @@
+{
+  "name": "A-280-CFE Pistol Config",
+  "points": 10,
+  "type": "Armament",
+
+  "restrictions": {
+    "units": ["Cassian Andor"]
+  },
+
+  "keywords": {
+    "passiveForUpgrade": {
+      "Reconfigure": "A-280-CFE Sniper Config"
+    }
+  },
+
+  "weapon": {
+    "name": "A-280-CFE Pistol Config",
+    "range": [1, 2],
+    "dice": { "red": 2, "black": 1 },
+    "keywords": {
+      "Long Shot": 1,
+      "Pierce": 1
+    }
+  }
+}

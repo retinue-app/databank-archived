@@ -1,0 +1,33 @@
+{
+  "name": "Echo",
+  "points": 40,
+  "type": "Heavy Weapon",
+  "wounds": 2,
+
+  "restrictions": {
+    "units": ["ARC Troopers"],
+    "unitTypes": [{ "Trooper": "Clone Trooper" }],
+    "unitRanks": ["Corps"],
+    "isUnique": true
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "Reliable": 1
+    },
+    "passiveForUpgrade": {
+      "Leader": null
+    }
+  },
+
+  "weapon": {
+    "name": "Echo",
+    "range": [1, 5],
+    "dice": { "red": 2 },
+    "keywords": {
+      "Critical": 1,
+      "Immune": ["Deflect"],
+      "Lethal": 1
+    }
+  }
+}

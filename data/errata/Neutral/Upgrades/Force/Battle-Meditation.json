@@ -1,0 +1,11 @@
+{
+  "name": "Battle Meditation",
+  "points": 5,
+  "type": "Force",
+
+  "since": {
+    "RRG": "Unknown"
+  },
+
+  "description": "While you are issuing orders using a command card, you may issue 1 of those orders to any friendly unit on the battlefield, instead of a unit indicated on the command card."
+}

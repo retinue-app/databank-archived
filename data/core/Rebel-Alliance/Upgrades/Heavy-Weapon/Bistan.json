@@ -1,0 +1,20 @@
+{
+  "name": "Bistan",
+  "points": 32,
+  "type": "Heavy Weapon",
+
+  "usage": "Exhaust",
+
+  "weapon": {
+    "name": "Bistan",
+    "range": [1, 4],
+    "dice": {
+      "black": 1,
+      "white": 4
+    },
+    "keywords": {
+      "Impact": 1,
+      "Ion": 1
+    }
+  }
+}

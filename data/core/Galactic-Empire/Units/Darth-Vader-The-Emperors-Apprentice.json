@@ -1,0 +1,57 @@
+{
+  "name": "Darth Vader",
+  "title": "The Emperor's Apprentice",
+  "restrictions": {
+    "factions": ["Galactic Empire"],
+    "isUnique": true,
+    "forceAlignment": ["Dark Side"]
+  },
+  "points": 170,
+  "rank": "Operative",
+  "miniatures": 1,
+  "type": "Trooper",
+  "defense": {
+    "color": "Red",
+    "wounds": 6,
+    "courage": 3
+  },
+  "speed": 1,
+  "upgrades": {
+    "Force": 2,
+    "Training": 1
+  },
+  "keywords": {
+    "passive": {
+      "Deflect": null,
+      "Immune": ["Pierce"],
+      "Jedi Hunter": null,
+      "Master of the Force": 1,
+      "Relentless": null,
+      "Spur": null
+    }
+  },
+  "weapons": [
+    {
+      "name": "Vader's Lightsaber",
+      "range": ["Melee"],
+      "dice": {
+        "red": 5
+      },
+      "keywords": {
+        "Impact": 3,
+        "Pierce": 3
+      }
+    },
+    {
+      "name": "Force Throw",
+      "range": [1, 2],
+      "dice": {
+        "black": 2
+      },
+      "keywords": {
+        "Blast": null,
+        "Scatter": null
+      }
+    }
+  ]
+}

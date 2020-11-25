@@ -1,0 +1,7 @@
+{
+  "name": "Tenacity",
+  "points": 4,
+  "type": "Training",
+
+  "description": "While performing a melee attack, if you are wounded or if one or more of your minis have been defeated, add 1 red attack die to your attack pool."
+}

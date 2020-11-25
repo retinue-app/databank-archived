@@ -1,0 +1,19 @@
+{
+  "name": "88 Twin Light Blaster Cannon",
+  "points": 20,
+  "type": "Hardpoint",
+
+  "restrictions": {
+    "units": ["AT-ST"]
+  },
+
+  "weapon": {
+    "name": "88 Twin Light Blaster Cannon",
+    "dice": { "red": 1, "black": 1, "white": 1 },
+    "range": [1, 3],
+    "keywords": {
+      "Fixed": ["Front"],
+      "Impact": 1
+    }
+  }
+}
