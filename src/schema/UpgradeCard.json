@@ -1,0 +1,113 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://schema.retinue.app/UpgradeCard.json",
+  "title": "UpgradeCard",
+
+  "description": "Defines an upgrade card.",
+  "additionalProperties": false,
+
+  "definitions": {
+    "PointAdjustments": {
+      "properties": {
+        "if": {
+          "$ref": "./TargetSet.json"
+        },
+
+        "condition": {
+          "enum": ["In Army", "On Unit"]
+        },
+
+        "adjustBy": {
+          "type": "number"
+        }
+      },
+
+      "additionalProperties": true,
+      "required": ["if", "condition", "adjustBy"]
+    }
+  },
+
+  "properties": {
+    "name": {
+      "description": "Name of the upgrade.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 40
+    },
+
+    "since": {
+      "description": "When this upgrade or errata/adjustment was last edited.",
+      "$ref": "./RuleSet.json"
+    },
+
+    "description": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 300
+    },
+
+    "keywords": {
+      "$ref": "./UpgradeKeywords.json"
+    },
+
+    "usage": {
+      "enum": ["Detonate", "Discard", "Exhaust"]
+    },
+
+    "type": {
+      "$ref": "./UpgradeType.json"
+    },
+
+    "wounds": {
+      "type": "number",
+      "minimum": 1,
+      "description": "Wounds if this is a miniature. If omitted defaults to the unit."
+    },
+
+    "counterpart": {
+      "additionalProperties": false,
+
+      "properties": {
+        "type": {
+          "$ref": "./UnitType.json"
+        },
+
+        "upgrades": {
+          "propertyNames": {
+            "$ref": "./UpgradeType.json"
+          },
+
+          "additionalProperties": {
+            "type": "number",
+            "minimum": 1
+          }
+        }
+      },
+
+      "required": ["type"]
+    },
+
+    "restrictions": {
+      "$ref": "./TargetSet.json"
+    },
+
+    "restrictionsNot": {
+      "$ref": "./TargetSet.json"
+    },
+
+    "points": {
+      "type": "number",
+      "minimum": 0
+    },
+
+    "pointAdjustments": {
+      "$ref": "#/definitions/PointAdjustments"
+    },
+
+    "weapon": {
+      "$ref": "./Weapon.json"
+    }
+  },
+
+  "required": ["name", "type", "points"]
+}

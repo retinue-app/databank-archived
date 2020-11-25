@@ -64,10 +64,6 @@ export type NotchedBaseSide = 'Front' | 'Sides' | 'Rear';
  * Range in the game.
  */
 export type Range = ('Melee' | 'Infinite' | number)[];
-/**
- * Defines a duration.
- */
-export type Duration = 'EndOfActivation';
 
 /**
  * Defines an upgrade card.
@@ -80,7 +76,6 @@ export interface UpgradeCard {
   since?: RuleSet;
   description?: string;
   keywords?: UpgradeKeywords;
-  action?: CardAction;
   usage?: 'Detonate' | 'Discard' | 'Exhaust';
   type: UpgradeType;
   /**
@@ -385,7 +380,6 @@ export interface TargetSet {
    * Units that have an upgrade icon. Multiple entries is treated as an OR.
    */
   hasUpgradeSlot?: UpgradeType[];
-  hostile?: 'Enemy' | 'Friendly';
 }
 /**
  * A set of keywords that provide a passive effect for a specific upgrade/model.
@@ -400,59 +394,6 @@ export interface UpgradeKeywordSet {
   Small?: null;
   [k: string]: undefined | number | string;
 }
-/**
- * Defines a card-attached action.
- */
-export interface CardAction {
-  description?: string;
-  actions: number;
-  target?: {
-    /**
-     * Number of targets. If omitted, defaults to 1.
-     */
-    amount?: number;
-    range?: Range;
-    is?: 'Self' | TargetSet;
-    not?: TargetSet;
-    miniature?: true;
-    inLineOfSight?: true;
-  };
-  grants?: {
-    keywords?: PassiveKeywordSet;
-    duration?: Duration;
-    weapons?: WeaponKeywordSet;
-    tokens?: {
-      [k: string]: number;
-    };
-    maxTokensOfAnyType?: number;
-  };
-}
-/**
- * A set of weapon keywords (i.e. on a weapon).
- */
-export interface WeaponKeywordSet {
-  Beam?: number;
-  Blast?: null;
-  Critical?: number;
-  Cumbersome?: null;
-  Fixed?: NotchedBaseSide[];
-  'High Velocity'?: null;
-  Immobilize?: number;
-  Immune?: 'Deflect'[];
-  Impact?: number;
-  Ion?: number;
-  Lethal?: number;
-  'Long Shot'?: number;
-  Pierce?: number;
-  Poison?: number;
-  Ram?: number;
-  Scatter?: null;
-  Spray?: null;
-  Suppressive?: null;
-  'Tow Cable'?: null;
-  Versatile?: null;
-  [k: string]: null | undefined | string[] | number | string;
-}
 export interface PointAdjustments {
   if: TargetSet;
   condition: 'In Army' | 'On Unit';
@@ -466,7 +407,7 @@ export interface Weapon {
   name: string;
   range: Range;
   dice: AttackPool;
-  keywords?: WeaponKeywordSet1;
+  keywords?: WeaponKeywordSet;
   surge?: 'Hit' | 'Crit';
 }
 /**
@@ -480,7 +421,7 @@ export interface AttackPool {
 /**
  * A set of weapon keywords (i.e. on a weapon).
  */
-export interface WeaponKeywordSet1 {
+export interface WeaponKeywordSet {
   Beam?: number;
   Blast?: null;
   Critical?: number;

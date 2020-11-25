@@ -24,17 +24,17 @@
   "json.schemas": [
     {
       "fileMatch": ["data/**/Units/*.json"],
-      "url": "/schema/UnitCard.json"
+      "url": "/src/schema/UnitCard.json"
     },
 
     {
       "fileMatch": ["data/**/Upgrades/*.json"],
-      "url": "/schema/UpgradeCard.json"
+      "url": "/src/schema/UpgradeCard.json"
     },
 
     {
       "fileMatch": ["errata/Points.json"],
-      "url": "/schema/PointAdjustments.json"
+      "url": "/src/schema/PointAdjustments.json"
     }
   ],
   // Linting.

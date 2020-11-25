@@ -1,0 +1,11 @@
+{
+  "name": "Rebel Trooper Specialist",
+  "points": 14,
+  "type": "Personnel",
+
+  "restrictions": {
+    "units": ["Rebel Troopers"]
+  },
+
+  "usage": "Exhaust"
+}

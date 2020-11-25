@@ -17,10 +17,10 @@ function containAllOrFail(primary: Set<string>, secondary: Set<string>): void {
   console.log('Verifying "errata".');
   try {
     console.log('Loading core data...');
-    const core = await Catalog.load(path.join('data', 'core'));
+    const core = await Catalog.load(path.join('src', 'data', 'core'));
 
     console.log('Loading errata data...');
-    const errata = await Catalog.load(path.join('data', 'errata'));
+    const errata = await Catalog.load(path.join('src', 'data', 'errata'));
 
     console.log('Checking that errata units replace core units...');
     containAllOrFail(core.units, errata.units);
@@ -29,7 +29,7 @@ function containAllOrFail(primary: Set<string>, secondary: Set<string>): void {
     containAllOrFail(core.upgrades, errata.upgrades);
 
     const points = (await fs.readJson(
-      path.join('data', 'errata', 'Points.json'),
+      path.join('src', 'data', 'errata', 'Metadata.json'),
     )) as PointAdjustments;
 
     const adjustedUnits = new Set(Object.keys(points.units).sort());

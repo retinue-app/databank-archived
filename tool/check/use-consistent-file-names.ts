@@ -60,7 +60,7 @@ async function checkName(file: string): Promise<boolean> {
 
 (async () => {
   let failed = false;
-  const files = await glob(path.join('data', '**', '*.json'));
+  const files = await glob(path.join('src', 'data', '**', '*.json'));
   for (const file of files) {
     if (!(await checkName(file))) {
       failed = true;

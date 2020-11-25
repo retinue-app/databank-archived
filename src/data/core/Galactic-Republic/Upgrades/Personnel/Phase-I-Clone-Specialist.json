@@ -1,0 +1,11 @@
+{
+  "name": "Phase I Clone Specialist",
+  "points": 17,
+  "type": "Personnel",
+
+  "restrictions": {
+    "units": ["Phase I Clone Troopers"]
+  },
+
+  "usage": "Exhaust"
+}
