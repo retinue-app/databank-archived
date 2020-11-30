@@ -1,3 +1,4 @@
+import { DataBank, Faction, PointAdjustments, UnitCard, UpgradeCard } from '../index';
 /**
  * Represents an indexed @see DataBank with errata and point changes applied.
  *
