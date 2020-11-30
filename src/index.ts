@@ -1,3 +1,4 @@
+export { Catalog, CatalogBuilder } from './lib/catalog';
 export { ActionKeywordSet } from './types/ActionKeywordSet';
 export { AttackDice } from './types/AttackDice';
 export { AttackPool } from './types/AttackPool';
