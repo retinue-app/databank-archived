@@ -5,7 +5,7 @@
     "build": "npm run build:types && npm run build:concat && npm run build:deploy",
     "build:concat": "ts-node ./tool/build/concat-data.ts && prettier --write src/data.json",
     "build:deploy": "tsc --build tsconfig.dist.json && ts-node ./tool/build/prepare-deploy.ts",
-    "build:types": "json2ts --bannerComment \"/* @internal */\" --unknownAny --enableConstEnums --cwd src/schema -i src/schema/*.json -o src/types && prettier --ignore-path .gitignore --write src/types",
+    "build:types": "json2ts --bannerComment \"/* @internal */\" --unknownAny --ignoreMinAndMaxItems --strictIndexSignatures --cwd src/schema -i src/schema/*.json -o src/types && prettier --ignore-path .gitignore --write src/types",
     "lint": "npm run lint:format && npm run lint:eslint && npm run lint:file-names && npm run lint:errata-names && npm run lint:validate",
     "lint:errata-names": "ts-node ./tool/check/errata-names.ts",
     "lint:eslint": "eslint src",
@@ -13,7 +13,8 @@
     "lint:format": "prettier --ignore-path .gitignore --list-different src",
     "lint:validate": "npm run lint:validate:units && npm run lint:validate:upgrades",
     "lint:validate:units": "ajv -s \"src/schema/UnitCard.json\" -d \"src/data/**/Units/*.json\" -r \"src/schema/**/*.json\" --extend-refs=true",
-    "lint:validate:upgrades": "ajv -s \"src/schema/UpgradeCard.json\" -d \"src/data/**/Upgrades/**/*.json\" -r \"src/schema/**/*.json\" --extend-refs=true"
+    "lint:validate:upgrades": "ajv -s \"src/schema/UpgradeCard.json\" -d \"src/data/**/Upgrades/**/*.json\" -r \"src/schema/**/*.json\" --extend-refs=true",
+    "test": "jest"
   },
   "license": "MIT",
   "devDependencies": {

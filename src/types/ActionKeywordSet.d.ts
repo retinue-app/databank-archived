@@ -18,11 +18,14 @@ export interface ActionKeywordSet {
   Treat?: DefineActionWithCapacity;
   'Take Cover'?: DefineActionWithAmount;
   [k: string]:
-    | undefined
-    | DefineAction
-    | DefineActionWithAmount
-    | DefineActionWithCapacity
-    | DefineActionWithExplosive;
+    | (
+        | undefined
+        | DefineAction
+        | DefineActionWithAmount
+        | DefineActionWithCapacity
+        | DefineActionWithExplosive
+      )
+    | undefined;
 }
 export interface DefineActionWithExplosive {
   actions: number;

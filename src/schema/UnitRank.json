@@ -12,16 +12,5 @@
     "Special Forces",
     "Support",
     "Heavy"
-  ],
-
-  "$comment": "This forces json2ts to output the enums as TypeScript enums instead of type unions.",
-
-  "tsEnumNames": [
-    "Commander",
-    "Operative",
-    "Corps",
-    "SpecialForces",
-    "Support",
-    "Heavy"
   ]
 }

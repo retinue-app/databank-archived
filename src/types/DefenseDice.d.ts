@@ -3,7 +3,4 @@
 /**
  * Defense dice in the game.
  */
-export const enum DefenseDice {
-  White = 'White',
-  Red = 'Red',
-}
+export type DefenseDice = 'White' | 'Red';

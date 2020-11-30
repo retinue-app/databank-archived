@@ -14,5 +14,5 @@ export interface PointAdjustments {
   upgrades: NamedCards;
 }
 export interface NamedCards {
-  [k: string]: number;
+  [k: string]: number | undefined;
 }

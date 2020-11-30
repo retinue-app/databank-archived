@@ -31,6 +31,16 @@ export type Faction =
     )
   | string;
 /**
+ * Ranks that are part of the game. These values are not customizable for custom content.
+ */
+export type UnitRank =
+  | 'Commander'
+  | 'Operative'
+  | 'Corps'
+  | 'Special Forces'
+  | 'Support'
+  | 'Heavy';
+/**
  * Unit types and sub-types
  */
 export type UnitType =
@@ -113,27 +123,30 @@ export interface ActionKeywordSet {
     amount: number;
   };
   [k: string]:
-    | undefined
-    | {
-        actions: number;
-      }
-    | {
-        actions: number;
-        amount: number;
-      }
-    | {
-        actions: number;
-        amount: number;
-        capacity: number;
-      }
-    | {
-        actions: number;
-        amount: number;
-        /**
-         * This name must be identical to a weapon on an upgrade or command card.
-         */
-        explosive: string;
-      };
+    | (
+        | undefined
+        | {
+            actions: number;
+          }
+        | {
+            actions: number;
+            amount: number;
+          }
+        | {
+            actions: number;
+            amount: number;
+            capacity: number;
+          }
+        | {
+            actions: number;
+            amount: number;
+            /**
+             * This name must be identical to a weapon on an upgrade or command card.
+             */
+            explosive: string;
+          }
+      )
+    | undefined;
 }
 /**
  * A set of keywords that provide a passive effect.
@@ -262,43 +275,46 @@ export interface PassiveKeywordSet {
   };
   'Wheel Mode'?: null;
   [k: string]:
-    | undefined
-    | null
-    | ('Attack' | 'Dodge' | 'Move')[]
-    | number
     | (
-        | 'Blast'
-        | 'Deflect'
-        | 'Melee'
-        | 'Pierce'
-        | 'Pierce (Melee)'
-        | 'Range 1 Weapons'
-      )[]
-    | {
-        amount: number;
-        /**
-         * This name must be identical to a weapon on an upgrade or command card.
-         */
-        explosive: string;
-      }
-    | PassiveKeywordSet
-    | {
-        amount: number;
-        sides: NotchedBaseSide[];
-      }
-    | ('Hit' | 'Crit')
-    | TargetSet
-    | {
-        type: 'Open' | 'Closed';
-        capacity: number;
-      }
-    | (
-        | 'Ground'
+        | undefined
+        | null
+        | ('Attack' | 'Dodge' | 'Move')[]
+        | number
+        | (
+            | 'Blast'
+            | 'Deflect'
+            | 'Melee'
+            | 'Pierce'
+            | 'Pierce (Melee)'
+            | 'Range 1 Weapons'
+          )[]
         | {
-            Air: number;
+            amount: number;
+            /**
+             * This name must be identical to a weapon on an upgrade or command card.
+             */
+            explosive: string;
           }
+        | PassiveKeywordSet
+        | {
+            amount: number;
+            sides: NotchedBaseSide[];
+          }
+        | ('Hit' | 'Crit')
+        | TargetSet
+        | {
+            type: 'Open' | 'Closed';
+            capacity: number;
+          }
+        | (
+            | 'Ground'
+            | {
+                Air: number;
+              }
+          )
+        | UpgradeType
       )
-    | UpgradeType;
+    | undefined;
 }
 /**
  * A set of units, types, ranks, targeted by an effect.
@@ -344,17 +360,5 @@ export interface UpgradeKeywordSet {
   Reconfigure?: string;
   Sidearm?: 'Melee' | 'Ranged';
   Small?: null;
-  [k: string]: undefined | null | number | string;
-}
-
-/**
- * Ranks that are part of the game. These values are not customizable for custom content.
- */
-export const enum UnitRank {
-  Commander = 'Commander',
-  Operative = 'Operative',
-  Corps = 'Corps',
-  SpecialForces = 'Special Forces',
-  Support = 'Support',
-  Heavy = 'Heavy',
+  [k: string]: (undefined | null | number | string) | undefined;
 }
