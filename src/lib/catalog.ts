@@ -1,6 +1,6 @@
 /* @internal */
 
-import { DataBank, UnitCard, UpgradeCard } from '../index';
+import { DataBank, PointAdjustments, UnitCard, UpgradeCard } from '../index';
 
 /**
  * Represents an indexed @see DataBank with errata and point changes applied.
@@ -17,8 +17,14 @@ export class CatalogBuilder {
   private readonly upgrades: UpgradeCard[] = [];
 
   addData(data: DataBank): void {
-    data.core.units.forEach((u) => this.addUnit(u));
-    data.core.upgrades.forEach((u) => this.addUpgrade(u));
+    data.core.units.forEach((u) => this.addUnit((u as unknown) as UnitCard));
+    data.core.upgrades.forEach((u) => this.addUpgrade(u as UpgradeCard));
+    data.errata?.cards?.units.forEach((u) =>
+      this.addUnit((u as unknown) as UnitCard),
+    );
+    data.errata?.cards?.upgrades.forEach((u) =>
+      this.addUpgrade(u as UpgradeCard),
+    );
   }
 
   addUnit(unit: UnitCard): void {
@@ -54,4 +60,6 @@ export class CatalogBuilder {
     }
     upgrades.push(upgrade);
   }
+
+  replacePoints(points: PointAdjustments): void {}
 }
