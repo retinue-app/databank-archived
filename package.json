@@ -4,8 +4,8 @@
   "scripts": {
     "build": "npm run build:types && npm run build:concat && npm run build:deploy",
     "build:concat": "ts-node ./tool/build/concat-data.ts && prettier --write src/data.json",
-    "build:deploy": "tsc --build tsconfig.dist.json  && ts-node ./tool/build/prepare-deploy.ts",
-    "build:types": "json2ts --unknownAny --enableConstEnums --cwd src/schema -i src/schema/*.json -o src/types && prettier --ignore-path .gitignore --write src/types",
+    "build:deploy": "tsc --build tsconfig.dist.json && ts-node ./tool/build/prepare-deploy.ts",
+    "build:types": "json2ts --bannerComment \"/* @internal */\" --unknownAny --enableConstEnums --cwd src/schema -i src/schema/*.json -o src/types && prettier --ignore-path .gitignore --write src/types",
     "lint": "npm run lint:format && npm run lint:eslint && npm run lint:file-names && npm run lint:errata-names && npm run lint:validate",
     "lint:errata-names": "ts-node ./tool/check/errata-names.ts",
     "lint:eslint": "eslint src",
@@ -17,9 +17,12 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@types/jest": "^26.0.15",
     "@types/prettier": "^2.1.5",
     "eslint-plugin-import": "^2.22.1",
-    "json-schema-to-typescript": "^9.1.1"
+    "jest": "^26.6.3",
+    "json-schema-to-typescript": "^9.1.1",
+    "ts-jest": "^26.4.4"
   },
   "dependencies": {
     "@types/fs-extra": "^9.0.4",
