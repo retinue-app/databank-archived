@@ -13,10 +13,10 @@ export interface WeaponKeywordSet {
   Blast?: null;
   Critical?: number;
   Cumbersome?: null;
-  Fixed?: [NotchedBaseSide, ...NotchedBaseSide[]];
+  Fixed?: NotchedBaseSide[];
   'High Velocity'?: null;
   Immobilize?: number;
-  Immune?: ['Deflect', ...'Deflect'[]];
+  Immune?: 'Deflect'[];
   Impact?: number;
   Ion?: number;
   Lethal?: number;
@@ -29,5 +29,5 @@ export interface WeaponKeywordSet {
   Suppressive?: null;
   'Tow Cable'?: null;
   Versatile?: null;
-  [k: string]: null | undefined | string[] | number | string;
+  [k: string]: (null | undefined | string[] | number | string) | undefined;
 }

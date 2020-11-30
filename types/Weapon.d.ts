@@ -51,5 +51,5 @@ export interface WeaponKeywordSet {
   Suppressive?: null;
   'Tow Cable'?: null;
   Versatile?: null;
-  [k: string]: null | undefined | string[] | number | string;
+  [k: string]: (null | undefined | string[] | number | string) | undefined;
 }

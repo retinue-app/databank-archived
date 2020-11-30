@@ -12,6 +12,16 @@ export type Faction =
     )
   | string;
 /**
+ * Ranks that are part of the game. These values are not customizable for custom content.
+ */
+export type UnitRank =
+  | 'Commander'
+  | 'Operative'
+  | 'Corps'
+  | 'Special Forces'
+  | 'Support'
+  | 'Heavy';
+/**
  * Unit types and sub-types
  */
 export type UnitType =
@@ -49,26 +59,23 @@ export interface TargetSet {
   /**
    * Factions. Multiple entries is treated as an OR.
    */
-  factions?: [Faction, ...Faction[]];
+  factions?: Faction[];
   /**
    * Force alignments. Multiple entries is treated as an OR.
    */
-  forceAlignment?: [
-    'Light Side' | 'Dark Side',
-    ...('Light Side' | 'Dark Side')[]
-  ];
+  forceAlignment?: ('Light Side' | 'Dark Side')[];
   /**
    * Unit names. Multiple entries is treated as an OR.
    */
-  units?: [string, ...string[]];
+  units?: string[];
   /**
    * Unit ranks. Multiple entries is treated as an OR.
    */
-  unitRanks?: [UnitRank, ...UnitRank[]];
+  unitRanks?: UnitRank[];
   /**
    * Unit types. Multiple entries is treated as an OR.
    */
-  unitTypes?: [UnitType, ...UnitType[]];
+  unitTypes?: UnitType[];
   /**
    * This unit or effect is unique (once per list or per game).
    */
@@ -76,17 +83,5 @@ export interface TargetSet {
   /**
    * Units that have an upgrade icon. Multiple entries is treated as an OR.
    */
-  hasUpgradeSlot?: [UpgradeType, ...UpgradeType[]];
-}
-
-/**
- * Ranks that are part of the game. These values are not customizable for custom content.
- */
-export const enum UnitRank {
-  Commander = 'Commander',
-  Operative = 'Operative',
-  Corps = 'Corps',
-  SpecialForces = 'Special Forces',
-  Support = 'Support',
-  Heavy = 'Heavy',
+  hasUpgradeSlot?: UpgradeType[];
 }

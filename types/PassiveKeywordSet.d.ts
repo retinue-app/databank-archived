@@ -33,6 +33,16 @@ export type Faction =
     )
   | string;
 /**
+ * Ranks that are part of the game. These values are not customizable for custom content.
+ */
+export type UnitRank =
+  | 'Commander'
+  | 'Operative'
+  | 'Corps'
+  | 'Special Forces'
+  | 'Support'
+  | 'Heavy';
+/**
  * Unit types and sub-types
  */
 export type UnitType =
@@ -48,33 +58,20 @@ export type UnitType =
  */
 export type NotchedBaseSide = 'Front' | 'Sides' | 'Rear';
 export type DefinePassiveWithSurge = 'Hit' | 'Crit';
-export type DefinePassiveWithActions = [
-  'Attack' | 'Dodge' | 'Move',
-  ...('Attack' | 'Dodge' | 'Move')[]
-];
+export type DefinePassiveWithActions = ('Attack' | 'Dodge' | 'Move')[];
 export type DefinePassiveWithTerrain =
   | 'Ground'
   | {
       Air: number;
     };
-export type DefinePassiveWithEffects = [
-  (
-    | 'Blast'
-    | 'Deflect'
-    | 'Melee'
-    | 'Pierce'
-    | 'Pierce (Melee)'
-    | 'Range 1 Weapons'
-  ),
-  ...(
-    | 'Blast'
-    | 'Deflect'
-    | 'Melee'
-    | 'Pierce'
-    | 'Pierce (Melee)'
-    | 'Range 1 Weapons'
-  )[]
-];
+export type DefinePassiveWithEffects = (
+  | 'Blast'
+  | 'Deflect'
+  | 'Melee'
+  | 'Pierce'
+  | 'Pierce (Melee)'
+  | 'Range 1 Weapons'
+)[];
 
 /**
  * A set of keywords that provide a passive effect.
@@ -177,19 +174,22 @@ export interface PassiveKeywordSet {
   'Weak Point'?: DefinePassiveWithSides;
   'Wheel Mode'?: DefinePassive;
   [k: string]:
-    | undefined
-    | DefinePassive
-    | DefinePassiveWithActions
-    | DefinePassiveWithAmount
-    | DefinePassiveWithEffects
-    | DefinePassiveWithExplosive
-    | PassiveKeywordSet1
-    | DefinePassiveWithSides
-    | DefinePassiveWithSurge
-    | TargetSet
-    | DefinePassiveWithTransport
-    | DefinePassiveWithTerrain
-    | UpgradeType;
+    | (
+        | undefined
+        | DefinePassive
+        | DefinePassiveWithActions
+        | DefinePassiveWithAmount
+        | DefinePassiveWithEffects
+        | DefinePassiveWithExplosive
+        | PassiveKeywordSet1
+        | DefinePassiveWithSides
+        | DefinePassiveWithSurge
+        | TargetSet
+        | DefinePassiveWithTransport
+        | DefinePassiveWithTerrain
+        | UpgradeType
+      )
+    | undefined;
 }
 /**
  * A set of keywords that provide a passive effect.
@@ -318,43 +318,46 @@ export interface PassiveKeywordSet1 {
   };
   'Wheel Mode'?: null;
   [k: string]:
-    | undefined
-    | null
-    | ('Attack' | 'Dodge' | 'Move')[]
-    | number
     | (
-        | 'Blast'
-        | 'Deflect'
-        | 'Melee'
-        | 'Pierce'
-        | 'Pierce (Melee)'
-        | 'Range 1 Weapons'
-      )[]
-    | {
-        amount: number;
-        /**
-         * This name must be identical to a weapon on an upgrade or command card.
-         */
-        explosive: string;
-      }
-    | PassiveKeywordSet1
-    | {
-        amount: number;
-        sides: NotchedBaseSide[];
-      }
-    | ('Hit' | 'Crit')
-    | TargetSet
-    | {
-        type: 'Open' | 'Closed';
-        capacity: number;
-      }
-    | (
-        | 'Ground'
+        | undefined
+        | null
+        | ('Attack' | 'Dodge' | 'Move')[]
+        | number
+        | (
+            | 'Blast'
+            | 'Deflect'
+            | 'Melee'
+            | 'Pierce'
+            | 'Pierce (Melee)'
+            | 'Range 1 Weapons'
+          )[]
         | {
-            Air: number;
+            amount: number;
+            /**
+             * This name must be identical to a weapon on an upgrade or command card.
+             */
+            explosive: string;
           }
+        | PassiveKeywordSet1
+        | {
+            amount: number;
+            sides: NotchedBaseSide[];
+          }
+        | ('Hit' | 'Crit')
+        | TargetSet
+        | {
+            type: 'Open' | 'Closed';
+            capacity: number;
+          }
+        | (
+            | 'Ground'
+            | {
+                Air: number;
+              }
+          )
+        | UpgradeType
       )
-    | UpgradeType;
+    | undefined;
 }
 /**
  * A set of units, types, ranks, targeted by an effect.
@@ -402,17 +405,5 @@ export interface DefinePassiveWithTransport {
 }
 export interface DefinePassiveWithSides {
   amount: number;
-  sides: [NotchedBaseSide, ...NotchedBaseSide[]];
-}
-
-/**
- * Ranks that are part of the game. These values are not customizable for custom content.
- */
-export const enum UnitRank {
-  Commander = 'Commander',
-  Operative = 'Operative',
-  Corps = 'Corps',
-  SpecialForces = 'Special Forces',
-  Support = 'Support',
-  Heavy = 'Heavy',
+  sides: NotchedBaseSide[];
 }
