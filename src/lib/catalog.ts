@@ -1,5 +1,3 @@
-/* @internal */
-
 import {
   DataBank,
   Faction,
