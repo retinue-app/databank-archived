@@ -90,6 +90,10 @@
       "$ref": "#/definitions/DefineActionWithExplosive"
     },
 
+    "Bolster": {
+      "$ref": "#/definitions/DefineActionWithAmount"
+    },
+
     "Calculate Odds": {
       "$ref": "#/definitions/DefineAction"
     },

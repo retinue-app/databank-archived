@@ -1037,6 +1037,37 @@
         ]
       },
       {
+        "name": "Clone Commander",
+        "title": "Trained For Leadership",
+        "restrictions": { "factions": ["Galactic Republic"] },
+        "points": 55,
+        "rank": "Commander",
+        "miniatures": 1,
+        "type": { "Trooper": "Clone Trooper" },
+        "defense": { "color": "Red", "wounds": 4, "courage": 2 },
+        "speed": 2,
+        "upgrades": { "Command": 1, "Training": 1, "Gear": 1 },
+        "keywords": {
+          "actions": { "Bolster": 2 },
+          "passive": {
+            "Direct": { "unitTypes": ["Clone Trooper"] },
+            "Sharpshooter": 1
+          }
+        },
+        "weapons": [
+          {
+            "name": "Advanced Combat Training",
+            "range": ["Melee"],
+            "dice": { "red": 2 }
+          },
+          {
+            "name": "Commander's DC-15 Blaster Rifle",
+            "range": [1, 3],
+            "dice": { "black": 3 }
+          }
+        ]
+      },
+      {
         "name": "Obi-Wan Kenobi",
         "title": "Civilized Warrior",
         "restrictions": {
@@ -2536,6 +2567,33 @@
             "keywords": { "Critical": 1, "Fixed": ["Front"] }
           }
         ]
+      },
+      {
+        "name": "T-series Tactical Droid",
+        "title": "Programmed For Strategy",
+        "restrictions": { "factions": ["Separatist Alliance"] },
+        "points": 55,
+        "rank": "Commander",
+        "miniatures": 1,
+        "type": { "Trooper": "Droid Trooper" },
+        "defense": { "color": "White", "wounds": 4, "courage": 2 },
+        "speed": 2,
+        "upgrades": { "Command": 1, "Comms": 1, "Gear": 1 },
+        "keywords": {
+          "actions": { "Bolster": 2 },
+          "passive": {
+            "Direct": { "unitTypes": ["Droid Trooper"] },
+            "Sharpshooter": 1
+          }
+        },
+        "weapons": [
+          { "name": "Bludgeon", "range": ["Melee"], "dice": { "white": 1 } },
+          {
+            "name": "Commander's E-5 Blaster Rifle",
+            "range": [1, 3],
+            "dice": { "red": 1, "white": 1 }
+          }
+        ]
       }
     ],
     "upgrades": [
@@ -3285,6 +3343,41 @@
         }
       },
       {
+        "name": "Clone Commander",
+        "points": 20,
+        "type": "Personnel",
+        "restrictions": { "unitTypes": ["Clone Trooper"] },
+        "keywords": {
+          "passiveForUnit": { "Inspire": 1, "Reliable": 1 },
+          "passiveForUpgrade": { "Leader": null }
+        }
+      },
+      {
+        "name": "Clone Comms Technician",
+        "points": 12,
+        "type": "Personnel",
+        "restrictions": { "unitTypes": ["Clone Trooper"] },
+        "keywords": { "passiveForUnit": { "$Add and Equip Upgrade": "Comms" } }
+      },
+      {
+        "name": "Clone Engineer",
+        "points": 18,
+        "type": "Personnel",
+        "restrictions": { "unitTypes": ["Clone Trooper"] },
+        "keywords": {
+          "actions": { "Repair": { "actions": 0, "amount": 1, "capacity": 1 } }
+        }
+      },
+      {
+        "name": "Clone Medic",
+        "points": 20,
+        "type": "Personnel",
+        "restrictions": { "unitTypes": ["Clone Trooper"] },
+        "keywords": {
+          "actions": { "Treat": { "actions": 0, "amount": 1, "capacity": 1 } }
+        }
+      },
+      {
         "name": "Phase I Clone Captain",
         "points": 15,
         "type": "Personnel",
@@ -3371,10 +3464,22 @@
         "description": "After an order token is drawn from a friendly order pool, draw a second order token from that pool. Choose 1 to use and shuffle the other back into the order pool. If you do, during the End Phase, ready this card."
       },
       {
+        "name": "Inspiring Presence",
+        "points": 5,
+        "type": "Command",
+        "description": "Friendly units at range 1-4 can use your courage value when checking whether they are panicked. This range can be reduced by other effects."
+      },
+      {
         "name": "Strict Orders",
         "points": 5,
         "type": "Command",
         "description": "When a friendly trooper unit with a faceup order token activates, during its Rally step, it may remove 1 suppression token instead of rolling dice."
+      },
+      {
+        "name": "Vigilance",
+        "points": 5,
+        "type": "Command",
+        "description": "During the End Phase, choose either 1 friendly trooper unit at range 1-2 or up to 2 friendly {CORPS} trooper units at range 1-2. Each chosen unit does not remove 1 dodge token."
       },
       {
         "name": "Command Control Array",
@@ -4486,6 +4591,17 @@
         "restrictions": { "units": ["B2 Super Battle Droids"] }
       },
       {
+        "name": "EV-series Medical Droid",
+        "points": 14,
+        "type": "Personnel",
+        "restrictions": { "unitTypes": ["Droid Trooper"] },
+        "wounds": 1,
+        "keywords": {
+          "actions": { "Treat": { "actions": 0, "amount": 1, "capacity": 2 } },
+          "passiveForUpgrade": { "Noncombatant": null }
+        }
+      },
+      {
         "name": "OOM-series Battle Droid",
         "points": 12,
         "type": "Personnel",
@@ -4494,6 +4610,17 @@
         "keywords": {
           "passiveForUpgrade": { "Leader": null },
           "passiveForUnit": { "$Coordinate: Range 1-2": null }
+        }
+      },
+      {
+        "name": "PK-series Worker Droid",
+        "points": 12,
+        "type": "Personnel",
+        "restrictions": { "unitTypes": ["Droid Trooper"] },
+        "wounds": 1,
+        "keywords": {
+          "actions": { "Repair": { "actions": 0, "amount": 1, "capacity": 2 } },
+          "passiveForUpgrade": { "Noncombatant": null }
         }
       },
       {
@@ -4513,6 +4640,22 @@
           "name": "T-series Tactical Droid",
           "range": [1, 3],
           "dice": { "red": 1 }
+        }
+      },
+      {
+        "name": "Viper Recon Droid",
+        "points": 8,
+        "type": "Personnel",
+        "restrictions": { "factions": ["Separatist Alliance"] },
+        "wounds": 1,
+        "keywords": {
+          "actions": { "Observe": { "actions": 1, "amount": 2 } },
+          "passiveForUpgrade": { "Sidearm": "Ranged" }
+        },
+        "weapon": {
+          "name": "Viper Recon Droid",
+          "dice": { "white": 2 },
+          "range": [1, 2]
         }
       },
       {
