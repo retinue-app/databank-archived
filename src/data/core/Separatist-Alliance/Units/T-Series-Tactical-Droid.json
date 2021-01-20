@@ -1,0 +1,52 @@
+{
+  "name": "T-series Tactical Droid",
+  "title": "Programmed For Strategy",
+  "restrictions": {
+    "factions": ["Separatist Alliance"]
+  },
+  "points": 55,
+  "rank": "Commander",
+  "miniatures": 1,
+  "type": {
+    "Trooper": "Droid Trooper"
+  },
+  "defense": {
+    "color": "White",
+    "wounds": 4,
+    "courage": 2
+  },
+  "speed": 2,
+  "upgrades": {
+    "Command": 1,
+    "Comms": 1,
+    "Gear": 1
+  },
+  "keywords": {
+    "actions": {
+      "Bolster": 2
+    },
+    "passive": {
+      "Direct": {
+        "unitTypes": ["Droid Trooper"]
+      },
+      "Sharpshooter": 1
+    }
+  },
+  "weapons": [
+    {
+      "name": "Bludgeon",
+      "range": ["Melee"],
+      "dice": {
+        "white": 1
+      }
+    },
+    {
+      "name": "Commander's E-5 Blaster Rifle",
+      "range": [1, 3],
+      "dice": {
+        "red": 1,
+        "white": 1
+      }
+    }
+  ]
+}

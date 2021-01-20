@@ -1,0 +1,7 @@
+{
+  "name": "Inspiring Presence",
+  "points": 5,
+  "type": "Command",
+
+  "description": "Friendly units at range 1-4 can use your courage value when checking whether they are panicked. This range can be reduced by other effects."
+}

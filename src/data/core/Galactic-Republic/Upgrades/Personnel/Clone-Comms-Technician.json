@@ -1,0 +1,15 @@
+{
+  "name": "Clone Comms Technician",
+  "points": 12,
+  "type": "Personnel",
+
+  "restrictions": {
+    "unitTypes": ["Clone Trooper"]
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "$Add and Equip Upgrade": "Comms"
+    }
+  }
+}
