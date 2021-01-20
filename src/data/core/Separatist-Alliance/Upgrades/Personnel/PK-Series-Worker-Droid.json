@@ -1,0 +1,25 @@
+{
+  "name": "PK-series Worker Droid",
+  "points": 12,
+  "type": "Personnel",
+
+  "restrictions": {
+    "unitTypes": ["Droid Trooper"]
+  },
+
+  "wounds": 1,
+
+  "keywords": {
+    "actions": {
+      "Repair": {
+        "actions": 0,
+        "amount": 1,
+        "capacity": 2
+      }
+    },
+
+    "passiveForUpgrade": {
+      "Noncombatant": null
+    }
+  }
+}

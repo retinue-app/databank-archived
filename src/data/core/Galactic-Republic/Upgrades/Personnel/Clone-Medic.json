@@ -1,0 +1,19 @@
+{
+  "name": "Clone Medic",
+  "points": 20,
+  "type": "Personnel",
+
+  "restrictions": {
+    "unitTypes": ["Clone Trooper"]
+  },
+
+  "keywords": {
+    "actions": {
+      "Treat": {
+        "actions": 0,
+        "amount": 1,
+        "capacity": 1
+      }
+    }
+  }
+}

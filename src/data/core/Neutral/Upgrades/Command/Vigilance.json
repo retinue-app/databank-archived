@@ -1,0 +1,7 @@
+{
+  "name": "Vigilance",
+  "points": 5,
+  "type": "Command",
+
+  "description": "During the End Phase, choose either 1 friendly trooper unit at range 1-2 or up to 2 friendly {CORPS} trooper units at range 1-2. Each chosen unit does not remove 1 dodge token."
+}

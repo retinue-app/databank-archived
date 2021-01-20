@@ -255,6 +255,10 @@
       "$ref": "#/definitions/DefinePassiveWithExplosive"
     },
 
+    "Direct": {
+      "$ref": "#/definitions/DefinePassiveWithTarget"
+    },
+
     "Disciplined": {
       "$ref": "#/definitions/DefinePassiveWithAmount"
     },

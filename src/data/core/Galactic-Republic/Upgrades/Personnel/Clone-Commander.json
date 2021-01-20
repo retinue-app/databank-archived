@@ -1,0 +1,19 @@
+{
+  "name": "Clone Commander",
+  "points": 20,
+  "type": "Personnel",
+
+  "restrictions": {
+    "unitTypes": ["Clone Trooper"]
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "Inspire": 1,
+      "Reliable": 1
+    },
+    "passiveForUpgrade": {
+      "Leader": null
+    }
+  }
+}
