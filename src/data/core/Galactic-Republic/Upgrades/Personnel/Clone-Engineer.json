@@ -1,0 +1,19 @@
+{
+  "name": "Clone Engineer",
+  "points": 18,
+  "type": "Personnel",
+
+  "restrictions": {
+    "unitTypes": ["Clone Trooper"]
+  },
+
+  "keywords": {
+    "actions": {
+      "Repair": {
+        "actions": 0,
+        "amount": 1,
+        "capacity": 1
+      }
+    }
+  }
+}

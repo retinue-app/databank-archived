@@ -1,0 +1,25 @@
+{
+  "name": "EV-series Medical Droid",
+  "points": 14,
+  "type": "Personnel",
+
+  "restrictions": {
+    "unitTypes": ["Droid Trooper"]
+  },
+
+  "wounds": 1,
+
+  "keywords": {
+    "actions": {
+      "Treat": {
+        "actions": 0,
+        "amount": 1,
+        "capacity": 2
+      }
+    },
+
+    "passiveForUpgrade": {
+      "Noncombatant": null
+    }
+  }
+}

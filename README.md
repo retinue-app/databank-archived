@@ -23,13 +23,13 @@ Community data for Star Wars: Legion
 
 - [ ] Add command cards (wave 0 -> 9).
 
-- [ ] Add actions.
+- [x] Add actions.
 - [ ] Add tokens.
-- [ ] Add keywords.
+- [x] Add keywords.
 
 - [ ] Encode effects on common or simple keywords/actions (`Force Reflexes`).
 
-- [ ] Add most recent RRG points and errata.
+- [x] Add most recent RRG points and errata.
 
 - [ ] Add battle cards (core, priority supplies, vital assets).
 - [ ] Add battle cards (downed AT-ST, crashed Escape Pod, imperial Bunker).

@@ -1,0 +1,30 @@
+{
+  "name": "Viper Recon Droid",
+  "points": 8,
+  "type": "Personnel",
+
+  "restrictions": {
+    "factions": ["Separatist Alliance"]
+  },
+
+  "wounds": 1,
+
+  "keywords": {
+    "actions": {
+      "Observe": {
+        "actions": 1,
+        "amount": 2
+      }
+    },
+
+    "passiveForUpgrade": {
+      "Sidearm": "Ranged"
+    }
+  },
+
+  "weapon": {
+    "name": "Viper Recon Droid",
+    "dice": { "white": 2 },
+    "range": [1, 2]
+  }
+}
