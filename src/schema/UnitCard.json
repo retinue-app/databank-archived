@@ -83,6 +83,10 @@
       "$ref": "./UnitRank.json"
     },
 
+    "size": {
+      "$ref": "./BaseSize.json"
+    },
+
     "miniatures": {
       "type": "number",
       "default": 1,
@@ -138,6 +142,7 @@
     "restrictions",
     "points",
     "rank",
+    "size",
     "miniatures",
     "type",
     "defense",
