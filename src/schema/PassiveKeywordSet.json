@@ -211,6 +211,10 @@
       "$ref": "#/definitions/DefinePassive"
     },
 
+    "Contingencies": {
+      "$ref": "#/definitions/DefinePassiveWithAmount"
+    },
+
     "Coordinate": {
       "$ref": "#/definitions/DefinePassiveWithTarget"
     },

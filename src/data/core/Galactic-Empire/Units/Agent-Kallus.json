@@ -1,0 +1,52 @@
+{
+  "name": "Agent Kallus",
+  "title": "Hunter of Spectres",
+  "restrictions": {
+    "factions": ["Galactic Empire"],
+    "isUnique": true
+  },
+  "points": 90,
+  "rank": "Commander",
+  "size": "Small",
+  "miniatures": 1,
+  "type": "Trooper",
+  "defense": {
+    "color": "Red",
+    "wounds": 6,
+    "courage": 3
+  },
+  "attack": {
+    "surges": "Crit"
+  },
+  "speed": 2,
+  "upgrades": {
+    "Command": 1,
+    "Training": 1,
+    "Gear": 1,
+    "Armament": 1
+  },
+  "keywords": {
+    "passive": {
+      "Contingencies": 2,
+      "Cunning": null,
+      "Flawed": null,
+      "Sharpshooter": 1,
+      "Tactical": 1
+    }
+  },
+  "weapons": [
+    {
+      "name": "Advanced Combat Training",
+      "range": ["Melee"],
+      "dice": { "red": 2 }
+    },
+    {
+      "name": "Kallus's RK-3 Blaster Pistol",
+      "range": [1, 2],
+      "dice": { "black": 2, "white": 1 },
+      "keywords": {
+        "Pierce": 1
+      }
+    }
+  ]
+}
