@@ -1,0 +1,29 @@
+{
+  "name": "J-19 Bo-rifle Staff",
+  "points": 25,
+  "type": "Armament",
+
+  "restrictions": {
+    "units": ["Agent Kallus"],
+    "isUnique": true
+  },
+
+  "keywords": {
+    "passiveForUnit": {
+      "Charge": null,
+      "Immune": ["Pierce (Melee)"]
+    },
+    "passiveForUpgrade": {
+      "Reconfigure": "J-19 Bo-rifle Blaster"
+    }
+  },
+
+  "weapon": {
+    "name": "J-19 Bo-rifle Staff",
+    "range": ["Melee"],
+    "dice": { "red": 1, "black": 2, "white": 1 },
+    "keywords": {
+      "Lethal": 1
+    }
+  }
+}
